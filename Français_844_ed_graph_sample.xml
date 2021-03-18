@@ -1275,7 +1275,7 @@
                 <w>que</w>
                 <lb facs="#facs_145_line_1607001976770_2204" n="N007"/>
                 <w>ie</w>
-                <w rend="elision"> l</w><w>en</w><w>crui</w><!-- VM rend="aggl" : <w>lencrui</w>-->
+                <w rend="elision"> l</w><w rend="aggl">en</w><w>crui</w><!-- VM rend="aggl" : <w>lencrui</w>-->
                 <w>·</w>
                 <w><comment>S</comment>i</w>
                 <w>sui</w>
@@ -3057,6 +3057,9 @@
                 <w>en</w>
                 <w>uos</w>
                 <w>&que-q-tilde;n</w><!-- VM abr + élision -->
+                <!-- TODO: ajouter au modèle ODD la doc sur ce point -->
+                <w rend="elision"><choice><abbr xml:id="abbr_01">q&#x0303;</abbr><expan>qu</expan></choice></w><w><choice><abbr sameAs="#abbr_01"
+                    /><expan><ex>e</ex>n</expan></choice></w>
                 <w>dame</w>
                 <w>qui</w>
                 <w>soit</w>
