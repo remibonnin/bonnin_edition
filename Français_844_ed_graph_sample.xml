@@ -1,0 +1,3365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="Modele.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="Modele.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/css" href="../css/tei_imitatif.css" title="imitative" alternate="yes"?>
+<?xml-stylesheet type="text/css" href="../css/tei_diplomatique.css" title="diplomatique" alternate="yes"?>
+<?xml-stylesheet type="text/css" href="../css/tei_edition.css" title="edition" alternate="yes"?>
+<!DOCTYPE TEI SYSTEM "./dtd/abreviations.dtd" [
+<!--VM ajouter ici les entités-->
+]>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Français 844_tr_graphematique</title>
+                <author>Lambert l'Aveugle. Auteur du texte</author>
+                <principal>viola.mariotti.maritem@gmail.com</principal>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>tranScriptorium</publisher>
+            </publicationStmt>
+            <seriesStmt>
+                <title>Paris, Bnf, français 844</title>
+            </seriesStmt>
+            <sourceDesc>
+                <p>TRP document creator: viola.mariotti.maritem@gmail.com</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <gap reason="sampling"/>
+           <pb facs="#facs_31" n="31" xml:id="img_0031"/>
+            <ab facs="#facs_31_region_1606066921800_248" type="" n="1"><w/>
+                <lb facs="#facs_31_line_1606066943996_260" n="N001"/>
+                <w><comment>li dux
+                    de</comment></w>
+                <lb facs="#facs_31_line_1606066946464_263" n="N002"/>
+                <w><comment>brabant
+                    ·</comment></w></ab>
+            <ab facs="#facs_31_r1" type="" n="2">
+                <lb facs="#facs_31_r1l5" n="N001"/>
+                <w>mors</w>
+                <w rend="elision">m</w><w>est</w>
+                <w>v</w>
+                <w>cuer</w>
+                <w>entree</w>
+                <w>·</w>
+                <w>de</w>
+                <w>chantee</w>
+                <w rend="elision">m</w><w>a</w>
+<lb facs="#facs_31_r1l8" n="N002"/>
+                <w>esmeu</w>
+                <w>·</w>
+                <w>si</w>
+                <w>chant</w>
+                <w>por</w>
+                <w>la</w>
+                <w>bele</w>
+                <w>nee</w>
+                <w>·</w>
+                <w rend="aggl">a</w><w>cui</w>
+                <w rend="elision">i</w><w>ai</w>
+                <lb facs="#facs_31_r1l12" n="N003"/>
+                <w>mon</w>
+                <w>cuer</w>
+                <w>rendu</w>
+                <w>·</w>
+                <w>ligement</w>
+                <w>·</w>
+                <w>et</w>
+                <w>sachent</w>
+                <w>la</w>
+                <lb facs="#facs_31_r1l17" n="N004"/>
+                <w>gent</w>
+                <w>·</w>
+                <w>mercier</w>
+                <w>·</w>
+                <w>ne</w>
+                <w>doit</w>
+                <w>on</w>
+                <w>de</w>
+                <w>mon</w>
+                <w>chan&tilde2-er;</w>
+                <w>·</w>
+                <lb facs="#facs_31_r1l20" n="N005"/>
+                <w>fors</w>
+                <w>li</w>
+                <w>cui</w>
+                <w rend="elision">i</w><w>aim</w>
+                <w>si</w>
+                <w>·</w>
+                <w>que</w>
+                <w rend="elision">i</w><w>en</w>
+                <w>ai</w>
+                <w>et</w>
+                <w>cuer</w>
+                <w>et</w>
+                <w>cors</w>
+                <lb facs="#facs_31_line_1606067048880_373" n="N006"/>
+                <w>>joli</w>
+                <w>·</w>
+                <lb facs="#facs_31_r1l24" n="N007"/>
+                <w><comment>S</comment>e</w>
+                <w rend="elision">i</w><w>ai</w>
+                <w>dolor</w>
+                <w>enduree</w>
+                <w>·</w>
+                <w>por</w>
+                <w>amor</w>
+                <w>et</w>
+                <w>mal</w>
+                <lb facs="#facs_31_r1l25" n="N008"/>
+                <w>sentu</w>
+                <w>·</w>
+                <w>il</w>
+                <w>me</w>
+                <w>plaist</w>
+                <w>bien</w>
+                <w>et</w>
+                <w>agree</w>
+                <w>·</w>
+                <w>quant</w>
+                <lb facs="#facs_31_r1l26" n="N009"/>
+                <w rend="elision">i</w><w>ai</w>
+                <w>si</w>
+                <w>bien</w>
+                <w>esleu</w>
+                <w>·</w>
+                <w rend="elision">n</w><w>ai</w>
+                <w>talent</w>
+                <w>·</w>
+               <w rend="elision">d</w><w>amer</w>
+                <w>fausse¬</w>
+                <lb facs="#facs_31_r1l27" n="N010" rend="tiret"/>
+                  <w>ment</w>
+                <w>·</w>
+                <w>amender</w>
+                <w>·</w>
+                <w>vueill</w>
+                <w>·</w>
+                <w>et</w>
+                <w>loiaum̃t</w><!-- VM entité  tilde horizontal pour voyelle +  nasale -->
+                <lb facs="#facs_31_r1l28" n="N011"/>
+                <w>amer</w>
+                <w>·</w>
+                <w>por</w>
+                <w>li</w>
+                <w>cui</w>
+                <w rend="elision">i</w><w>am</w>
+                <w>si</w>
+                <w>·</w>
+                <w>que</w>
+               <w rend="elision">i</w> <w>en</w>
+                <w>ai</w>
+                <w>·</w>
+                <lb facs="#facs_31_r1l29" n="N012"/>
+                <w><comment>A</comment>mors</w>
+                <w>est</w>
+                <w>en</w>
+                <w>moi</w>
+                <w>doublee</w>
+                <w>·</w>
+                <w>pluz</w>
+                <w>que</w>
+                <lb facs="#facs_31_r1l30" n="N013"/>
+                <w>onques</w>
+                <w>maiz</w>
+                <w>ne</w>
+                <w>fu</w>
+                <w>·</w>
+                <w>si</w>
+                <w>seruirai</w>
+                <w rend="aggl">a</w><w>duree</w>
+                <w>·</w>
+                <w>dex</w>
+                <lb facs="#facs_31_r1l31" n="N014"/>
+                <w>doint</w>
+                <w>&com-9-tironien;</w>
+                <w rend="elision">m</w><w>ait</w>
+                <w>retenu</w>
+                <w></w>
+                <w>temprement</w>
+                <w>·</w>
+                <w>a¬</w>
+                <lb facs="#facs_31_r1l32" n="N015"/>
+                <w>morousement</w>
+                <w>·</w>
+                <w>sanz</w>
+                <w>fausser</w>
+                <w>·</w>
+                <w>car</w>
+                <w>ie</w>
+                <w>ne</w>
+                <w>puis</w></ab>
+            <ab facs="#facs_31_r2" type="" n="3"><w/>
+                <lb facs="#facs_31_r2l1" n="N001"/>
+                <w>oublier</w>
+                <w>·</w>
+                <w>celi</w>
+                <w>cui</w>
+                <w rend="elision">i</w><w>aim</w>
+                <w>si</w>
+                <w>·</w>
+                <w>Qve</w>
+                <w>·</w>
+                <lb facs="#facs_31_r2l2" n="N002"/>
+                <w><comment>E</comment>t</w>
+                <w rend="elision">s</w><w>mors</w>
+                <w>les</w>
+                <w>suens</w>
+                <w>auance</w>
+                <w></w>
+                <w>de</w>
+                <w>moi</w>
+                <w>li</w>
+                <lb facs="#facs_31_r2l3" n="N003"/>
+                <w>doit</w>
+                <w>souenir</w>
+                <w>·</w>
+                <w>car</w>
+                <w>ie</w>
+                <w>sui</w>
+                <w>suens</w>
+                <w>sanz</w>
+                <w>faillance</w>
+                <w>·</w>
+                <lb facs="#facs_31_r2l4" n="N004"/>
+                <w rend="aggl">a</w><w>toz</w>
+                <w>iors</w>
+                <w>sanz</w>
+                <w>repentir</w>
+                <w>·</w>
+                <w>ententis</w>
+                <w>·</w>
+                <w>serai</w>
+                <w>ṃẹṣ</w>
+<lb facs="#facs_31_r2l5" n="N005"/>
+                <w>ṭọụẓ</w>
+                <w>ḍịṣ</w>
+                <w></w>
+                <w rend="elision">d</w><w>uancier</w>
+                <w>·</w>
+                <w>amors</w>
+                <w>·</w>
+                <w>et</w>
+                <w>son</w>
+                <w>nom</w>
+                <lb facs="#facs_31_r2l6" n="N006"/>
+                <w>haucier</w>
+                <w>·</w>
+                <w>por</w>
+                <w>li</w>
+                <w>cui</w>
+                <w rend="elision">i</w><w>am</w>
+                <w>si</w>
+                <w>·</w>
+                <w>Qve</w>
+                <w>·</w>
+                <lb facs="#facs_31_r2l7" n="N007"/>
+                <w><comment>A</comment>des</w>
+                <w>me</w>
+                <w>croist</w>
+                <w>ma</w>
+                <w>poissance</w>
+                <w>·</w>
+                <w>et</w>
+                <w>volen¬</w>
+                <lb facs="#facs_31_r2l8" n="N008"/>
+                <w>tez</w>
+                <w>de</w>
+                <w>seruir</w>
+                <w>·</w>
+                <w>sanz</w>
+                <w>celi</w>
+                <w>ou</w>
+                <w rend="elision">i</w><w>ai</w>
+                <w>fiance</w>
+                <w>·</w>
+                <w>ne</w>
+                <w>por¬</w>
+            <lb facs="#facs_31_r2l9" n="N009"/>
+                <w>rai</w>
+                <w>mie</w>
+                <w>guarir</w>
+                <w>·</w>
+                <w>si</w>
+                <w>&con-9-tironien;quis</w>
+                <w>·</w>
+                <w>mont</w>
+                <w>si</w>
+                <w rend="aggl">tres</w><w>douz</w>
+                <lb facs="#facs_31_r2l10" n="N010"/>
+                <w>ris</w>
+                <w>·</w>
+                <w>sanz</w>
+                <w>cuidier</w>
+                <w>·</w>
+                <w>sai</w>
+                <w>que</w>
+                <w>ne</w>
+                <w>puis</w>
+                <w>eslong&tilde2-er-pour-ier;</w>
+                <w>·</w>
+                <lb facs="#facs_31_r2l11" n="N011"/>
+                <w>>de</w>
+                <w>li</w>
+                <w>cui</w>
+                <w rend="elision">i</w><w>aim</w>
+                <w>si</w>
+                <w>·</w>
+                <w>Qve</w>
+                <w>·</w>
+                <lb facs="#facs_31_r2l12" n="N012"/>
+                <w><comment>Q</comment>vens</w>
+                <w>iolis</w>
+                <w>de</w>
+                <w>flandres</w>
+                <w>amis</w>
+                <w>·</w>
+                <w>cui</w>
+                <w rend="elision">i</w> <w>ai</w>
+                <w>chier</w>
+                <w>·</w>
+                <lb facs="#facs_31_r2l13" n="N013"/>
+                <w>me</w>
+                <w>sauriez</w>
+                <w>vous</w>
+                <w>&con-9-tironien;seillier</w>
+                <w>·</w>
+                <w>de</w>
+                <w>li</w>
+                <w>cui</w>
+                <w rend="elision">i</w><w>aim</w>
+                <w>si</w>
+                <w></w>
+               <lb facs="#facs_31_r2l14" n="N014"/>
+                <w>que</w>
+                <w rend="elision">i</w><w>en</w>
+                <w>ai</w>
+                <w>et</w>
+                <w>cuer</w>
+                <w>et</w>
+                <w>cors</w>
+                <w>ioli</w>
+                <w>·</w>
+               <lb facs="#facs_31_r2l18" n="N015"/>
+                <w>e</w>
+                <w></w>
+                <w>Gilebert</w>
+                <w>dites</w>
+                <w rend="elision">s</w><w>il</w>
+                <w>vos</w>
+                <w>a¬</w>
+                <lb facs="#facs_31_r2l21" n="N016"/>
+                <w>gree</w>
+                <w>·</w>
+                <w>respondez</w>
+                <w>moi</w>
+                <w rend="aggl">a</w><w>ce</w>
+                <w>&que-q-tilde;</w>
+                <w><lb facs="#facs_31_r2l26" n="N017"/>vous</w>
+                <w>demant</w>
+                <w>·</w>
+                <w>vns</w>
+                <w>&chevalier-r-droit;ch̃rs</w><!-- VM  vérifier abr. chevaliers -->
+                <w>a</w>
+                <w>vne</w>
+                <w>dame</w>
+                <w>amee</w>
+                <lb facs="#facs_31_r2l29" n="N018"/>
+                <w>et</w>
+                <w>si</w>
+                <w>vos</w>
+                <w>di</w>
+                <w rend="elision">qu</w><w>il</w>
+                <w>en</w>
+                <w>est</w>
+                <w>si</w>
+                <w>auant</w>
+                <w>·</w>
+                <w>que</w>
+                <w>nuit</w>
+                <lb facs="#facs_31_r2l32" n="N019"/>
+                <w>et</w>
+                <w>ior</w>
+                <w>fait</w>
+                <w>de</w>
+                 <w>li</w>
+                <w>son</w>
+                <w>&com-9-tironien;mant</w>
+                <w>·</w>
+                <w>tant</w>
+                <w>ont</w>
+                <w>a¬</w>
+                <lb facs="#facs_31_r2l36" n="N020"/>
+                <w>mors</w>
+                <w>la</w>
+                <w>dame</w>
+                <w>abandonee</w>
+                <w>·</w>
+                <w>dites</w>
+                <w rend="elision">s</w><w>amors</w>
+               <lb facs="#facs_31_line_1606067156750_500" n="N021"/>
+                <w>vait</w>
+                <w>por</w>
+                <w>ce</w>
+                <w>eslongant</w>
+                <w>·</w>
+                <lb facs="#facs_31_r2l41" n="N022"/>
+                <w><comment>D</comment>vx</w>
+                <w>de</w>
+                <w>braibant</w>
+                <w>ia</w>
+                <w>orrez</w>
+                <w>ma</w>
+                <w>pensee</w>
+                <w>·</w>
+                <w>ia</w>
+                <lb facs="#facs_31_r2l42" n="N023"/>
+                <w>bone</w>
+                <w>amors</w>
+                <w rend="elision">n</w><w>ira</w>
+                <w>por</w>
+                <w>ce</w>
+                <w>faillant</w>
+                <w>·</w>
+                <w>ancoiz</w>
+                <lb facs="#facs_31_r2l43" n="N024"/>
+                <w>seroit</w>
+                <w>en</w>
+                <w>loial</w>
+                <w>cuer</w>
+                <w>doublee</w>
+                <w>·</w>
+                <w>son</w>
+                <w>li</w>
+                <w>faisoit</w>
+                <lb facs="#facs_31_r2l44" n="N025"/>
+                <w>bonte</w>
+                <w>et</w>
+                <w>biau</w>
+                <w>samblant</w>
+                <w>·</w>
+                <w>se</w>
+                 <w>la</w>
+                <w>dame</w>
+                <w>a</w>
+                <w>do¬</w>
+                <lb facs="#facs_31_r2l45" n="N026"/>
+                <w>ne</w>
+                <w>a</w>                   
+                <w>son</w>
+                <w>amant</w>
+                <w>·</w>
+                <w>ia</w>
+                <w rend="elision">n</w><w>en</w>
+                <w>sera</w>
+                <w>por</w>
+                <w>ce</w>
+                <w>fors</w>
+                <lb facs="#facs_31_r2l46" n="N027"/>
+                <w>mieuz</w>
+                <w>amee</w>
+                <w>·</w>
+                <w rend="elision">s</w><w>en</w>
+                <w>son</w>
+                <w>cuer</w>
+                <w>a</w>
+                <w>point</w>
+                <w>de</w>
+                <w>bon¬</w></ab>
+                       <ab facs="#facs_31_region_1606066923709_251" type="page-numberpage-number" n="4"><w/>
+                <w><lb facs="#facs_31_line_1606066987789_286" n="N001"/>6</w></ab>
+            <ab facs="#facs_31_r3" type="" n="5"><w/>
+                <w><lb facs="#facs_31_line_1606066970698_277" n="N001"/><comment>li dux
+                    de</comment></w>
+                <w><lb facs="#facs_31_line_1606066973547_280" n="N002"/><comment>brabant
+                    ·</comment></w></ab>
+            <note facs="#facs_31_region_1606066929141_254" place="[direction]">
+                <lb facs="#facs_31_line_1606066991726_289" n="N001"/>? <lb
+                    facs="#facs_31_line_1606066993817_292" n="N002"/>?</note>
+            <note facs="#facs_31_region_1606066931725_257" place="[direction]">
+                <lb facs="#facs_31_line_1606067005983_298" n="N001"/>Gilibert de ?</note>
+            <pb facs="#facs_32" n="32" xml:id="img_0032"/>
+            <ab facs="#facs_32_r1" type="" n="6"><w/>
+            <lb facs="#facs_32_line_1606067202158_526" n="N001"/>
+            <w>te</w>
+                <w>manant</w>
+                <w>·</w>
+            <lb facs="#facs_32_r1l2" n="N002"/>
+                <w><comment>H</comment>e</w>
+                <w></w>
+                <w>Gilebert</w>
+                <w>ou</w>
+                <w>auez</w>
+                <w>vos</w>
+                <w>trouee</w>
+                <w>·</w>
+                <w>ceste</w>
+                <w>rai¬</w>
+            <lb facs="#facs_32_r1l3" n="N003"/>
+                <w>son</w>
+                <w>·</w>
+                <w>trop</w>
+                <w>vos</w>
+                <w>voi</w>
+                <w>non</w>
+                <w>sachant</w>
+                <w>·</w>
+                <w rend="elision">l</w><w>en</w>
+                  <w>tient</w>
+                <w>pl᷒&tilde4-us;</w>
+            <lb facs="#facs_32_r1l4" n="N004"/>
+                <w>chier</w>
+                <w>la</w>
+                <w>chose</w>
+                <w>desirree</w>
+                <w>·</w>
+                <w>que</w>
+                <w>ce</w>
+                <w>&con-9-tironien;</w>
+                <w>a</w>
+                <w>abando¬</w>
+            <lb facs="#facs_32_r1l5" n="N005"/>
+                <w>neement</w>
+                <w>·</w>
+                <w>ne</w>
+                <w rend="elision">m</w><w>alez</w>
+                <w>mie</w>
+                <w>de</w>
+                <w>ce</w>
+                <w>aprendant</w>
+                <w>·</w>
+            <lb facs="#facs_32_r1l6" n="N006"/>
+                <w>tant</w>
+                <w>est</w>
+                <w>amors</w>
+                <w>seruie</w>
+                <w>et</w>
+                <w>honoree</w>
+                <w>·</w>
+            <w>&con-9-tironien;</w>
+                <w>la</w>
+                <w>da¬</w>
+            <lb facs="#facs_32_r1l7" n="N007"/>
+                <w>me</w>
+                <w>se</w>
+                <w>garde</w>
+                <w>sainnemant</w>
+                <w>·</w></ab>
+              <note facs="#facs_32_region_1612281494941_1444" place="[direction]">
+                <lb facs="#facs_32_line_1612281499269_1447" n="N001"/>a d</note>
+            <pb facs="#facs_33" n="33" xml:id="img_0033"/>
+            <note facs="#facs_33_region_1606122562343_144" place="[direction]"/>
+            <ab facs="#facs_33_region_1606067284360_551" type="" n="7"><w/>
+                <w><lb facs="#facs_33_line_1606067289510_554" n="N001"/><comment>li vidames de
+                        chartres ·</comment></w></ab>
+            <ab facs="#facs_33_r1" type="" n="8"><w/>
+                <w rend="elision"><lb facs="#facs_33_line_1606122566096_147" n="N001"/>D</w>
+                <w><lb facs="#facs_33_r1l3" n="N002"/>amours</w>
+                <w>vient</w>
+                <w>ioie</w>
+                <w>et</w>
+                <w>honours</w>
+                <w>en¬</w>
+                <lb facs="#facs_33_r1l5" n="N003"/>
+                <w>ement</w>
+                <w>·</w>
+                <w rend="aggl">a</w><w>ceus</w>
+                <w>qui</w>
+                <w>sunt</w>
+                <w>loial</w>
+                <w>en</w>
+                <lb facs="#facs_33_r1l8" n="N004"/>
+                <w>son</w>
+                <w>seruice</w>
+                <w>·</w>
+                <w>ne</w>
+                <w>nus</w>
+                <w>ne</w>
+                <w>puet</w>
+                <w>auoir</w>
+                <lb facs="#facs_33_r1l10" n="N005"/>
+                <w>entierement</w>
+                <w>·</w>
+                <w>pris</w>
+                <w>ne</w>
+                <w>valour</w>
+                <w>·</w>
+                <w>sa¬</w>
+                <lb facs="#facs_33_r1l11" n="N006"/>
+                <w>mours</w>
+                <w>ne</w>
+                <w>le</w>
+                <w>iustice</w>
+                <w>·</w>
+                <w>de</w>
+                <w>ce</w>
+                <w>ai</w>
+                <w>bien</w>
+                <lb facs="#facs_33_r1l12" n="N007"/>
+                <w>la</w>
+                <w>verite</w>
+                <w><hi rend="strikethrough:true; fontSize:0.0; kerning:0;">em</hi></w>
+                <w>aprise</w>
+                <w>·</w>
+                <w>pour</w>
+                <w>ce</w>
+                <w>la</w>
+                <lb facs="#facs_33_r1l13" n="N008"/>
+                <w>serf</w>
+                <w>de</w>
+                <w>fin</w>
+                <w>cuer</w>
+                <w>loiaument</w>
+                <w>·</w>
+                <w>et</w>
+                <w>a¬</w>
+                <lb facs="#facs_33_r1l14" n="N009"/>
+                <w>merai</w>
+                <w>sanz</w>
+                <w>nul</w>
+                <w>definement</w>
+                <w></w>
+                <w>ma</w>
+                <lb facs="#facs_33_r1l15" n="N010"/>
+                <w>dame</w>
+                <w>et</w>
+                <w>li</w>
+                <w></w>
+                <w>si</w>
+                <w>est</w>
+                <w>la</w>
+                <w>chose</w>
+                <w>emprise</w>
+                <w>·</w></ab>
+            <ab facs="#facs_33_r2" type="" n="9"><w/>
+                <lb facs="#facs_33_r2l1" n="N001"/>
+                <w><comment>B</comment>ien</w>
+                <w>doit</w>
+                <w>sauoir</w>
+                <w>qui</w>
+                <w>tel</w>
+                <w>amour</w>
+                <lb facs="#facs_33_r2l2" n="N002"/>
+                <w>emprent</w>
+                <w>·</w>
+                <w rend="elision">qu</w><w>en</w>
+                <w>son</w>
+                <w>cuer</w>
+                <w>nait</w>
+                <w>faus¬</w>
+                <lb facs="#facs_33_r2l3" n="N003"/>
+                <w>sete</w>
+                <w>·</w>
+                <w>ne</w>
+                <w>faintise</w>
+                <w>·</w>
+                <w>quar</w>
+                <w rend="elision">i</w><w>aim</w>
+                <w>touz</w>
+                <w>ceus</w>
+                <lb facs="#facs_33_r2l4" n="N004"/>
+                <w>plus</w>
+                <w>que</w>
+                <w>moi</w>
+                <w>·</w>
+                <w rend="elision">n</w><w>autres</w>
+                <w>cent</w>
+                <w></w>
+              <w>les<lb facs="#facs_33_r2l5" n="N005"/>queus</w>
+                <w>ie</w>
+                <w>sai</w>
+                <w>que</w>
+                <w>ma</w>
+                <w>dame</w>
+                <w>aime</w>
+                <w>et</w>
+                <lb facs="#facs_33_r2l6" n="N006"/>
+                <w>/>prise</w>
+                <w>·</w>
+                <w>dedenz</w>
+                <w>mon</w>
+                <w>cuer</w>
+                <w>se</w>
+                <w>ralume</w>
+                <w>et</w>
+                <lb facs="#facs_33_r2l7" n="N007"/>
+                <w>atise</w>
+                <w>·</w>
+                <w rend="aggl">tres</w><w>fine</w>
+                <w>amours</w>
+                <w>·</w>
+                <w>qui</w>
+                <w>tout</w>
+                <w>mon</w>
+               <lb facs="#facs_33_r2l8" n="N008"/>
+                <w>cuer</w>
+                <w>esprent</w>
+                <w></w>
+                <w>a</w>
+                <w>bien</w>
+                <w>amer</w>
+                <w>·</w>
+                <w>et</w>
+                <w>sachiez</w>
+                <w><lb facs="#facs_33_r2l9" n="N009"/><hi
+                        rend="strikethrough:true; fontSize:0.0; kerning:0;">vracl</hi></w>
+                <w>vraiement</w>
+                <w></w>
+                <w>par</w>
+                <w>biau</w>
+                <w>seruir</w>
+<lb facs="#facs_33_r2l10" n="N010"/>
+                    <w>est</w>
+                <w>dame</w>
+                <w>a</w>
+                <w>droit</w>
+                <w>conquise</w>
+                <w>·</w>
+                  <lb facs="#facs_33_r2l11" n="N011"/>
+                <w><comment>M</comment>ieuz</w>
+                <w>ameroie</w>
+                <w>itel</w>
+                <w>conquestement</w>
+                <w></w>
+                <lb facs="#facs_33_r2l12" n="N012"/>
+                <w rend="elision">qu</w><w>espaigne</w>
+                <w>au</w>
+                <w>iour</w>
+                <w>que</w>
+                <w>li</w>
+                <w>bons</w>
+                <w>rois</w>
+                <lb facs="#facs_33_r2l13" n="N013"/>
+                <w rend="elision">l</w><w>ot</w>
+                <w>prise</w>
+                <w>·</w>
+                <w>charlemainnes</w>
+                <w>qui</w>
+                <w>en</w>
+                <w>fist</w>
+                <lb facs="#facs_33_r2l14" n="N014"/>
+                <w>son</w>
+                <w>talent</w>
+                <w>·</w>
+                <w>he</w>
+                <w></w>
+               <w rend="elision">m</w><w>estra</w>
+                <w>ia</w>
+                <w>samours</w>
+               <lb facs="#facs_33_r2l15" n="N015"/>
+                <w>nul</w>
+                <w>iour</w>
+                <w>pramise</w>
+                <w>·</w>
+                <w>ne</w>
+                <w>puiz</w>
+                <w>sauoir</w>
+                <w>co&tilde1-nasale-n;¬</w>
+                <lb facs="#facs_33_r2l16" n="N016"/>
+                <w>ment</w>
+                <w>·</w>
+                <w>ne</w>
+                <w>en</w>
+                <w>quel</w>
+                <w>guise</w>
+                <w>·</w>
+                <w>puisse</w>
+                <w>a</w>
+                <lb facs="#facs_33_r2l17" n="N017"/>
+                <w>uoir</w>
+                <w rend="elision">d</w><w>autre</w>
+                <w>amour</w>
+                <w>mon</w>
+                <w>cuer</w>
+                <w>dolent</w>
+                <w>·</w>
+                <lb facs="#facs_33_r2l18" n="N018"/>
+               <w rend="elision">qu</w><w>en</w>
+                <w>bon</w>
+                <w>espoir</w>
+                 <w rend="aggl">a</w><w>bel</w>
+                <w>confortement</w>
+                <w></w>
+                <lb facs="#facs_33_r2l19" n="N019"/>
+                <w>qui</w>
+                <w>tel</w>
+                <w>dame</w>
+                <w>aime</w>
+                <w>·</w>
+                <w>et</w>
+                <w>est</w>
+                <w>asa</w>
+                <w>de¬</w>
+                <lb facs="#facs_33_r2l20" n="N020"/>
+                <w>uise</w>
+                <w>·</w></ab>
+            <ab facs="#facs_33_region_1606067298332_558" type="page-numberpage-number" n="10"><w/>
+            <w><lb facs="#facs_33_line_1606067302119_561" n="N001"/>7</w></ab>
+             <pb facs="#facs_34" n="34" xml:id="img_0034"/>
+            <note facs="#facs_34_region_1612281703505_1460" place="[direction]">
+                <lb facs="#facs_34_line_1612281708162_1463" n="N001"/>2</note>
+            <ab facs="#facs_34_r1" type="" n="11"><w/>
+                <w><lb facs="#facs_34_r1l1" n="N001"/><comment>li vidames de cartres ·</comment></w>
+                <lb facs="#facs_34_r1l3" n="N002"/>
+                <w>vant</w>
+                <w>la</w>
+                <w>saisons</w>
+                <w>del</w>
+                <w>douz</w>
+                <lb facs="#facs_34_r1l6" n="N003"/>
+                <w>tanz</w>
+                <w rend="elision">s</w><w>asseure</w>
+                <w>·</w>
+                <w>que</w>
+                <lb facs="#facs_34_r1l12" n="N004"/>
+                <w>biauz</w>
+                <w>estez</w>
+                <w>se</w>
+                <w>raferme</w>
+                <w>et</w>
+                <w>resclaire</w>
+                <w>&que-q-tilde;</w>
+                <lb facs="#facs_34_r1l16" n="N005"/>
+                <w>toute</w>
+                <w>rienz</w>
+                <w rend="aggl">a</w><w>sa</w>
+                <w>droite</w>
+                <w>nature</w>
+                <w>·</w>
+                <w>vient</w>
+                <lb facs="#facs_34_r1l21" n="N006"/>
+                <w>et</w>
+                <w>retrait</w>
+                <w>·</w>
+                <w>se</w>
+                <w>trop</w>
+                <w rend="elision">n</w><w>est</w>
+                <w rend="aggl">de</w><w>male</w>
+                <w>aire</w>
+                <w>·</w>
+                <lb facs="#facs_34_r1l23" n="N007"/>
+                <w>Lors</w>
+                <w>chanterai</w>
+                <w>que</w>
+                <w>pluz</w>
+                <w>ne</w>
+                <w rend="elision">m</w><w>en</w>
+                <w>puis</w>
+                <lb facs="#facs_34_r1l28" n="N008"/>
+                <w>taire</w>
+                <w>·</w>
+                <w>pour</w>
+                <w>conforter</w>
+                <w>ma</w>
+                <w>cruel</w>
+                <w>auen¬</w>
+                <lb facs="#facs_34_r1l34" n="N009"/>
+                <w>ture</w>
+                <w>·</w>
+                <w>qui</w>
+                <w rend="elision">m</w><w>est</w>
+                <w>tournee</w>
+                <w rend="aggl">a</w><w>grant</w>
+                <w>des&con-9-tironien;</w>
+                <lb facs="#facs_34_line_1606067463758_758" n="N010"/>
+                <w>fiture</w>
+                <w>·</w>
+                <lb facs="#facs_34_r1l40" n="N011"/>
+                <w><comment>I</comment>aim</w>
+                <w>et</w>
+                <w>desir</w>
+                <w>ce</w>
+                <w>qui</w>
+                <w>de</w>
+                <w>moi</w>
+                <w rend="elision">n</w><w>a</w>
+                <w>cure</w>
+                <w>·</w>
+                <lb facs="#facs_34_r1l41" n="N012"/>
+                <w>las</w>
+                <w>ie</w>
+                <w>li</w>
+                <w>dis</w>
+                <w>·</w>
+                <w>amours</w>
+                <w>le</w>
+                <w>me</w>
+                <w>fist</w>
+                <w>faire</w>
+                <w>·</w>
+                <w>or</w>
+                <lb facs="#facs_34_r1l42" n="N013"/>
+                <w>me</w>
+                <w>het</w>
+                <w>pluz</w>
+                <w>cue</w>
+                <w>nule</w>
+                <w>creature</w>
+                <w>·</w>
+                <w>et</w>
+                <w>as</w>
+                <lb facs="#facs_34_r1l43" n="N014"/>
+                <w>autres</w>
+                <w>la</w>
+                <w>voi</w>
+                <w>si</w>
+                <w>debonaire</w>
+                <w>·</w>
+                <w>diex</w>
+                <w></w>
+                <w>pour</w>
+                <lb facs="#facs_34_r1l44" n="N015"/>
+                <w>quoi</w>
+                <w rend="elision">l</w><w>aim</w>
+                <w>quant</w>
+                <w>ie</w>
+                <w>ne</w>
+                <w>li</w>
+                <w>puis</w>
+                <w>plaire</w>
+                <w>·</w>
+                <lb facs="#facs_34_r1l45" n="N016"/>
+                <w>or</w>
+                <w>ai</w>
+                <w>ie</w>
+                <w>dit</w>
+                <w>folie</w>
+                <w>sanz</w>
+                <w>droiture</w>
+                <w>·</w>
+                <w rend="elision">qu</w><w>en</w>
+                <lb facs="#facs_34_r1l46" n="N017"/>
+                <w>bien</w>
+                <w>amer</w>
+                <w>ne</w>
+                <w>doit</w>
+                <w>auoir</w>
+                <w>mesure</w>
+                <w>·</w>
+                <lb facs="#facs_34_r1l48" n="N018"/>
+                <w><comment>A</comment></w>
+                <w>ma</w>
+                <w>doleur</w>
+                <w rend="elision">n</w><w>a</w>
+                <w>mestier</w>
+                <w>couuerture</w>
+                <w>·</w>
+                <lb facs="#facs_34_r1l49" n="N019"/>
+                <w>si</w>
+                <w>sui</w>
+                <w>soupris</w>
+                <w>que</w>
+                <w>ne</w>
+                <w rend="elision">m</w><w>en</w>
+                <w>puiz</w>
+                <w>retraire</w>
+                <w>·</w>
+                <lb facs="#facs_34_r1l50" n="N020"/>
+                <w>ce</w>
+                <w>font</w>
+                <w>mi</w>
+                <w>oeill</w>
+                <w>par</w>
+                <w>lor</w>
+                <w>bone</w>
+                <w>auentu¬</w></ab>
+            <note facs="#facs_34_region_1612285319074_2167" place="[direction]">
+                <lb facs="#facs_34_line_1612285323579_2170" n="N001"/></note>
+            <ab facs="#facs_34_r3" type="" n="12"><w/>
+                <lb facs="#facs_34_r3l1" n="N001"/>
+                <w>re</w>
+                <w>·</w>
+                <w>qui</w>
+                <w>ce</w>
+                <w rend="elision">m</w><w>ont</w>
+                <w>fait</w>
+                <w rend="elision">qu</w><w>il</w>
+                <w>ne</w>
+                <w>poent</w>
+                <lb facs="#facs_34_r3l2" n="N002"/>
+                <w>desfaire</w>
+                <w>·</w>
+                <w>ne</w>
+                <w>ie</w>
+                <w>ne</w>
+                <w>puis</w>
+                <w>de</w>
+                <w>li</w>
+                <w>nule</w>
+                <w>a¬</w>
+                <lb facs="#facs_34_r3l3" n="N003"/>
+                <w>mour</w>
+                <w>traire</w>
+                <w>·</w>
+                <w>ses</w>
+                <w>felons</w>
+                <w>cuers</w>
+                <w>qui</w>
+                <w>poi&tilde1-nasale-n;t</w>
+                <lb facs="#facs_34_r3l4" n="N004"/>
+                <w>ne</w>
+                <w rend="elision">m</w><w>asseure</w>
+                <w>·</w>
+                <w>mort</w>
+                <w rend="elision">m</w><w>auera</w>
+                <w>se</w>
+                <w>sa</w>
+                <w>guer¬</w>
+                <lb facs="#facs_34_line_1606067492262_783" n="N005"/>
+                <w>re</w>
+                <w>me</w>
+                <w>dure</w>
+                <w>·</w>
+                <lb facs="#facs_34_r3l6" n="N006"/>
+                <w><comment>A</comment>mours</w>
+                <w>amours</w>
+                <w>·</w>
+                <w>ie</w>
+                <w>muir</w>
+                <w>et</w>
+                <w>sanz</w>
+                <lb facs="#facs_34_r3l7" n="N007"/>
+                <w>droiture</w>
+                <w>·</w>
+                <w>certes</w>
+                <w>ma</w>
+                <w>mort</w>
+                <w>vous</w>
+                <w>deueroit</w>
+                <lb facs="#facs_34_r3l8" n="N008"/>
+                <w>desplaire</w>
+                <w>·</w>
+                <w>quar</w>
+                <w>en</w>
+                <w>vous</w>
+                <w>ai</w>
+                <w>mise</w>
+                <w>toute</w>
+                <lb facs="#facs_34_r3l9" n="N009"/>
+                <w>ma</w>
+                <w>cure</w>
+                <w>·</w>
+                <w>et</w>
+                <w>mon</w>
+                <w>penser</w>
+                <w>dont</w>
+                <w>ia</w>
+                <w>le</w>
+                <lb facs="#facs_34_r3l10" n="N010"/>
+                <w>iour</w>
+                <w>cent</w>
+                <w>paire</w>
+                <w>·</w>
+                <w>sor</w>
+                <w>vous</w>
+                <w>deuoit</w>
+                <w>mon</w>
+                <lb facs="#facs_34_r3l11" n="N011"/>
+                <w>bel</w>
+                <w>seruice</w>
+                <w>plaire</w>
+                <w></w>
+                <w>si</w>
+                <w>en</w>
+                <w>seroit</w>
+                <w>ma</w>
+                <w>ioie</w>
+                <lb facs="#facs_34_r3l12" n="N012"/>
+                <w>pluz</w>
+                <w>seure</w>
+                <w></w>
+                <w>&con-9-tironien;</w>
+                <w>dist</w>
+                <w>pieca</w>
+                <w rend="elision">qu</w><w>il</w>
+                <w>est</w>
+                <w>de</w>
+                <lb facs="#facs_34_line_1606067505859_798" n="N013"/>
+                <w>tout</w>
+                <w>mesure</w>
+                <w>·</w>
+                <lb facs="#facs_34_r3l14" n="N014"/>
+                <w><comment>Q</comment>ve</w>
+                <w>crueus</w>
+                <w>fait</w>
+                <w>ses</w>
+                <w>cuers</w>
+                <w rend="elision">s</w><w>il</w>
+                <w>li</w>
+                <w>o¬</w>
+                <lb facs="#facs_34_r3l15" n="N015"/>
+                <w>troie</w>
+                <w>·</w>
+                <w>moi</w>
+                <w rend="aggl">a</w><w>hair</w>
+                <w>dont</w>
+                <w>ie</w>
+                <w>la</w>
+                <w>voi</w>
+                <w>certein¬</w>
+                <lb facs="#facs_34_r3l16" n="N016"/>
+                <w>>ne</w>
+                <w>·</w>
+                <w rend="elision">qu</w><w>en</w>
+                <w>tout</w>
+                <w>le</w>
+                <w>mont</w>
+                <w>ne</w>
+                <w>li</w>
+                <w>deman¬</w>
+               <lb facs="#facs_34_r3l17" n="N017"/>
+                <w>deroie</w>
+                <w>·</w>
+                <w>rienz</w>
+                <w>fors</w>
+              <w rend="elision">s</w><w>amour</w>
+                <w>·</w>
+                <w>qui</w>
+                    <w rend="aggl">a</w><w>la</w>
+                    <lb facs="#facs_34_r3l18" n="N018"/>
+                <w>mort</w>
+                <w>me</w>
+                <w>mainne</w>
+                <w>·</w>
+               <w rend="elision">s</w><w>ele</w>
+              <w rend="elision">m</w><w>ocit</w>
+                <w>si</w>
+                <w>fera</w>
+                <lb facs="#facs_34_r3l19" n="N019"/>
+                <w>que</w>
+                <w>vilainne</w>
+                <w>·</w>
+                <w>et</w>
+               <w rend="elision">s</w><w>einsinc</w>
+                <w>est</w>
+               <w>·</w>
+                <w>que</w>
+              <lb facs="#facs_34_r3l20" n="N020"/>
+                <w>pour</w>
+                <w>li</w>
+                <w>morir</w>
+                <w>doie</w>
+                <w></w>
+                <w>ce</w>
+                <w>est</w>
+                <w>la</w>
+                <w>mort</w>
+                <w>dont</w>
+              <lb facs="#facs_34_line_1606067525971_818" n="N021"/>
+                <w>pluz</w>
+                <w>morir</w>
+                <w>voudroie</w>
+                <w>·</w>
+                <lb facs="#facs_34_line_1606067529288_821" n="N022"/>
+                <w><comment>li vidames de
+                        chartres</comment></w>
+                    <lb facs="#facs_34_r3l23" n="N023"/>
+                <w>ombien</w>
+           <w rend="elision">qu</w><w>aie</w>
+                <w>demoure</w>
+               <lb facs="#facs_34_r3l25" n="N024"/>
+                <w>hors</w>
+                <w>de</w>
+                <w>ma</w>
+                <w>douce</w>
+                <w>con¬</w>
+              <lb facs="#facs_34_r3l28" n="N025"/>
+                <w>tre</w>
+                <w>·</w>
+                <w>et</w>
+                <w>maint</w>
+                <w>grant</w>
+                <w>trauaill</w>
+                <w>endu¬</w>
+                <lb facs="#facs_34_r3l32" n="N026"/>
+                <w>re</w>
+                <w>·</w>
+                <w>en</w>
+                <w>terre</w>
+               <w>mal<space/>euree</w>
+                <w>·</w>
+                <w>pour</w>
+                <w>ce</w>
+               <w rend="elision">n</w><w>ai</w>
+               <lb facs="#facs_34_r3l35" n="N027"/>
+                <w>ie</w>
+                <w>pas</w>
+                <w>oublie</w>
+                <w>·</w>
+                <w>le</w>
+                <w>douz</w>
+                <w>mal</w>
+                <w>qui</w>
+                <w>tant</w>
+               <lb facs="#facs_34_r3l39" n="N028"/>
+               <w rend="elision">m</w><w>agree</w>
+                <w></w>
+                <w>que</w>
+                <w>ia</w>
+               <w rend="elision">n</w><w>en</w>
+                <w>quier</w>
+                <w>auoir</w>
+               <lb facs="#facs_34_r3l43" n="N029"/>
+                <w>sante</w>
+                <w></w>
+               <w rend="elision">s</w><w>en</w>
+                <w>france</w>
+                <w>ne</w>
+             <w rend="elision">m</w><w>est</w>
+                <w>trouuee</w>
+                <w>·</w></ab>
+               <gap reason="sampling"/>
+            <pb facs="#facs_145" n="145" xml:id="img_0145"/>
+            <ab facs="#facs_145_r2" type="" n="13"><w/>
+                <lb facs="#facs_145_r2l2" n="N001"/>
+                <w>bien</w>
+                <w>a</w>
+                <w>toz</w>
+                <w>autres</w>
+                <w>&con-9-tironien;traires</w>
+                <w>·</w>
+                <w>que</w>
+                <w>qui</w>
+                <w>aime</w>
+                <lb facs="#facs_145_r2l3" n="N002"/>
+                <w>ains</w>
+                <w>dex</w>
+                <w>ne</w>
+                <w>fist</w>
+                <w>celui</w>
+                <w rend="elision">n</w><w>estuit</w>
+                <w>souuent</w>
+                <lb facs="#facs_145_r2l5" n="N003"/>
+                <w>de</w>
+                <w>ses</w>
+                <w>max</w>
+                <w>ioie</w>
+                <w>faire</w>
+                <w>·</w>
+                <w>de</w>
+                <w>uos</w>
+                <w>amer</w>
+                <w>on&que-q-tilde;s</w>
+                <lb facs="#facs_145_r2l7" n="N004"/>
+                <w>ne</w>
+                <w>me</w>
+                <w>recrui</w>
+                <w>·</w>
+                <w>puis</w>
+                <w>cele</w>
+                <w>eure</w>
+                <w>dame</w>
+                <w>que</w>
+                <w>uo<lb facs="#facs_145_r2l8" n="N005"/>stre</w>
+                <w>fui</w>
+                <w>·</w>
+                <w>que</w>
+                <w>mes</w>
+                <w>fins</w>
+                <w>cuers</w>
+                <w>me</w>
+                <w>fist</w>
+                <w>ta&tilde1-nasale-n;t</w>
+                <lb facs="#facs_145_r2l12" n="N006"/>
+                <w>a</w>
+                <w>moi</w>
+                <w>plaire</w>
+                <w>dont</w>
+                <w>maugre</w>
+                <w>soi</w>
+                <w>de</w>
+                <w>ce</w>
+                <w>que</w>
+                <lb facs="#facs_145_line_1607001976770_2204" n="N007"/>
+                <w>ie</w>
+                <w rend="elision"> l</w><w rend="aggl">en</w><w>crui</w><!-- VM rend="aggl" : <w>lencrui</w>-->
+                <w>·</w>
+                <w><comment>S</comment>i</w>
+                <w>sui</w>
+                <w>pensis</w>
+                <w>&que-q-tilde;</w>
+                <w>que</w>
+                <w>ne</w>
+                <w>sai</w>
+                <w>&que-q-tilde;</w>
+                <w>ie</w>
+                <lb facs="#facs_145_r2l21" n="N008"/>
+                <w>quier</w>
+                <w>fors</w>
+                <w>que</w>
+                <w>merci</w>
+                <w>dame</w>
+                <w>si</w>
+                <w>uos</w>
+                <w>agree</w>
+                <lb facs="#facs_145_r2l22" n="N009"/>
+                <w>que</w>
+                <w>bien</w>
+                <w>sauez</w>
+                <w>ia</w>
+                <w rend="elision">n</w><w>iert</w>
+                <w>en</w>
+                <w>reprouuier</w>
+                <lb facs="#facs_145_r2l23" n="N010"/>
+                <w rend="elision">d</w><w>orguellex</w>
+                <w>cuer</w>
+                <w>bone</w>
+                <w>chancon</w>
+                <w>chantee</w>
+                <w>·</w>
+                <lb facs="#facs_145_r2l24" n="N011"/>
+                <w>mes</w>
+                <w>par</w>
+                <w>pitie</w>
+                <w>se</w>
+                <w>doit</w>
+                <w>on</w>
+                <w>essaucier</w>
+                <w>ne</w>
+                <w>ia</w>
+                <lb facs="#facs_145_r2l25" n="N012"/>
+                <w>orguiaus</w>
+                <w>ne</w>
+                <w>si</w>
+                <w>doit</w>
+                <w>herbegier</w>
+                <w>la</w>
+                <w>ou</w>
+                <w>il</w>
+                <w>a</w>
+                <lb facs="#facs_145_r2l26" n="N013"/>
+                <w rend="elision">d</w><w>amors</w>
+                <w>tel</w>
+                <w>renomee</w>
+                <w>ainz</w>
+                <w>doit</w>
+                <w>le</w>
+                <w>sien</w>
+                <w>bn</w><!-- VM entité bien -->
+                <lb facs="#facs_145_r2l27" n="N014"/>
+                <w>fere</w>
+                <w>&et-tironien;</w>
+                <w>auancier</w>
+                <w><comment>C</comment>hancon</w>
+                <w>di</w>
+                <w>li</w>
+                <w>que</w>
+                <w>tot</w>
+                <lb facs="#facs_145_r2l28" n="N015"/>
+                <w>ce</w>
+                <w rend="elision">n</w><w>a</w>
+                <w>mestier</w>
+                <w>que</w>
+                <w rend="elision">s</w><w>ele</w>
+                <w>auoit</w>
+                <w>cent</w>
+                <w>foiz</w>
+                <lb facs="#facs_145_r2l29" n="N016"/>
+                <w rend="aggl">ma</w><w>mort</w>
+                <w>iuree</w>
+                <w>si</w>
+                <w rend="elision">m</w><w>estuet</w>
+                <w>il</w>
+                <w>remeindre</w>
+                <lb facs="#facs_145_r2l30" n="N017"/>
+                <w>en</w>
+                <w>son</w>
+                <w>dangier</w>
+                <w>·</w>
+                <lb facs="#facs_145_r2l36" n="N018"/>
+                <w>Or</w>
+                <w>mal</w>
+                <w>tens</w>
+                <w>ne</w>
+                <w>por</w>
+                <w>gelee</w>
+                <w>ne</w>
+                <lb facs="#facs_145_r2l39" n="N019"/>
+                <w>por</w>
+                <w>froide</w>
+                <w>matinee</w>
+                <w>ne</w>
+                <w>por</w>
+                <w>nu<lb facs="#facs_145_r2l46" n="N020"/> le</w>
+                <w>autre</w>
+                <w>riens</w>
+                <w>nee</w>
+                <w>ne</w>
+                <w>partirai</w>
+                <w>ma</w>
+                <w>pensee</w>
+                <lb facs="#facs_145_r2l50" n="N021"/>
+                <w rend="elision">d</w><w>mors</w>
+                <w>que</w>
+                <w rend="elision">i</w><w>ai</w>
+                <w>que</w>
+                <w>trop</w>
+                <w rend="elision">l</w><w>ai</w>
+                <w>amee</w>
+                <w>de</w>
+                <w>cuer</w>
+                <lb facs="#facs_145_r2l51" n="N022"/>
+                <w><comment>B</comment>ele</w>
+                <w>&et-tironien;</w>
+                <w>blonde</w>
+                <w>&et-tironien;</w>
+                <w>coloree</w>
+                <lb facs="#facs_145_r2l53" n="N023"/>
+                <w>moi</w>
+                <w>plest</w>
+                <w>quanque</w>
+                <w>uos</w>
+                <lb facs="#facs_145_r2l54" n="N024"/>
+                <w>uerai</w>
+                <w>·</w>
+                <w>valara</w>
+                <w>·</w>
+                <w>agree</w>
+                <w>&et-tironien;</w>
+                <w>dex</w>
+                <w>car</w>
+                <w>me</w>
+                <w>fu <lb facs="#facs_145_r2l55" n="N025"/> st</w>
+                <w>dounee</w>
+                <w rend="elision">l</w><w>amors</w>
+                <w>que</w>
+                <w>uos</w>
+                <w>ai</w>
+                <w>rouuee</w>
+                <w>q&a-suscrit-ua;nt</w>
+                <lb facs="#facs_145_r2l56" n="N026"/>
+                <w>uos</w>
+                <w>prierai</w>
+                <w rend="elision">s</w><w>ele</w>
+                <w rend="elision">m</w><w>est</w>
+                <w>uaee</w>
+                <w rend="elision">i</w><w>en</w>
+                <w>morra</w>
+                <w>·</w>
+                <w>va¬<lb facs="#facs_145_r2l57" n="N027" rend="tiret"/>lara</w>
+                <w>·</w>
+                <w><comment>D</comment>ame</w>
+                <w>en</w>
+                <w>la</w>
+                <w>&vostre;</w>
+                <w>baillie</w>
+                <w>ai</w>
+                <w>mis</w>
+                <w>mo&tilde1-nasale-n;</w>
+                <lb facs="#facs_145_r2l58" n="N028"/>
+                <w>cors</w>
+                <w>&et-tironien;</w>
+                <w>ma</w>
+                <w>uie</w>
+                <w>·</w>
+                <w>por</w>
+                <w>dieu</w>
+                <w>ne</w>
+                <w rend="elision">m</w><w>ociez</w>
+                <w>mie</w>
+                <w>la</w>
+                <lb facs="#facs_145_r2l59" n="N029"/>
+                <w>ou</w>
+                <w>fins</w>
+                <w>cuers</w>
+                <w rend="elision">s</w><w>umelie</w>
+                <w>doit</w>
+                <w>on</w>
+                <w>trouer</w>
+                <lb facs="#facs_145_r2l60" n="N030"/>
+                <w>merci</w>
+                <w>&et-tironien;</w>
+                <w>aie</w>
+                <w>por</w>
+                <w>conforter</w>
+                <w>·</w>
+                <w>valara</w>
+                <w><comment>D</comment>ame</w>
+                <lb facs="#facs_145_r2l61" n="N031"/>
+                <w>faites</w>
+                <w>cortoisie</w>
+                <w>plaise</w>
+                <w>uos</w>
+                <w>que</w>
+                <w>en</w>
+                <w>ma</w>
+                <w>uie</w>
+                <lb facs="#facs_145_r2l62" n="N032"/>
+                <w>iceste</w>
+                <w>parole</w>
+                <w>die</w>
+                <w>·</w>
+                <w>ma</w>
+                <w>bele</w>
+                <w>tres</w>
+                <w>douce</w>
+                <w>amie</w>
+                <lb facs="#facs_145_r2l63" n="N033"/>
+                <w>uos</w>
+                <w>os</w>
+                <w>no&tilde1-nasale-m;mer</w>
+                <w>con&que-q-tilde;s</w>
+                <w>noi</w>
+                <w>enuie</w>
+                <w rend="elision">d</w><w>autrui</w></ab>
+            <ab facs="#facs_145_r3" type="" n="14"><w/>
+                <w><lb facs="#facs_145_r3l1" n="N001"/>amer</w>
+                <w>·</w>
+                <w>valara</w>
+                <w>·</w>
+                <w><comment>O</comment>nq&que-q-tilde;s</w>
+                <w>ior</w>
+                <w>ne</w>
+                <w>me</w>
+                <w>soi</w>
+                <w>plain<lb facs="#facs_145_r3l2" n="N002"/>dre</w>
+                <w>tant</w>
+                <w>seroit</w>
+                <w>ma</w>
+                <w>dolor</w>
+                <w>graindre</w>
+                <w>se</w>
+                <w>ie</w>
+                <w>ne</w>
+                <lb facs="#facs_145_r3l3" n="N003"/>
+                <w>di</w>
+                <w>que</w>
+                <w>toz</w>
+                <w>uueil</w>
+                <w>remaindre</w>
+                <w>en</w>
+                <w>sa</w>
+                <w>mai&tilde1-nasale-n;</w>
+                <w>·</w>
+                <w>va<lb facs="#facs_145_r3l4" n="N004"/>lara</w>
+                <w>·</w>
+                <w><comment>T</comment>rop</w>
+                <w>seroit</w>
+                <w>fort</w>
+                <w rend="aggl">a</w><w>estaindre</w>
+                <w>chanco&tilde1-nasale-n;s</w>
+                <lb facs="#facs_145_r3l5" n="N005"/>
+                <w rend="aggl">di</w><w>li</w>
+                <w>·</w>
+                <w rend="elision">l</w><w>amors</w>
+                <w>est</w>
+                <w>a</w>
+                <w>fraindre</w>
+                <w>dont</w>
+                <w>pens</w>
+                <w rend="aggl">a</w><w>li</w>
+                <lb facs="#facs_145_r3l6" n="N006"/>
+                <w>valara</w>
+                <w>·</w>
+                <lb facs="#facs_145_r3l7" n="N007"/>
+                <w>Ame</w>
+                <w>einsi</w>
+                <w>est</w>
+                <w>qui</w>
+                <w rend="elision">m</w><w>en</w>
+                <w>couuient</w>
+                <lb facs="#facs_145_r3l11" n="N008"/>
+                <w>aler</w>
+                <w>&et-tironien;</w>
+                <w>departir</w>
+                <w>de</w>
+                <w>la</w>
+                <w>douce</w>
+                <w>&con-9-tironien;tree</w>
+                <lb facs="#facs_145_r3l14" n="N009"/>
+                <w>ou</w>
+                <w>tant</w>
+                <w>ai</w>
+                <w>max</w>
+                <w>sofferz</w>
+                <w>&et-tironien;</w>
+                <w>endurez</w>
+                <w>quant</w>
+                <lb facs="#facs_145_r3l18" n="N010"/>
+                <w>ie</w>
+                <w>uos</w>
+                <w>lais</w>
+                <w>droiz</w>
+                <w>est</w>
+                <w>que</w>
+                <w>ie</w>
+                <w rend="elision">m</w><w>en</w>
+                <w>hee</w>
+                <w>·</w>
+                <w>dex</w>
+                <lb facs="#facs_145_r3l23" n="N011"/>
+                <w>por</w>
+                <w>quoi</w>
+                <w>fu</w>
+                <w>la</w>
+                <w>terre</w>
+                <w rend="elision">d</w><w>outremer</w>
+                <w>qui</w>
+                <w>tant</w>
+                <lb facs="#facs_145_r3l25" n="N012"/>
+               <w>amanz</w>
+                <w>aurai</w>
+                <w>fait</w>
+                <w>desseurer</w>
+                <w>dont</w>
+                <w>puis</w>
+                <w>ne</w>
+                <lb facs="#facs_145_r3l29" n="N013"/>
+                <w>fu</w>
+                <w>la</w>
+                <w>mors</w>
+                <w>reconfortee</w>
+                <w>ne</w>
+                <w>ne</w>
+                <w>porent</w>
+                <w>la</w>
+                <w>ioie</w>
+                <lb facs="#facs_145_r3l30" n="N014"/>
+                <w><comment>I</comment>a</w>
+                <w>sanz</w>
+                <w>amors</w>
+                <w>ne</w>
+                <w>porroie</w>
+                <w>du<lb facs="#facs_145_r3l33" n="N015"/>rer</w>
+                <w>tant</w>
+                <w>par</w>
+                <w rend="aggl">i</w><w>truis</w>
+                <w>ferme</w>
+                <lb facs="#facs_145_r3l34" n="N016"/>
+                <w>remembrer</w>
+                <w>·</w>
+                <w>ment</w>
+                <w>ma</w>
+                <w>pensee</w>
+                <w>ne</w>
+                <w>mes</w>
+                <w>finz</w>
+                <lb facs="#facs_145_r3l35" n="N017"/>
+                <w>cuers</w>
+                <w>ne</w>
+                <w rend="elision">m</w><w>en</w>
+                <w>lait</w>
+                <w>retorner</w>
+                <w>ainz</w>
+                <w>sui</w>
+                <w rend="aggl">a</w><w>lui</w>
+                <w>la</w>
+                <lb facs="#facs_145_r3l36" n="N018"/>
+                <w>ou</w>
+                <w>il</w>
+                <w>uelt</w>
+                <w>&et-tironien;</w>
+                <w>bee</w>
+                <w>trop</w>
+                <w>ai</w>
+                <w>apris</w>
+                <w>durement</w>
+                <lb facs="#facs_145_r3l37" n="N019"/>
+                <w>a</w>
+                <w>amer</w>
+                <w>por</w>
+                <w>ce</w>
+                <w rend="elision">n</w><w>en</w>
+                <w>uoi</w>
+                <w>&com-9-tironien;ment</w>
+                <w>puisse</w>
+                <w>du¬<lb facs="#facs_145_r3l38" n="N020" rend="tiret"/>rer</w>
+                <w>de</w>
+                <w>ioie</w>
+                <w>auoir</w>
+                <w>de</w>
+                <w>la</w>
+                <w>plus</w>
+                <w>desirree</w>
+                <w>con&que-q-tilde;s</w>
+                <lb facs="#facs_145_r3l39" n="N021"/>
+                <w>nus</w>
+                <w>hom</w>
+                <w>osast</w>
+                <w>merci</w>
+                <w>crier</w>
+                <w><comment>I</comment>e</w>
+                <w>ne</w>
+                <w>uoi</w>
+                <w>pas</w>
+                <lb facs="#facs_145_r3l41" n="N022"/>
+                <w>quant</w>
+                <w>de</w>
+                <w>li</w>
+                <w>sui</w>
+                <w>partiz</w>
+                <w>que</w>
+                <w>puisse</w>
+                <w>auoir</w>
+                <w>bñ</w><!-- VM bien entité  -->
+                <lb facs="#facs_145_r3l43" n="N023"/>
+                <w>ne</w>
+                <w>solas</w>
+                <w>ne</w>
+                <w>ioie</w>
+                <w>·</w>
+                <w>car</w>
+                <w>onques</w>
+                <w>rien</w>
+                <w>ne</w>
+                <w>fis</w>
+                <lb facs="#facs_145_r3l44" n="N024"/>
+                <w>si</w>
+                <w rend="aggl">a</w><w>enuis</w>
+                <w>com</w>
+                <w>uos</w>
+                <w>laissier</w>
+                <w>se</w>
+                <w>ie</w>
+                <w>iames</w>
+                <w>uos</w>
+                <lb facs="#facs_145_r3l45" n="N025"/>
+                <w>uoie</w>
+                <w>·</w>
+                <w>trop</w>
+                <w>par</w>
+                <w>en</w>
+                <w>sui</w>
+                <w>dolens</w>
+                <w>&et-tironien;</w>
+                <w>esbahiz</w>
+                <w>par</w>
+                <lb facs="#facs_145_r3l46" n="N026"/>
+                <w>mainte</w>
+                <w>foiz</w>
+                <w rend="elision">m</w><w>en</w>
+                <w>serai</w>
+                <w>repentiz</w>
+                <w>q&a-suscrit-ua;nt</w>
+                <w>ion<lb facs="#facs_145_r3l47" n="N027"/>ques</w>
+                <w>uols</w>
+                <w>aler</w>
+                <w>en</w>
+                <w>ceste</w>
+                <w>uoie</w>
+                <w>·</w>
+                <w>&et-tironien;</w>
+                <w>ie</w>
+                <w>recort</w></ab>
+            <ab facs="#facs_145_r4" type="page-numberpage-number" n="15"><w/>
+            <w><lb facs="#facs_145_r4l1" n="N001"/>64</w><pc type="supplied">.</pc></ab>
+                      <pb facs="#facs_146" n="146" xml:id="img_0146"/>
+            <ab facs="#facs_146_r2" type="" n="16"><w/>
+                <w><lb facs="#facs_146_r2l1" n="N001"/>uos</w>
+                <w>debonaires</w>
+                <w>dis</w>
+                <w>·</w>
+                <w><comment>B</comment>iaus</w>
+                <w>sire</w>
+                <w>dex</w>
+                <lb facs="#facs_146_r2l2" n="N002"/>
+                <w>uers</w>
+                <w>uos</w>
+                <w>me</w>
+                <w>sui</w>
+                <w>ganchiz</w>
+                <w>tot</w>
+                <w>laiz</w>
+                <w>por</w>
+                <lb facs="#facs_146_r2l3" n="N003"/>
+                <w>uos</w>
+                <w>ce</w>
+                <w>que</w>
+                <w>ie</w>
+                <w>tant</w>
+                <w>amoie</w>
+                <w>li</w>
+                <w>guerredo&tilde1-nasale-n;s</w>
+                <lb facs="#facs_146_r2l4" n="N004"/>
+                <w>en</w>
+                <w>doit</w>
+                <w>estre</w>
+                <w>floris</w>
+                <w>q&a-suscrit-ua;nt</w>
+                <w>por</w>
+                <w>uos</w>
+                <w>per</w>
+                <w>&et-tironien;</w>
+                <w>mo&tilde1-nasale-n;</w>
+                <lb facs="#facs_146_r2l5" n="N005"/>
+                <w>cuer</w>
+                <w>&et-tironien;</w>
+                <w>ma</w>
+                <w>ioie</w>
+                <w>·</w>
+                <w>de</w>
+                <w>uos</w>
+                <w>seruir</w>
+                <w>sui</w>
+                <w>toz</w>
+                <w>prez</w>
+                <lb facs="#facs_146_r2l6" n="N006"/>
+                <w>&tilde1-nasale-n;</w>
+                <w>garnis</w>
+                <w>a</w>
+                <w>uos</w>
+                <w>me</w>
+                <w>ren</w>
+                <w>biau</w>
+                <w>pere</w>
+                <w>&Ihu-jesus;cris</w><!-- VM entité à vérifier -->
+                <lb facs="#facs_146_r2l7" n="N007"/>
+                <w>si</w>
+                <w>bon</w>
+                <w>seignor</w>
+                <w>auoir</w>
+                <w>ie</w>
+                <w>ne</w>
+                <w>porroie</w>
+                <w>cil</w>
+                <w>qui</w>
+                <lb facs="#facs_146_r2l8" n="N008"/>
+                <w>uos</w>
+                <w>sert</w>
+                <w>ne</w>
+                <w>puet</w>
+                <w>estre</w>
+                <w>traiz</w>
+                <w>·<comment>B</comment>ien</w>
+                <w>doit</w>
+                <lb facs="#facs_146_r2l9" n="N009"/>
+                <w>mes</w>
+                <w>cuers</w>
+                <w rend="aggl">estre</w><w>liez</w>
+                <w>&et-tironien;</w>
+                <w>dolenz</w>
+                <w>·</w>
+                <w>dolens</w>
+                <w>de</w>
+                <w>ce</w>
+                <lb facs="#facs_146_r2l10" n="N010"/>
+                <w>que</w>
+                <w>ie</w>
+                <w>part</w>
+                <w>de</w>
+                <w>ma</w>
+                <w>dame</w>
+                <w>·</w>
+                <w>&et-tironien;</w>
+                <w>liez</w>
+                <w>de</w>
+                <w>ce</w>
+                <w>que</w>
+                <lb facs="#facs_146_r2l11" n="N011"/>
+                <w>ie</w>
+                <w>sui</w>
+                <w>desirrans</w>
+                <w>de</w>
+                <w>seruir</w>
+                <w>dieu</w>
+                <w>cui</w>
+                <w>est</w>
+                <w>mes</w>
+                <lb facs="#facs_146_r2l12" n="N012"/>
+                <w>cors</w>
+                <w>&et-tironien;</w>
+                <w rend="elision">m</w><w>ame</w>
+                <w>·</w>
+                <w>iceste</w>
+                <w>amors</w>
+                <w>est</w>
+                <w>trop</w>
+                <w>fine</w>
+                <lb facs="#facs_146_r2l13" n="N013"/>
+                <w>&et-tironien;</w>
+                <w>puissanz</w>
+                <w>par</w>
+                <w>la</w>
+                <w>couient</w>
+                <w>uenir</w>
+                <w>les</w>
+                <w>plus</w>
+                <lb facs="#facs_146_r2l14" n="N014"/>
+                <w>sachanz</w>
+                <w>·</w>
+                <w>cest</w>
+                <w>li</w>
+                <w>rubinz</w>
+                <w rend="elision">l</w><w>esmeraude</w>
+                <w>la</w>
+                <w>da<lb facs="#facs_146_r2l15" n="N015"/>me</w>
+                <w>qui</w>
+                <w>tost</w>
+                <w>garist</w>
+                <w>des</w>
+                <w>uix</w>
+                <w>pechiez</w>
+                <w>pua&tilde1-nasale-n;s</w>
+                <lb facs="#facs_146_r2l16" n="N016"/>
+                <w><comment>D</comment>ame</w>
+                <w>des</w>
+                <w>ciex</w>
+                <w>grant</w>
+                <w>reine</w>
+                <w>puissant</w>
+                <w>au</w>
+                <lb facs="#facs_146_r2l17" n="N017"/>
+                <w>g&a-suscrit-ra;nt</w>
+                <w>besoing</w>
+                <w>me</w>
+                <w>soiez</w>
+                <w>secoranz</w>
+                <w>de</w>
+                <w>uos</w>
+                <w>a¬<lb facs="#facs_146_r2l18" n="N018" rend="tiret"/>mer</w>
+                <w>puisse</w>
+                <w>auoir</w>
+                <w>droite</w>
+                <w>fla&tilde1-nasale-m;me</w>
+                <w>q&a-suscrit-ua;nt</w>
+                <w>dame</w>
+                <lb facs="#facs_146_r2l20" n="N019"/>
+                <w>par</w>
+                <w>dame</w>
+                <w>me</w>
+                <w>me</w>
+                <w>soit</w>
+                <w>ardanz</w>
+                <w>·</w>
+                <lb facs="#facs_146_r2l22" n="N020"/>
+                <w>E</w>
+                <w>nouuiau</w>
+                <w rend="elision">m</w><w>estuet</w>
+                <w>chanter</w>
+                <lb facs="#facs_146_r2l23" n="N021"/>
+                <w></w>
+                <w>ou</w>
+                <w>tens</w>
+                <w>que</w>
+                <w>plus</w>
+                <w>sui</w>
+                <w>marris</w>
+                <lb facs="#facs_146_r2l26" n="N022"/>
+                <w>q&a-suscrit-ua;nt</w>
+                <w>ne</w>
+                <w>puis</w>
+                <w>merci</w>
+                <w>trouer</w>
+                <w>bien</w>
+                <w>doi</w>
+                <w>chant&tilde2-er;</w>
+                <lb facs="#facs_146_r2l29" n="N023"/>
+                <w>>aenuiz</w>
+                <w>·</w>
+                <w>ne</w>
+                <w>ie</w>
+                <w rend="elision">n</w><w>os</w>
+                <w rend="aggl">a</w><w>li</w>
+                <w>parler</w>
+                <w>de</w>
+                <w>ma</w>
+                <w>chan<lb facs="#facs_146_r2l33" n="N024"/>con</w>
+                <w>faz</w>
+                <w>message</w>
+                <w>que</w>
+                <w>tant</w>
+                <w>est</w>
+                <w>cortoise</w>
+                <w>&et-tironien;</w>
+                <lb facs="#facs_146_r2l34" n="N025"/>
+                <w><comment>S</comment>e</w>
+                <w>pois</w>
+                <lb facs="#facs_146_r2l36" n="N026"/>
+                <w>se</w>
+                <w>oubli</w>
+                <lb facs="#facs_146_r2l37" n="N027"/>
+                <w>sage</w>
+                <w>que</w>
+                <w>ne</w>
+                <w>puis</w>
+                <w>aillors</w>
+                <w>penser</w>
+                <w>·</w>
+                <w>er</w>
+                <w>sa</w>
+                <w>biau<lb facs="#facs_146_r2l38" n="N028"/>te</w>
+                <w>&et-tironien;</w>
+                <w>ses</w>
+                <w>bons</w>
+                <w>diz</w>
+                <w>&et-tironien;</w>
+                <w>son</w>
+                <w>tres</w>
+                <w>douz</w>
+                <w>esgarder</w>
+                <lb facs="#facs_146_r2l39" n="N029"/>
+                <w>bien</w>
+                <w>poisse</w>
+                <w>estre</w>
+                <w>garis</w>
+                <w>mes</w>
+              <w rend="elision">n</w><w>en</w>
+                <w>puis</w>
+                <w>mo&tilde1-nasale-n;</w>
+               <lb facs="#facs_146_r2l40" n="N030"/>
+                <w>cuer</w>
+                <w>oster</w>
+                <w>tant</w>
+               <w rend="aggl">i</w><w>pens</w>
+                <w>de</w>
+                <w>fin</w>
+                <w>corage</w>
+                <w>espoir</w>
+               <lb facs="#facs_146_r2l41" n="N031"/>
+               <w rend="elision">s</w><w>ai</w>
+                <w>fait</w>
+                <w>g&a-suscrit-ra;nt</w>
+                <w>folaige</w>
+                <w>mes</w>
+                <w>moi</w>
+                <w>couient</w>
+                <w>en¬<ab facs="#facs_146_r4" type="" n="17"/><lb facs="#facs_146_r4l2" n="N001" rend="tiret"/>durer</w>
+                <w><comment>C</comment>hascuns</w>
+                <w>dit</w>
+                <w>qui</w>
+                <w>muert</w>
+                <w rend="elision">d</w><w>amors</w>
+                <lb facs="#facs_146_r4l3" n="N002"/>
+                <w>mes</w>
+                <w>ie</w>
+                <w rend="elision">n</w><w>en</w>
+                <w>quier</w>
+                <w>ia</w>
+                <w>morir</w>
+                <w>mielz</w>
+                <w>aim</w>
+                <w>sos¬<lb facs="#facs_146_r4l4" n="N003" rend="tiret"/>frir</w>
+                <w>ma</w>
+                <w>dolor</w>
+                <w>uuire</w>
+                <w>&et-tironien;</w>
+                <w>atendre</w>
+                <w>&et-tironien;</w>
+                <w>languir</w>
+                <lb facs="#facs_146_r4l5" n="N004"/>
+                <w rend="elision">qu</w><w>ele</w>
+                <w>me</w>
+                <w>puet</w>
+                <w>bien</w>
+                <w>merir</w>
+                <w>mes</w>
+                <w>max</w>
+                <w>&et-tironien;</w>
+                <lb facs="#facs_146_r4l6" n="N005"/>
+                <w>ma</w>
+                <w>&con-9-tironien;sirree</w>
+                <w>·</w>
+                <w rend="elision">n</w><w>aime</w>
+                <w>pas</w>
+                <w rend="aggl">a</w><w>droit</w>
+                <w>qui</w>
+                <w>bee</w>
+                <w>&que-q-tilde;</w>
+                <lb facs="#facs_146_r4l8" n="N006"/>
+                <w rend="elision">l</w><w>en</w>
+                <w>porroit</w>
+                <w>auenir</w>
+                <w>·</w>
+                <w><comment>D</comment>ame</w>
+                <w>qui</w>
+                <w>a</w>
+                <w>grant</w>
+                <lb facs="#facs_146_r4l9" n="N007"/>
+                <w>paor</w>
+                <w>souuent</w>
+                <w rend="elision">l</w><w>estuet</w>
+                <w>esbahir</w>
+                <w>&et-tironien;</w>
+                <w>penser</w>
+                <w>a</w>
+                <lb facs="#facs_146_r4l11" n="N008"/>
+                <w>tel</w>
+                <w>folor</w>
+                <w>dont</w>
+                <w>ie</w>
+                <w>ne</w>
+                <w>me</w>
+                <w>puis</w>
+                <w>tenir</w>
+                <w rend="elision">s</w><w>il</w>
+                <w>est</w>
+                <lb facs="#facs_146_r4l13" n="N009"/>
+                <w>a</w>
+                <w>uostre</w>
+                <w>plaisir</w>
+                <w>siert</w>
+                <w>bñ</w><!-- VM bien entité -->
+                <w>ma</w>
+                <w>peine</w>
+                <w>sauuee</w>
+                <lb facs="#facs_146_r4l16" n="N010"/>
+                <w>que</w>
+                <w>seul</w>
+                <w>de</w>
+                <w>la</w>
+                <w>desirree</w>
+                <w>me</w>
+                <w>fait</w>
+                <w>mon</w>
+                <w>cuer</w>
+                <lb facs="#facs_146_r4l21" n="N011"/>
+                <w>resbaudir</w>
+                <w>·</w>
+                <w><comment>N</comment>us</w>
+                <w>ne</w>
+                <w>puet</w>
+                <w>grant</w>
+                <w>ioie</w>
+                <w>auoir</w>
+                <lb facs="#facs_146_r4l25" n="N012"/>
+                <w rend="elision">s</w><w>il</w>
+                <w rend="elision">n</w><w>era</w>
+                <w>des</w>
+                <w>max</w>
+                <w>apris</w>
+                <w>qui</w>
+                <w>toz</w>
+                <w>iors</w>
+                <w>fait</w>
+                <w>son</w>
+                <lb facs="#facs_146_r4l28" n="N013"/>
+                <w>uoloir</w>
+                <w>apaine</w>
+                <w>ert</w>
+                <w>ia</w>
+                <w>fins</w>
+                <w>amis</w>
+                <w>por</w>
+                <w>ce</w>
+                <w>fait</w>
+                <lb facs="#facs_146_r4l31" n="N014"/>
+                <w>amors</w>
+                <w>doloir</w>
+                <w>&que-q-tilde;le</w><!-- VM entité + aggl -->
+                <w>uelt</w>
+                <w>guerredon</w>
+                <w>rendre</w>
+                <lb facs="#facs_146_r4l33" n="N015"/>
+                <w rend="elision">c</w><w>aux</w>
+                <w>qui</w>
+                <w>bien</w>
+                <w>seuent</w>
+                <w>atendre</w>
+                <w>&et-tironien;</w>
+                <w>seruir</w>
+                <w>a</w>
+                <lb facs="#facs_146_r4l34" n="N016"/>
+                <w>son</w>
+                <w>uoloir</w>
+                <w>·</w>
+                <w><comment>D</comment>ame</w>
+                <w>dex</w>
+                <w>tot</w>
+                <w>mon</w>
+                <w>pooir</w>
+                <w>mo¬<lb facs="#facs_146_r4l35" n="N017" rend="tiret"/>tro</w><!-- VM revoir ms -->
+                <w>auos</w>
+                <w>sanz</w>
+                <w>&con-9-tironien;tendre</w>
+                <w>que</w>
+                <w>sanz</w>
+                <w>uos</w>
+                <w>ne</w>
+                <lb facs="#facs_146_r4l37" n="N018"/>
+                <w>me</w>
+                <w>puet</w>
+                <w>rendre</w>
+                <w>nus</w>
+                <w>bien</w>
+                <w>ne</w>
+                <w>ne</w>
+                <w>quier</w>
+                <w>a</w>
+                <lb facs="#facs_146_r4l38" n="N019"/>
+                <w>uoir</w>
+                <w>·</w>
+                <lb facs="#facs_146_r4l42" n="N020"/>
+                <w>J</w>
+                <w>douz</w>
+                <w>pensers</w>
+                <w>&et-tironien;</w>
+                <w>li</w>
+                <w>douz</w>
+                <w>souuenirs</w>
+                <lb facs="#facs_146_r4l44" n="N021"/>
+                <w>mi</w>
+                <w>fait</w>
+                <w>mon</w>
+                <w>cuer</w>
+                <w>espanre</w>
+                <w rend="aggl">de</w><w>cha&tilde1-nasale-n;<lb facs="#facs_146_r4l48" n="N022"/>ter</w>
+                <w>&et-tironien;</w>
+                <w>fine</w>
+                <w>amor</w>
+                <w>qui</w>
+                <w>ne</w>
+                <w>mi</w>
+                <w>lait</w>
+                <w>durer</w>
+                <w>qui</w>
+                <lb facs="#facs_146_r4l51" n="N023"/>
+                <w>fait</w>
+                <w>les</w>
+                <w>siens</w>
+                <w>en</w>
+                <w>ioie</w>
+                <w>maintenir</w>
+                <w>&et-tironien;</w>
+                <w>met</w>
+                <lb facs="#facs_146_r4l56" n="N024"/>
+                <w>es</w>
+                <w>cuers</w>
+                <w>la</w>
+                <w>douce</w>
+                <w>remembrance</w>
+                <w rend="aggl">por</w><w>cest</w>
+                <lb facs="#facs_146_r4l63" n="N025"/>
+                <w>amors</w>
+                <w>de</w>
+                <w>trop</w>
+                <w>haute</w>
+                <w>poissance</w>
+                <w>qui</w>
+                <w>en</w>
+                <lb facs="#facs_146_r4l68" n="N026"/>
+                <w>esmai</w>
+                <w>fait</w>
+                <w>home</w>
+                <w>resioir</w>
+                <w>ne</w>
+                <w>por</w>
+                <w>doloir</w></ab>
+           <pb facs="#facs_147" n="147" xml:id="img_0147"/>
+            <ab facs="#facs_147_r1" type="" n="18"><w/>
+                <lb facs="#facs_147_line_1607005916538_3148" n="N001"/>
+                <w><comment>S</comment>ens</w>
+                <w>&et-tironien;</w>
+                <w>honor</w>
+                <w>ne</w>
+                <lb facs="#facs_147_r1l7" n="N002"/>
+                <w>puet</w>
+                <w>nus</w>
+                <w>nus</w>
+                <w>mai&tilde1-nasale-n;</w>
+                <lb facs="#facs_147_r1l8" n="N003"/>
+                <w>nou</w>
+                <w>laist</w>
+                <w>de</w>
+                <w>lui</w>
+                <w>partir</w>
+                <w>·</w>
+                <w>tenir</w>
+                <w rend="elision">s</w><w>il</w>
+                <w rend="elision">n</w><w>a</w>
+                <w>en</w>
+                <w>soi</w>
+                <lb facs="#facs_147_r1l9" n="N004"/>
+                <w>senti</w>
+                <w>les</w>
+                <w>max</w>
+                <w rend="elision">d</w><w>amer</w>
+                <w rend="elision">n</w><w>a</w>
+                <w>grant</w>
+                <w>ualor</w>
+                <w>ne</w>
+                <lb facs="#facs_147_r1l10" n="N005"/>
+                <w>puet</w>
+                <w>por</w>
+                <w>rien</w>
+                <w>monter</w>
+                <w>non&que-q-tilde;s</w>
+                <w>en</w>
+                <w>soi</w>
+                <lb facs="#facs_147_r1l11" n="N006"/>
+                <w>nou</w>
+                <w>uit</w>
+                <w>nus</w>
+                <w>auenir</w>
+                <w>·</w>
+                <w>par</w>
+                <w>ce</w>
+                <w>uos</w>
+                <w>pri</w>
+                <w rend="elision">d</w><w>a<lb facs="#facs_147_r1l12" n="N007"/>mors</w>
+                <w>droite</w>
+                <w>semblance</w>
+                <w rend="elision">qu</w><w>en</w>
+                <w>ne</w>
+                <w rend="elision">s</w><w>en</w>
+                <lb facs="#facs_147_r1l13" n="N008"/>
+                <w>doit</w>
+                <w>partir</w>
+                <w>por</w>
+                <w>esmaiance</w>
+                <w>ne</w>
+                <w>ia</w>
+                <w>de</w>
+                <w>moi</w>
+                <lb facs="#facs_147_r1l14" n="N009"/>
+                <w>nou</w>
+                <w>uerroiz</w>
+                <w>auenir</w>
+                <w>que</w>
+                <w>toz</w>
+                <w>parfais</w>
+                <w>u</w>
+                <lb facs="#facs_147_r1l15" n="N010"/>
+                <w>ueil</w>
+                <w>en</w>
+                <w>amors</w>
+                <w>morir</w>
+                <w>·</w>
+                <w><comment>D</comment>ame</w>
+                <w>se</w>
+                <w>ie</w>
+                <w>uos</w>
+                <lb facs="#facs_147_r1l16" n="N011"/>
+                <w>osasse</w>
+                <w>prier</w>
+                <w>ml̃t</w><!-- VM mlt entité -->
+                <w>me</w>
+                <w>seroit</w>
+                <w>ie</w>
+                <w>cuit</w>
+                <w>bien</w>
+                <lb facs="#facs_147_r1l17" n="N012"/>
+                <w>auenu</w>
+                <w>·</w>
+                <w>mes</w>
+                <w>il</w>
+                <w rend="elision">n</w><w>a</w>
+                <w>pas</w>
+                <w>en</w>
+                <w>moi</w>
+                <w>tant</w>
+                <w>de</w>
+                <lb facs="#facs_147_r1l18" n="N013"/>
+                <w>uertu</w>
+                <w>que</w>
+                <w>deuant</w>
+                <w>uos</w>
+                <w>uos</w>
+                <w>os</w>
+                <w>bien</w>
+                <w>a <lb facs="#facs_147_r1l19" n="N014"/>uiser</w>
+                <w>ice</w>
+                <w>me</w>
+                <w>font</w>
+                <w>&et-tironien;</w>
+                <w rend="elision">m</w><w>ocist</w>
+                <w>&et-tironien;</w>
+                <w rend="elision">m</w><w>esmaie</w>
+                <lb facs="#facs_147_r1l20" n="N015"/>
+                <w>uostre</w>
+                <w>biaute</w>
+                <w>fait</w>
+                <w>a</w>
+                <w>mon</w>
+                <w>cuer</w>
+                <w>la</w>
+                <w>plaie</w>
+                <lb facs="#facs_147_r1l21" n="N016"/>
+                <w>que</w>
+                <w>de</w>
+                <w>mes</w>
+                <w>ielz</w>
+                <w>seul</w>
+                <w>ne</w>
+                <w>me</w>
+                <w>puis</w>
+                <w>aidier</w>
+                <lb facs="#facs_147_r1l22" n="N017"/>
+                <w>dou</w>
+                <w>resgarder</w>
+                <w>dont</w>
+                <w>ie</w>
+                <w>ai</w>
+                <w>desirrer</w>
+                <w><comment>Q</comment>&a-suscrit-ua;nt</w>
+                <lb facs="#facs_147_r1l23" n="N018"/>
+                <w>me</w>
+                <w>couuient</w>
+                <w>dame</w>
+                <w>de</w>
+                <w>uos</w>
+                <w>loignier</w>
+                <w>on<lb facs="#facs_147_r1l24" n="N019"/>ques</w>
+                <w>certes</w>
+                <w>plus</w>
+                <w>dolens</w>
+                <w>hom</w>
+                <w>ne</w>
+                <w>fu</w>
+                <w>·</w>
+                <w>&et-tironien;</w>
+                <lb facs="#facs_147_r1l25" n="N020"/>
+                <w>dex</w>
+                <w>feroit</w>
+                <w>ce</w>
+                <w>croi</w>
+                <w>por</w>
+                <w>moi</w>
+                <w>uertu</w>
+                <w>se</w>
+                <w>ie</w>
+                <w>ia¬ <lb facs="#facs_147_r1l26" n="N021" rend="tiret"/>mes</w>
+                <w>uos</w>
+                <w>pooie</w>
+                <w>aprochier</w>
+                <w>que</w>
+                <w>toz</w>
+                <w>les</w>
+                <w>bi<lb facs="#facs_147_r1l27" n="N022"/>ens</w>
+                <w>&et-tironien;</w>
+                <w>toz</w>
+                <w>les</w>
+                <w>max</w>
+                <w>que</w>
+                <w rend="elision">i</w><w>aie</w>
+                <w>ai</w>
+                <w>ie</w>
+                <w>de</w>
+                <w>·</w>
+                <w>uos</w>
+                <lb facs="#facs_147_r1l28" n="N023"/>
+                <w>douce</w>
+                <w>dame</w>
+                <w>ueraie</w>
+                <w>·</w>
+                <w>ne</w>
+                <w>ia</w>
+                <w>sanz</w>
+                <w>uos</w>
+                <w>nus</w>
+                <lb facs="#facs_147_r1l29" n="N024"/>
+                <w>ne</w>
+                <w>me</w>
+                <w>puisse</w>
+                <w>aidier</w>
+                <w>nou</w>
+                <w>fera</w>
+                <w>il</w>
+                <w>qui</w>
+                <w>ni</w>
+                <w>a<lb facs="#facs_147_r1l30" n="N025"/>uroit</w>
+                <w>mestier</w>
+                <w>·</w>
+                <w><comment>D</comment>es</w>
+                <w>grans</w>
+                <w>biautes</w>
+                <w>do&tilde1-nasale-n;t</w>
+                <lb facs="#facs_147_r1l31" n="N026"/>
+                <w>nus</w>
+                <w>hom</w>
+                <w rend="elision">n</w><w>a</w>
+                <w>pooir</w>
+                <w rend="elision">qu</w><w>il</w>
+                <w>en</w>
+                <w>deust</w>
+                <w>la</w>
+                <w>cin¬<lb facs="#facs_147_r1l32" n="N027" rend="tiret"/>quantisme</w>
+                <w>part</w>
+                <w>li</w>
+                <w>dit</w>
+                <w>plaisant</w>
+                <w>li</w>
+                <w>amo¬<lb facs="#facs_147_r1l33" n="N028" rend="tiret"/>reus</w>
+                <w>regart</w>
+                <w>mi</w>
+                <w>font</w>
+                <w>souuent</w>
+                <w>resioir</w>
+                <w>&et-tironien;</w>
+                <lb facs="#facs_147_r1l34" n="N029"/>
+                <w>doloir</w>
+                <w>ioie</w>
+                <w>en</w>
+                <w>atent</w>
+                <w>que</w>
+                <w>mes</w>
+                <w>cuers</w>
+                <w>a</w>
+                <w>ce</w>
+                <lb facs="#facs_147_r1l35" n="N030"/>
+                <w>bee</w>
+                <w>·</w>
+                <w>&et-tironien;</w>
+                <w>la</w>
+                <w>paors</w>
+                <w>rest</w>
+                <w>dedens</w>
+                <w>moi</w>
+                <w>entree</w>
+<lb facs="#facs_147_r1l36" n="N031"/>
+                <w>ensi</w>
+                <w rend="elision">m</w><w>estuet</w>
+                <w>morir</w>
+                <w>par</w>
+                <w>estouuoir</w>
+                <w>en</w>
+                <w>g&a-suscrit-ra;nt</w>
+                <lb facs="#facs_147_r1l37" n="N032"/>
+                <w>esmai</w>
+                <w>en</w>
+                <w>ioie</w>
+                <w>&et-tironien;</w>
+                <w>en</w>
+                <w>uoloir</w>
+                <w>·</w>
+                <w><comment>D</comment>ame</w>
+                <w>de</w>
+                <w>qui</w>
+                <lb facs="#facs_147_r1l38" n="N033"/>
+                <w>est</w>
+                <w>ma</w>
+                <w>g&a-suscrit-ra;nt</w>
+                <w>desirree</w>
+                <w>saluz</w>
+                <w>uos</w>
+                <w>mant</w>
+                <w>dou<lb facs="#facs_147_r1l39" n="N034"/>tre</w>
+                <w>la</w>
+                <w>mer</w>
+                <w>salee</w>
+                <w>com</w>
+                <w rend="aggl">a</w><w>celui</w>
+                <w>ou</w>
+                <w>ie</w>
+                <w>pens</w>
+                <lb facs="#facs_147_r1l40" n="N035"/>
+                <w>main</w>
+                <w>&et-tironien;</w>
+                <w>soir</w>
+                <w rend="elision">n</w><w>autre</w>
+                <w>pensers</w>
+                <w>ne</w>
+                <w>me</w>
+                <w>fet</w>
+                <lb facs="#facs_147_line_1607005833742_3024" n="N036"/>
+                <w>ioie</w>
+                <w>auoir</w>
+                <w>·</w>
+                <lb facs="#facs_147_r1l44" n="N037"/>
+                <w>E</w>
+                <w>toz</w>
+                <w>mauz</w>
+                <w rend="elision">n</w><w>est</w>
+                <w>nus</w>
+                <w>plaisans</w>
+                <lb facs="#facs_147_r1l46" n="N038"/>
+                <w>fors</w>
+                <w>seulement</w>
+                <w>cil</w>
+                <w rend="elision">d</w><w>amer</w>
+                <w>·</w>
+                <w>mes</w></ab>
+            <ab facs="#facs_147_r2" type="" n="19"><w/>
+<lb facs="#facs_147_r2l2" n="N001"/>
+                <w>cil</w>
+                <w>est</w>
+                <w>douz</w>
+                <w>&et-tironien;</w>
+                <w>poignanz</w>
+                <w>&et-tironien;</w>
+                <w>deliteuz</w>
+                <w>a</w>
+                <w>penser</w>
+                <lb facs="#facs_147_r2l6" n="N002"/>
+                <w>&et-tironien;</w>
+                <w>tant</w>
+                <w>set</w>
+                <w>biau</w>
+                <w>conforter</w>
+                <w>&et-tironien;</w>
+                <w>de</w>
+                <w>grans</w>
+                <w>bie&tilde1-nasale-n;s</w>
+                <lb facs="#facs_147_r2l8" n="N003"/>
+                <w>ia</w>
+                <w>tant</w>
+                <w>que</w>
+                <w>nus</w>
+                <w>ne</w>
+                <w rend="elision">s</w><w>en</w>
+                <w>doit</w>
+                <w>oster</w>
+                <w>·</w>
+                <w><comment>F</comment>ins</w>
+                <lb facs="#facs_147_r2l9" n="N004"/>
+                <w>amans</w>
+                <w>uueil</w>
+                <w>a</w>
+                <w>madame</w>
+                <w>encliner</w>
+                <w>·</w>
+                <w>ie</w>
+                <w>ne</w>
+                <lb facs="#facs_147_r2l10" n="N005"/>
+                <w>puis</w>
+                <w>estre</w>
+                <w>dolens</w>
+                <w>q&a-suscrit-ua;nt</w>
+                <w>oi</w>
+                <w rend="aggl">de</w><w>li</w>
+                <w>parler</w>
+                <w>tant</w>
+                <lb facs="#facs_147_r2l11" n="N006"/>
+                <w>me</w>
+                <w>plest</w>
+                <w>a</w>
+                <w>ramembrer</w>
+                <w>que</w>
+                <w>de</w>
+                <w>toz</w>
+                <w>max</w>
+                <w rend="elision">m</w><w>est</w>
+                <lb facs="#facs_147_r2l12" n="N007"/>
+                <w>garans</w>
+                <w>sa</w>
+                <w>biaute</w>
+                <w>a</w>
+                <w>recorder</w>
+                <w>·</w>
+                <w><comment>A</comment>mors</w>
+                <w>q&a-suscrit-ua;nt</w>
+                <lb facs="#facs_147_r2l13" n="N008"/>
+                <w>uos</w>
+                <w rend="elision">m</w><w>aues</w>
+                <w>mis</w>
+                <w>lie</w>
+                <w>en</w>
+                <w>&vostre;</w><!-- VM entité à vérifier -->
+                <w>prison</w>
+                <w>mielz</w>
+                <w>a<lb facs="#facs_147_r2l14" n="N009"/>meroie</w>
+                <w>estre</w>
+                <w>ocis</w>
+                <w>que</w>
+                <w rend="elision">i</w><w>eusse</w>
+                <w>raencon</w>
+                <w>tiex</w>
+                <lb facs="#facs_147_r2l15" n="N010"/>
+                <w>max</w>
+                <w>est</w>
+                <w>bien</w>
+                <w>sanz</w>
+                <w>raison</w>
+                <w>qui</w>
+                <w>me</w>
+                <w>plaist</w>
+                <w>q&a-suscrit-ua;nt</w>
+                <lb facs="#facs_147_r2l16" n="N011"/>
+                <w>me</w>
+                <w>fait</w>
+                <w>pis</w>
+                <w>ne</w>
+                <w>ia</w>
+                <w rend="elision">n</w><w>en</w>
+                <w>quier</w>
+                <w>raencon</w>
+                <w><comment>Q</comment>&a-suscrit-ua;n<lb facs="#facs_147_r2l17" n="N012"/>que</w>
+                <w>il</w>
+                <w>uos</w>
+                <w>est</w>
+                <w>auis</w>
+                <w>dame</w>
+                <w>me</w>
+                <w>semble</w>
+                <w>reson</w>
+                <lb facs="#facs_147_r2l18" n="N013"/>
+                <w>si</w>
+                <w rend="elision">m</w><w>a</w>
+                <w>uostre</w>
+                <w>amors</w>
+                <w>sospris</w>
+                <w>&et-tironien;</w>
+                <w>&vostre;</w><!-- VM entité à vérifier -->
+                <w>plaisanz</w>
+                <lb facs="#facs_147_r2l19" n="N014"/>
+                <w>facon</w>
+                <w>&et-tironien;</w>
+                <w>biautez</w>
+                <w>a</w>
+                <w>tel</w>
+                <w>foison</w>
+                <w>qui</w>
+                <w>resplent</w>
+                <w>en</w>
+                <lb facs="#facs_147_r2l20" n="N015"/>
+                <w>uostre</w>
+                <w>uis</w>
+                <w>&et-tironien;</w>
+                <w>des</w>
+                <w>les</w>
+                <w>piez</w>
+                <w rend="elision">jusqu</w><w>en</w>
+                <w>son</w>
+                <w>·</w>
+                <w><comment>S</comment>e</w>
+                <w>de</w>
+                <lb facs="#facs_147_r2l21" n="N016"/>
+                <w>uos</w>
+                <w>poisse</w>
+                <w>auoir</w>
+                <w>dame</w>
+                <w>un</w>
+                <w>poi</w>
+                <w>plus</w>
+                <w>bel</w>
+                <w>sen<lb facs="#facs_147_r2l22" n="N017"/>blant</w>
+                <w>·</w>
+                <w>ie</w>
+                <w>ne</w>
+                <w>sauroie</w>
+                <w>uoloir</w>
+                <w>·</w>
+                <w>querre</w>
+                <w>dieu</w>
+                <w>m&tilde2-er;ci</w>
+                <lb facs="#facs_147_r2l23" n="N018"/>
+                <w>si</w>
+                <w>grant</w>
+                <w>que</w>
+                <w>de</w>
+                <w>ioie</w>
+                <w>auroie</w>
+                <w>tant</w>
+                <w>que</w>
+                <w>tuit</w>
+                <lb facs="#facs_147_r2l24" n="N019"/>
+                <w>autre</w>
+                <w>home</w>
+                <w>pot</w>
+                <w>uoir</w>
+                <w>seroient</w>
+                <w>uers</w>
+                <w>moi</w>
+                <w>do<lb facs="#facs_147_r2l25" n="N020"/>lent</w>
+                <w>·</w>
+                <w><comment>D</comment>ame</w>
+                <w>ou</w>
+                <w>toz</w>
+                <w>mos</w>
+                <w>biens</w>
+                <w>atent</w>
+                <w>sa¬<lb facs="#facs_147_r2l26" n="N021" rend="tiret"/>chiez</w>
+                <w>q&a-suscrit-ua;nt</w>
+                <w>uos</w>
+                <w>puis</w>
+                <w>ueoir</w>
+                <w>nus</w>
+                <w rend="elision">n</w><w>a</w>
+                <w>si</w>
+                <w>ioieus</w>
+                <lb facs="#facs_147_r2l29" n="N022"/>
+                <w>torment</w>
+                <w>·</w>
+                <lb facs="#facs_147_r2l32" n="N023"/>
+                <w>Hanter</w>
+                <w rend="elision">m</w><w>estuet</w>
+                <w>que</w>
+                <w>ne</w>
+                <w rend="elision">m</w><w>en</w>
+                <w>puis</w>
+                <lb facs="#facs_147_r2l36" n="N024"/>
+                <w>tenir</w>
+                <w>·</w>
+                <w>&et-tironien;</w>
+                 <w>si</w>
+                <w rend="elision">n</w><w>ai</w>
+                <w>ie</w>
+                <w>fors</w>
+                <w rend="elision">qu</w><w>anui</w>
+                <w>&et-tironien;</w>
+                <lb facs="#facs_147_r2l41" n="N025"/>
+                <w>pesance</w>
+                <w>·</w>
+                <w>mes</w>
+                <w>tout</w>
+                <w>ades</w>
+                <w>se</w>
+                <w>fait</w>
+                <w>bon</w>
+                <w>resio<lb facs="#facs_147_r2l43" n="N026"/>ir</w>
+                <w rend="elision">qu</w><w>en</w>
+                <w>fere</w>
+                <w>duel</w>
+                <w>nus</w>
+                <w>dou</w>
+                <w>mo&tilde1-nasale-n;t</w>
+                <w>ne</w>
+                <w>sauance</w>
+                <w>·</w></ab>
+           <ab facs="#facs_147_r3" type="page-numberpage-number" n="20"><w/>
+                <lb facs="#facs_147_r3l1" n="N001"/>
+                <w>65</w><pc type="supplied">.</pc></ab>
+            <pb facs="#facs_148" n="148" xml:id="img_0148"/>
+            <ab facs="#facs_148_r1" type="" n="21"><w/>
+                <lb facs="#facs_148_r1l2" n="N001"/>
+                <w>ie</w>
+                <w>ne</w>
+                <w>chant</w>
+                <w>pas</w>
+                <w>com</w>
+                <w>hom</w>
+                <w>qui</w>
+                <w>soit</w>
+                <w>ames</w>
+                <lb facs="#facs_148_r1l5" n="N002"/>
+                <w>mes</w>
+                <w>com</w>
+                <w>destroiz</w>
+                <w>pensis</w>
+                <w>&et-tironien;</w>
+                <w>esgarez</w>
+                <w>&que-q-tilde;</w>
+                   <w> ie</w>
+                <lb facs="#facs_148_r1l7" n="N003"/>
+                <w rend="elision">n</w><w>ai</w>
+                <w>mais</w>
+                <w>de</w>
+                <w>bien</w>
+                <w>nule</w>
+                <w>es&p-barré-per;ance</w>
+                <w>ains</w>
+                <w>sui</w>
+                <lb facs="#facs_148_r1l8" n="N004"/>
+                <w><comment>I</comment>e</w>
+                <w>uos</w>
+                <w>di</w>
+                <lb facs="#facs_148_r1l10" n="N005"/>
+                <w>bien</w>
+                <w>une</w>
+                <w>rie&tilde1-nasale-n;s</w>
+                <lb facs="#facs_148_r1l11" n="N006"/>
+                <w>toz</w>
+                <w>iors</w>
+                <w>a</w>
+                <w>paroles</w>
+                <w>menez</w>
+                <w>·</w>
+                <w>sans</w>
+                <w>mentir</w>
+                <lb facs="#facs_148_r1l12" n="N007"/>
+                <w rend="elision">qu</w><w>en</w>
+                <w>amor</w>
+                <w>a</w>
+                <w>eur</w>
+                <w>&et-tironien;</w>
+                <w>grant</w>
+                <w>cheance</w>
+                <w>se</w>
+                <w>ie</w>
+               <lb facs="#facs_148_r1l13" n="N008"/>
+                <w>de</w>
+                <w>li</w>
+                <w>me</w>
+                <w>poisse</w>
+                <w>partir</w>
+                <w>mielz</w>
+                <w rend="elision">m</w><w>n</w>
+                <w>uenist</w>
+                <lb facs="#facs_148_r1l14" n="N009"/>
+                    <w rend="elision">qu</w><w>estre</w>
+                <w>sires</w>
+                <w>de</w>
+                <w>france</w>
+                <w>·</w>
+                <w>or</w>
+                <w>aue</w>
+                <w>dit</w>
+                <w>com</w>
+                    <lb facs="#facs_148_r1l15" n="N010"/>
+                <w>fox</w>
+                <w>desesperez</w>
+                <w>miex</w>
+                <w>aim</w>
+                <w>morir</w>
+                <w>recorda&tilde1-nasale-n;s</w>
+                    <lb facs="#facs_148_r1l16" n="N011"/>
+                <w>ses</w>
+                <w>biautez</w>
+                <w>&et-tironien;</w>
+                <w>son</w>
+                <w>g&a-suscrit-ra;nt</w>
+                <w>sen</w>
+                <w>&et-tironien;</w>
+                <w>sa</w>
+                <w>douce</w>
+                <w>acoi&tilde1-nasale-n; <lb facs="#facs_148_r1l17" n="N012"/>tance</w>
+               <w rend="elision">qu</w><w>estre</w>
+                <w>sires</w>
+                <w>de</w>
+                <w>tot</w>
+                <w>le</w>
+                <w>mont</w>
+                <w>clamez</w>
+               <lb facs="#facs_148_r1l18" n="N013"/>
+                <w><comment>I</comment>l</w>
+               <w rend="elision">n</w><w>aura</w>
+                <w>bien</w>
+                <w>ie</w>
+                <w>sai</w>
+                <w rend="aggl">a</w><w>scient</w>
+                    <w rend="elision">qu</w><w>amors</w>
+                    <lb facs="#facs_148_r1l19" n="N014"/>
+                <w>me</w>
+                <w>het</w>
+                <w>&et-tironien;</w>
+                <w>ma</w>
+                <w>dame</w>
+                    <w rend="elision">m</w><w>oublie</w>
+                <w>·</w>
+                    <w rend="elision">s</w><w>est</w>
+                <w>il</w>
+                <w>rai<lb facs="#facs_148_r1l20" n="N015"/>sons</w>
+                <w>qui</w>
+                <w>a</w>
+                <w>amer</w>
+                <w>entent</w>
+                    <w rend="elision">qu</w><w>il</w>
+                <w>ne</w>
+                <w>dout</w>
+                <w>mort</w>
+                   <lb facs="#facs_148_r1l21" n="N016"/> 
+                <w>ne</w>
+                <w>peine</w>
+                <w>ne</w>
+                <w>folie</w>
+                <w>puis</w>
+                <w>que</w>
+                <w>me</w>
+                <w>sui</w>
+                <w>a</w>
+                <w>ma¬</w>
+                <lb facs="#facs_148_r1l22" n="N017"/>
+                <w>dame</w>
+                <w>dounez</w>
+                <w>amors</w>
+                <w>le</w>
+                <w>uelt</w>
+                <w>&et-tironien;</w>
+                <w>q&a-suscrit-ua;nt</w>
+                <w>il</w>
+                <w>est</w>
+                <lb facs="#facs_148_r1l23" n="N018"/>
+                <w>ses</w>
+                <w>gres</w>
+                <w>ou</w>
+                <w>ie</w>
+                <w>morrai</w>
+                <w>ou</w>
+                <w>ie</w>
+                <w>raura</w>
+                <w rend="elision">m</w><w>a<lb facs="#facs_148_r1l24" n="N019"/>mie</w>
+                <w>ou</w>
+                <w>ma</w>
+                <w>uie</w>
+                    <w rend="elision">n</w><w>iert</w>
+                <w>mie</w>
+                <w>ma</w>
+                <w>santez</w>
+                <w>·</w>
+               <lb facs="#facs_148_r1l25" n="N020"/>
+                <w><comment>L</comment>i</w>
+                <w>fenix</w>
+                <w>quiert</w>
+                <w>la</w>
+                <w>busche</w>
+                <w>&et-tironien;</w>
+                <w>le</w>
+                <w>sarme&tilde1-nasale-n;t</w>
+               <lb facs="#facs_148_r1l26" n="N021"/>
+                <w>en</w>
+                <w>que</w>
+                <w>il</w>
+                <w>sart</w>
+                <w>&et-tironien;</w>
+                <w>giete</w>
+                <w>fors</w>
+                <w>de</w>
+                <w>uie</w>
+                <w>·</w>
+                <w>aussi</w>
+               <lb facs="#facs_148_r1l27" n="N022"/>
+                <w>quis</w>
+                <w>ie</w>
+              <w rend="aggl">ma</w><w>mort</w>
+                <w>&et-tironien;</w>
+                <w>mon</w>
+                <w>torment</w>
+                <w>quant</w>
+               <lb facs="#facs_148_r1l28" n="N023"/>
+                <w>ie</w>
+                <w>la</w>
+                <w>ui</w>
+                <w>se</w>
+                <w>pitiez</w>
+                <w>ne</w>
+                    <w rend="elision">m</w><w>aide</w>
+                <w>·</w>
+                <w>dex</w>
+                <w>tant</w>
+                <w>me</w>
+                    <lb facs="#facs_148_r1l29" n="N024"/>
+                <w>fu</w>
+                <w>li</w>
+                <w>ueoir</w>
+                <w>sauorez</w>
+                <w>dont</w>
+                    <w rend="elision">i</w><w>aurai</w>
+                <w>puis</w>
+                   <lb facs="#facs_148_r1l30" n="N025"/> 
+                <w>tant</w>
+                <w>de</w>
+                <w>max</w>
+                <w>endurez</w>
+                <w>·</w>
+                <w>li</w>
+                <w>souuenirs</w>
+                <w>me</w>
+                    <lb facs="#facs_148_r1l31" n="N026"/>
+                <w>fait</w>
+                <w>morir</w>
+                    <w rend="elision">d</w><w>enuie</w>
+                <w>&et-tironien;</w>
+                <w>li</w>
+                <w>desirs</w>
+                <w>&et-tironien;</w>
+                <w>la</w>
+                <w>g&a-suscrit-ra;ns</w>
+                <w>uo¬<lb facs="#facs_148_r1l32" n="N027" rend="tiret"/>lentez</w>
+                <w>·</w>
+                <w><comment>D</comment>ame</w>
+                <w>merci</w>
+                <w>qui</w>
+                <w>toz</w>
+                <w>les</w>
+                <w>biens</w>
+                <lb facs="#facs_148_r1l33" n="N028"/>
+                <w>sauez</w>
+                <w>toutes</w>
+                <w>ualors</w>
+                <w>&et-tironien;</w>
+                <w>toutez</w>
+                <w>g&a-suscrit-ra;ns</w>
+                <w>bon¬<lb facs="#facs_148_r1l34" n="N029" rend="tiret"/></w><w>tez</w>
+                <w>sont</w>
+                <w>plus</w>
+                <w>en</w>
+                <w>uos</w>
+                <w>&que-q-tilde;n</w><!-- VM abr + élision -->
+                <!-- TODO: ajouter au modèle ODD la doc sur ce point -->
+                <w rend="elision"><choice><abbr xml:id="abbr_01">q&#x0303;</abbr><expan>qu</expan></choice></w><w><choice><abbr sameAs="#abbr_01"
+                    /><expan><ex>e</ex>n</expan></choice></w>
+                <w>dame</w>
+                <w>qui</w>
+                <w>soit</w>
+                    <lb facs="#facs_148_r1l35" n="N030"/>
+                <w>nee</w>
+                <w>·</w>
+                <w>secorez</w>
+                <w>moi</w>
+                <w>que</w>
+                <w>fere</w>
+                <w>le</w>
+                <w>poez</w>
+                <w>·</w>
+                <w><comment>C</comment>ha&tilde1-nasale-n;</w>
+                <lb facs="#facs_148_r1l36" n="N031"/>
+                <w>con</w>
+                <w>phelipe</w>
+                <w>a</w>
+                <w>mon</w>
+                <w>ami</w>
+                <w>corez</w>
+                <w>puis</w>
+                <w>&que-q-tilde;</w>
+               <lb facs="#facs_148_r1l37" n="N032"/>
+                <w>il</w>
+               <w rend="elision">s</w><w>est</w>
+                <w>dedenz</w>
+                <w>la</w>
+                <w>cort</w>
+                <w>boutez</w>
+                <w>bien</w>
+                <w>e&tilde1-nasale-n;</w>
+                <w>samors</w>
+                    <lb facs="#facs_148_r1l38" n="N033"/>
+                <w>en</w>
+                <w>haine</w>
+                <w>tornee</w>
+                <w>·</w>
+                <w>apeine</w>
+                <w>ier</w>
+                <w>mes</w>
+                <w>de</w>
+                <w>be<lb facs="#facs_148_r1l39" n="N034"/>le</w>
+                <w>dame</w>
+                <w>amez</w>
+                <w>·</w></ab>
+            <ab facs="#facs_148_r2" type="" n="22"><w/>
+                <lb facs="#facs_148_r2l1" n="N001"/>
+                <w>J</w>
+                <w>rossignox</w>
+                <w>chante</w>
+                <w>tant</w>
+                <w>&que-q-tilde;</w>
+                <w>mors</w>
+                <lb facs="#facs_148_r2l3" n="N002"/>
+                <w>chiet</w>
+                <w>de</w>
+                <w rend="elision">l</w><w>aubre</w>
+                <w>ius</w>
+                <w>·</w>
+                <w>si</w>
+                <w>bele</w>
+                <w>mort</w>
+                <lb facs="#facs_148_r2l9" n="N003"/>
+                <w>ne</w>
+                <w>uit</w>
+                <w>nus</w>
+                <w>tant</w>
+                <w>douce</w>
+                <w>ne</w>
+                <w>si</w>
+                <w>plaisant</w>
+                <w>·</w>
+              <lb facs="#facs_148_r2l12" n="N004"/>
+               <w>autresi</w>
+                <w>muir</w>
+                <w>en</w>
+                <w>chantant</w>
+                <w>a</w>
+                <w>plai&tilde1-nasale-n;z</w>
+                <w>criz</w>
+                <lb facs="#facs_148_r2l15" n="N005"/>
+                <w>ne</w>
+                <w>ie</w>
+                <w>ne</w>
+                <w>puis</w>
+                <w>de</w>
+                <w>madame</w>
+                <w>estre</w>
+                <w>oiz</w>
+                <w>ne</w>
+                <lb facs="#facs_148_r2l18" n="N006"/>
+                <w>le</w>
+                <w>de</w>
+                <w>moi</w>
+                <w>pitiez</w>
+                <w>auoir</w>
+                <w>ne</w>
+                <w>daigne</w>
+                <w>·</w>
+                <w><comment>C</comment>has<lb facs="#facs_148_r2l19" n="N007"/>cuns</w>
+                <w>dit</w>
+                <w rend="elision">qu</w><w>il</w>
+                <w>a</w>
+                <w>amie</w>
+                <w>tant</w>
+                <w rend="elision">c</w><w>onques</w>
+                <w>si</w>
+                <w>fort</w>
+                <lb facs="#facs_148_r2l20" n="N008"/>
+                <w>nama</w>
+                <w>nus</w>
+                <w>·</w>
+                <w>ce</w>
+                <w>fait</w>
+                <w>les</w>
+                <w>amans</w>
+                <w>&con-9-tironien;fus</w>
+                <w>q&que-q-tilde;</w>
+                <lb facs="#facs_148_r2l21" n="N009"/>
+                <w>trop</w>
+                <w rend="elision">m</w><w>entent</w>
+                <w>li</w>
+                <w>truant</w>
+                <w>·</w>
+                <w>mes</w>
+                <w>dame</w>
+                <w>doit</w>
+                <lb facs="#facs_148_r2l22" n="N010"/>
+                <w>conoistre</w>
+                <w>a</w>
+                <w>lor</w>
+                <w>faus</w>
+                <w>diz</w>
+                <w>que</w>
+                <w>de</w>
+                <w>toz</w>
+                <w>b</w><!-- VM bien abréviaition -->
+                <lb facs="#facs_148_r2l23" n="N011"/>
+                <w rend="elision">s</w><w>est</w>
+                <w>lor</w>
+                <w>faus</w>
+                <w>cuers</w>
+                <w>partiz</w>
+                <w rend="elision">n</w><w>il</w>
+                <w rend="elision">n</w><w>est</w>
+                <w>pas</w>
+                <lb facs="#facs_148_r2l24" n="N012"/>
+                <w>droiz</w>
+                <w>que</w>
+                <w>pitiez</w>
+                <w>leu</w>
+                <w>en</w>
+                <w>praigne</w>
+                <w>·</w>
+                <w><comment>O</comment>n&que-q-tilde;s</w>
+                <lb facs="#facs_148_r2l25" n="N013"/>
+                <w>fierte</w>
+                <w rend="elision">n</w><w>ot</w>
+                <w>si</w>
+                <w>grant</w>
+                <w>uers</w>
+                <w>ponpee</w>
+                <w>iulius</w>
+                <lb facs="#facs_148_r2l27" n="N014"/>
+                <w>que</w>
+                <w>madame</w>
+                <w rend="elision">n</w><w>en</w>
+                <w>ait</w>
+                <w>plus</w>
+                <w>uers</w>
+                <w>moi</w>
+                <lb facs="#facs_148_r2l30" n="N015"/>
+                <w>qui</w>
+                <w>muir</w>
+                <w>desirranz</w>
+                <w>deuant</w>
+                <w>li</w>
+                <w>est</w>
+                <w>toz</w>
+                <w>iorz</w>
+                <lb facs="#facs_148_r2l33" n="N016"/>
+                <w>mes</w>
+                <w>esperiz</w>
+                <w>&et-tironien;</w>
+                <w>nuit</w>
+                <w>&et-tironien;</w>
+                <w>ior</w>
+                <w>li</w>
+                <w>crie</w>
+                <w>nul</w>
+                <w>mer¬<lb facs="#facs_148_r2l36" n="N017" rend="tiret"/>ciz</w>
+                <w>besant</w>
+                <w>ses</w>
+                <w>piez</w>
+                <w>que</w>
+                <w>de</w>
+                <w>moi</w>
+                <w>li</w>
+                <w>souuie<lb facs="#facs_148_r2l37" n="N018"/>gne</w>
+                <w>·</w>
+                <w><comment>L</comment>en</w>
+                <w>trairai</w>
+                <w>dieu</w>
+                <w>agarant</w>
+                <w>&et-tironien;</w>
+                <w>toz</w>
+                <lb facs="#facs_148_r2l38" n="N019"/>
+                <w>les</w>
+                <w>sainz</w>
+                <w>de</w>
+                <w>lasus</w>
+                <w>que</w>
+                <w>se</w>
+                <w>nus</w>
+                <w>puet</w>
+                <w>am&tilde2-er;</w>
+                <lb facs="#facs_148_r2l39" n="N020"/>
+                <w>plus</w>
+                <w>que</w>
+                <w>ia</w>
+                <w rend="elision">n</w><w>aie</w>
+                <w>amendement</w>
+                <w>ne</w>
+                <w>ia</w>
+                <lb facs="#facs_148_r2l40" n="N021"/>
+                <w>de</w>
+                <w>uos</w>
+                <w>ne</w>
+                <w>soie</w>
+                <w>maiz</w>
+                <w>oiz</w>
+                <w>einz</w>
+                <w>me</w>
+                <w>tolez</w>
+                <lb facs="#facs_148_r2l41" n="N022"/>
+                <w>uos</w>
+                <w>debonaires</w>
+                <w>diz</w>
+                <w>&et-tironien;</w>
+                <w>me</w>
+                <w>chaciez</w>
+                <w>com</w>
+                <lb facs="#facs_148_r2l42" n="N023"/>
+                <w>beste</w>
+                <w>de</w>
+                <w>montaigne</w>
+                <w>·</w>
+                <w><comment>I</comment>e</w>
+                <w>ne</w>
+                <w>cuit</w>
+                <w>pas</w>
+                <lb facs="#facs_148_r2l43" n="N024"/>
+                <w>que</w>
+                <w>serpens</w>
+                <w rend="elision">n</w><w>autre</w>
+                <w>beste</w>
+                <w>poignent</w>
+                <w>pl᷒&tilde4-us;</w>
+                <lb facs="#facs_148_r2l44" n="N025"/>
+                <w>que</w>
+                <w>font</w>
+                <w>amors</w>
+                <w>au</w>
+                <w>desus</w>
+                <w>trop</w>
+                <w>par</w>
+                <w>sont</w>
+                <lb facs="#facs_148_r2l45" n="N026"/>
+                <w>si</w>
+                <w>cop</w>
+                <w>pesant</w>
+                <w>plus</w>
+                <w>trait</w>
+                <w>souuent</w>
+                <w>&que-q-tilde;</w>
+                <w>turs</w>
+                <lb facs="#facs_148_r2l46" n="N027"/>
+                <w>ne</w>
+                <w>arabiz</w>
+                <w>non&que-q-tilde;s</w>
+                <w>encor</w>
+                <w>salemon</w>
+                <w>ne</w>
+                <w>da<lb facs="#facs_148_r2l47" n="N028"/>uid</w>
+                <w>ne</w>
+                <w>si</w>
+                <w>tindrent</w>
+                <w>ne</w>
+                <w>cuns</w>
+                <w>fox</w>
+                <w>dalemai¬<lb facs="#facs_148_r2l48" n="N029" rend="tiret"/>gne</w>
+                <w>·</w>
+                <w><comment>N</comment>est</w>
+                <w>merueille</w>
+                <w>se</w>
+                <w>ie</w>
+                <w>sui</w>
+                <w>esbahiz</w></ab>
+            <gap reason="sampling"/>
+        </body>
+    </text>
+</TEI>
