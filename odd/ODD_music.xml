@@ -1,0 +1,1679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns:rng="http://relaxng.org/ns/structure/1.0"
+    xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Music Encoding Initiative Guidelines: <title type="sub">All
+                    Customization</title></title>
+                <respStmt>
+                    <resp>Authored by</resp>
+                    <name xml:id="PR">Perry Roland</name>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <p/>
+            </publicationStmt>
+            <sourceDesc>
+                <p/>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <change n="1" when="2014-12-04" who="#PR">
+                <desc>Creation of the initial ODD.</desc>
+            </change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <divGen type="toc"/>
+        </front>
+        <body>
+            
+            <!-- Limit the set of possible start elements -->
+            <schemaSpec ident="mei" ns="http://www.music-encoding.org/ns/mei" prefix="mei_"
+                start="mei meiHead meiCorpus music">
+                
+                <!-- Include all modules -->
+                <moduleRef key="MEI"/>
+                <moduleRef key="MEI.shared"
+                include="annot body clef clefGrp ending group label layer layerDef mdiv mei music note part parts rest score scoreDef 
+                section staff staffDef staffGrp"/>
+                <elementSpec ident="scoreDef" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.shared">
+                    <desc>(score definition) – Container for score meta-information.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.scoreDef.log"/>
+                        <memberOf key="att.scoreDef.vis"/>
+                        <memberOf key="att.scoreDef.ges"/>
+                        <memberOf key="att.scoreDef.anl"/>
+                        <memberOf key="model.scoreDefLike"/>
+                    </classes>
+                    <content>
+                        <rng:optional>
+                            <rng:ref name="model.chordTableLike" />
+                        </rng:optional>
+                        <rng:optional>
+                            <rng:ref name="model.symbolTableLike" />
+                        </rng:optional>
+                        <rng:optional>
+                            <rng:ref name="model.keySigLike" />
+                        </rng:optional>
+                        <rng:optional>
+                            <rng:ref name="model.meterSigLike" />
+                        </rng:optional>
+                        <rng:optional>
+                            <rng:ref name="pgHead" />
+                        </rng:optional>
+                        <rng:optional>
+                            <rng:ref name="pgHead2" />
+                        </rng:optional>
+                        <rng:optional>
+                            <rng:ref name="pgFoot" />
+                        </rng:optional>
+                        <rng:optional>
+                            <rng:ref name="pgFoot2" />
+                        </rng:optional>
+                        <rng:optional>
+                            <rng:ref name="instrGrp" />
+                        </rng:optional>
+                        <rng:choice>
+                            <rng:optional>
+                                <rng:ref name="model.staffGrpLike" />
+                            </rng:optional>
+                        </rng:choice>
+                        <rng:zeroOrMore>
+                            <rng:ref name="grpSym" />
+                        </rng:zeroOrMore>
+                        <rng:optional>
+                            <rng:ref name="ambitus" />
+                        </rng:optional>
+                    </content>
+                </elementSpec>
+                <elementSpec ident="layer" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.shared">
+                    <desc>An independent stream of events on a staff.</desc>
+                    <classes>
+                        <memberOf key="att.basic"/>
+                        <memberOf key="att.facsimile"/>
+                        <memberOf key="att.labelled"/>
+                        <memberOf key="att.linking"/>
+                        <memberOf key="att.metadataPointing"/>
+                        <memberOf key="att.nInteger"/>
+                        <memberOf key="att.responsibility"/>
+                        <memberOf key="att.typed"/>
+                        <memberOf key="att.layer.log"/>
+                        <memberOf key="att.layer.vis"/>
+                        <memberOf key="att.layer.ges"/>
+                        <memberOf key="att.layer.anl"/>
+                        <memberOf key="model.layerLike"/>
+                    </classes>
+                    <content>
+                        <rng:zeroOrMore>
+                            <rng:choice>
+                                <rng:ref name="model.annotLike" />
+                                <rng:ref name="model.appLike" />
+                                <rng:ref name="model.editLike" />
+                                <rng:ref name="model.graphicPrimitiveLike" />
+                                <rng:ref name="model.layerPart" />
+                                <rng:ref name="model.milestoneLike.music" />
+                                <rng:ref name="model.transcriptionLike" />
+                            </rng:choice>
+                        </rng:zeroOrMore>
+                    </content>
+                    <remarks>
+                        <p part="N">The term 'layer' is used instead of 'voice' in order to avoid confusion between 'voice' and 'voice leading' and 'voicing'. The
+                            <att scheme="TEI">def</att>
+                            attribute may be used to create a connection with a
+                            <gi scheme="MEI">layerDef</gi>
+                            element where logical and visual information about the layer is recorded. Alternatively, the
+                            <att scheme="TEI">n</att>
+                            attribute may be used as a reference to a
+                            <gi scheme="MEI">layerDef</gi>
+                            element with the same value in its
+                            <att scheme="TEI">n</att>
+                            attribute. If neither
+                            <att scheme="TEI">def</att>
+                            nor
+                            <att scheme="TEI">n</att>
+                            attributes are present, then encoding order of the layers is presumed to match the encoding order of the layer definitions.</p>
+                    </remarks>
+                </elementSpec>
+                <elementSpec ident="staffGrp" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.shared">
+                    <desc>(staff group) – A group of bracketed or braced staves.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.facsimile"/>
+                        <memberOf key="att.metadataPointing"/>
+                        <memberOf key="att.staffGrp.log"/>
+                        <memberOf key="att.staffGrp.vis"/>
+                        <memberOf key="att.staffGrp.ges"/>
+                        <memberOf key="att.staffGrp.anl"/>
+                        <memberOf key="model.staffGrpLike"/>
+                    </classes>
+                    <content>
+                        <rng:zeroOrMore>
+                            <rng:ref name="grpSym" />
+                        </rng:zeroOrMore>
+                        <rng:zeroOrMore>
+                            <rng:choice>
+                                <rng:ref name="model.labelLike" />
+                            </rng:choice>
+                        </rng:zeroOrMore>
+                        <rng:zeroOrMore>
+                            <rng:ref name="model.instrDefLike" />
+                        </rng:zeroOrMore>
+                        <rng:oneOrMore>
+                            <rng:choice>
+                                <rng:ref name="model.staffGrpLike" />
+                                <rng:ref name="model.staffDefLike" />
+                            </rng:choice>
+                        </rng:oneOrMore>
+                        <rng:zeroOrMore>
+                            <rng:ref name="grpSym" />
+                        </rng:zeroOrMore>
+                    </content>
+                    <constraintSpec ident="Check_staffGrp_unique_staff_n_values" scheme="schematron">
+                        <constraint>
+                            <sch:rule context="mei:staffGrp">
+                                <sch:let name="countstaves" value="count(descendant::mei:staffDef)"/>
+                                <sch:let name="countuniqstaves" value="count(distinct-values(descendant::mei:staffDef/@n))"/>
+                                <sch:assert test="$countstaves eq $countuniqstaves">Each staffDef must have a unique value for the n attribute.</sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    <remarks>
+                        <p part="N">System is the more proper name for this concept (Read, p. 37-38). Bracketed staff groups may contain other bracketed or braced staff groups or single staves. See Read, p. 35-38, examples p. 434, 438.</p>
+                    </remarks>
+                </elementSpec>
+                <elementSpec ident="layerDef" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.shared">
+                    <desc>(layer definition) – Container for layer meta-information.</desc>
+                    <classes>
+                        <memberOf key="att.basic"/>
+                        <memberOf key="att.labelled"/>
+                        <memberOf key="att.linking"/>
+                        <memberOf key="att.metadataPointing"/>
+                        <memberOf key="att.nInteger"/>
+                        <memberOf key="att.responsibility"/>
+                        <memberOf key="att.typed"/>
+                        <memberOf key="att.layerDef.log"/>
+                        <memberOf key="att.layerDef.vis"/>
+                        <memberOf key="att.layerDef.ges"/>
+                        <memberOf key="att.layerDef.anl"/>
+                        <memberOf key="model.layerDefLike"/>
+                    </classes>
+                    <content>
+                        <rng:zeroOrMore>
+                            <rng:choice>
+                                <rng:ref name="model.labelLike" />
+                            </rng:choice>
+                        </rng:zeroOrMore>
+                        <rng:zeroOrMore>
+                            <rng:ref name="model.instrDefLike" />
+                        </rng:zeroOrMore>
+                        <rng:optional>
+                            <rng:ref name="ambitus" />
+                        </rng:optional>
+                    </content>
+                </elementSpec>
+                <elementSpec ident="label"  mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.shared">
+                    <desc>A container for document text that identifies the feature to which it is attached. For a "tool tip" or other generated label, use the
+                        <att scheme="TEI">label</att>
+                        attribute.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.facsimile"/>
+                        <memberOf key="att.lang"/>
+                        <memberOf key="att.source"/>
+                        <memberOf key="model.labelLike"/>
+                    </classes>
+                    <content>
+                        <rng:zeroOrMore>
+                            <rng:choice>
+                                <rng:text/>
+                                <rng:ref name="model.textPhraseLike.limited" />
+                                <rng:ref name="model.editLike" />
+                                <rng:ref name="model.transcriptionLike" />
+                            </rng:choice>
+                        </rng:zeroOrMore>
+                    </content>
+                    <remarks>
+                        <p part="N">This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+                        <p part="N">Don't confuse this element, which is used to capture labelling text appearing in the document, with the
+                            <att scheme="TEI">label</att>
+                            attribute, which records text to be used to generate a designation for the element to which it's attached, a "tool tip" or prefatory text, for example.</p>
+                    </remarks>
+                </elementSpec>
+                <elementSpec ident="staffDef" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.shared">
+                    <desc>(staff definition) – Container for staff meta-information.</desc>
+                    <classes>
+                        <memberOf key="att.basic"/>
+                        <memberOf key="att.labelled"/>
+                        <memberOf key="att.linking"/>
+                        <memberOf key="att.metadataPointing"/>
+                        <memberOf key="att.nInteger"/>
+                        <memberOf key="att.responsibility"/>
+                        <memberOf key="att.typed"/>
+                        <memberOf key="att.staffDef.log"/>
+                        <memberOf key="att.staffDef.vis"/>
+                        <memberOf key="att.staffDef.ges"/>
+                        <memberOf key="att.staffDef.anl"/>
+                        <memberOf key="model.staffDefLike"/>
+                    </classes>
+                    <content>
+                        <rng:zeroOrMore>
+                            <rng:choice>
+                                <rng:ref name="model.labelLike" />
+                            </rng:choice>
+                        </rng:zeroOrMore>
+                        <rng:zeroOrMore>
+                            <rng:choice>
+                                <rng:ref name="model.instrDefLike" />
+                                <rng:ref name="model.layerDefLike" />
+                                <rng:ref name="model.staffDefPart" />
+                            </rng:choice>
+                        </rng:zeroOrMore>
+                        <rng:optional>
+                            <rng:ref name="ambitus" />
+                        </rng:optional>
+                    </content>
+                    <constraintSpec ident="Check_staffDefn" scheme="schematron">
+                        <constraint>
+                            <sch:rule context="mei:staffDef[not(ancestor::mei:staff)]">
+                                <sch:let name="thisstaff" value="@n"/>
+                                <sch:assert test="@n">StaffDef must have an n attribute.</sch:assert>
+                                <sch:assert test="@lines or preceding::mei:staffDef[@n=$thisstaff and @lines]"> Either @lines must be present or a preceding staffDef with the same value for @n and @lines must exist.</sch:assert>
+                                <sch:assert test="count(mei:clef) + count(mei:clefGrp) 2">Only one clef or clefGrp is permitted.</sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    <constraintSpec ident="Check_ancestor_staff" scheme="schematron">
+                        <constraint>
+                            <sch:rule context="mei:staffDef[ancestor::mei:staff and @n]">
+                                <sch:let name="thisstaff" value="@n"/>
+                                <sch:assert test="ancestor::mei:staff/@n eq $thisstaff">@n must have the same value as the current staff.</sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    <constraintSpec ident="Check_ancestor_staff_lines" scheme="schematron">
+                        <constraint>
+                            <sch:rule context="mei:staffDef[ancestor::mei:staff and not(@n)]">
+                                <sch:let name="thisstaff" value="ancestor::mei:staff/@n"/>
+                                <sch:assert test="@lines or preceding::mei:staffDef[@n=$thisstaff and @lines]"> Either @lines must be present or a preceding staffDef with matching @n value and @lines must exist.</sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    <constraintSpec ident="Check_clef_position_staffDef" scheme="schematron">
+                        <constraint>
+                            <sch:rule context="mei:staffDef[@clef.line and @lines]">
+                                <sch:assert test="number(@clef.line) = number(@lines)">The clef position must be less than or equal to the number of lines on the staff.</sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    <constraintSpec ident="Check_clef_position_staffDef_nolines" scheme="schematron">
+                        <constraint>
+                            <sch:rule context="mei:staffDef[@clef.line and not(@lines)]">
+                                <sch:let name="thisstaff" value="@n"/>
+                                <sch:let name="stafflines" value="preceding::mei:staffDef[@n=$thisstaff and @lines][1]/@lines"/>
+                                <sch:assert test="number(@clef.line) = number($stafflines)">The clef position must be less than or equal to the number of lines on the staff.</sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    <constraintSpec ident="Check_tab_strings_lines" scheme="schematron">
+                        <constraint>
+                            <sch:rule context="mei:staffDef[@tab.strings and @lines]">
+                                <sch:let name="countTokens" value="count(tokenize(normalize-space(@tab.strings), '\s'))"/>
+                                <sch:assert test="$countTokens = @lines">The tab.strings attribute must have the same number of values as there are staff lines.</sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    <constraintSpec ident="Check_tab_strings_nolines" scheme="schematron">
+                        <constraint>
+                            <sch:rule context="mei:staffDef[@tab.strings and not(@lines)]">
+                                <sch:let name="countTokens" value="count(tokenize(normalize-space(@tab.strings), '\s'))"/>
+                                <sch:let name="thisstaff" value="@n"/>
+                                <sch:assert test="$countTokens = preceding::mei:staffDef[@n=$thisstaff and @lines][1]/@lines">The tab.strings attribute must have the same number of values as there are staff lines.</sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    <constraintSpec ident="Check_lines_color" scheme="schematron">
+                        <constraint>
+                            <sch:pattern>
+                                <sch:rule context="mei:staffDef[@lines.color and @lines]">
+                                    <sch:let name="countTokens" value="count(tokenize(normalize-space(@lines.color), '\s'))"/>
+                                    <sch:assert test="$countTokens = 1 or $countTokens = @lines">The lines.color attribute must have either 1) a single value or 2) the same number of values as there are staff lines.</sch:assert>
+                                </sch:rule>
+                                <sch:rule context="mei:staffDef[@lines.color and not(@lines)]">
+                                    <sch:let name="countTokens" value="count(tokenize(normalize-space(@lines.color), '\s'))"/>
+                                    <sch:let name="thisstaff" value="@n"/>
+                                    <sch:assert test="$countTokens = 1 or $countTokens = preceding::mei:staffDef[@n=$thisstaff and @lines][1]/@lines">The lines.color attribute must have either 1) a single value or 2) the same number of values as there are staff lines.</sch:assert>
+                                </sch:rule>
+                            </sch:pattern>
+                        </constraint>
+                    </constraintSpec>
+                    <constraintSpec ident="Check_staff_ppq_ancestor" scheme="schematron">
+                        <constraint>
+                            <sch:pattern>
+                                <sch:rule context="mei:staffDef[@ppq][ancestor::mei:scoreDef[@ppq]]">
+                                    <sch:let name="staffPPQ" value="@ppq"/>
+                                    <sch:let name="scorePPQ" value="ancestor::mei:scoreDef[@ppq][1]/@ppq"/>
+                                    <sch:assert test="($scorePPQ mod $staffPPQ) = 0">The value of ppq must be a factor of the value of ppq on an ancestor scoreDef.</sch:assert>
+                                </sch:rule>
+                            </sch:pattern>
+                        </constraint>
+                    </constraintSpec>
+                    <constraintSpec ident="Check_staff_ppq_preceding" scheme="schematron">
+                        <constraint>
+                            <sch:pattern>
+                                <sch:rule context="mei:staffDef[@ppq][preceding::mei:scoreDef[@ppq]]">
+                                    <sch:let name="staffPPQ" value="@ppq"/>
+                                    <sch:let name="scorePPQ" value="preceding::mei:scoreDef[@ppq][1]/@ppq"/>
+                                    <sch:assert test="($scorePPQ mod $staffPPQ) = 0">The value of ppq must be a factor of the value of ppq on a preceding scoreDef.</sch:assert>
+                                </sch:rule>
+                            </sch:pattern>
+                        </constraint>
+                    </constraintSpec>
+                </elementSpec>
+                <elementSpec ident="staff" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.shared">
+                    <desc>A group of equidistant horizontal lines on which notes are placed in order to represent pitch or a grouping element for individual 'strands' of notes, rests, etc. that may or may not actually be rendered on staff lines; that is, both diastematic and non-diastematic signs.</desc>
+                    <classes>
+                        <memberOf key="att.basic"/>
+                        <memberOf key="att.facsimile"/>
+                        <memberOf key="att.labelled"/>
+                        <memberOf key="att.linking"/>
+                        <memberOf key="att.metadataPointing"/>
+                        <memberOf key="att.nInteger"/>
+                        <memberOf key="att.responsibility"/>
+                        <memberOf key="att.typed"/>
+                        <memberOf key="att.staff.log"/>
+                        <memberOf key="att.staff.vis"/>
+                        <memberOf key="att.staff.ges"/>
+                        <memberOf key="att.staff.anl"/>
+                        <memberOf key="model.staffLike"/>
+                    </classes>
+                    <content>
+                        <rng:zeroOrMore>
+                            <rng:choice>
+                                <rng:ref name="model.annotLike" />
+                                <rng:ref name="model.appLike" />
+                                <rng:ref name="model.editLike" />
+                                <rng:ref name="model.graphicPrimitiveLike" />
+                                <rng:ref name="model.milestoneLike.music" />
+                                <rng:ref name="model.relationLike" />
+                                <rng:ref name="model.staffDefLike" />
+                                <rng:ref name="model.staffPart" />
+                                <rng:ref name="model.transcriptionLike" />
+                            </rng:choice>
+                        </rng:zeroOrMore>
+                    </content>
+                    <constraintSpec ident="checkStaff_n" scheme="schematron">
+                        <constraint>
+                            <sch:rule context="mei:staff[@n]">
+                                <sch:let name="thisstaff" value="@n"/>
+                                <sch:assert test="preceding::mei:staffDef[@n=$thisstaff] or preceding::mei:staff[@n=$thisstaff]/mei:staffDef or mei:staffDef">There must be a preceding staffDef with a matching value of @n, a preceding staff with a matching @n value containing a staffDef, or a staffDef child element.</sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    <remarks>
+                        <p part="N">The
+                            <att scheme="TEI">def</att>
+                            attribute may be used to create a connection with a
+                            <gi scheme="MEI">staffDef</gi>
+                            element where logical and visual information about the staff is recorded. Alternatively, the
+                            <att scheme="TEI">n</att>
+                            attribute may be used as a reference to a
+                            <gi scheme="MEI">staffDef</gi>
+                            element with the same value in its
+                            <att scheme="TEI">n</att>
+                            attribute or the staff may contain a staffDef element that defines it. If neither
+                            <att scheme="TEI">def</att>
+                            nor
+                            <att scheme="TEI">n</att>
+                            attributes are present, then the encoding order of the staves is presumed to match the encoding order of the staff definitions.</p>
+                    </remarks>
+                </elementSpec>
+                <elementSpec ident="score" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.shared">
+                    <desc>Full score view of the musical content.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.metadataPointing"/>
+                        <memberOf key="att.score.log"/>
+                        <memberOf key="att.score.vis"/>
+                        <memberOf key="att.score.ges"/>
+                        <memberOf key="att.score.anl"/>
+                        <memberOf key="model.scoreLike"/>
+                    </classes>
+                    <content>
+                        <rng:zeroOrMore>
+                            <rng:choice>
+                                <rng:ref name="model.annotLike" />
+                                <rng:ref name="model.appLike" />
+                                <rng:ref name="model.divLike" />
+                                <rng:ref name="model.editLike" />
+                                <rng:ref name="model.graphicPrimitiveLike" />
+                                <rng:ref name="model.milestoneLike.music" />
+                                <rng:ref name="model.relationLike" />
+                                <rng:ref name="model.scoreDefLike" />
+                                <rng:ref name="model.scorePart" />
+                                <rng:ref name="model.staffDefLike" />
+                                <rng:ref name="model.transcriptionLike" />
+                            </rng:choice>
+                        </rng:zeroOrMore>
+                    </content>
+                    <remarks>
+                        <p part="N">Since the
+                            <gi scheme="MEI">measure</gi>
+                            element is optional, a score may consist entirely of page beginnings, each of which points to a page image.
+                            <gi scheme="MEI">div</gi>
+                            elements are allowed preceding and following sections of music data in order to accommodate blocks of explanatory text.</p>
+                    </remarks>
+                </elementSpec>
+                <elementSpec ident="note" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.shared">
+                    <desc>A single pitched event. </desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.facsimile"/>
+                        <memberOf key="att.note.log"/>
+                        <memberOf key="att.note.vis"/>
+                        <memberOf key="att.note.ges"/>
+                        <memberOf key="att.note.anl"/>
+                        <memberOf key="model.chordPart"/>
+                        <memberOf key="model.eventLike"/>
+                    </classes>
+                    <content>
+                        <rng:zeroOrMore>
+                            <rng:choice>
+                                <rng:ref name="model.noteModifierLike" />
+                                <rng:ref name="model.verseLike" />
+                                <rng:ref name="model.sylLike" />
+                                <rng:ref name="model.appLike" />
+                                <rng:ref name="model.editLike" />
+                                <rng:ref name="model.transcriptionLike" />
+                            </rng:choice>
+                        </rng:zeroOrMore>
+                    </content>
+                    <remarks>
+                        <p part="N">The
+                            <gi scheme="MEI">accid</gi>
+                            and
+                            <gi scheme="MEI">artic</gi>
+                            sub-elements may be used instead of the note element's attributes when accid and artic represent first-class objects, e.g., when they require attributes, such as
+                            <att scheme="TEI">x</att>
+                            and
+                            <att scheme="TEI">y</att>
+                            location attributes. Similarly, the
+                            <gi scheme="MEI">syl</gi>
+                            sub-element may be used instead of the
+                            <att scheme="TEI">syl</att>
+                            attribute. The verse sub-element may be used to group text syllables by verse. The
+                            <att scheme="TEI">colored</att>
+                            attribute may be used to indicate coloration. In the mensural repertoire, coloration is a temporary change in the underlying mensuration from perfect to imperfect. In the CMN repertoire, coloration is an inversion of the note head's normal rendition, that is, the note head is void when it would otherwise be filled and vice versa. Do not confuse this with visual color.</p>
+                    </remarks>
+                </elementSpec>
+                <elementSpec ident="annot" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.shared">
+                    <desc>(annotation) – Provides a statement explaining the text or indicating the basis for an assertion.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.annot.log"/>
+                        <memberOf key="att.annot.vis"/>
+                        <memberOf key="att.annot.ges"/>
+                        <memberOf key="att.annot.anl"/>
+                        <memberOf key="att.audience"/>
+                        <memberOf key="att.bibl"/>
+                        <memberOf key="att.dataPointing"/>
+                        <memberOf key="att.facsimile"/>
+                        <memberOf key="att.lang"/>
+                        <memberOf key="att.plist"/>
+                        <memberOf key="att.source"/>
+                        <memberOf key="att.targetEval"/>
+                        <memberOf key="model.annotLike"/>
+                    </classes>
+                    <content>
+                        <rng:choice>
+                            <rng:group>
+                                <rng:zeroOrMore>
+                                    <rng:ref name="model.headLike" />
+                                </rng:zeroOrMore>
+                                <rng:zeroOrMore>
+                                    <rng:ref name="model.textComponentLike" />
+                                </rng:zeroOrMore>
+                            </rng:group>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:text/>
+                                    <rng:ref name="model.editLike" />
+                                    <rng:ref name="model.textPhraseLike" />
+                                    <rng:ref name="model.transcriptionLike" />
+                                </rng:choice>
+                            </rng:zeroOrMore>
+                        </rng:choice>
+                    </content>
+                    <constraintSpec ident="Check_annot_data" scheme="schematron">
+                        <constraint>
+                            <sch:rule context="mei:annot[@data]">
+                                <sch:assert test="ancestor::mei:notesStmt">The @data attribute may only occur on an annotation within the notesStmt element.</sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    <remarks>
+                        <p part="N">The
+                            <gi scheme="MEI">annot</gi>
+                            element can be used for both general comments and for annotations of the musical text. It provides a way to group participating *events* and/or *control events*, for example, the notes that form a descending bass line, and provide a label for and comment regarding the group. Participating entities may be identified in the
+                            <att scheme="TEI">plist</att>
+                            attribute. An editorial or analytical comment or observation may be included directly within the
+                            <gi scheme="MEI">annot</gi>
+                            element. The starting point of the annotation may be indicated by either a
+                            <att scheme="TEI">tstamp</att>
+                            ,
+                            <att scheme="TEI">tstamp.ges</att>
+                            ,
+                            <att scheme="TEI">tstamp.real</att>
+                            or
+                            <att scheme="TEI">startid</att>
+                            attribute, while the ending point may be recorded by either a
+                            <att scheme="TEI">dur</att>
+                            ,
+                            <att scheme="TEI">dur.ges</att>
+                            or
+                            <att scheme="TEI">endid</att>
+                            attribute. The
+                            <att scheme="TEI">resp</att>
+                            attribute records the editor(s) responsible for identifying or creating the annotation.</p>
+                    </remarks>
+                </elementSpec>
+                <elementSpec ident="rest" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.shared">
+                    <desc>A non-sounding event found in the source being transcribed.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.facsimile"/>
+                        <memberOf key="att.rest.log"/>
+                        <memberOf key="att.rest.vis"/>
+                        <memberOf key="att.rest.ges"/>
+                        <memberOf key="att.rest.anl"/>
+                        <memberOf key="model.eventLike"/>
+                    </classes>
+                    <content>
+                        <rng:zeroOrMore>
+                            <rng:choice>
+                                <rng:ref name="dot" />
+                                <rng:ref name="model.appLike" />
+                                <rng:ref name="model.editLike" />
+                                <rng:ref name="model.transcriptionLike" />
+                            </rng:choice>
+                        </rng:zeroOrMore>
+                    </content>
+                    <constraintSpec ident="Check_restline" scheme="schematron">
+                        <constraint>
+                            <sch:rule context="mei:rest[@line]">
+                                <sch:let name="thisstaff" value="ancestor::mei:staff/@n"/>
+                                <sch:assert test="number(@line) = number(preceding::mei:staffDef[@n=$thisstaff and @lines][1]/@lines)">The value of @line must be less than or equal to the number of lines on the staff.</sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    <remarks>
+                        <p part="N">See (Read, p. 96-102). Do not confuse this element with the
+                            <gi scheme="MEI">space</gi>
+                            element, which is used as an aid for visual alignment.</p>
+                    </remarks>
+                </elementSpec>
+                <elementSpec ident="section" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.shared">
+                    <desc>Segment of music data.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.facsimile"/>
+                        <memberOf key="att.metadataPointing"/>
+                        <memberOf key="att.pointing"/>
+                        <memberOf key="att.section.anl"/>
+                        <memberOf key="att.section.ges"/>
+                        <memberOf key="att.section.log"/>
+                        <memberOf key="att.section.vis"/>
+                        <memberOf key="att.targetEval"/>
+                        <memberOf key="model.sectionLike"/>
+                    </classes>
+                    <content>
+                        <rng:zeroOrMore>
+                            <rng:ref name="expansion" />
+                        </rng:zeroOrMore>
+                        <rng:zeroOrMore>
+                            <rng:choice>
+                                <rng:ref name="model.annotLike" />
+                                <rng:ref name="model.appLike" />
+                                <rng:ref name="model.divLike" />
+                                <rng:ref name="model.editLike" />
+                                <rng:ref name="model.graphicPrimitiveLike" />
+                                <rng:ref name="model.milestoneLike.music" />
+                                <rng:ref name="model.relationLike" />
+                                <rng:ref name="model.sectionPart" />
+                                <rng:ref name="model.transcriptionLike" />
+                            </rng:choice>
+                        </rng:zeroOrMore>
+                    </content>
+                    <constraintSpec ident="Check_sectionexpansion" scheme="schematron">
+                        <constraint>
+                            <sch:rule context="mei:section[mei:expansion]">
+                                <sch:assert test="descendant::mei:section|descendant::mei:ending|descendant::mei:rdg">A section containing an expansion element must have descendant section, ending, or rdg elements.</sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    <remarks>
+                        <p part="N">This element functions as a container for actual music data. Pointing attributes make it possible to connect this element to other internal or external entities, such as media objects or annotations.</p>
+                    </remarks>
+                </elementSpec>
+                <elementSpec ident="parts" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.shared">
+                    <desc>Provides a container for performers' parts.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.metadataPointing"/>
+                        <memberOf key="att.parts.log"/>
+                        <memberOf key="att.parts.vis"/>
+                        <memberOf key="att.parts.ges"/>
+                        <memberOf key="att.parts.anl"/>
+                        <memberOf key="model.partsLike"/>
+                    </classes>
+                    <content>
+                        <rng:zeroOrMore>
+                            <rng:ref name="model.partLike" />
+                        </rng:zeroOrMore>
+                    </content>
+                </elementSpec>
+                <elementSpec ident="part" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.shared">
+                    <desc>An alternative visual rendition of the score from the point of view of a particular performer (or group of performers).</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.metadataPointing"/>
+                        <memberOf key="att.part.log"/>
+                        <memberOf key="att.part.vis"/>
+                        <memberOf key="att.part.ges"/>
+                        <memberOf key="att.part.anl"/>
+                        <memberOf key="model.partLike"/>
+                    </classes>
+                    <content>
+                        <rng:zeroOrMore>
+                            <rng:choice>
+                                <rng:ref name="model.annotLike" />
+                                <rng:ref name="model.appLike" />
+                                <rng:ref name="model.divLike" />
+                                <rng:ref name="model.editLike" />
+                                <rng:ref name="model.graphicPrimitiveLike" />
+                                <rng:ref name="model.milestoneLike.music" />
+                                <rng:ref name="model.scoreDefLike" />
+                                <rng:ref name="model.scorePart" />
+                                <rng:ref name="model.staffDefLike" />
+                                <rng:ref name="model.transcriptionLike" />
+                            </rng:choice>
+                        </rng:zeroOrMore>
+                    </content>
+                    <remarks>
+                        <p part="N">
+                            <gi scheme="MEI">part</gi>
+                            elements are not used in MEI to indicate voice leading.
+                            <att scheme="TEI">next</att>
+                            attributes on event elements should be used for this purpose.
+                            <gi scheme="MEI">part</gi>
+                            elements are useful for encoding individual parts when there is no score, such as early music part books, when the music has non-aligning bar lines, when different layout, such as page turns, are needed for the score and parts, or for accommodating software that requires part-by-part encoding. When assembly of the parts into a score is desired and there are non-aligning bar lines, bar lines which indicate points of alignment across all the parts may be marked as 'controlling', while non-aligning ones may be marked as 'non-controlling'.</p>
+                    </remarks>
+                </elementSpec>
+                <elementSpec ident="mdiv" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.shared">
+                    <desc>(musical division) – Contains a subdivision of the body of a musical text.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.facsimile"/>
+                        <memberOf key="att.metadataPointing"/>
+                        <memberOf key="att.mdiv.anl"/>
+                        <memberOf key="att.mdiv.ges"/>
+                        <memberOf key="att.mdiv.log"/>
+                        <memberOf key="att.mdiv.vis"/>
+                        <memberOf key="model.mdivLike"/>
+                    </classes>
+                    <content>
+                        <rng:choice>
+                            <rng:group>
+                                <rng:optional>
+                                    <rng:ref name="model.scoreLike" />
+                                </rng:optional>
+                                <rng:optional>
+                                    <rng:ref name="model.partsLike" />
+                                </rng:optional>
+                            </rng:group>
+                            <rng:zeroOrMore>
+                                <rng:ref name="model.mdivLike" />
+                            </rng:zeroOrMore>
+                        </rng:choice>
+                    </content>
+                    <remarks>
+                        <p part="N">The
+                            <gi scheme="MEI">mdiv</gi>
+                            element may contain one or both of 2 possible views of the music. The score view is the traditional full and open score while the parts view contains each performer's view of the score; that is, his part. These 2 views are necessary because it is not always possible or desirable to generate one from the other. The
+                            <gi scheme="MEI">score</gi>
+                            and
+                            <gi scheme="MEI">parts</gi>
+                            elements are placed here and not directly within the
+                            <gi scheme="MEI">body</gi>
+                            element because score and part characteristics may change from
+                            <gi scheme="MEI">mdiv</gi>
+                            to
+                            <gi scheme="MEI">mdiv</gi>
+                            . For example, the 2nd movement of a symphony may require different performing forces (and therefore different score and part layout) than the other movements. The
+                            <gi scheme="MEI">mdiv</gi>
+                            element may be recursively nested in order to represent music which exhibits this kind of structure. For example, an opera is normally divided into acts, which are in turn divided into scenes.</p>
+                    </remarks>
+                </elementSpec>
+                <elementSpec ident="body" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.shared">
+                    <desc>Contains the whole of a single musical text, excluding any front or back matter.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.metadataPointing"/>
+                        <memberOf key="model.musicPart"/>
+                    </classes>
+                    <content>
+                        <rng:oneOrMore>
+                            <rng:choice>
+                                <rng:ref name="model.divLike" />
+                                <rng:ref name="model.mdivLike" />
+                            </rng:choice>
+                        </rng:oneOrMore>
+                    </content>
+                    <remarks>
+                        <p part="N">When the music can be broken into high-level, discrete, linear segments, such as movements of a symphony, there may be multiple
+                            <gi scheme="MEI">mdiv</gi>
+                            elements within
+                            <gi scheme="MEI">body</gi>
+                            . This is the highest level indication of the structure of the music.</p>
+                        <p part="N">The content model of
+                            <gi scheme="MEI">body</gi>
+                            also allows blocks of text and music notation to be interleaved. This permits the encoding of a wide range of musical documents, including those that are primarily textual with only occasional musical material or even those which completely lack music notation.</p>
+                    </remarks>
+                </elementSpec>
+                <elementSpec ident="music" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.shared">
+                    <desc>Contains a single musical text of any kind, whether unitary or composite, for example, an etude, opera, song cycle, symphony, or anthology of piano solos.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.meiVersion"/>
+                        <memberOf key="att.metadataPointing"/>
+                    </classes>
+                    <content>
+                        <rng:zeroOrMore>
+                            <rng:ref name="model.resourceLike" />
+                        </rng:zeroOrMore>
+                        <rng:ref name="macro.musicPart" />
+                    </content>
+                </elementSpec>
+                <elementSpec ident="mei" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.shared">
+                    <desc>Contains a single MEI-conformant document, consisting of an MEI header and a musical text, either in isolation or as part of an meiCorpus element.</desc>
+                    <classes>
+                        <memberOf key="att.id"/>
+                        <memberOf key="att.meiVersion"/>
+                        <memberOf key="att.responsibility"/>
+                    </classes>
+                    <content>
+                        <rng:ref name="meiHead" />
+                        <rng:ref name="music" />
+                    </content>
+                    <constraintSpec ident="Check_staff" scheme="schematron">
+                        <constraint>
+                            <sch:rule context="mei:*[@staff]">
+                                <sch:assert test="every $i in tokenize(normalize-space(@staff), '\s+') satisfies $i=//mei:staffDef/@n">The values in @staff must correspond to @n attribute of a staffDef element.</sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    <remarks>
+                        <p part="N">The
+                            <gi scheme="MEI">mei</gi>
+                            element defines an instance of a document encoded with the MEI schema. It is the document element for a single document containing a header and data. The name of this element should not be changed by any customization in order to assure an absolute minimum level of MEI compliance.</p>
+                    </remarks>
+                </elementSpec>
+                <elementSpec ident="group" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.shared">
+                    <desc>Contains a composite musical text, grouping together a sequence of distinct musical texts (or groups of such musical texts) which are regarded as a unit for some purpose, for example, the collected works of a composer.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.metadataPointing"/>
+                        <memberOf key="model.musicPart"/>
+                    </classes>
+                    <content>
+                        <rng:choice>
+                            <rng:ref name="music" />
+                            <rng:ref name="group" />
+                        </rng:choice>
+                        <rng:zeroOrMore>
+                            <rng:choice>
+                                <rng:ref name="music" />
+                                <rng:ref name="group" />
+                            </rng:choice>
+                        </rng:zeroOrMore>
+                    </content>
+                    <remarks>
+                        <p part="N">Because its model contains the music element, each of the subordinate MEI documents can have its own front and back matter.</p>
+                    </remarks>
+                    <remarks>
+                        <p part="N">This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+                    </remarks>
+                </elementSpec>
+                <elementSpec ident="ending" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.shared">
+                    <desc>Alternative ending for a repeated passage of music; i.e., prima volta, seconda volta, etc.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.ending.anl"/>
+                        <memberOf key="att.ending.ges"/>
+                        <memberOf key="att.ending.log"/>
+                        <memberOf key="att.ending.vis"/>
+                        <memberOf key="att.facsimile"/>
+                        <memberOf key="att.pointing"/>
+                        <memberOf key="att.targetEval"/>
+                        <memberOf key="model.endingLike"/>
+                    </classes>
+                    <content>
+                        <rng:zeroOrMore>
+                            <rng:ref name="expansion" />
+                        </rng:zeroOrMore>
+                        <rng:zeroOrMore>
+                            <rng:choice>
+                                <rng:ref name="model.annotLike" />
+                                <rng:ref name="model.appLike" />
+                                <rng:ref name="model.editLike" />
+                                <rng:ref name="model.graphicPrimitiveLike" />
+                                <rng:ref name="model.milestoneLike.music" />
+                                <rng:ref name="model.relationLike" />
+                                <rng:ref name="model.scoreDefLike" />
+                                <rng:ref name="model.sectionLike" />
+                                <rng:ref name="model.sectionPart.cmn" />
+                                <rng:ref name="model.sectionPart.mensuralAndNeumes" />
+                                <rng:ref name="model.staffDefLike" />
+                                <rng:ref name="model.transcriptionLike" />
+                            </rng:choice>
+                        </rng:zeroOrMore>
+                    </content>
+                    <remarks>
+                        <p part="N">The
+                            <gi scheme="MEI">scoreDef</gi>
+                            element is allowed as a sub-element so that an ending may have its own meta-data without the overhead of child
+                            <gi scheme="MEI">section</gi>
+                            elements.
+                            <gi scheme="MEI">div</gi>
+                            sub-elements are not allowed within ending. They may, however, be contained by the children of ending, e.g., measures. Endings may not contain other ending elements.</p>
+                    </remarks>
+                </elementSpec>
+                <elementSpec ident="clef" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.shared">
+                    <desc>Indication of the exact location of a particular note on the staff and, therefore, the other notes as well.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.event"/>
+                        <memberOf key="att.facsimile"/>
+                        <memberOf key="att.clef.anl"/>
+                        <memberOf key="att.clef.ges"/>
+                        <memberOf key="att.clef.log"/>
+                        <memberOf key="att.clef.vis"/>
+                        <memberOf key="model.eventLike"/>
+                        <memberOf key="model.staffDefPart"/>
+                    </classes>
+                    <content>
+                        <rng:empty/>
+                    </content>
+                    <constraintSpec ident="Clef_position_lines" scheme="schematron">
+                        <constraint>
+                            <sch:rule context="mei:clef[ancestor::mei:staffDef[@lines]]">
+                                <sch:let name="thisstaff" value="ancestor::mei:staffDef/@n"/>
+                                <sch:assert test="number(@line) = number(ancestor::mei:staffDef[@n=$thisstaff and @lines][1]/@lines)">The clef position must be less than or equal to the number of lines of an ancestor staff.</sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    <constraintSpec ident="Clef_position_nolines" scheme="schematron">
+                        <constraint>
+                            <sch:rule context="mei:clef[ancestor::mei:staffDef[not(@lines)]]">
+                                <sch:let name="thisstaff" value="ancestor::mei:staffDef/@n"/>
+                                <sch:assert test="number(@line) = number(preceding::mei:staffDef[@n=$thisstaff and @lines][1]/@lines)">The clef position must be less than or equal to the number of lines of a preceding staff.</sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    <remarks>
+                        <p part="N">This element can be used as an alternative to the
+                            <gi scheme="MEI">staff</gi>
+                            element's clef.* attributes. It should be used when specific display info, such as size or color, needs to be recorded for the clef or when multiple, simultaneous clefs occur on a single staff. This element may also be used within the staff context to indicate changes of clef.</p>
+                    </remarks>
+                </elementSpec>
+                <elementSpec ident="clefGrp" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.shared">
+                    <desc>(clef group) – A set of simultaneously-occurring clefs.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.event"/>
+                        <memberOf key="att.facsimile"/>
+                        <memberOf key="att.clefGrp.log"/>
+                        <memberOf key="att.clefGrp.vis"/>
+                        <memberOf key="att.clefGrp.ges"/>
+                        <memberOf key="att.clefGrp.anl"/>
+                        <memberOf key="model.eventLike"/>
+                        <memberOf key="model.staffDefPart"/>
+                    </classes>
+                    <content>
+                        <rng:oneOrMore>
+                            <rng:ref name="clef" />
+                        </rng:oneOrMore>
+                    </content>
+                </elementSpec>
+                <moduleRef key="MEI.header"
+                include="editionStmt encodingDesc fileDesc meiHead notesStmt physDesc pubStmt revisionDesc seriesStmt source sourceDesc"/>
+                <elementSpec ident="encodingDesc" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.header">
+                    <desc>(encoding description) – Documents the relationship between an electronic file and the source or sources from which it was derived as well as applications used in the encoding/editing process.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.bibl"/>
+                        <memberOf key="model.headerPart"/>
+                    </classes>
+                    <content>
+                        <rng:zeroOrMore>
+                            <rng:ref name="model.headLike" />
+                        </rng:zeroOrMore>
+                        <rng:optional>
+                            <rng:ref name="appInfo" />
+                        </rng:optional>
+                        <rng:optional>
+                            <rng:ref name="editorialDecl" />
+                        </rng:optional>
+                        <rng:optional>
+                            <rng:ref name="projectDesc" />
+                        </rng:optional>
+                        <rng:optional>
+                            <rng:ref name="samplingDecl" />
+                        </rng:optional>
+                        <rng:zeroOrMore>
+                            <rng:ref name="domainsDecl" />
+                        </rng:zeroOrMore>
+                        <rng:optional>
+                            <rng:ref name="tagsDecl" />
+                        </rng:optional>
+                        <rng:optional>
+                            <rng:ref name="classDecls" />
+                        </rng:optional>
+                    </content>
+                    <remarks>
+                        <p part="N">This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+                    </remarks>
+                </elementSpec>
+                <elementSpec ident="meiHead" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.header">
+                    <desc>(MEI header) – Supplies the descriptive and declarative metadata prefixed to every MEI-conformant text.</desc>
+                    <classes>
+                        <memberOf key="att.basic"/>
+                        <memberOf key="att.bibl"/>
+                        <memberOf key="att.labelled"/>
+                        <memberOf key="att.lang"/>
+                        <memberOf key="att.meiVersion"/>
+                        <memberOf key="att.responsibility"/>
+                        <memberOf key="model.startLike.header"/>
+                    </classes>
+                    <content>
+                        <rng:zeroOrMore>
+                            <rng:ref name="altId" />
+                        </rng:zeroOrMore>
+                        <rng:ref name="fileDesc" />
+                        <rng:optional>
+                            <rng:ref name="encodingDesc" />
+                        </rng:optional>
+                        <rng:optional>
+                            <rng:ref name="workList" />
+                        </rng:optional>
+                        <rng:optional>
+                            <rng:ref name="manifestationList" />
+                        </rng:optional>
+                        <rng:zeroOrMore>
+                            <rng:ref name="extMeta" />
+                        </rng:zeroOrMore>
+                        <rng:optional>
+                            <rng:ref name="revisionDesc" />
+                        </rng:optional>
+                    </content>
+                    <constraintSpec ident="check_meiHead_type" scheme="schematron">
+                        <constraint>
+                            <sch:rule context="mei:meiHead[@type eq 'music']">
+                                <sch:assert test="ancestor::mei:mei">The meiHead type attribute can have the value 'music' only when the document element is "mei".</sch:assert>
+                            </sch:rule>
+                            <sch:rule context="mei:meiHead[@type eq 'corpus']">
+                                <sch:assert test="ancestor::mei:meiCorpus">The meiHead type attribute can have the value 'corpus' only when the document element is "meiCorpus".</sch:assert>
+                            </sch:rule>
+                            <sch:rule context="mei:meiHead[@type eq 'independent']">
+                                <sch:assert test="not(ancestor::mei:*)">The meiHead type attribute can have the value 'independent' only when the document element is "meiHead".</sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    <attList org="group">
+                        <attDef ident="type" usage="opt">
+                            <desc>Specifies the kind of document to which the header is attached, for example whether it is a corpus or individual text.</desc>
+                            <valList type="closed">
+                                <valItem ident="music">
+                                    <desc>Header is attached to a music document.</desc>
+                                </valItem>
+                                <valItem ident="corpus">
+                                    <desc>Header is attached to a corpus.</desc>
+                                </valItem>
+                                <valItem ident="independent">
+                                    <desc>Header is independent; i.e., not attached to either a music or a corpus document.</desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                    </attList>
+                    <remarks>
+                        <p part="N">In order to encourage uniformity in the provision of metadata across document types, this element is modelled on an element in the Text Encoding Initiative (TEI) standard. This information is often essential in a machine-readable environment. Five sub-elements must be encoded in the following order:
+                            <gi scheme="MEI">altId</gi>
+                            (optional),
+                            <gi scheme="MEI">fileDesc</gi>
+                            (required),
+                            <gi scheme="MEI">encodingDesc</gi>
+                            (optional),
+                            <gi scheme="MEI">workList</gi>
+                            (optional), and
+                            <gi scheme="MEI">revisionDesc</gi>
+                            (optional). These elements and their sub-elements provide: a unique identifier for the MEI file, bibliographic information about the MEI file and its sources, information about the encoding process, information about the creation of the work being encoded, and statements regarding significant revisions of the file. The
+                            <att scheme="TEI">xml:lang</att>
+                            attribute may be used to indicate the language in which the metadata content of the header is provided.</p>
+                    </remarks>
+                </elementSpec>
+                <elementSpec ident="fileDesc" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.header">
+                    <desc>(file description) – Contains a full bibliographic description of the MEI file.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.bibl"/>
+                    </classes>
+                    <content>
+                        <rng:ref name="titleStmt" />
+                        <rng:optional>
+                            <rng:ref name="editionStmt" />
+                        </rng:optional>
+                        <rng:optional>
+                            <rng:ref name="extent" />
+                        </rng:optional>
+                        <rng:ref name="pubStmt" />
+                        <rng:optional>
+                            <rng:ref name="seriesStmt" />
+                        </rng:optional>
+                        <rng:optional>
+                            <rng:ref name="notesStmt" />
+                        </rng:optional>
+                        <rng:optional>
+                            <rng:ref name="sourceDesc" />
+                        </rng:optional>
+                    </content>
+                    <remarks>
+                        <p part="N">Extent in this context represents file size.</p>
+                    </remarks>
+                    <remarks>
+                        <p part="N">This element is modelled on elements in the Text Encoding Initiative (TEI) and Encoded Archival Description (EAD) standards.</p>
+                    </remarks>
+                </elementSpec>
+                <elementSpec ident="sourceDesc" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.header">
+                    <desc>(source description) – A container for the descriptions of the source(s) used in the creation of the electronic file.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                    </classes>
+                    <content>
+                        <rng:zeroOrMore>
+                            <rng:ref name="model.headLike" />
+                        </rng:zeroOrMore>
+                        <rng:oneOrMore>
+                            <rng:ref name="source" />
+                        </rng:oneOrMore>
+                    </content>
+                    <remarks>
+                        <p part="N">This element is recommended where the MEI file is a transcription of existing music, but is not required when the data is originally created in MEI form.</p>
+                    </remarks>
+                </elementSpec>
+                <elementSpec ident="source" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.header">
+                    <desc>A bibliographic description of a source used in the creation of the electronic file.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.authorized"/>
+                        <memberOf key="att.bibl"/>
+                        <memberOf key="att.componentType"/>
+                        <memberOf key="att.dataPointing"/>
+                        <memberOf key="att.pointing"/>
+                        <memberOf key="att.recordType"/>
+                        <memberOf key="att.targetEval"/>
+                    </classes>
+                    <content>
+                        <rng:zeroOrMore>
+                            <rng:ref name="model.headLike" />
+                        </rng:zeroOrMore>
+                        <rng:zeroOrMore>
+                            <rng:choice>
+                                <rng:ref name="locus" />
+                                <rng:ref name="locusGrp" />
+                            </rng:choice>
+                        </rng:zeroOrMore>
+                        <rng:zeroOrMore>
+                            <rng:choice>
+                                <rng:ref name="model.biblLike" />
+                            </rng:choice>
+                        </rng:zeroOrMore>
+                    </content>
+                    <constraintSpec ident="check_source_target" scheme="schematron">
+                        <constraint>
+                            <sch:rule context="mei:source/@target">
+                                <sch:assert role="warning" test="not(normalize-space(.) eq '')">@target attribute should have content.</sch:assert>
+                                <sch:assert role="warning" test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*[local-name() eq 'source' or local-name() eq 'manifestation']/@xml:id or matches($i, '^([a-z]+://|\.{1,2}/)')">Each value in @target should correspond to the @xml:id attribute of a source or manifestation element or be an external URI.</sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    <remarks>
+                        <p part="N">This element contains, or references via its
+                            <att scheme="TEI">target</att>
+                            attribute, a description of a source used in the creation of the electronic file. For description of a physical embodiment of an expression of a work use the
+                            <gi scheme="MEI">manifestation</gi>
+                            element.</p>
+                        <p part="N">The
+                            <att scheme="TEI">data</att>
+                            attribute may be used to reference one or more musical features found in the content of this particular source.</p>
+                    </remarks>
+                    <remarks>
+                        <p part="N">This element is modelled on elements in the Text Encoding Initiative (TEI) and Encoded Archival Description (EAD) standards.</p>
+                    </remarks>
+                </elementSpec>
+                <elementSpec ident="notesStmt" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.header">
+                    <desc>(notes statement)– Collects any notes providing information about a text additional to that recorded in other parts of the bibliographic description.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.bibl"/>
+                    </classes>
+                    <content>
+                        <rng:zeroOrMore>
+                            <rng:ref name="model.headLike" />
+                        </rng:zeroOrMore>
+                        <rng:oneOrMore>
+                            <rng:ref name="model.annotLike" />
+                        </rng:oneOrMore>
+                    </content>
+                    <remarks>
+                        <p part="N">This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+                    </remarks>
+                </elementSpec>
+                <elementSpec ident="physDesc" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.header">
+                    <desc>(physical description) – Container for information about the appearance, construction, or handling of physical materials, such as their dimension, quantity, color, style, and technique of creation.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.bibl"/>
+                    </classes>
+                    <content>
+                        <rng:zeroOrMore>
+                            <rng:ref name="model.headLike" />
+                        </rng:zeroOrMore>
+                        <rng:zeroOrMore>
+                            <rng:ref name="model.pLike" />
+                        </rng:zeroOrMore>
+                        <rng:zeroOrMore>
+                            <rng:ref name="model.physDescPart" />
+                        </rng:zeroOrMore>
+                    </content>
+                    <remarks>
+                        <p part="N">Dedicatory text and title page features may also be encoded here when they are not transcribed as part of the front or back matter; i.e., when they are considered to be meta-data rather than a transcription.</p>
+                    </remarks>
+                    <remarks>
+                        <p part="N">This element is modelled on an element in the Encoded Archival Description (EAD) standard.</p>
+                    </remarks>
+                </elementSpec>
+                <elementSpec ident="editionStmt" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.header">
+                    <desc>(edition statement) – Container for meta-data pertaining to a particular edition of the material being described.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.bibl"/>
+                        <memberOf key="att.lang"/>
+                    </classes>
+                    <content>
+                        <rng:zeroOrMore>
+                            <rng:ref name="model.headLike" />
+                        </rng:zeroOrMore>
+                        <rng:oneOrMore>
+                            <rng:ref name="model.editionLike" />
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:ref name="model.respLikePart" />
+                                    <rng:ref name="respStmt" />
+                                </rng:choice>
+                            </rng:zeroOrMore>
+                        </rng:oneOrMore>
+                    </content>
+                    <remarks>
+                        <p part="N">This element is modelled on elements in the Text Encoding Initiative (TEI) and Encoded Archival Description (EAD) standards.</p>
+                    </remarks>
+                </elementSpec>
+                <elementSpec ident="pubStmt" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.header">
+                    <desc>(publication statement) – Container for information regarding the publication or distribution of a bibliographic item, including the publisher's name and address, the date of publication, and other relevant details.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.bibl"/>
+                    </classes>
+                    <content>
+                        <rng:zeroOrMore>
+                            <rng:ref name="model.headLike" />
+                        </rng:zeroOrMore>
+                        <rng:choice>
+                            <rng:optional>
+                                <rng:ref name="unpub" />
+                            </rng:optional>
+                            <rng:zeroOrMore>
+                                <rng:ref name="model.pubStmtPart" />
+                            </rng:zeroOrMore>
+                        </rng:choice>
+                    </content>
+                    <remarks>
+                        <p part="N">When an item is unpublished, use only the
+                            <gi scheme="MEI">unpub</gi>
+                            sub-element.</p>
+                    </remarks>
+                    <remarks>
+                        <p part="N">This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+                    </remarks>
+                </elementSpec>
+                <elementSpec ident="seriesStmt" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.header">
+                    <desc>(series statement) – Groups information about the series, if any, to which a publication belongs.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.bibl"/>
+                    </classes>
+                    <content>
+                        <rng:zeroOrMore>
+                            <rng:ref name="model.headLike" />
+                        </rng:zeroOrMore>
+                        <rng:oneOrMore>
+                            <rng:ref name="model.titleLike" />
+                        </rng:oneOrMore>
+                        <rng:zeroOrMore>
+                            <rng:choice>
+                                <rng:ref name="model.respLikePart" />
+                                <rng:ref name="respStmt" />
+                            </rng:choice>
+                        </rng:zeroOrMore>
+                        <rng:zeroOrMore>
+                            <rng:choice>
+                                <rng:ref name="model.identifierLike" />
+                                <rng:ref name="biblScope" />
+                                <rng:ref name="contents" />
+                                <rng:ref name="seriesStmt" />
+                            </rng:choice>
+                        </rng:zeroOrMore>
+                    </content>
+                    <remarks>
+                        <p part="N">The
+                            <gi scheme="MEI">title</gi>
+                            sub-element records the series title, the
+                            <gi scheme="MEI">respStmt</gi>
+                            element records the person or group responsible for the series, and the
+                            <gi scheme="MEI">identifier</gi>
+                            element contains a series identifier. The
+                            <gi scheme="MEI">contents</gi>
+                            element should be used when it is necessary to enumerate the content of the series, but not describe each component. The
+                            <gi scheme="MEI">seriesStmt</gi>
+                            element is provided within seriesStmt for the description of a sub-series.</p>
+                    </remarks>
+                    <remarks>
+                        <p part="N">This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+                    </remarks>
+                </elementSpec>
+                <elementSpec ident="revisionDesc" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.header">
+                    <desc>(revision description) – Container for information about alterations that have been made to an MEI file.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.bibl"/>
+                    </classes>
+                    <content>
+                        <rng:zeroOrMore>
+                            <rng:ref name="model.headLike" />
+                        </rng:zeroOrMore>
+                        <rng:oneOrMore>
+                            <rng:ref name="change" />
+                        </rng:oneOrMore>
+                    </content>
+                    <remarks>
+                        <p part="N">It is recommended that changes be recorded in reverse chronological order, with the most recent alteration first.</p>
+                    </remarks>
+                    <remarks>
+                        <p part="N">This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+                    </remarks>
+                </elementSpec>
+                <moduleRef key="MEI.cmn"
+                include="measure"/>
+                <elementSpec ident="measure" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.cmn">
+                    <desc>Unit of musical time consisting of a fixed number of note values of a given type, as determined by the prevailing meter, and delimited in musical notation by bar lines.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.facsimile"/>
+                        <memberOf key="att.metadataPointing"/>
+                        <memberOf key="att.pointing"/>
+                        <memberOf key="att.measure.anl"/>
+                        <memberOf key="att.measure.ges"/>
+                        <memberOf key="att.measure.log"/>
+                        <memberOf key="att.measure.vis"/>
+                        <memberOf key="att.targetEval"/>
+                        <memberOf key="model.measureLike"/>
+                    </classes>
+                    <content>
+                        <rng:optional>
+                            <rng:ref name="mNum" />
+                        </rng:optional>
+                        <rng:zeroOrMore>
+                            <rng:choice>
+                                <rng:ref name="model.annotLike" />
+                                <rng:ref name="model.appLike" />
+                                <rng:ref name="model.editLike" />
+                                <rng:ref name="model.graphicPrimitiveLike" />
+                                <rng:ref name="model.measurePart" />
+                                <rng:ref name="model.milestoneLike.music" />
+                                <rng:ref name="model.relationLike" />
+                                <rng:ref name="model.staffDefLike" />
+                                <rng:ref name="model.transcriptionLike" />
+                            </rng:choice>
+                        </rng:zeroOrMore>
+                    </content>
+                    <remarks>
+                        <p part="N">In MEI, the
+                            <gi scheme="MEI">measure</gi>
+                            element is a grouping mechanism for events and control events. Pointing attributes make it possible to connect this element to other internal or external entities, such as media objects or annotations. The
+                            <att scheme="TEI">width</att>
+                            attribute may be used to capture the width of the measure for interchange with music printing systems that utilize this information for printing.</p>
+                    </remarks>
+                </elementSpec>
+                <moduleRef key="MEI.mensural"
+                include="ligature mensur proport"/>
+                <elementSpec ident="ligature" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.mensural">
+                    <desc>A mensural notation symbol that combines two or more notes into a single sign.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.facsimile"/>
+                        <memberOf key="att.ligature.log"/>
+                        <memberOf key="att.ligature.vis"/>
+                        <memberOf key="att.ligature.ges"/>
+                        <memberOf key="att.ligature.anl"/>
+                        <memberOf key="model.eventLike.mensural"/>
+                    </classes>
+                    <content>
+                        <rng:zeroOrMore>
+                            <rng:choice>
+                                <rng:ref name="model.appLike" />
+                                <rng:ref name="model.editLike" />
+                                <rng:ref name="model.eventLike" />
+                                <rng:ref name="model.eventLike.mensural" />
+                                <rng:ref name="model.eventLike.neumes" />
+                                <rng:ref name="model.transcriptionLike" />
+                            </rng:choice>
+                        </rng:zeroOrMore>
+                    </content>
+                    <remarks>
+                        <p part="N">The rhythmic meaning of the components of a ligature is typically contextual, not absolute; therefore, an interpretative duration may be encoded on each of the components using either the
+                            <att scheme="TEI">dur.ges</att>
+                            attribute or the
+                            <att scheme="TEI">num</att>
+                            and
+                            <att scheme="TEI">numbase</att>
+                            attribute pair. The
+                            <gi scheme="MEI">ligature</gi>
+                            element should
+                            <hi rend="bold">not</hi>
+                            be used for brackets in modern notation that indicate notes that were part of a ligature in the original source.</p>
+                    </remarks>
+                </elementSpec>
+                <elementSpec ident="mensur" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.mensural">
+                    <desc>(mensuration) – Collects information about the metrical relationship between a note value and the next smaller value; that is, either triple or duple.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.facsimile"/>
+                        <memberOf key="att.mensur.log"/>
+                        <memberOf key="att.mensur.vis"/>
+                        <memberOf key="att.mensur.ges"/>
+                        <memberOf key="att.mensur.anl"/>
+                        <memberOf key="model.eventLike.mensural"/>
+                        <memberOf key="model.staffDefPart.mensural"/>
+                    </classes>
+                    <content>
+                        <rng:empty/>
+                    </content>
+                    <remarks>
+                        <p part="N">The
+                            <gi scheme="MEI">mensur</gi>
+                            element is provided for the encoding of mensural notation. The
+                            <att scheme="TEI">slash</att>
+                            attribute indicates the number lines added to the mensuration sign. For example, one slash is added for what we now call 'alla breve'.</p>
+                    </remarks>
+                </elementSpec>
+                <elementSpec ident="proport" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.mensural">
+                    <desc>(proportion) – Description of note duration as arithmetic ratio.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.facsimile"/>
+                        <memberOf key="att.proport.log"/>
+                        <memberOf key="att.proport.vis"/>
+                        <memberOf key="att.proport.ges"/>
+                        <memberOf key="att.proport.anl"/>
+                        <memberOf key="model.eventLike.mensural"/>
+                        <memberOf key="model.staffDefPart.mensural"/>
+                    </classes>
+                    <content>
+                        <rng:empty/>
+                    </content>
+                    <remarks>
+                        <p part="N">The proport element is provided for the encoding of mensural notation. It allows the description of note durations as arithmetic ratios. While mensuration refers to the normal relationships between note durations, proportion affects the relations of the note durations to the tactus.</p>
+                    </remarks>
+                </elementSpec>
+                <moduleRef key="MEI.neumes"
+                include="liquescent"/>
+                <elementSpec ident="liquescent" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.neumes">
+                    <desc>Liquescent.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.facsimile"/>
+                        <memberOf key="att.liquescent.anl"/>
+                        <memberOf key="att.liquescent.ges"/>
+                        <memberOf key="att.liquescent.log"/>
+                        <memberOf key="att.liquescent.vis"/>
+                        <memberOf key="model.neumeComponentModifierLike"/>
+                    </classes>
+                </elementSpec>
+                <moduleRef key="MEI.analysis"/>
+                <moduleRef key="MEI.cmnOrnaments"
+                include="mordent"/>
+                <elementSpec ident="mordent" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.cmnOrnaments">
+                    <desc>An ornament indicating rapid alternation of the main note with a secondary note, usually a step below, but sometimes a step above. </desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.facsimile"/>
+                        <memberOf key="att.mordent.log"/>
+                        <memberOf key="att.mordent.vis"/>
+                        <memberOf key="att.mordent.ges"/>
+                        <memberOf key="att.mordent.anl"/>
+                        <memberOf key="model.ornamentLike.cmn"/>
+                    </classes>
+                    <content>
+                        <rng:empty/>
+                    </content>
+                    <constraintSpec ident="mordent_start-type_attributes_required" scheme="schematron">
+                        <constraint>
+                            <sch:rule context="mei:mordent">
+                                <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of the attributes: startid, tstamp, tstamp.ges or tstamp.real.</sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    <remarks>
+                        <p part="N">The starting point of the mordent may be indicated by either a
+                            <att scheme="TEI">startid</att>
+                            ,
+                            <att scheme="TEI">tstamp</att>
+                            ,
+                            <att scheme="TEI">tstamp.ges</att>
+                            , or
+                            <att scheme="TEI">tstamp.real</att>
+                            attribute. It is a semantic error not to specify one of these attributes.</p>
+                    </remarks>
+                </elementSpec>
+                <moduleRef key="MEI.corpus"
+                include="meiCorpus"/>
+                <elementSpec ident="meiCorpus" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.corpus">
+                    <desc>(MEI corpus) – A group of related MEI documents, consisting of a header for the group, and one or more
+                        <gi scheme="MEI">mei</gi>
+                        elements, each with its own complete header.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.meiVersion"/>
+                        <memberOf key="model.startLike.corpus"/>
+                    </classes>
+                    <content>
+                        <rng:ref name="meiHead" />
+                        <rng:zeroOrMore>
+                            <rng:ref name="mei" />
+                        </rng:zeroOrMore>
+                    </content>
+                    <remarks>
+                        <p part="N">This element is modelled on the teiCorpus element in the Text Encoding Initiative (TEI) standard. The MEI instances making up the corpus may be related in a number of ways, for example, by composer, by similar instrumentation, by holding institution, etc. This element's name should not be changed in order to assure an absolute minimum level of MEI compliance.</p>
+                    </remarks>
+                </elementSpec>
+                <moduleRef key="MEI.critapp"/>
+                <moduleRef key="MEI.edittrans"
+                include="handShift"/>
+                <elementSpec ident="handShift" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.edittrans">
+                    <desc>Marks the beginning of a passage written in a new hand, or of a change in the scribe, writing style, ink or character of the document hand.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.edit"/>
+                        <memberOf key="att.facsimile"/>
+                        <memberOf key="att.medium"/>
+                        <memberOf key="model.transcriptionLike"/>
+                    </classes>
+                    <content>
+                        <rng:empty/>
+                    </content>
+                    <attList org="group">
+                        <attDef ident="character" usage="opt">
+                            <desc>Describes the character of the new hand.</desc>
+                            <datatype maxOccurs="1" minOccurs="1">
+                                <rng:text/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="new" usage="opt">
+                            <desc>Identifies the new hand. The value must contain the ID of a hand element given elsewhere in the document.</desc>
+                            <datatype maxOccurs="1" minOccurs="1">
+                                <rng:ref name="data.URI" />
+                            </datatype>
+                            <constraintSpec ident="check_newTarget" scheme="schematron">
+                                <constraint>
+                                    <sch:rule context="@new">
+                                        <sch:assert role="warning" test="not(normalize-space(.) eq '')">@new attribute should have content.</sch:assert>
+                                        <sch:assert role="warning" test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:hand/@xml:id">The value in @new should correspond to the @xml:id attribute of a hand element.</sch:assert>
+                                    </sch:rule>
+                                </constraint>
+                            </constraintSpec>
+                        </attDef>
+                        <attDef ident="old" usage="opt">
+                            <desc>Identifies the old hand. The value must contain the ID of a hand element given elsewhere in the document.</desc>
+                            <datatype maxOccurs="1" minOccurs="1">
+                                <rng:ref name="data.URI" />
+                            </datatype>
+                            <constraintSpec ident="check_oldTarget" scheme="schematron">
+                                <constraint>
+                                    <sch:rule context="@old">
+                                        <sch:assert role="warning" test="not(normalize-space(.) eq '')">@old attribute should have content.</sch:assert>
+                                        <sch:assert role="warning" test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:hand/@xml:id">The value in @old should correspond to the @xml:id attribute of a hand element.</sch:assert>
+                                    </sch:rule>
+                                </constraint>
+                            </constraintSpec>
+                        </attDef>
+                    </attList>
+                    <remarks>
+                        <p part="N">The
+                            <att scheme="TEI">character</att>
+                            attribute describes characteristics of the hand, particularly those related to the quality of the writing, e.g., 'shaky', 'thick', regular'. A description of the tint or type of ink, e.g. 'brown' or the writing medium, e.g. 'pencil', may be placed in the
+                            <att scheme="TEI">medium</att>
+                            attribute. The new hand may be identified using the
+                            <att scheme="TEI">new</att>
+                            attribute, while the previous hand may be recorded in the
+                            <att scheme="TEI">old</att>
+                            attribute. The
+                            <att scheme="TEI">resp</att>
+                            attribute contains an ID reference to an element containing the name of the editor or transcriber responsible for identifying the change of hand. The
+                            <att scheme="TEI">cert</att>
+                            attribute signifies the degree of certainty ascribed to the identification of the new hand.</p>
+                    </remarks>
+                    <remarks>
+                        <p part="N">This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+                    </remarks>
+                </elementSpec>
+                <moduleRef key="MEI.externalsymbols"/>
+                <moduleRef key="MEI.facsimile"/>
+                <moduleRef key="MEI.figtable"/>
+                <moduleRef key="MEI.fingering"/>
+                <moduleRef key="MEI.frbr"/>
+                <moduleRef key="MEI.harmony"/>
+                <moduleRef key="MEI.lyrics"/>
+                <moduleRef key="MEI.midi"/>
+                <moduleRef key="MEI.namesdates"/>
+                <moduleRef key="MEI.performance"/>
+                <moduleRef key="MEI.ptrref"/>
+                <moduleRef key="MEI.tablature"/>
+                <moduleRef key="MEI.text"
+                include="back front"/>
+                <elementSpec ident="back" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.text">
+                    <desc>(back matter) – Contains any appendixes, advertisements, indexes, etc. following the main body of a musical text.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.facsimile"/>
+                        <memberOf key="att.lang"/>
+                        <memberOf key="att.metadataPointing"/>
+                        <memberOf key="model.backLike"/>
+                    </classes>
+                    <content>
+                        <rng:zeroOrMore>
+                            <rng:choice>
+                                <rng:ref name="model.divLike" />
+                                <rng:ref name="model.frontAndBackPart" />
+                                <rng:ref name="model.milestoneLike.text" />
+                                <rng:ref name="model.relationLike" />
+                            </rng:choice>
+                        </rng:zeroOrMore>
+                    </content>
+                    <remarks>
+                        <p part="N">This element is modelled on elements in the Text Encoding Initiative (TEI) and Encoded Archival Description (EAD) standards.</p>
+                    </remarks>
+                </elementSpec>
+                <elementSpec ident="front" mode="add" ns="http://www.example.org/ns/nonTEI" module="MEI.text">
+                    <desc>(front matter) – Bundles prefatory text found before the start of the musical text.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.facsimile"/>
+                        <memberOf key="att.lang"/>
+                        <memberOf key="att.metadataPointing"/>
+                        <memberOf key="model.frontLike"/>
+                    </classes>
+                    <content>
+                        <rng:zeroOrMore>
+                            <rng:choice>
+                                <rng:ref name="model.divLike" />
+                                <rng:ref name="model.frontAndBackPart" />
+                                <rng:ref name="model.milestoneLike.text" />
+                                <rng:ref name="model.relationLike" />
+                            </rng:choice>
+                        </rng:zeroOrMore>
+                    </content>
+                    <remarks>
+                        <p part="N">
+                            <gi scheme="MEI">titlePage</gi>
+                            may be used to transcribe the item's title page. Other front matter structures, such as a preface, dedication, or table of contents, may be encoded as textual divisions; that is, as
+                            <gi scheme="MEI">div</gi>
+                            elements, with an optional
+                            <gi scheme="MEI">head</gi>
+                            sub-element describing the nature of the division. The
+                            <gi scheme="MEI">pb</gi>
+                            element is allowed here in order to accommodate page images, e.g. cover, endpapers, etc. before and after the actual textual matter.</p>
+                    </remarks>
+                    <remarks>
+                        <p part="N">This element is modelled on elements in the Text Encoding Initiative (TEI) and Encoded Archival Description (EAD) standards.</p>
+                    </remarks>
+                </elementSpec>
+                <moduleRef key="MEI.usersymbols"/>
+                
+                <!-- Include SVG -->
+                <moduleRef url="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/svg11.rng">
+                    <content>
+                        <rng:define name="mei_model.graphicLike" combine="choice">
+                            <rng:ref name="svg"/>
+                        </rng:define>
+                    </content>
+                </moduleRef>
+                
+            </schemaSpec>
+        </body>
+    </text>
+</TEI>
