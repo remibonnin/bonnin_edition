@@ -2876,6 +2876,7 @@ CC 3778 Li casteax ne doutoit assaut
                             <attDef ident="who" mode="change" usage="req"/>
                         </attList>
                     </elementSpec>
+                    
                     <moduleRef key="core"
                         include="abbr add address addrLine analytic author bibl biblScope biblStruct cb choice 
                         citedRange corr date del edition editor email emph expan extent gap gb graphic head 
@@ -3798,6 +3799,7 @@ CC 3778 Li casteax ne doutoit assaut
                             </attDef>
                         </attList>
                     </elementSpec>
+                    
                     <moduleRef key="verse" include="att.metrical"/>
 
                     <moduleRef key="textcrit"
@@ -3847,6 +3849,7 @@ CC 3778 Li casteax ne doutoit assaut
                     <classSpec ident="att.textCritical" module="textcrit" type="atts" mode="change">
                         <!-- TODO: à redéfinir en détail lors de la modélisation de l'apparat critique -->
                     </classSpec>
+                    
                     <moduleRef key="analysis" include="c pc w"/>
                     <!-- je remet c : mais il faudra le documenter, le préciser, et voir comment on définit sa complémentarité vis-à-vis de reg/orig - de g
                     tel que je le vois
@@ -4157,6 +4160,7 @@ CC 3778 Li casteax ne doutoit assaut
                         </classes>
                     </elementSpec>
                     <!-- retirés: notamment msItem (d'autres également: informations biblioth.)-->
+                    
                     <moduleRef key="msdescription"
                         include=" accMat acquisition additional additions altIdentifier binding bindingDesc catchwords 
                         collation collection colophon condition decoDesc decoNote depth dim dimensions explicit filiation 
@@ -4365,7 +4369,6 @@ CC 3778 Li casteax ne doutoit assaut
                             </attDef>
                         </attList>
                     </elementSpec>
-
                     <elementSpec ident="foliation" mode="change">
                         <content>
                             <!-- TODO: définir une classe de contenu, pour ces cas fréquents? -->
@@ -4377,7 +4380,6 @@ CC 3778 Li casteax ne doutoit assaut
                             </alternate>
                         </content>
                     </elementSpec>
-
                     <elementSpec ident="decoDesc" mode="change">
                         <desc xml:lang="fr">contient la description de la décoration du
                             manuscrit<!--,
@@ -4396,8 +4398,6 @@ CC 3778 Li casteax ne doutoit assaut
 
                         </remarks>
                     </elementSpec>
-
-
                     <elementSpec ident="history" mode="change">
                         <content>
                             <sequence>
@@ -4457,6 +4457,23 @@ CC 3778 Li casteax ne doutoit assaut
                             </attDef>
                         </attList>
                     </elementSpec>
+                    <elementSpec ident="handNote" mode="change">
+                        <content>
+                            <macroRef key="macro.specialPara"/>
+                        </content>
+                        <attList>
+                            <attDef ident="scribe" mode="change" usage="opt"/>
+                            <attDef ident="scribeRef" mode="change" usage="opt"/>
+                            <attDef ident="script" mode="change" usage="opt"/>
+                            <attDef ident="scriptRef" mode="change" usage="opt"/>
+                            <attDef ident="medium" mode="change" usage="opt"/>
+                            <attDef ident="scope" mode="change" usage="opt"/>
+                        </attList>
+                    </elementSpec>
+                    <classSpec ident="att.handFeatures" module="transcr" type="atts" mode="add">
+                        <desc>provides attributes describing aspects of the hand in which a manuscript is written.</desc>
+                    </classSpec>
+                    
                     <moduleRef key="gaiji" include="g"/>
                     <moduleRef key="figures" include="formula table"/>
                 </schemaSpec>
