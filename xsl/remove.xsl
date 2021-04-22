@@ -13,12 +13,11 @@
     <xsl:template match="@*|text()|comment()|processing-instruction()">
         <xsl:copy-of select="." />
     </xsl:template>
-    <xsl:template match="/TEI/text/body/div/ab/@type"/>
-    <xsl:template match="/TEI/text/body/div/ab/comment"/>
-    <xsl:template match="/TEI/text/body/div/note/comment"/>
-    <xsl:template match="/TEI/text/body/div/ab/hi/comment"/>
-    <xsl:template match="/TEI/text/body/div/ab/blackening"/>
-    <xsl:template match="/TEI/text/body/div/fw/comment"/>
+    <!-- Pas nécessaire d'avoir chemins aussi développés -->
+    <!--<xsl:template match="/TEI/text/body/div/ab/@type"/>-->
+    <xsl:template match="ab/@type"/>
+    <xsl:template match="comment"/>
+    <xsl:template match="blackening"/>
         
     
 </xsl:stylesheet>
