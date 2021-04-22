@@ -240,6 +240,8 @@
                             <gi>msDesc</gi>, pour la transcription d'un manuscrit. <specList>
                             <specDesc key="biblStruct" atts="xml:id"/>
                             <specDesc key="biblFull" atts="xml:id"/>
+                            <specDesc key="bibl" atts="default status"/>
+                            <specDesc key="biblScope"/>
                             <specDesc key="notesStmt"/>
                             <specDesc key="msDesc" atts="xml:id"/>
                         </specList>
@@ -3396,7 +3398,12 @@ CC 3778 Li casteax ne doutoit assaut
                             </egXML>
                         </exemplum>
                     </elementSpec>
-                    <!--<elementSpec ident="bibl" mode="change">
+                    <elementSpec ident="biblScope" mode="change">
+                        <content>
+                            <macroRef key="macro.phraseSeq"/>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="bibl" mode="change">
                         <attList>
                             <attDef ident="xml:id" mode="delete"/>
                             <attDef ident="n" mode="delete"/>
@@ -3416,7 +3423,7 @@ CC 3778 Li casteax ne doutoit assaut
                                 </valList>
                             </attDef>
                         </attList>
-                    </elementSpec>-->
+                    </elementSpec>
                     <elementSpec ident="biblStruct" mode="change">
                         <!-- Élément à préciser et documenter -->
                         <attList>
