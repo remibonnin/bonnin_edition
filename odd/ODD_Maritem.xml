@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <TEI xmlns:xi="http://www.w3.org/2001/XInclude" xmlns="http://www.tei-c.org/ns/1.0"
-    xmlns:mei="http://www.music-encoding.org/ns/mei" 
-    xmlns:rng="http://relaxng.org/ns/structure/1.0" 
-    xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-    xmlns:s="http://purl.oclc.org/dsdl/schematron" xml:lang="fr">
+    xmlns:mei="http://www.music-encoding.org/ns/mei" xmlns:rng="http://relaxng.org/ns/structure/1.0"
+    xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:s="http://purl.oclc.org/dsdl/schematron"
+    xml:lang="fr">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -167,6 +166,7 @@
                         <specDesc key="fileDesc"/>
                         <specDesc key="profileDesc"/>
                         <specDesc key="revisionDesc"/>
+                        <specDesc key="encodingDesc"/>
                     </specList>
                 </p>
                 <div>
@@ -207,6 +207,7 @@
                             <specDesc key="authority"/>
                             <specDesc key="publisher"/>
                             <specDesc key="availability"/>
+                            <specDesc key="licence"/>
                             <specDesc key="date"/>
                         </specList>
                     </p>
@@ -239,6 +240,7 @@
                             <gi>msDesc</gi>, pour la transcription d'un manuscrit. <specList>
                             <specDesc key="biblStruct" atts="xml:id"/>
                             <specDesc key="biblFull" atts="xml:id"/>
+                            <specDesc key="notesStmt"/>
                             <specDesc key="msDesc" atts="xml:id"/>
                         </specList>
                     </p>
@@ -360,7 +362,18 @@
                         lieu et date d'origine, ainsi que les langues et dialectes employés. <specList>
                             <specDesc key="profileDesc"/>
                             <specDesc key="creation"/>
+                            <specDesc key="language"/>
                             <specDesc key="langUsage"/>
+                            <specDesc key="textDesc"/>
+                            <specDesc key="channel"/>
+                            <specDesc key="constitution"/>
+                            <specDesc key="derivation"/>
+                            <specDesc key="domain"/>
+                            <specDesc key="factuality"/>
+                            <specDesc key="interaction"/>
+                            <specDesc key="preparedness"/>
+                            <specDesc key="purpose"/>
+                            <specDesc key="textClass"/>
                         </specList>
                     </p>
                     <p>Dans la description de la création, les éléments <gi>origPlace</gi> et
@@ -440,6 +453,20 @@
                         qui vont avec également).
                         -->
                     </p>
+                </div>
+                <div>
+                    <head>Descriptif de l'encodage du document</head>
+                    <p>Le <gi>teiHeader</gi>se conclut par un élément<gi>encodingDesc</gi>, qui
+                        documente la relation entre un texte électronique et la ou les sources dont
+                        il est issu : <specList>
+                            <specDesc key="encodingDesc"/>
+                            <specDesc key="classDecl"/>
+                            <specDesc key="taxonomy"/>
+                            <specDesc key="catDesc"/>
+                            <specDesc key="category"/>
+                            <specDesc key="projectDesc"/>
+                            <specDesc key="editorialDecl"/>
+                        </specList></p>
                 </div>
             </div>
             <div xml:id="DIV_STRUCT">
@@ -2517,13 +2544,13 @@ CC 3778 Li casteax ne doutoit assaut
             </div>
             <div>
                 <head>Spécifications pour le schéma</head>
-                <schemaSpec ident="maritem" start="TEI" ns="http://www.tei-c.org/ns/1.0" docLang="fr"
-                    xml:lang="fr" source="ODD_music.xml">
+                <schemaSpec ident="maritem" start="TEI" ns="http://www.tei-c.org/ns/1.0"
+                    docLang="fr" xml:lang="fr" source="ODD_music.xml">
                     <!-- Sélection à faire parmi les informations du teiHeader-->
                     <moduleRef key="header"
                         include=" teiHeader fileDesc titleStmt authority idno availability biblFull 
-                        notesStmt relatedItem licence encodingDesc classDecl taxonomy catDesc category projectDesc address addrLine 
-                        email editorialDecl publicationStmt sourceDesc profileDesc creation language langUsage textDesc channel 
+                        notesStmt licence encodingDesc classDecl taxonomy catDesc category projectDesc 
+                        editorialDecl publicationStmt sourceDesc profileDesc creation language langUsage textDesc channel 
                         constitution derivation domain factuality interaction preparedness purpose textClass revisionDesc change"/>
                     <elementSpec ident="teiHeader" mode="change">
                         <content>
@@ -2548,9 +2575,6 @@ CC 3778 Li casteax ne doutoit assaut
                                 <!--TODO: à rendre obligatoire dans la version définitive? -->
                                 <elementRef key="publicationStmt"/>
                                 <elementRef key="sourceDesc"/>
-                                <elementRef key="address"/>
-                                <elementRef key="addrLine"/>
-                                <elementRef key="email"/>
                                 <elementRef key="p"/>
                                 <elementRef key="authority"/>
                                 <elementRef key="idno"/>
@@ -2562,10 +2586,8 @@ CC 3778 Li casteax ne doutoit assaut
                     <elementSpec ident="titleStmt" mode="change">
                         <content>
                             <sequence>
-                                <elementRef key="title" minOccurs="1"
-                                    maxOccurs="unbounded"/>
-                                <classRef key="model.respLike"
-                                    minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="title" minOccurs="1" maxOccurs="unbounded"/>
+                                <classRef key="model.respLike" minOccurs="0" maxOccurs="unbounded"/>
                             </sequence>
                         </content>
                     </elementSpec>
@@ -2576,41 +2598,37 @@ CC 3778 Li casteax ne doutoit assaut
                     </elementSpec>
                     <elementSpec ident="idno" mode="change">
                         <content>
-                            <alternate minOccurs="0"
-                                maxOccurs="unbounded">
+                            <alternate minOccurs="0" maxOccurs="unbounded">
                                 <textNode/>
                                 <classRef key="model.gLike"/>
                                 <elementRef key="idno"/>
                             </alternate>
                         </content>
-                    </elementSpec>        
+                    </elementSpec>
                     <elementSpec ident="availability" mode="change">
                         <content>
-                            <alternate minOccurs="1"
-                                maxOccurs="unbounded">
+                            <alternate minOccurs="1" maxOccurs="unbounded">
                                 <classRef key="model.availabilityPart"/>
                                 <classRef key="model.pLike"/>
                             </alternate>
                             <elementRef key="licence"/>
                         </content>
-                    </elementSpec>                                              
+                    </elementSpec>
                     <elementSpec ident="biblFull" mode="change">
                         <content>
                             <alternate>
                                 <sequence>
                                     <sequence>
                                         <elementRef key="titleStmt"/>
-                                        <elementRef key="editionStmt"
-                                            minOccurs="0"/>
+                                        <elementRef key="editionStmt" minOccurs="0"/>
                                         <elementRef key="extent" minOccurs="0"/>
                                         <elementRef key="publicationStmt"/>
-                                        <elementRef key="seriesStmt"
-                                            minOccurs="0" maxOccurs="unbounded"/>
-                                        <elementRef key="notesStmt"
-                                            minOccurs="0"/>
+                                        <elementRef key="seriesStmt" minOccurs="0"
+                                            maxOccurs="unbounded"/>
+                                        <elementRef key="notesStmt" minOccurs="0"/>
                                     </sequence>
-                                    <elementRef key="sourceDesc"
-                                        minOccurs="0" maxOccurs="unbounded"/>
+                                    <elementRef key="sourceDesc" minOccurs="0" maxOccurs="unbounded"
+                                    />
                                 </sequence>
                                 <sequence>
                                     <elementRef key="fileDesc"/>
@@ -2690,34 +2708,13 @@ CC 3778 Li casteax ne doutoit assaut
                                 <elementRef key="category" minOccurs="0" maxOccurs="unbounded"/>
                             </sequence>
                         </content>
-                    </elementSpec>   
+                    </elementSpec>
                     <elementSpec ident="projectDesc" mode="change">
                         <content>
                             <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
                         </content>
                     </elementSpec>
-                    <elementSpec ident="address" mode="change">
-                        <content>
-                            <sequence>
-                                <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
-                                <sequence minOccurs="1" maxOccurs="unbounded">
-                                    <classRef key="model.addrPart"/>
-                                    <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"
-                                    />
-                                </sequence>
-                            </sequence>
-                        </content>
-                    </elementSpec>
-                    <elementSpec ident="addrLine" mode="change">
-                        <content>
-                            <macroRef key="macro.phraseSeq"/>
-                        </content>
-                    </elementSpec>
-                    <elementSpec ident="email" mode="change">
-                        <content>
-                            <macroRef key="macro.phraseSeq"/>
-                        </content>
-                    </elementSpec>    
+
                     <elementSpec ident="editorialDecl" mode="change">
                         <content>
                             <alternate minOccurs="1" maxOccurs="unbounded">
@@ -2751,6 +2748,7 @@ CC 3778 Li casteax ne doutoit assaut
                             <sequence>
                                 <elementRef key="creation"/>
                                 <elementRef key="language"/>
+                                <elementRef key="langUsage"/>
                                 <elementRef key="textDesc"/>
                                 <elementRef key="channel"/>
                                 <elementRef key="constitution"/>
@@ -2786,10 +2784,8 @@ CC 3778 Li casteax ne doutoit assaut
                     <elementSpec ident="langUsage">
                         <content>
                             <alternate>
-                                <classRef key="model.pLike" minOccurs="1"
-                                    maxOccurs="unbounded"/>
-                                <elementRef key="language" minOccurs="1"
-                                    maxOccurs="unbounded"/>
+                                <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
+                                <elementRef key="language" minOccurs="1" maxOccurs="unbounded"/>
                             </alternate>
                         </content>
                     </elementSpec>
@@ -2799,14 +2795,12 @@ CC 3778 Li casteax ne doutoit assaut
                             <attDef ident="cert" mode="change" usage="req"/>
                             <attDef ident="resp" mode="change" usage="req"/>
                         </attList>
-                    </elementSpec>                   
+                    </elementSpec>
                     <elementSpec ident="textDesc" mode="change">
                         <content>
                             <sequence>
-                                <classRef key="model.textDescPart"
-                                    expand="sequence"/>
-                                <elementRef key="purpose" minOccurs="1"
-                                    maxOccurs="unbounded"/>
+                                <classRef key="model.textDescPart" expand="sequence"/>
+                                <elementRef key="purpose" minOccurs="1" maxOccurs="unbounded"/>
                             </sequence>
                         </content>
                     </elementSpec>
@@ -2852,8 +2846,7 @@ CC 3778 Li casteax ne doutoit assaut
                     </elementSpec>
                     <elementSpec ident="textClass" mode="change">
                         <content>
-                            <alternate minOccurs="0"
-                                maxOccurs="unbounded">
+                            <alternate minOccurs="0" maxOccurs="unbounded">
                                 <elementRef key="classCode"/>
                                 <elementRef key="catRef"/>
                                 <elementRef key="keywords"/>
@@ -2876,7 +2869,7 @@ CC 3778 Li casteax ne doutoit assaut
                             <attDef ident="who" mode="change" usage="req"/>
                         </attList>
                     </elementSpec>
-                    
+
                     <moduleRef key="core"
                         include="abbr add address addrLine analytic author bibl biblScope biblStruct cb choice 
                         citedRange corr date del edition editor email emph expan extent gap gb graphic head 
@@ -2889,6 +2882,28 @@ CC 3778 Li casteax ne doutoit assaut
                     <!-- emph à détailler -->
                     <!--<moduleRef key="core"/>-->
                     <!--<elementSpec ident="sic" mode="change"/>-->
+                    <elementSpec ident="address" mode="change">
+                        <content>
+                            <sequence>
+                                <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
+                                <sequence minOccurs="1" maxOccurs="unbounded">
+                                    <classRef key="model.addrPart"/>
+                                    <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"
+                                    />
+                                </sequence>
+                            </sequence>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="addrLine" mode="change">
+                        <content>
+                            <macroRef key="macro.phraseSeq"/>
+                        </content>
+                    </elementSpec>                    
+                    <elementSpec ident="email" mode="change">
+                        <content>
+                            <macroRef key="macro.phraseSeq"/>
+                        </content>
+                    </elementSpec>                    
                     <elementSpec ident="gb" mode="change">
                         <desc> (gathering begins) marque le début d'un nouveau cahier dans un
                             manuscrit transcrit.</desc>
@@ -3799,7 +3814,7 @@ CC 3778 Li casteax ne doutoit assaut
                             </attDef>
                         </attList>
                     </elementSpec>
-                    
+
                     <moduleRef key="verse" include="att.metrical"/>
 
                     <moduleRef key="textcrit"
@@ -3849,7 +3864,7 @@ CC 3778 Li casteax ne doutoit assaut
                     <classSpec ident="att.textCritical" module="textcrit" type="atts" mode="change">
                         <!-- TODO: à redéfinir en détail lors de la modélisation de l'apparat critique -->
                     </classSpec>
-                    
+
                     <moduleRef key="analysis" include="c pc w"/>
                     <!-- je remet c : mais il faudra le documenter, le préciser, et voir comment on définit sa complémentarité vis-à-vis de reg/orig - de g
                     tel que je le vois
@@ -3920,6 +3935,11 @@ CC 3778 Li casteax ne doutoit assaut
                                     </valItem>
                                 </valList>
                             </attDef>
+                            <attDef ident="xml:id" mode="change" usage="rec"/>
+                            <attDef ident="lemmaRef" mode="change" usage="rec"/>
+                            <attDef ident="lemma" mode="change" usage="rec"/>
+                            <attDef ident="pos" mode="change" usage="rec"/>
+                            <attDef ident="msd" mode="change" usage="rec"/>
                         </attList>
                     </elementSpec>
                     <elementSpec ident="pc" mode="change">
@@ -4160,7 +4180,7 @@ CC 3778 Li casteax ne doutoit assaut
                         </classes>
                     </elementSpec>
                     <!-- retirés: notamment msItem (d'autres également: informations biblioth.)-->
-                    
+
                     <moduleRef key="msdescription"
                         include=" accMat acquisition additional additions altIdentifier binding bindingDesc catchwords 
                         collation collection colophon condition decoDesc decoNote depth dim dimensions explicit filiation 
@@ -4471,9 +4491,10 @@ CC 3778 Li casteax ne doutoit assaut
                         </attList>
                     </elementSpec>
                     <classSpec ident="att.handFeatures" module="transcr" type="atts" mode="add">
-                        <desc>provides attributes describing aspects of the hand in which a manuscript is written.</desc>
+                        <desc>provides attributes describing aspects of the hand in which a
+                            manuscript is written.</desc>
                     </classSpec>
-                    
+
                     <moduleRef key="gaiji" include="g"/>
                     <moduleRef key="figures" include="formula table"/>
                 </schemaSpec>
