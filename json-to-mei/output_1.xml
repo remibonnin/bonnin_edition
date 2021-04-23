@@ -1,0 +1,2388 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    <TEI type="dict">
+        <uuid type="str">13ceb372-a760-41e4-9c86-60f5e1c493c7</uuid>
+        <children type="list">
+            <item type="dict">
+                <uuid type="str">fa477f9f-dd9b-4b9c-96ef-c27f209be139</uuid>
+                <children type="list">
+                    <item type="dict">
+                        <uuid type="str">da8912b1-f98d-468a-b41c-112abf710302</uuid>
+                        <children type="list">
+                            <item type="dict">
+                                <uuid type="str">8cea73f1-7c97-456a-9755-775898246ccb</uuid>
+                                <focus type="bool">True</focus>
+                                <base type="str">D</base>
+                                <octave type="int">5</octave>
+                                <shape type="str">C</shape>
+                                <kind type="str">Clef</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">2eb4369c-d1ab-4965-8968-cb92561d8333</uuid>
+                                <text type="str">Li</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >12e0a1c9-33d1-47b8-a75f-482d035b78bb</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">G</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">103b8ec4-0833-430a-841e-d0440208d8da</uuid>
+                                <text type="str">granz</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >bae45011-cb57-4732-bdc9-9454e5bca03d</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">A</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">f92cae4f-3543-4609-9fd3-2e11ea0ba8f1</uuid>
+                                <text type="str">de-</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >0600efd5-dc03-4e0a-ae2c-c3e4e9aaf09a</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">A</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >63bd8b48-dcd9-423d-8338-3d9385de59db</uuid>
+                                                  <noteType type="str">Descending</noteType>
+                                                  <base type="str">B</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">True</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">3921b236-cd87-4a8e-9c51-c7c754837c42</uuid>
+                                <text type="str">sirs</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >794a3ce3-c952-456d-aa18-61e69f9de333</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">A</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >4d2441e4-de48-4d0d-ba87-f6bf178950e3</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">G</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">5dc4649f-e378-4553-94fd-dfdbca4b728a</uuid>
+                                <text type="str">et</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >fd1cd8c1-28b8-48ac-ab98-2be71a741519</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">A</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">ba5da2a9-2bd0-4041-b12d-9fae3d6f6507</uuid>
+                                <text type="str">la</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >446a959a-77aa-462f-9aae-74112d72bca9</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">B</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">e2b24a58-842a-4975-8ff7-cdee775db986</uuid>
+                                <text type="str">dou-</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >5ebf5093-411d-420c-b3aa-1fed3da71c06</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">A</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">77253475-5472-4f99-8233-42b932899eee</uuid>
+                                <text type="str">ce</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >73bb2eb3-71ef-41bb-b019-1d9c67eeb5e9</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">G</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">6713a4b1-a462-47a5-899b-34e80d0f1468</uuid>
+                                <text type="str">pen-</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >86ab265b-8c1e-498c-ae4a-261f2d20140d</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">F</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">7950a7fa-ea02-4c3b-8e9e-30ce5fd9c14e</uuid>
+                                <text type="str">se-</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >c7b4bd7b-83c0-4e26-b63b-64a1660ff923</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">E</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >e0341fd7-d135-4fae-b9e8-54eac40ecfdd</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">D</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >2571f3f2-7819-4fb6-9013-e640cbaaf488</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">E</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">a8b29f98-4076-4298-9c50-ca87296cad7f</uuid>
+                                <text type="str">e·</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >b4e7d8fb-04dd-43d1-b5a6-b4d7ac891088</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">E</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >f3021888-2d90-42ed-a70c-5a22690af838</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">D</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">c962fa4b-afb8-4f24-a72e-fcc671be623d</uuid>
+                                <hasNotes type="bool">True</hasNotes>
+                                <focus type="bool">True</focus>
+                                <kind type="str">LineChange</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">014b3ba8-fb44-411c-b0db-0fcc4206a836</uuid>
+                                <text type="str">que</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >85b59c6a-3616-419d-945c-c3e4c7703210</uuid>
+                                                  <noteType type="str">Ascending</noteType>
+                                                  <base type="str">D</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">028ba732-546a-4aec-a5b1-e17dde339c1c</uuid>
+                                <text type="str">iai</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >33fc9555-0480-4e73-9205-5e4a9e3a23de</uuid>
+                                                  <noteType type="str">Descending</noteType>
+                                                  <base type="str">E</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                        </children>
+                        <kind type="str">ZeileContainer</kind>
+                    </item>
+                    <item type="dict">
+                        <uuid type="str">ea80d1fc-a89e-4cb3-9ab1-b7624e5b3ddf</uuid>
+                        <children type="list">
+                            <item type="dict">
+                                <uuid type="str">f99ba760-7914-4117-be7a-87f499dc41af</uuid>
+                                <focus type="bool">True</focus>
+                                <base type="str">B</base>
+                                <octave type="int">4</octave>
+                                <shape type="str">F</shape>
+                                <kind type="str">Clef</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">a30301ef-82c8-4e2a-9fd8-fe5f4d8472b6</uuid>
+                                <text type="str">por</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >73250e5e-75b0-4e09-8773-d3d99c9470d9</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">F</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >8eaf2209-ff31-496e-a26e-e9f480b321da</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">E</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">b8e19fef-fd08-43b3-b546-aeca321ce759</uuid>
+                                <text type="str">vos</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >fddf9ec1-8dfe-4741-ae8f-9e50c3e08bfb</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">F</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">30d4e4d2-e351-403e-a60d-fc1e78af0d86</uuid>
+                                <text type="str">da-</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >ccb9a6d9-40c9-4307-8c75-e8af7e32e360</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">F</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">4511a4fc-5f94-4baf-a47f-3e25073ba959</uuid>
+                                <text type="str">me</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >6974237c-d980-40da-9542-353bf8bdadf7</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">G</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">f80b64ff-4a25-4cf5-aadf-21fe1cd2a5e9</uuid>
+                                <text type="str">qui</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >36a255c4-2611-4a5b-9f58-afeea54d3e96</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">A</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >5c539d52-26d5-472e-810d-c8835eaf11fc</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">B</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >ef33cc4a-75bf-48fc-90f6-5bbf1e674662</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">C</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">5</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">9b4db8b6-eafc-43ef-a8ba-9f76437bc178</uuid>
+                                <text type="str">va-</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >35db227e-4bf0-4544-a5a4-bea372212d1a</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">B</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">40cff64b-f451-40ce-9636-93ee7676cadc</uuid>
+                                <text type="str">lez</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >3cb88eb9-5554-4136-ba2f-5671030a6824</uuid>
+                                                  <noteType type="str">Ascending</noteType>
+                                                  <base type="str">A</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">True</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">31c0d802-3933-410e-aab4-03d950f3dcf7</uuid>
+                                <text type="str">tant·</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >e7e45789-0576-4be3-8ef1-53d1f7e15119</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">A</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >739a45ef-a3e3-4625-8b64-e8740c2bc580</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">G</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">eebec09f-d13b-4d77-aaf3-ab90a76002ea</uuid>
+                                <hasNotes type="bool">True</hasNotes>
+                                <focus type="bool">True</focus>
+                                <kind type="str">LineChange</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">3fecd3f4-e7bc-4ac5-84ed-c401de722bf0</uuid>
+                                <text type="str">dont</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >2667d55d-1c10-4863-b50d-451f8127ea16</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">B</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">613731cb-6136-40a5-b90a-083af51420d4</uuid>
+                                <text type="str">la</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >8ecafb7a-90e2-4be2-88f5-0d576044908f</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">C</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">5</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">c1de38f4-e823-4c96-b871-c10ba0ccb7cc</uuid>
+                                <text type="str">pai-</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >2e8b72ad-3e42-4735-a284-c3e7ad41044e</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">D</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">5</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >baad60a3-5d55-4d37-a284-b7dbbfd60599</uuid>
+                                                  <noteType type="str">Descending</noteType>
+                                                  <base type="str">D</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">5</octave>
+                                                  <focus type="bool">True</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">f1aff63f-38ae-4b95-b89e-79282fb92f4d</uuid>
+                                <text type="str">ne</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >50b6eb02-f505-4243-9f9e-71ccc5a21eda</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">C</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">5</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >d92a4d97-fead-463c-8d69-d945d799a412</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">B</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                        </children>
+                        <kind type="str">ZeileContainer</kind>
+                    </item>
+                    <item type="dict">
+                        <uuid type="str">0b08c4b7-ac03-49af-938d-98131806a52d</uuid>
+                        <children type="list">
+                            <item type="dict">
+                                <uuid type="str">ae4f88f6-80e6-45d3-bf15-5b86a0937235</uuid>
+                                <focus type="bool">True</focus>
+                                <base type="str">D</base>
+                                <octave type="int">5</octave>
+                                <shape type="str">C</shape>
+                                <kind type="str">Clef</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">45e73551-748a-455d-8ead-e608e4bc1e25</uuid>
+                                <text type="str">ne</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >134cc3df-de4e-4fb1-80ef-893902304e38</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">A</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">4a3295b6-8a46-4b62-b56b-a8e9a1236864</uuid>
+                                <text type="str">puet</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >21846208-3d78-4a67-80ee-a63d3ad80e72</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">B</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">a051839f-fabf-47e4-8271-027940bd248c</uuid>
+                                <text type="str">es-</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >bf2eb308-279f-41ea-b502-4cd78ded3ba5</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">A</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">5164151c-441b-49e1-a0ac-5e6e3ce315bf</uuid>
+                                <text type="str">tre</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >616b1d87-e731-4e3d-b944-0560826713c7</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">G</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">9112d531-1c69-4b60-9ac6-92c7e0cbecbb</uuid>
+                                <text type="str">ce-</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >5fec4311-c772-401b-a588-94ca48869d55</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">F</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">a0e86b00-76c6-487d-88cd-fc3cfcf57763</uuid>
+                                <text type="str">le-</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >20e3ab82-b9dd-4463-a9a8-ac6b9d04abc7</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">E</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >d76e71f4-abf0-4484-8405-e0341aaa0cc9</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">D</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >a65712da-60a1-45c5-8a13-3bee1f0f150c</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">E</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">879eb5da-f5ff-45c8-941b-6935ff64c4ab</uuid>
+                                <text type="str">e·</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >c90b8286-2533-4c57-b0a6-344015706466</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">E</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >6d715ce8-bc7a-4972-ab22-265a4131149f</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">D</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">True</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">fccc2f1a-d507-4827-81b4-1513c4a16dae</uuid>
+                                <hasNotes type="bool">True</hasNotes>
+                                <focus type="bool">True</focus>
+                                <kind type="str">LineChange</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">55f7dea9-86fd-4508-8c17-0ab30ca37c9b</uuid>
+                                <text type="str">ou</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >917be434-cbf6-4e84-806d-0482d8b53d8c</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">D</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >34489989-bda5-4b59-a4a0-3959a897c55e</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">E</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">7611cead-b0e5-4012-ab62-5a1ee01c3a57</uuid>
+                                <text type="str">ma-</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >1a79b604-bbfb-4804-b8fb-870c8b6a229d</uuid>
+                                                  <noteType type="str">Descending</noteType>
+                                                  <base type="str">E</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">0e71027f-fab6-493f-ab49-3da21813d9f7</uuid>
+                                <text type="str">uez</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >f4ae194e-e85c-418a-aeb0-972ba91ac91e</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">D</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >90d044bb-011d-4fce-b04a-ddfc0c50fff4</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">C</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">e5f48595-8f84-42c3-86f1-8124b6332297</uuid>
+                                <text type="str">mis</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >a20bf7a6-6ed7-49d0-ad5c-30794a51ff2b</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">D</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">93f844b8-9b8e-4d62-98ce-524a8caad359</uuid>
+                                <text type="str">et</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >6139cdd2-05b2-409c-b8bf-7970fdccafd8</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">D</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">ecf49d8e-8853-4fcf-9000-fcadb7a60a40</uuid>
+                                <text type="str">te-</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >8b03ff3a-e203-4f52-9383-28324afcf421</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">E</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">591db2aa-82e3-4605-9bda-c8b1b4eaed00</uuid>
+                                <text type="str">nu</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >11f2f66f-eb66-4db6-8cc2-117ceb947ca1</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">F</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >499232c3-4fcd-4908-adeb-3e0eb7156889</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">G</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >e39e185a-0a5a-416e-a4f5-0fcccae85e22</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">A</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">True</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                        </children>
+                        <kind type="str">ZeileContainer</kind>
+                    </item>
+                    <item type="dict">
+                        <uuid type="str">bf2b95a1-eab1-449e-b7c4-ffc4b1b35695</uuid>
+                        <children type="list">
+                            <item type="dict">
+                                <uuid type="str">d6d8da0a-7536-494c-b780-88609d5b747e</uuid>
+                                <focus type="bool">True</focus>
+                                <base type="str">D</base>
+                                <octave type="int">5</octave>
+                                <shape type="str">C</shape>
+                                <kind type="str">Clef</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">d87753b7-8dac-4735-a77a-230952816699</uuid>
+                                <text type="str">lon-</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >316fc249-e7f9-499e-a95b-1636468a96a7</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">G</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">55f43954-c5b8-45d7-9d4a-63e7bd0fdb3f</uuid>
+                                <text type="str">gue-</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >b436549f-bc02-43a3-bc80-9196e79c3dc2</uuid>
+                                                  <noteType type="str">Ascending</noteType>
+                                                  <base type="str">F</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">True</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">94ba6a86-7d0f-40da-b2ef-3f0b7627deef</uuid>
+                                <text type="str">mant·</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >2c7cf227-dc04-48d0-bced-9932e34b4b82</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">F</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >1a2840f2-9ebf-4d09-915a-84a248214e33</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">E</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">True</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">c6d3cf6b-4ac7-476d-9b21-95d5f9f55a95</uuid>
+                                <hasNotes type="bool">True</hasNotes>
+                                <focus type="bool">True</focus>
+                                <kind type="str">LineChange</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">b6c2b3d9-9d5a-4e30-a4e4-30ac411c082e</uuid>
+                                <text type="str">en-</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >b2084976-c83a-4c43-a67e-0827f590c928</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">A</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">08b15148-923e-42b9-95f2-0f7f7efd7ebf</uuid>
+                                <text type="str">cor</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >cb7bfafa-fd17-4bf9-8990-2408061433da</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">B</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">42e9957f-caa0-4cf2-8c27-798b7906101b</uuid>
+                                <text type="str">te-</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >1105bb31-ebcf-4437-bf6d-7d285a893767</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">C</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">5</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">bfa45b32-c22f-4961-bbb4-7edd0c34b124</uuid>
+                                <text type="str">nez</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >c04ace61-a2cc-474b-b8e7-77ee086c5cea</uuid>
+                                                  <noteType type="str">Descending</noteType>
+                                                  <base type="str">D</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">5</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">af0872a4-5e21-40a7-8e82-94f353ae668c</uuid>
+                                <text type="str">mon</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >bca9abea-4754-45ac-adb1-590c84a73c04</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">B</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">4ed108be-ce62-4d3a-b334-6cf513b3a2eb</uuid>
+                                <text type="str">cuer</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >6950789f-db4c-46e4-8966-d4143b836b35</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">A</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">da63c4c2-9d40-44c9-857c-aa7366fef99e</uuid>
+                                <text type="str">en</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >feee7a79-64f7-4fc4-ab3f-ebc5dc8f7184</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">G</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">True</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">66d59096-a835-4d4b-9b5b-334fd12b6d03</uuid>
+                                <text type="str">tel</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >74fad720-fd45-413d-9e1d-c9a956ec23a2</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">A</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                        </children>
+                        <kind type="str">ZeileContainer</kind>
+                    </item>
+                    <item type="dict">
+                        <uuid type="str">a8559ddc-e9ff-436a-a1af-59d8df89f086</uuid>
+                        <children type="list">
+                            <item type="dict">
+                                <uuid type="str">71ba30d6-51ee-47e8-9ec6-752cd96e9a99</uuid>
+                                <focus type="bool">True</focus>
+                                <base type="str">D</base>
+                                <octave type="int">5</octave>
+                                <shape type="str">C</shape>
+                                <kind type="str">Clef</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">f4a3e950-fc67-42f9-a310-6b46f6bc3d5c</uuid>
+                                <text type="str">tor-</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >29418edf-9ecd-4376-a6b8-a0743a1ba3e6</uuid>
+                                                  <noteType type="str">Flat</noteType>
+                                                  <base type="str">C</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">5</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >fb96f9e4-bfef-4a9c-892f-84c7ada2eba1</uuid>
+                                                  <noteType type="str">Ascending</noteType>
+                                                  <base type="str">B</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">066006bf-6ce0-41b2-ae38-3800199e27b5</uuid>
+                                <text type="str">mant·</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >d642b321-d3ef-4b45-8769-b2c0d25e90f9</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">B</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >1a9d933e-09d4-4acc-9e5d-9999f6ab3995</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">A</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">d40f62bf-a942-4238-8638-ba776d4c8ec9</uuid>
+                                <hasNotes type="bool">True</hasNotes>
+                                <focus type="bool">False</focus>
+                                <kind type="str">LineChange</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">eb68cb9d-9a16-4c42-ba32-da13dce39774</uuid>
+                                <text type="str">dont</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >5e9d6606-08d7-4044-b52e-94caa52557ec</uuid>
+                                                  <noteType type="str">Ascending</noteType>
+                                                  <base type="str">C</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">5</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">6a053bf6-b113-419a-ac46-852251080297</uuid>
+                                <text type="str">ia</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >9a9ab92e-88be-411d-b534-bcad7229e75f</uuid>
+                                                  <noteType type="str">Descending</noteType>
+                                                  <base type="str">C</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">5</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">f3dab94b-6d79-4c7c-a356-17f1527dd4c5</uuid>
+                                <text type="str">nis-</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >55bcc535-c755-454f-ab2b-9daac8846b5f</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">A</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">3eb6fd76-1fd6-435d-838b-3d2344f39193</uuid>
+                                <text type="str">trai</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >b1fc5c99-cb3d-46c3-b5ef-703f406aeeb9</uuid>
+                                                  <noteType type="str">Descending</noteType>
+                                                  <base type="str">B</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">b6eb5ad3-3f9e-4aec-854c-d070499f45f9</uuid>
+                                <text type="str">nul</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >f0ac45a0-6fc1-41f3-ac6f-70738d8529ab</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">G</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >27e80349-1aae-4f8e-82c7-edeb0cc9fe50</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">F</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">1e2cc2b3-2f34-460e-a6dd-fae01629aa79</uuid>
+                                <text type="str">ior</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >23cac03a-403a-4787-9f32-23f8f1993174</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">E</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">313f86e2-38cc-476e-988f-f7e1b0947d55</uuid>
+                                <text type="str">de</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >6741da8d-10c2-42d0-891b-7ee18887dafb</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">G</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">268a3296-1c2a-48d1-b740-cc4b01664d8e</uuid>
+                                <text type="str">mon</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >1272abff-80f4-41ad-be86-98ca8db4b4b2</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">A</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">9be46b05-5af8-4e8a-b7b1-a415c133d0cc</uuid>
+                                <text type="str">vi-</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >095979d2-aac5-4149-bf5c-beba3be07d83</uuid>
+                                                  <noteType type="str">Ascending</noteType>
+                                                  <base type="str">B</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                        </children>
+                        <kind type="str">ZeileContainer</kind>
+                    </item>
+                    <item type="dict">
+                        <uuid type="str">c3d26680-72b5-4e37-b6d0-232a09ceb680</uuid>
+                        <children type="list">
+                            <item type="dict">
+                                <uuid type="str">f7cfb97b-d697-45f0-8cfc-ec4f8350a53b</uuid>
+                                <focus type="bool">True</focus>
+                                <base type="str">D</base>
+                                <octave type="int">5</octave>
+                                <shape type="str">C</shape>
+                                <kind type="str">Clef</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">03422f9e-d6c7-42c9-b674-c0f472d9ded5</uuid>
+                                <text type="str">uant·</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >bbe3497d-ac5e-4e33-9732-489362f34b50</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">B</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">True</focus>
+                                                  </item>
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >70d0bd2f-36a3-494a-b1ff-a344087edf25</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">A</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">42b55230-7f7c-40c0-9d44-98064b6472b1</uuid>
+                                <hasNotes type="bool">True</hasNotes>
+                                <focus type="bool">True</focus>
+                                <kind type="str">LineChange</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">e077a1da-8e13-40ec-ae37-b954b47f4e3f</uuid>
+                                <text type="str">se</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >8303491b-2f68-4c05-b393-14a27b8fb5de</uuid>
+                                                  <noteType type="str">Ascending</noteType>
+                                                  <base type="str">B</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">c6e184f0-818b-4848-95fb-64fd5c867af7</uuid>
+                                <text type="str">par</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >33215dee-2edb-49df-9f08-dbfab5b83763</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">B</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">bb43ded3-ecb9-4bdc-a089-2d78f6eb47bc</uuid>
+                                <text type="str">vos</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >80c32407-f381-4ccc-945e-6177c56c768b</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">A</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">9b4b1bd5-feb0-4751-b92b-95b1e66cf261</uuid>
+                                <text type="str">non</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >5c27c242-245c-40ec-ade0-40b36bdf70e9</uuid>
+                                                  <noteType type="str">Descending</noteType>
+                                                  <base type="str">B</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >01d210aa-a944-4fc4-af91-5fecf83db9d5</uuid>
+                                                  <noteType type="str">Descending</noteType>
+                                                  <base type="str">B</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">9597aec0-6e1d-4bae-ac0a-711a64c37a88</uuid>
+                                <text type="str">dou-</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >84ecfd08-54e0-48c8-8383-3175dc7c433f</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">G</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >6980f673-ff36-4184-9513-6354fc96a0f7</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">F</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">ddcefd33-6695-4820-a297-2d12a213a36c</uuid>
+                                <text type="str">ce</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >5cf63c6d-5422-4d0a-b2b8-e12e6070dc90</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">E</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">6d6cd86b-794b-46c1-aa34-7cd3409ea79f</uuid>
+                                <text type="str">dame</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >e41ca000-1fe8-4114-9dc0-fe5d4f100874</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">G</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">8523666e-6c17-4ee3-8bf9-8455ff0f28fa</uuid>
+                                <text type="str">ho-</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >9d64b04e-e213-432b-b684-707c3ed7c120</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">A</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">87233153-5ef4-432f-9889-ae004c9ba86d</uuid>
+                                <text type="str">no-</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >2b76273d-c010-4ed0-9999-0324b3ec9786</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">B</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >a6f7fe41-c9ed-41ec-af7a-45a7f5e28c68</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">C</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">5</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >541ebbc7-174c-4fde-8dfe-1fd46268af89</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">D</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">5</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">a16f2b68-b220-4edb-a532-1912cb9b77ee</uuid>
+                                <text type="str">re-</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >24fc4fb9-2cdd-4f0f-9fdf-34ee1e8be422</uuid>
+                                                  <noteType type="str">Descending</noteType>
+                                                  <base type="str">C</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">5</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >bd6e2359-25d9-4e28-b8e0-6a60dfca1df7</uuid>
+                                                  <noteType type="str">Descending</noteType>
+                                                  <base type="str">C</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">5</octave>
+                                                  <focus type="bool">True</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                            <item type="dict">
+                                <uuid type="str">14c237cf-2017-45d5-b4af-afcec1ec6a94</uuid>
+                                <text type="str">e</text>
+                                <notes type="dict">
+                                    <spaced type="list">
+                                        <item type="dict">
+                                            <nonSpaced type="list">
+                                                <item type="dict">
+                                                  <grouped type="list">
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >57904ade-8c72-41ce-9a27-da28733c5059</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">B</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  <item type="dict">
+                                                  <uuid type="str"
+                                                  >620e2b73-e23b-4c6a-9270-5dfb8b5fa999</uuid>
+                                                  <noteType type="str">Normal</noteType>
+                                                  <base type="str">A</base>
+                                                  <liquescent type="bool">False</liquescent>
+                                                  <octave type="int">4</octave>
+                                                  <focus type="bool">False</focus>
+                                                  </item>
+                                                  </grouped>
+                                                </item>
+                                            </nonSpaced>
+                                        </item>
+                                    </spaced>
+                                </notes>
+                                <syllableType type="str">Normal</syllableType>
+                                <kind type="str">Syllable</kind>
+                            </item>
+                        </children>
+                        <kind type="str">ZeileContainer</kind>
+                    </item>
+                </children>
+                <data type="list">
+                    <item type="dict">
+                        <name type="str">Signatur</name>
+                        <data type="str">Li granz desirs, f. 4r</data>
+                    </item>
+                </data>
+                <kind type="str">FormteilContainer</kind>
+            </item>
+        </children>
+        <comments type="list"/>
+        <documentType type="str">Level1</documentType>
+        <version type="null"/>
+        <kind type="str">RootContainer</kind>
+    </TEI>
+</root>
