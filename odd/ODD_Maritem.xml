@@ -291,7 +291,11 @@
                     </p>
                     <p>Dans le cas d'une notice de manuscrit, les informations auront vocation à
                         être détaillées. Elles seront exposées dans une autre section de ce modèle
-                            (<ptr target="#DIV_MSDESC"/>). </p>
+                            (<ptr target="#DIV_MSDESC"/>).<specList>
+                                <specDesc key="address"/>
+                                <specDesc key="addrLine"/>
+                                <specDesc key="email"/>
+                            </specList> </p>
                     <p>Exemple complet: <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <fileDesc>
                                 <titleStmt>
@@ -519,6 +523,7 @@
                             <specDesc key="note"/>
                             <!-- TODO: vérifier qu'on est bien sûr de vouloir accepter des notes à ce niveau là… -->
                             <specDesc key="witDetail"/>
+                            <specDesc key="wit"/>
                             <specDesc key="app"/>
                             <specDesc key="gap"/>
                             <specDesc key="space"/>
@@ -540,8 +545,10 @@
                 <div>
                     <head>Contenu des vers</head>
                     <p>Le contenu des vers se compose régulièrement de mots lexicaux (i.e. pouvant
-                        être rattachés à un lemme), qui sont marqués par l'emploi de <gi>w</gi>: <specList>
+                        être rattachés à un lemme), qui sont marqués par l'emploi de <gi>w</gi> et 
+                        de rimes notées <gi>rhyme</gi>: <specList>
                             <specDesc key="w" atts="xml:id rend lemma lemmaRef pos msd"/>
+                            <specDesc key="rhyme"/>
                         </specList>
                     </p>
                     <p>Dans la version définitive de l'édition, l'attribut <att>xml:id</att> doit
@@ -614,7 +621,6 @@
                             <specDesc key="add"/>
                             <specDesc key="pc" atts="type subtype"/>
                             <specDesc key="hi"/>
-                            <specDesc key="handShift"/>
                             <specDesc key="gap"/>
                             <specDesc key="date"/>
                             <specDesc key="persName"/>
@@ -633,6 +639,7 @@
                             <specDesc key="reg"/>
                             <specDesc key="unclear"/>
                             <specDesc key="seg"/>
+                            <specDesc key="ab"/> <!-- Ajout de la balise ab ici ? -->
                         </specList>
                     </p>
                     <p>Le sens et l'utilisation de ces différents éléments sont détaillés
@@ -738,16 +745,20 @@
                     <p>Les corrections éditoriales des édition numérisées peuvent être représentées
                         par l'élément <gi>corr</gi>, éventuellement accompagné de l'enregistrement
                         de la leçon originale par l'élément <gi>sic</gi>; dans ce cas, les deux sont
-                        enregistrés en parallèle à l'intérieur de l'élément <gi>choice</gi> Pour les
+                        enregistrés en parallèle à l'intérieur de l'élément <gi>choice</gi> On rajoute 
+                        également l'élément <gi>gloss</gi>pour distinguer les érudits. Pour les
                         corrections éditoriales des éditions allographétiques, voir infra
                         (<!--<ptr target=""/>-->). <specList>
                             <specDesc key="corr" atts="type"/>
                             <specDesc key="sic"/>
                             <specDesc key="choice"/>
+                            <specDesc key="gloss"/>
                         </specList> On distinguera, le cas échéant, les corrections qui
                         correspondent à des <foreign xml:lang="lat">errata</foreign>, et pas à des
                         interventions éditoriales proprement dites, par l'utilisation de l'attribut
-                            <att>type</att>, avec la valeur <val>erratum</val>. <egXML
+                            <att>type</att>, avec la valeur <val>erratum</val>. <specList>
+                                <specDesc key="foreign"/>
+                            </specList><egXML
                             xmlns="http://www.tei-c.org/ns/Examples">
                             <w>
                                 <choice>
@@ -840,6 +851,7 @@
                         </specList> et, pour les citations longues d'un autre type, reprises dans
                         les introductions ou dans les notes, <specList>
                             <specDesc key="quote"/>
+                            <specDesc key="term"/>
                         </specList>
                     </p>
                 </div>
@@ -1179,6 +1191,8 @@
                                         <specDesc key="dimensions"/>
                                         <specDesc key="watermark"/>
                                         <specDesc key="note"/>
+                                        <specDesc key="height"/>
+                                        <specDesc key="width"/>    
                                     </specList> L'attribut <att>ref</att> de <gi>material</gi> porte
                                     un pointeur vers une description du type de matériau utilisé. </p>
                                 <p>L'élément <gi>material</gi> se compose lui-même de texte et
@@ -1243,9 +1257,13 @@
                             <div>
                                 <head>La collation</head>
                                 <p>La collation est faite [...] <specList>
+                                        <!--
                                         <specDesc key="formula"/>
+                                        -->
                                         <!-- Trouver mieux? -->
+                                        <!--
                                         <specDesc key="table"/>
+                                        -->
                                         <!-- À voir -->
                                         <specDesc key="signatures"/>
                                         <specDesc key="catchwords"/>
@@ -1260,7 +1278,9 @@
                                 et <att>writtenLines</att> obligatoires. La piqure, la réglure, Les
                                 dimensions de la justification... La première ligne écrite ou non <specList>
                                     <specDesc key="layout" atts="columns writtenLines"/>
+                                    <!--
                                     <specDesc key="formula"/>
+                                    -->
                                     <specDesc key="dimensions"/>
                                 </specList>
                             </p>
@@ -1301,7 +1321,9 @@
                             <specList>
                                 <specDesc key="decoDesc"/>
                                 <specDesc key="decoNote" atts="type"/>
+                                <!--
                                 <specDesc key="formula"/>
+                                -->
                             </specList>
                         </p>
                     </div>
@@ -2605,6 +2627,11 @@ CC 3778 Li casteax ne doutoit assaut
                             <elementRef key="licence"/>
                         </content>
                     </elementSpec>
+                    <elementSpec ident="licence">
+                        <content>
+                            <macroRef key="macro.specialPara"/>
+                        </content>
+                    </elementSpec>
                     <elementSpec ident="biblFull" mode="change">
                         <content>
                             <alternate>
@@ -2625,6 +2652,15 @@ CC 3778 Li casteax ne doutoit assaut
                                     <elementRef key="fileDesc"/>
                                     <elementRef key="profileDesc"/>
                                 </sequence>
+                            </alternate>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="notesStmt">
+                        <content>
+                            <alternate minOccurs="1"
+                                maxOccurs="unbounded">
+                                <classRef key="model.noteLike"/>
+                                <elementRef key="relatedItem"/>
                             </alternate>
                         </content>
                     </elementSpec>
@@ -2775,7 +2811,7 @@ CC 3778 Li casteax ne doutoit assaut
                             <attDef ident="cert" mode="change" usage="req"/>
                             <attDef ident="resp" mode="change" usage="req"/>
                             <attDef ident="ident" mode="change" usage="req">
-                                <valList>
+                                <valList mode="change" type="closed">
                                     <valItem ident="fro"/>
                                     <valItem ident="occ"/>
                                     <valItem ident="lat"/>
@@ -2812,6 +2848,21 @@ CC 3778 Li casteax ne doutoit assaut
                     <!-- emph à détailler -->
                     <!--<moduleRef key="core"/>-->
                     <!--<elementSpec ident="sic" mode="change"/>-->
+                    <elementSpec ident="mentioned" mode="change">
+                        <content>
+                            <macroRef key="macro.phraseSeq"/>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="num" mode="change">
+                        <content>
+                            <macroRef key="macro.phraseSeq"/>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="publisher" mode="change">
+                        <content>
+                            <macroRef key="macro.phraseSeq"/>
+                        </content>
+                    </elementSpec>
                     <elementSpec ident="address" mode="change">
                         <content>
                             <sequence>
@@ -2982,7 +3033,7 @@ CC 3778 Li casteax ne doutoit assaut
                             <!--<attDef ident="cert" mode="delete"/>-->
                             <attDef ident="type" mode="change">
                                 <defaultVal>editorial</defaultVal>
-                                <valList mode="add">
+                                <valList mode="add" type="closed">
                                     <valItem ident="editorial">
                                         <gloss>correction éditoriale</gloss>
                                         <desc>caractérise une correction correspondant à une
@@ -3229,12 +3280,12 @@ CC 3778 Li casteax ne doutoit assaut
                     <elementSpec ident="head" mode="change">
                         <attList>
                             <attDef ident="type" mode="change" usage="opt">
-                                <valList>
+                                <valList mode="add" type="closed">
                                     <valItem ident="rubric"/>
                                 </valList>
                             </attDef>
                             <attDef ident="place" mode="change" usage="opt">
-                                <valList>
+                                <valList mode="add" type="closed">
                                     <valItem ident="above"/>
                                     <valItem ident="bottom"/>
                                     <valItem ident="left margin"/>
@@ -3428,7 +3479,7 @@ CC 3778 Li casteax ne doutoit assaut
                         <content>
                             <macroRef key="macro.phraseSeq"/>
                         </content>
-                        <valList>
+                        <valList mode="add" type="closed">
                             <valItem ident="xml:id"/>
                         </valList>
                     </elementSpec>
@@ -3436,7 +3487,7 @@ CC 3778 Li casteax ne doutoit assaut
                         <content>
                             <macroRef key="macro.specialPara"/>
                         </content>
-                        <valList>
+                        <valList mode="add" type="closed">
                             <valItem ident="n"/>
                         </valList>
                     </elementSpec>
@@ -3454,7 +3505,7 @@ CC 3778 Li casteax ne doutoit assaut
                         </content>
                         <attList>
                             <attDef ident="n">
-                                <valList>
+                                <valList mode="add" type="closed">
                                     <valItem ident="a"/>
                                     <valItem ident="b"/>
                                     <valItem ident="c"/>
@@ -3469,7 +3520,7 @@ CC 3778 Li casteax ne doutoit assaut
                         </content>
                         <attList>
                             <attDef ident="xml:lang">
-                                <valList>
+                                <valList mode="add" type="closed">
                                     <valItem ident="lat"/>
                                     <valItem ident="fro"/>
                                     <valItem ident="occ"/>
@@ -3483,7 +3534,7 @@ CC 3778 Li casteax ne doutoit assaut
                             <alternate minOccurs="1" maxOccurs="unbounded">
                                 <!--<classRef key="model.phrase"/>-->
                                 <!-- model.phrase à redéfinir pour restreindre -->
-                                <!--<classRef key="model.lPart"/>-->
+                                <classRef key="model.lPart"/>
                                 <!-- TODO: je retire pour l'instant cette classe, qui correspond à des éléments sur césure
                                 et rime qui n'apparaissent pas dans notre document.
                                 -->
@@ -3539,7 +3590,7 @@ CC 3778 Li casteax ne doutoit assaut
                         <attList>
                             <attDef ident="xml:id" mode="change" usage="rec"/>
                             <attDef ident="xml:lang" mode="change" usage="req">
-                                <valList>
+                                <valList mode="add" type="closed">
                                     <valItem ident="fro"/>
                                     <valItem ident="occ"/>
                                     <valItem ident="lat"/>
@@ -3600,7 +3651,7 @@ CC 3778 Li casteax ne doutoit assaut
                             <alternate minOccurs="1" maxOccurs="unbounded">
                                 <!--<classRef key="model.phrase"/>-->
                                 <!-- model.phrase à redéfinir pour restreindre -->
-                                <!--<classRef key="model.lPart"/>-->
+                                <classRef key="model.lPart"/>
                                 <!-- TODO: je retire pour l'instant cette classe, qui correspond à des éléments sur césure
                                 et rime qui n'apparaissent pas dans notre document.
                                 -->
@@ -4067,13 +4118,13 @@ CC 3778 Li casteax ne doutoit assaut
                     </elementSpec>
                     
                     <moduleRef key="verse" include="rhyme"/>
-                    <elementSpec ident="rhyme">
+                    <elementSpec ident="rhyme" mode="change">
                         <content>
                             <macroRef key="macro.paraContent"/>
                         </content>
                         <attList>
                             <attDef ident="label">
-                                <valList>
+                                <valList mode="add" type="closed">
                                     <valItem ident="a"/>
                                     <valItem ident="b"/>
                                 </valList>
@@ -4111,7 +4162,7 @@ CC 3778 Li casteax ne doutoit assaut
                             <attDef ident="loc" mode="delete"/>
                             <attDef ident="exponctué" mode="change" usage="rec"/>
                             <attDef ident="type" mode="change" usage="rec">
-                                <valList>
+                                <valList mode="add" type="closed">
                                     <valItem ident="paleographic"></valItem>
                                 </valList>
                             </attDef>
@@ -4150,13 +4201,13 @@ CC 3778 Li casteax ne doutoit assaut
                         </content>
                         <attList>
                             <attDef ident="wit" mode="change" usage="req">
-                                <valList>
+                                <valList mode="add" type="closed">
                                     <valItem ident="FR_844"/> <!-- Valeur = Identifiant unique du Manuscrit du Roi ?-->
                                 </valList>
                             </attDef>                             
                         </attList>
                     </elementSpec>
-                    <elementSpec ident="gap">
+                    <elementSpec ident="gap" mode="change">
                         <content>
                             <alternate minOccurs="0"
                                 maxOccurs="unbounded">
@@ -4166,7 +4217,7 @@ CC 3778 Li casteax ne doutoit assaut
                         </content>
                         <attList>
                             <attDef ident="reason" mode="add" usage="req">
-                                <valList>
+                                <valList mode="add" type="closed">
                                     <valItem ident="damage"/>
                                 </valList>
                             </attDef>
@@ -4178,6 +4229,8 @@ CC 3778 Li casteax ne doutoit assaut
                             <attDef ident="wit" mode="change"/>
                         </attList>
                     </elementSpec>
+                    <elementSpec ident="lacunaStart" mode="change"></elementSpec>
+                    <elementSpec ident="lacunaEnd" mode="change"></elementSpec>
                     <elementSpec ident="wit" mode="change"> </elementSpec>
                     <elementSpec ident="listWit" mode="change"> </elementSpec>
                     <elementSpec ident="witness" mode="change"> </elementSpec>
@@ -4336,6 +4389,104 @@ CC 3778 Li casteax ne doutoit assaut
                     <classSpec type="atts" module="namesdates" ident="att.datable.iso" mode="delete"/>
                     <classSpec type="atts" module="namesdates" ident="att.datable.custom"
                         mode="delete"/>
+                    <elementSpec ident="listPerson" mode="change">
+                        <content>
+                            <sequence>
+                                <classRef key="model.headLike"
+                                    minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="desc" minOccurs="0"
+                                    maxOccurs="unbounded"/>
+                                <alternate minOccurs="0"
+                                    maxOccurs="unbounded">
+                                    <elementRef key="relation" minOccurs="1"
+                                        maxOccurs="1"/>
+                                    <elementRef key="listRelation"
+                                        minOccurs="1" maxOccurs="1"/>
+                                </alternate>
+                                <sequence minOccurs="1"
+                                    maxOccurs="unbounded">
+                                    <alternate minOccurs="1"
+                                        maxOccurs="unbounded">
+                                        <classRef key="model.personLike"
+                                            minOccurs="1" maxOccurs="1"/>
+                                        <elementRef key="listPerson"
+                                            minOccurs="1" maxOccurs="1"/>
+                                    </alternate>
+                                    <alternate minOccurs="0"
+                                        maxOccurs="unbounded">
+                                        <elementRef key="relation"
+                                            minOccurs="1" maxOccurs="1"/>
+                                        <elementRef key="listRelation"
+                                            minOccurs="1" maxOccurs="1"/>
+                                    </alternate>
+                                </sequence>
+                            </sequence>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="listPlace" mode="change">
+                        <content>
+                            <sequence>
+                                <classRef key="model.headLike"
+                                    minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="desc" minOccurs="0"
+                                    maxOccurs="unbounded"/>
+                                <alternate minOccurs="0"
+                                    maxOccurs="unbounded">
+                                    <elementRef key="relation" minOccurs="1"
+                                        maxOccurs="1"/>
+                                    <elementRef key="listRelation"
+                                        minOccurs="1" maxOccurs="1"/>
+                                </alternate>
+                                <sequence minOccurs="1"
+                                    maxOccurs="unbounded">
+                                    <alternate minOccurs="1"
+                                        maxOccurs="unbounded">
+                                        <classRef key="model.placeLike"
+                                            minOccurs="1" maxOccurs="1"/>
+                                        <elementRef key="listPlace"
+                                            minOccurs="1" maxOccurs="1"/>
+                                    </alternate>
+                                    <alternate minOccurs="0"
+                                        maxOccurs="unbounded">
+                                        <elementRef key="relation"
+                                            minOccurs="1" maxOccurs="1"/>
+                                        <elementRef key="listRelation"
+                                            minOccurs="1" maxOccurs="1"/>
+                                    </alternate>
+                                </sequence>
+                            </sequence>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="addName" mode="change">
+                        <content>
+                            <macroRef key="macro.phraseSeq"/>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="nameLink" mode="change">
+                        <content>
+                            <macroRef key="macro.phraseSeq"/>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="forename" mode="change">
+                        <content>
+                            <macroRef key="macro.phraseSeq"/>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="settlement" mode="change">
+                        <content>
+                            <macroRef key="macro.phraseSeq"/>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="placeName" mode="change">
+                        <content>
+                            <macroRef key="macro.phraseSeq"/>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="orgName" mode="change">
+                        <content>
+                            <macroRef key="macro.phraseSeq"/>
+                        </content>
+                    </elementSpec>
                     <elementSpec ident="persName" module="namesdates" mode="change">
                         <constraintSpec scheme="schematron" ident="persNameContent">
                             <constraint>
@@ -4370,6 +4521,11 @@ CC 3778 Li casteax ne doutoit assaut
                         include="am damage ex facsimile fw handShift space subst supplied surface surfaceGrp zone"/>
                     <!-- TODO: configuration de facsimile, surface, surfaceGrp et zone à faire -->
                     <!-- J'ajoute handshift -->
+                    <elementSpec ident="damage" mode="change">
+                        <content>
+                            <macroRef key="macro.paraContent"/>
+                        </content>
+                    </elementSpec>
                     <elementSpec ident="ex" mode="change">
                         <classes mode="change">
                             <memberOf key="model.choicePart" mode="delete"/>
@@ -4387,12 +4543,12 @@ CC 3778 Li casteax ne doutoit assaut
                         </content>
                         <attList>
                             <attDef ident="type" mode="change" usage="req">
-                                <valList>
+                                <valList mode="add" type="closed">
                                     <valItem ident="catchword"/>
                                 </valList>
                             </attDef>
                             <attDef ident="place" mode="change" usage="req">
-                                <valList>
+                                <valList mode="change" type="closed">
                                     <valItem ident="bottom"/>
                                 </valList>
                             </attDef>
@@ -4517,6 +4673,11 @@ CC 3778 Li casteax ne doutoit assaut
                     <classSpec ident="att.global.change" module="transcr" type="atts" mode="delete"/>
                     <classSpec ident="att.coordinated" module="transcr" type="atts" mode="delete"/>
                     <moduleRef key="linking" include="ab seg"/>
+                    <elementSpec ident="ab" mode="change"> <!-- Ajout de balises ab ? -->
+                        <content>
+                            <macroRef key="macro.paraContent"/>
+                        </content>
+                    </elementSpec>
                     <elementSpec ident="seg" mode="change">
                         <classes mode="change">
                             <memberOf key="model.choicePart" mode="delete"/>
@@ -4532,7 +4693,31 @@ CC 3778 Li casteax ne doutoit assaut
                         objectType origDate origPlace origin physDesc provenance recordHist repository rubric scriptDesc 
                         scriptNote seal sealDesc secFol signatures source stamp summary support supportDesc surrogates watermark width"/>
                     <!-- À voir ce qu'on fait de celui-là -->
-                    
+                    <elementSpec ident="heraldry" mode="change">
+                        <content>
+                            <macroRef key="macro.phraseSeq"/>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="acquisition" mode="change">
+                        <content>
+                            <macroRef key="macro.specialPara"/>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="provenance" mode="change">
+                        <content>
+                            <macroRef key="macro.specialPara"/>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="rubric" mode="change">
+                        <content>
+                            <macroRef key="macro.phraseSeq"/>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="summary" mode="change">
+                        <content>
+                            <macroRef key="macro.specialPara"/>
+                        </content>
+                    </elementSpec>
                     <elementSpec ident="msDesc" mode="change">
                         <classes mode="change">
                             <memberOf key="model.biblLike" mode="delete"/>
@@ -4552,6 +4737,32 @@ CC 3778 Li casteax ne doutoit assaut
                             <attDef ident="xml:id" mode="change" usage="req"/>
                         </attList>
                     </elementSpec>
+                    <elementSpec ident="msFrag" mode="change">
+                        <content>
+                            <sequence>
+                                <alternate>
+                                    <elementRef key="altIdentifier"/>
+                                    <elementRef key="msIdentifier"/>
+                                </alternate>
+                                <classRef key="model.headLike"
+                                    minOccurs="0" maxOccurs="unbounded"/>
+                                <alternate>
+                                    <classRef key="model.pLike"
+                                        minOccurs="1" maxOccurs="unbounded"/>
+                                    <sequence>
+                                        <elementRef key="msContents"
+                                            minOccurs="0"/>
+                                        <elementRef key="physDesc"
+                                            minOccurs="0"/>
+                                        <elementRef key="history" minOccurs="0"/>
+                                        <elementRef key="additional"
+                                            minOccurs="0"/>
+                                    </sequence>
+                                </alternate>
+                            </sequence>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="additional" mode="change"/>
                     <elementSpec ident="msIdentifier" mode="change">
                         <content>
                             <alternate minOccurs="1" maxOccurs="1">
@@ -4569,6 +4780,20 @@ CC 3778 Li casteax ne doutoit assaut
                             <elementRef key="altIdentifier" minOccurs="0" maxOccurs="unbounded"/>
                         </content>
                     </elementSpec>
+                    <elementSpec ident="msName" mode="change">
+                        <content>
+                            <alternate minOccurs="0"
+                                maxOccurs="unbounded">
+                                <textNode/>
+                                <classRef key="model.gLike"/>
+                            </alternate>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="collection" mode="change">
+                        <content>
+                            <macroRef key="macro.phraseSeq.limited"/>
+                        </content>
+                    </elementSpec>
                     <elementSpec ident="altIdentifier" mode="change">
                         <content>
                             <sequence>
@@ -4579,6 +4804,21 @@ CC 3778 Li casteax ne doutoit assaut
                                 <elementRef key="collection"/>
                                 <elementRef key="idno"/>
                             </sequence>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="repository" mode="change">
+                        <content>
+                            <macroRef key="macro.phraseSeq.limited"/>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="institution" mode="change">
+                        <content>
+                            <macroRef key="macro.phraseSeq.limited"/>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="country" mode="change">
+                        <content>
+                            <macroRef key="macro.phraseSeq"/>
                         </content>
                     </elementSpec>
                     <elementSpec ident="msContents" mode="change">
@@ -4620,6 +4860,36 @@ CC 3778 Li casteax ne doutoit assaut
                             <elementRef key="filiation" minOccurs="0"/>
                         </content>
                     </elementSpec>
+                    <elementSpec ident="filiation" mode="change">
+                        <content>
+                            <macroRef key="macro.specialPara"/>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="colophon" mode="change">
+                        <content>
+                            <macroRef key="macro.phraseSeq"/>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="finalRubric" mode="change">
+                        <content>
+                            <macroRef key="macro.phraseSeq"/>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="explicit" mode="change">
+                        <content>
+                            <macroRef key="macro.phraseSeq"/>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="incipit" mode="change">
+                        <content>
+                            <macroRef key="macro.phraseSeq"/>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="author" mode="change">
+                        <content>
+                            <macroRef key="macro.phraseSeq"/>
+                        </content>
+                    </elementSpec>
                     <elementSpec ident="locusGrp" mode="change">
                         <attList>
                             <attDef ident="scheme" mode="delete"/>
@@ -4659,6 +4929,21 @@ CC 3778 Li casteax ne doutoit assaut
                             <elementRef key="accMat" minOccurs="0"/>
                         </content>
                     </elementSpec>
+                    <elementSpec ident="accMat" mode="change">
+                        <content>
+                            <macroRef key="macro.specialPara"/>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="additions" mode="change">
+                        <content>
+                            <macroRef key="macro.specialPara"/>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="musicNotation" mode="change">
+                        <content>
+                            <macroRef key="macro.specialPara"/>
+                        </content>
+                    </elementSpec>
                     <elementSpec ident="bindingDesc" mode="change">
                         <content>
                             <sequence>
@@ -4666,7 +4951,7 @@ CC 3778 Li casteax ne doutoit assaut
                             </sequence>
                         </content>
                     </elementSpec>
-                    <elementSpec ident="binding">
+                    <elementSpec ident="binding" mode="change">
                         <content>
                             <alternate minOccurs="1"
                                 maxOccurs="unbounded">
@@ -4681,7 +4966,7 @@ CC 3778 Li casteax ne doutoit assaut
                             <macroRef key="macro.specialPara"/>
                         </content>
                     </elementSpec>
-                    <elementSpec ident="scriptDesc">
+                    <elementSpec ident="scriptDesc" mode="change">
                         <content>
                             <alternate>
                                 <classRef key="model.pLike" minOccurs="1"
@@ -4694,10 +4979,10 @@ CC 3778 Li casteax ne doutoit assaut
                             </alternate>
                         </content>
                     </elementSpec>
-                    <elementSpec ident="scriptNote">
+                    <elementSpec ident="scriptNote" mode="change">
                         <attList>
                             <attDef ident="script" mode="change" usage="req">
-                                <valList>
+                                <valList mode="add" type="closed">
                                     <valItem ident="Textualis formata"/>
                                     <valItem ident="Rutunda formata"/>
                                     <valItem ident="Cursiva formata"/>
@@ -4727,13 +5012,13 @@ CC 3778 Li casteax ne doutoit assaut
                             <attDef ident="form" mode="change" usage="req"/>
                         </attList>
                     </elementSpec>
-                    <elementSpec ident="layoutDesc">
+                    <elementSpec ident="layoutDesc" mode="change">
                         <content>
                             <elementRef key="layout"/>         
                         </content>
                     </elementSpec>
-                    <elementSpec ident="layout">
-                        <valList>
+                    <elementSpec ident="layout" mode="change">
+                        <valList mode="add" type="closed">
                             <valItem ident="columns"/>
                         </valList>
                     </elementSpec>
@@ -4770,12 +5055,12 @@ CC 3778 Li casteax ne doutoit assaut
                             </sequence>
                         </content>
                     </elementSpec>
-                    <elementSpec ident="signatures">
+                    <elementSpec ident="signatures" mode="change">
                         <content>
                             <macroRef key="macro.specialPara"/>
                         </content>
                     </elementSpec>
-                    <elementSpec ident="catchwords">
+                    <elementSpec ident="catchwords" mode="change">
                         <content>
                             <macroRef key="macro.phraseSeq"/>
                         </content>
@@ -4791,17 +5076,22 @@ CC 3778 Li casteax ne doutoit assaut
                             </sequence>
                         </content>
                     </elementSpec>
-                    <elementSpec ident="dimensions">
+                    <elementSpec ident="watermark" mode="change">
+                        <content>
+                            <macroRef key="macro.phraseSeq"/>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="dimensions" mode="change">
                         <attList>
                             <attDef ident="scope" mode="change" usage="req"/>
                             <attDef ident="type" mode="change" usage="req">
-                                <valList>
+                                <valList type="closed">
                                     <valItem ident="leaf"/>
                                     <valItem ident="specification"/>
                                 </valList>
                             </attDef>
                             <attDef ident="unit" mode="change" usage="req">
-                                <valList>
+                                <valList type="closed">
                                     <valItem ident="mm"/>
                                 </valList>
                             </attDef>
@@ -4824,7 +5114,7 @@ CC 3778 Li casteax ne doutoit assaut
                             <elementRef key="width"/>
                         </content>
                     </elementSpec>
-                    <elementSpec ident="height">
+                    <elementSpec ident="height" mode="change">
                         <content>
                             <macroRef key="macro.xtext"/>
                         </content>
@@ -4835,7 +5125,7 @@ CC 3778 Li casteax ne doutoit assaut
                         </content>
                         <attList>
                             <attDef ident="type" mode="change" usage="req">
-                                <valList>
+                                <valList type="closed">
                                     <valItem ident="composition"/>
                                 </valList>
                             </attDef>
@@ -4906,7 +5196,7 @@ CC 3778 Li casteax ne doutoit assaut
                     <elementSpec ident="origPlace" mode="change">
                         <attList>
                             <attDef ident="cert" mode="change" usage="req">
-                                <valList>
+                                <valList type="closed">
                                     <valItem ident="high" mode="change"/>
                                     <valItem ident="medium" mode="change"/>
                                     <valItem ident="low" mode="change"/>
@@ -4972,7 +5262,9 @@ CC 3778 Li casteax ne doutoit assaut
                     </classSpec>
 
                     <moduleRef key="gaiji" include="g"/>
+                    <!--
                     <moduleRef key="figures" include="formula table"/>
+                    -->
                 </schemaSpec>
             </div>
         </body>
