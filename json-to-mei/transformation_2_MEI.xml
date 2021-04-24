@@ -21,321 +21,287 @@
             <score>
                <scoreDef>
                   <staffGrp>
-                     <staffDef/>
+                     <staffDef n="1" 
+                               lines="5"
+                               notationtype="mensural.black"/>
                   </staffGrp>
                </scoreDef>
                <section n="1">
                   <measure>
                      <staff n="1">
-                        <layer n="1.1">
-                           <note pname="F" oct="4" dur="brevis">
-                              <plica dir=""/>
+                        <layer n="1">
+                           <note pname="f" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="G" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="g" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="G" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="g" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="G" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="g" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="G" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="g" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="A" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="a" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="G" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="g" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="F" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="f" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="E" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="e" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="D" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="d" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="D" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="d" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
                         </layer>
                      </staff>
                   </measure>
                </section>
-            </score>
-            <score>
-               <scoreDef>
-                  <staffGrp>
-                     <staffDef/>
-                  </staffGrp>
-               </scoreDef>
+
                <section n="2">
                   <measure>
-                     <staff n="2">
-                        <layer n="1.2">
-                           <note pname="C" oct="4" dur="brevis">
-                              <plica dir=""/>
+                     <staff n="1">
+                        <layer n="1">
+                           <note pname="c" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="D" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="d" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="C" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="c" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="C" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="c" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="C" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="c" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="D" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="d" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="E" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="e" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="F" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="f" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="E" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="e" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="E" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="e" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
                         </layer>
                      </staff>
                   </measure>
                </section>
-            </score>
-            <score>
-               <scoreDef>
-                  <staffGrp>
-                     <staffDef/>
-                  </staffGrp>
-               </scoreDef>
+
                <section n="3">
                   <measure>
-                     <staff n="3">
-                        <layer n="1.3">
-                           <note pname="F" oct="4" dur="brevis">
-                              <plica dir=""/>
+                     <staff n="1">
+                        <layer n="1">
+                           <note pname="f" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="G" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="g" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="A" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="a" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="G" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="g" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="G" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="g" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="A" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="a" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="G" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="g" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="F" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="f" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="E" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="e" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="D" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="e" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="D" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="d" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
                         </layer>
                      </staff>
                   </measure>
                </section>
-            </score>
-            <score>
-               <scoreDef>
-                  <staffGrp>
-                     <staffDef/>
-                  </staffGrp>
-               </scoreDef>
+
                <section n="4">
                   <measure>
-                     <staff n="4">
-                        <layer n="1.4">
-                           <note pname="C" oct="4" dur="brevis">
-                              <plica dir=""/>
+                     <staff n="1">
+                        <layer n="1">
+                           <note pname="c" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="D" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="d" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="C" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="c" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="C" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="c" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="C" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="c" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="D" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="d" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="E" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="e" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="F" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="f" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="E" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="e" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="E" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="e" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
                         </layer>
                      </staff>
                   </measure>
                </section>
-            </score>
-            <score>
-               <scoreDef>
-                  <staffGrp>
-                     <staffDef/>
-                  </staffGrp>
-               </scoreDef>
+
                <section n="5">
                   <measure>
-                     <staff n="5">
-                        <layer n="1.5">
-                           <note pname="G" oct="4" dur="brevis">
-                              <plica dir=""/>
+                     <staff n="1">
+                        <layer n="1">
+                           <note pname="g" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="A" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="a" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="B" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="b" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="C" oct="5" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="c" oct="5" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="A" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="a" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="G" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="g" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="F" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="f" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="G" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="g" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="A" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="a" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="A" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="a" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
                         </layer>
                      </staff>
                   </measure>
                </section>
-            </score>
-            <score>
-               <scoreDef>
-                  <staffGrp>
-                     <staffDef/>
-                  </staffGrp>
-               </scoreDef>
+
                <section n="6">
                   <measure>
-                     <staff n="6">
-                        <layer n="1.6">
-                           <note pname="B" oct="4" dur="brevis">
-                              <plica dir=""/>
+                     <staff n="1">
+                        <layer n="1">
+                           <note pname="b" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="B" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="b" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="G" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="g" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="A" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="a" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="F" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="f" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="D" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="d" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="F" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="f" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="G" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="g" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="A" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="a" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="A" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="a" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
                         </layer>
                      </staff>
                   </measure>
                </section>
-            </score>
-            <score>
-               <scoreDef>
-                  <staffGrp>
-                     <staffDef/>
-                  </staffGrp>
-               </scoreDef>
+
                <section n="7">
                   <measure>
-                     <staff n="7">
-                        <layer n="1.7">
-                           <note pname="A" oct="4" dur="brevis">
-                              <plica dir=""/>
+                     <staff n="1">
+                        <layer n="1">
+                           <note pname="a" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="A" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="a" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="G" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="g" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="A" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="a" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="F" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="f" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="D" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="d" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="F" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="f" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="G" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="g" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="A" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="a" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="B" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="b" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
-                           <note pname="A" oct="4" dur="brevis">
-                              <plica dir=""/>
+                           <note pname="a" oct="4" dur="brevis">
+                              <plica dir="up"/>
                            </note>
                         </layer>
                      </staff>
@@ -343,10 +309,12 @@
                </section>
             </score>
          </mdiv>
+         <!--
          <annot/>
          <typeDesc>Level1</typeDesc>
          <version/>
          <sourceDesc>RootContainer</sourceDesc>
+         -->
       </body>
    </music>
 </mei>
