@@ -757,7 +757,7 @@
                         correspondent à des <foreign xml:lang="lat">errata</foreign>, et pas à des
                         interventions éditoriales proprement dites, par l'utilisation de l'attribut
                             <att>type</att>, avec la valeur <val>erratum</val>. <specList>
-                                <specDesc key="foreign"/>
+                                <specDesc key="foreign" atts="xml:lang"/>
                             </specList><egXML
                             xmlns="http://www.tei-c.org/ns/Examples">
                             <w>
@@ -2559,7 +2559,7 @@ CC 3778 Li casteax ne doutoit assaut
             <div>
                 <head>Spécifications pour le schéma</head>
                 <schemaSpec ident="maritem" start="TEI" ns="http://www.tei-c.org/ns/1.0"
-                    docLang="fr" xml:lang="fr" source="ODD_music.xml">
+                    docLang="fr" xml:lang="fr">
                     <!-- Sélection à faire parmi les informations du teiHeader-->
                     <moduleRef key="header"
                         include=" teiHeader fileDesc titleStmt authority idno availability biblFull 
@@ -2622,13 +2622,14 @@ CC 3778 Li casteax ne doutoit assaut
                         <content>
                             <alternate minOccurs="1" maxOccurs="unbounded">
                                 <classRef key="model.availabilityPart"/>
+                                <elementRef key="licence"/>
                                 <classRef key="model.pLike"/>
                             </alternate>
-                            <elementRef key="licence"/>
                         </content>
                     </elementSpec>
-                    <elementSpec ident="licence">
+                    <elementSpec ident="licence" mode="change">
                         <content>
+                            <classRef key="model.availabilityPart"/>
                             <macroRef key="macro.specialPara"/>
                         </content>
                     </elementSpec>
@@ -2655,7 +2656,7 @@ CC 3778 Li casteax ne doutoit assaut
                             </alternate>
                         </content>
                     </elementSpec>
-                    <elementSpec ident="notesStmt">
+                    <elementSpec ident="notesStmt" mode="change">
                         <content>
                             <alternate minOccurs="1"
                                 maxOccurs="unbounded">
@@ -2797,7 +2798,7 @@ CC 3778 Li casteax ne doutoit assaut
                             </constraint>
                         </constraintSpec>
                     </elementSpec>
-                    <elementSpec ident="langUsage">
+                    <elementSpec ident="langUsage" mode="change">
                         <content>
                             <alternate>
                                 <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
@@ -3346,7 +3347,14 @@ CC 3778 Li casteax ne doutoit assaut
                             <memberOf key="att.global.facs" mode="add"/>
                         </classes>
                         <attList>
-                            <attDef ident="n" mode="change" usage="req"/>
+                            <attDef ident="n" mode="change" usage="req">
+                                <valList mode="add" type="closed">
+                                    <valItem ident="a"/>
+                                    <valItem ident="b"/>
+                                    <valItem ident="c"/>
+                                    <valItem ident="d"/>
+                                </valList>
+                            </attDef>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -3491,35 +3499,13 @@ CC 3778 Li casteax ne doutoit assaut
                             <valItem ident="n"/>
                         </valList>
                     </elementSpec>
-                    <elementSpec ident="pb" mode="change">
-                        <content>
-                            <empty/>
-                        </content>
-                        <attList>
-                            <attDef ident="n" mode="change" usage="req"/>
-                        </attList>
-                    </elementSpec>
-                    <elementSpec ident="cb" mode="change">
-                        <content>
-                            <empty/>
-                        </content>
-                        <attList>
-                            <attDef ident="n">
-                                <valList mode="add" type="closed">
-                                    <valItem ident="a"/>
-                                    <valItem ident="b"/>
-                                    <valItem ident="c"/>
-                                    <valItem ident="d"/>
-                                </valList>
-                            </attDef>
-                        </attList>
-                    </elementSpec>
+
                     <elementSpec ident="foreign" mode="change">
                         <content>
                             <macroRef key="macro.phraseSeq"/>
                         </content>
                         <attList>
-                            <attDef ident="xml:lang">
+                            <attDef ident="xml:lang" mode="change">
                                 <valList mode="add" type="closed">
                                     <valItem ident="lat"/>
                                     <valItem ident="fro"/>
@@ -4123,7 +4109,7 @@ CC 3778 Li casteax ne doutoit assaut
                             <macroRef key="macro.paraContent"/>
                         </content>
                         <attList>
-                            <attDef ident="label">
+                            <attDef ident="label" mode="change">
                                 <valList mode="add" type="closed">
                                     <valItem ident="a"/>
                                     <valItem ident="b"/>
@@ -4185,8 +4171,8 @@ CC 3778 Li casteax ne doutoit assaut
                             </alternate>
                         </content>
                         <attList>
-                            <attDef ident="wit"/>
-                            <attDef ident="resp"/>
+                            <attDef ident="resp" mode="change"/>
+                            <attDef ident="wit" mode="change"/>
                         </attList>
                         
                     </elementSpec>
@@ -4205,22 +4191,6 @@ CC 3778 Li casteax ne doutoit assaut
                                     <valItem ident="FR_844"/> <!-- Valeur = Identifiant unique du Manuscrit du Roi ?-->
                                 </valList>
                             </attDef>                             
-                        </attList>
-                    </elementSpec>
-                    <elementSpec ident="gap" mode="change">
-                        <content>
-                            <alternate minOccurs="0"
-                                maxOccurs="unbounded">
-                                <classRef key="model.descLike"/>
-                                <classRef key="model.certLike"/>
-                            </alternate>
-                        </content>
-                        <attList>
-                            <attDef ident="reason" mode="add" usage="req">
-                                <valList mode="add" type="closed">
-                                    <valItem ident="damage"/>
-                                </valList>
-                            </attDef>
                         </attList>
                     </elementSpec>
                     <elementSpec ident="witDetail" mode="change">
@@ -4556,7 +4526,8 @@ CC 3778 Li casteax ne doutoit assaut
                     </elementSpec>
                     <elementSpec ident="handShift" mode="change">
                         <attList>
-                            <attDef ident="new" mode="change" usage="opt"/>
+                            <attDef ident="new" mode="change" usage="req"/>
+                            <attDef ident="scriptRef" mode="change" usage="req"/>
                             <attDef ident="xml:id" mode="change" usage="req"/>
                             <attDef ident="cert" mode="change" usage="req"/>
                             <attDef ident="resp" mode="change" usage="req"/>
