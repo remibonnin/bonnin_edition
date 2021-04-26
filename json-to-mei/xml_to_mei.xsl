@@ -53,26 +53,29 @@
                 <body>
 
                     <mdiv>
-                        <xsl:for-each select="root/TEI/children/item/children/item">
-                            <xsl:element name="score">
-                                <xsl:element name="scoreDef">
-                                    <xsl:element name="staffGrp">
-                                        <xsl:element name="staffDef">
-                                            <xsl:for-each select=".//children/item/base">
+
+                        <xsl:element name="score">
+                            <xsl:element name="scoreDef">
+                                <xsl:element name="staffGrp">
+                                    <xsl:element name="staffDef">
+                                        <xsl:for-each select=".//children/item/base">
+                                            <!--
                                             <xsl:attribute name="clef.shape">
                                                 <xsl:value-of select=".//base/text()"/>
                                                 <xsl:apply-templates select=".//base[text()]"/>
                                             </xsl:attribute>
                                             <xsl:attribute name="clef.line"/>
+                                            -->
                                             <xsl:attribute name="n"/>
                                             <xsl:attribute name="lines"/>
                                             <xsl:attribute name="notationtype">
                                                 <xsl:apply-templates select="'mensural.black'"/>
                                             </xsl:attribute>
-                                            </xsl:for-each>
-                                        </xsl:element>
+                                        </xsl:for-each>
                                     </xsl:element>
                                 </xsl:element>
+                            </xsl:element>
+                            <xsl:for-each select="root/TEI/children/item/children/item">
                                 <xsl:element name="section">
                                     <xsl:attribute name="n">
                                         <xsl:number/>
@@ -88,10 +91,9 @@
                                                 <xsl:attribute name="n">
                                                   <xsl:number level="multiple"/>
                                                 </xsl:attribute>
-                                                
 
-                                                <xsl:for-each
-                                                  select=".//children/item">
+
+                                                <xsl:for-each select=".//children/item">
                                                   <xsl:element name="note">
                                                   <xsl:attribute name="pname">
                                                   <xsl:value-of select=".//base/text()"/>
@@ -105,11 +107,13 @@
                                                   <xsl:apply-templates select="'brevis'"/>
                                                   </xsl:attribute>
                                                   <xsl:element name="plica">
-                                                      <xsl:attribute name="dir"/>
+                                                  <xsl:attribute name="dir">
+                                                  <xsl:apply-templates select="'up'"/>
+                                                  </xsl:attribute>
                                                   </xsl:element>
                                                   </xsl:element>
                                                 </xsl:for-each>
-                                                
+
 
 
 
@@ -151,9 +155,11 @@
                                         </xsl:element>
                                     </xsl:element>
                                 </xsl:element>
-                            </xsl:element>
-                        </xsl:for-each>
+                            </xsl:for-each>
+                        </xsl:element>
+
                     </mdiv>
+                    <!--
                     <xsl:element name="annot"/>
                     <xsl:element name="typeDesc">
                         <xsl:value-of select="root/TEI/documentType"/>
@@ -162,6 +168,7 @@
                     <xsl:element name="sourceDesc">
                         <xsl:value-of select="root/TEI/kind"/>
                     </xsl:element>
+                    -->
                 </body>
             </music>
         </mei>
