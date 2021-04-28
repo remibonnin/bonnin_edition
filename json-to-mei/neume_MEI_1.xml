@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mei xmlns:mei="http://www.music-encoding.org/ns/mei">
+   <music>
+      <body>
+         <mdiv>
+            <score>
+               <scoreDef>
+                  <staffGrp>
+                     <staffDef clef.shape="CC" n="1" lines="5" notationtype="mensural.black"/>
+                  </staffGrp>
+               </scoreDef>
+            </score>
+            <section n="1">
+               <measure>
+                  <staff n="1">
+                     <layer n="1.1">
+                        <syllabe>
+                           <syl/>
+                           <neume>
+                              <nc pname="dD" oct="55">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>Li</syl>
+                           <neume>
+                              <nc pname="g" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>granz</syl>
+                           <neume>
+                              <nc pname="a" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>de-</syl>
+                           <neume>
+                              <nc pname="a b" oct="4 4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>sirs</syl>
+                           <neume>
+                              <nc pname="a g" oct="4 4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>et</syl>
+                           <neume>
+                              <nc pname="a" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>la</syl>
+                           <neume>
+                              <nc pname="b" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>dou-</syl>
+                           <neume>
+                              <nc pname="a" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>ce</syl>
+                           <neume>
+                              <nc pname="g" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>pen-</syl>
+                           <neume>
+                              <nc pname="f" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>se-</syl>
+                           <neume>
+                              <nc pname="e d e" oct="4 4 4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>e·</syl>
+                           <neume>
+                              <nc pname="e d" oct="4 4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl/>
+                           <neume>
+                              <nc pname="" oct="">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>que</syl>
+                           <neume>
+                              <nc pname="d" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>iai</syl>
+                           <neume>
+                              <nc pname="e" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                     </layer>
+                  </staff>
+               </measure>
+            </section>
+         </mdiv>
+         <mdiv>
+            <score>
+               <scoreDef>
+                  <staffGrp>
+                     <staffDef clef.shape="FF" n="2" lines="5" notationtype="mensural.black"/>
+                  </staffGrp>
+               </scoreDef>
+            </score>
+            <section n="2">
+               <measure>
+                  <staff n="2">
+                     <layer n="1.2">
+                        <syllabe>
+                           <syl/>
+                           <neume>
+                              <nc pname="bB" oct="44">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>por</syl>
+                           <neume>
+                              <nc pname="f e" oct="4 4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>vos</syl>
+                           <neume>
+                              <nc pname="f" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>da-</syl>
+                           <neume>
+                              <nc pname="f" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>me</syl>
+                           <neume>
+                              <nc pname="g" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>qui</syl>
+                           <neume>
+                              <nc pname="a b c" oct="4 4 5">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>va-</syl>
+                           <neume>
+                              <nc pname="b" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>lez</syl>
+                           <neume>
+                              <nc pname="a" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>tant·</syl>
+                           <neume>
+                              <nc pname="a g" oct="4 4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl/>
+                           <neume>
+                              <nc pname="" oct="">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>dont</syl>
+                           <neume>
+                              <nc pname="b" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>la</syl>
+                           <neume>
+                              <nc pname="c" oct="5">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>pai-</syl>
+                           <neume>
+                              <nc pname="d d" oct="5 5">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>ne</syl>
+                           <neume>
+                              <nc pname="c b" oct="5 4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                     </layer>
+                  </staff>
+               </measure>
+            </section>
+         </mdiv>
+         <mdiv>
+            <score>
+               <scoreDef>
+                  <staffGrp>
+                     <staffDef clef.shape="CC" n="3" lines="5" notationtype="mensural.black"/>
+                  </staffGrp>
+               </scoreDef>
+            </score>
+            <section n="3">
+               <measure>
+                  <staff n="3">
+                     <layer n="1.3">
+                        <syllabe>
+                           <syl/>
+                           <neume>
+                              <nc pname="dD" oct="55">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>ne</syl>
+                           <neume>
+                              <nc pname="a" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>puet</syl>
+                           <neume>
+                              <nc pname="b" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>es-</syl>
+                           <neume>
+                              <nc pname="a" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>tre</syl>
+                           <neume>
+                              <nc pname="g" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>ce-</syl>
+                           <neume>
+                              <nc pname="f" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>le-</syl>
+                           <neume>
+                              <nc pname="e d e" oct="4 4 4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>e·</syl>
+                           <neume>
+                              <nc pname="e d" oct="4 4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl/>
+                           <neume>
+                              <nc pname="" oct="">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>ou</syl>
+                           <neume>
+                              <nc pname="d e" oct="4 4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>ma-</syl>
+                           <neume>
+                              <nc pname="e" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>uez</syl>
+                           <neume>
+                              <nc pname="d c" oct="4 4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>mis</syl>
+                           <neume>
+                              <nc pname="d" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>et</syl>
+                           <neume>
+                              <nc pname="d" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>te-</syl>
+                           <neume>
+                              <nc pname="e" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>nu</syl>
+                           <neume>
+                              <nc pname="f g a" oct="4 4 4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                     </layer>
+                  </staff>
+               </measure>
+            </section>
+         </mdiv>
+         <mdiv>
+            <score>
+               <scoreDef>
+                  <staffGrp>
+                     <staffDef clef.shape="CC" n="4" lines="5" notationtype="mensural.black"/>
+                  </staffGrp>
+               </scoreDef>
+            </score>
+            <section n="4">
+               <measure>
+                  <staff n="4">
+                     <layer n="1.4">
+                        <syllabe>
+                           <syl/>
+                           <neume>
+                              <nc pname="dD" oct="55">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>lon-</syl>
+                           <neume>
+                              <nc pname="g" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>gue-</syl>
+                           <neume>
+                              <nc pname="f" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>mant·</syl>
+                           <neume>
+                              <nc pname="f e" oct="4 4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl/>
+                           <neume>
+                              <nc pname="" oct="">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>en-</syl>
+                           <neume>
+                              <nc pname="a" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>cor</syl>
+                           <neume>
+                              <nc pname="b" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>te-</syl>
+                           <neume>
+                              <nc pname="c" oct="5">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>nez</syl>
+                           <neume>
+                              <nc pname="d" oct="5">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>mon</syl>
+                           <neume>
+                              <nc pname="b" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>cuer</syl>
+                           <neume>
+                              <nc pname="a" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>en</syl>
+                           <neume>
+                              <nc pname="g" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>tel</syl>
+                           <neume>
+                              <nc pname="a" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                     </layer>
+                  </staff>
+               </measure>
+            </section>
+         </mdiv>
+         <mdiv>
+            <score>
+               <scoreDef>
+                  <staffGrp>
+                     <staffDef clef.shape="CC" n="5" lines="5" notationtype="mensural.black"/>
+                  </staffGrp>
+               </scoreDef>
+            </score>
+            <section n="5">
+               <measure>
+                  <staff n="5">
+                     <layer n="1.5">
+                        <syllabe>
+                           <syl/>
+                           <neume>
+                              <nc pname="dD" oct="55">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>tor-</syl>
+                           <neume>
+                              <nc pname="c b" oct="5 4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>mant·</syl>
+                           <neume>
+                              <nc pname="b a" oct="4 4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl/>
+                           <neume>
+                              <nc pname="" oct="">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>dont</syl>
+                           <neume>
+                              <nc pname="c" oct="5">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>ia</syl>
+                           <neume>
+                              <nc pname="c" oct="5">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>nis-</syl>
+                           <neume>
+                              <nc pname="a" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>trai</syl>
+                           <neume>
+                              <nc pname="b" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>nul</syl>
+                           <neume>
+                              <nc pname="g f" oct="4 4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>ior</syl>
+                           <neume>
+                              <nc pname="e" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>de</syl>
+                           <neume>
+                              <nc pname="g" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>mon</syl>
+                           <neume>
+                              <nc pname="a" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>vi-</syl>
+                           <neume>
+                              <nc pname="b" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                     </layer>
+                  </staff>
+               </measure>
+            </section>
+         </mdiv>
+         <mdiv>
+            <score>
+               <scoreDef>
+                  <staffGrp>
+                     <staffDef clef.shape="CC" n="6" lines="5" notationtype="mensural.black"/>
+                  </staffGrp>
+               </scoreDef>
+            </score>
+            <section n="6">
+               <measure>
+                  <staff n="6">
+                     <layer n="1.6">
+                        <syllabe>
+                           <syl/>
+                           <neume>
+                              <nc pname="dD" oct="55">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>uant·</syl>
+                           <neume>
+                              <nc pname="b a" oct="4 4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl/>
+                           <neume>
+                              <nc pname="" oct="">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>se</syl>
+                           <neume>
+                              <nc pname="b" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>par</syl>
+                           <neume>
+                              <nc pname="b" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>vos</syl>
+                           <neume>
+                              <nc pname="a" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>non</syl>
+                           <neume>
+                              <nc pname="b b" oct="4 4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>dou-</syl>
+                           <neume>
+                              <nc pname="g f" oct="4 4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>ce</syl>
+                           <neume>
+                              <nc pname="e" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>dame</syl>
+                           <neume>
+                              <nc pname="g" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>ho-</syl>
+                           <neume>
+                              <nc pname="a" oct="4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>no-</syl>
+                           <neume>
+                              <nc pname="b c d" oct="4 5 5">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>re-</syl>
+                           <neume>
+                              <nc pname="c c" oct="5 5">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                        <syllabe>
+                           <syl>e</syl>
+                           <neume>
+                              <nc pname="b a" oct="4 4">
+                                 <plica/>
+                              </nc>
+                           </neume>
+                        </syllabe>
+                     </layer>
+                  </staff>
+               </measure>
+            </section>
+         </mdiv>
+      </body>
+   </music>
+</mei>
