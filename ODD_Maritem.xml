@@ -4219,11 +4219,7 @@ CC 3778 Li casteax ne doutoit assaut
                             <memberOf key="att.global.facs" mode="add"/>
                         </classes>
                         <attList>
-                            <attDef ident="rend" mode="change" usage="req">
-                                <valList mode="add" type="closed">
-                                    <valItem ident="apos"/>
-                                </valList>
-                            </attDef>
+                            <attDef ident="apos" mode="add" usage="req"/>
                         </attList>
                     </elementSpec>
                     <elementSpec ident="w" mode="change">
