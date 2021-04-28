@@ -114,6 +114,16 @@
                             </xsl:element>
                             
                         </neume>
+                         <!-- JBC: si vous voulez itérer sur la chaîne de caractères, ça ressemblera à quelque chose comme: -->
+                         <xsl:for-each select="string-to-codepoints(base)">
+                             <neume>
+                                 <xsl:attribute name="pname">
+                                     <xsl:value-of select="lower-case(codepoints-to-string(.))"/>
+                                 </xsl:attribute>
+                             </neume>
+                         </xsl:for-each>
+                                
+                                
                             </syllabe>
                         </xsl:for-each>
                     </layer>
