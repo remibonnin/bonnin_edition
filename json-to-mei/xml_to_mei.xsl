@@ -14,49 +14,67 @@
     </xsl:template>
     <xsl:template match="TEI">
         <music>
-            <xsl:apply-templates select="/root/TEI/children"/>
+            <xsl:apply-templates/>
         </music>
     </xsl:template>
-    <xsl:template match="/root/TEI/children">
+    <xsl:template match="children[parent::TEI]">
         <body>
-            <xsl:apply-templates select="/root/TEI/children/item"/>
+            <xsl:apply-templates/>
         </body>
     </xsl:template>
-    <xsl:template match="/root/TEI/children/item">
-        
-            <xsl:apply-templates select="/root/TEI/children/item/children"/>
-        
+    
+    <xsl:template match="item[parent::children[parent::TEI]]">
+        <mdiv>
+            <score>
+                <xsl:apply-templates/>
+            </score>
+        </mdiv>
     </xsl:template>
     
+    <!--/TEI/children/item/children/item-->
+    <xsl:template match="item[parent::children[parent::item[parent::children[parent::TEI]]]]">
+        <!-- D'abord, la clef -->
+        <xsl:apply-templates select="item[1]"/>
+        <!-- Ensuite, la section -->
+        <xsl:apply-templates select="item[position()>1]"/>
+    </xsl:template>
+    
+    <xsl:template match="item[kind = 'Clef']">
+        <!-- Pour traiter les clefs -->
+        <!-- Que veut-on en faire ? -->
+        <scoreDef>
+            <staffGrp>
+                <staffDef>
+                    <xsl:attribute name="clef.shape">
+                        <xsl:value-of select="shape"/>
+                    </xsl:attribute>
+                   
+                    <xsl:attribute name="n">
+                        <xsl:number/>
+                    </xsl:attribute>
+                    <xsl:attribute name="lines">
+                        <xsl:number value="'5'"/>
+                    </xsl:attribute>
+                    <xsl:attribute name="notationtype">
+                        <xsl:apply-templates select="'mensural.black'"/>
+                    </xsl:attribute>
+                </staffDef>
+            </staffGrp>
+        </scoreDef>
+    </xsl:template>
+   
+   
+   <!-- À poursuivre -->
+    <xsl:template match="item[text or notes]">
+        <!-- Pour traiter les notes -->
+        
+        
+    </xsl:template>
+   
+    
     <xsl:template match="/root/TEI/children/item/children/item">
-        <mdiv>
-        <score>
             <xsl:apply-templates select="/root/TEI/children/item/children/item/children/text()"/>
-            <scoreDef>
-                <staffGrp>
-                    <staffDef>
-                        <xsl:copy-of select="shape"/>
-                        <xsl:attribute name="clef.shape">
-                            <xsl:value-of select=".//shape/text()"/>
-                            <xsl:apply-templates select=".//shape[text()]"/>
-                        </xsl:attribute>
-                        <!--
-                                                <xsl:attribute name="clef.line"/>
-                                                -->
-                        <xsl:attribute name="n">
-                            <xsl:number/>
-                        </xsl:attribute>
-                        <xsl:attribute name="lines">
-                            <xsl:number value="'5'"/>
-                        </xsl:attribute>
-                        <xsl:attribute name="notationtype">
-                            <xsl:apply-templates select="'mensural.black'"/>
-                        </xsl:attribute>
-                        
-                    </staffDef>
-                </staffGrp>
-            </scoreDef>
-        </score>
+            
         <section>
             <xsl:attribute name="n">
                 <xsl:number level="single"/>
@@ -82,12 +100,10 @@
                         <neume>
                             <xsl:element name="nc">
                                 <xsl:attribute name="pname">
-                                    <xsl:value-of select=".//base/[lower-case(text())]"/>
-                                    <xsl:apply-templates select="base[lower-case(text())]"/>
+                                    <xsl:value-of select="lower-case(base)"/>
                                 </xsl:attribute>
                                 <xsl:attribute name="oct">
-                                    <xsl:value-of select=".//octave/[text()]"/>
-                                    <xsl:apply-templates select="octave[text()]"/>
+                                    <xsl:apply-templates select="octave"/>
                                 </xsl:attribute>
                                 <!--
                                                         <xsl:attribute name="dur">
@@ -105,7 +121,6 @@
                
             </measure>
         </section>
-        </mdiv>
     </xsl:template>
 
 
