@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:mei="http://www.music-encoding.org/ns/mei">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title type="main">Maritem</title>
+            <title type="full">Format pivot pour le projet d'édition du Manuscrit du Roi : Image,
+               Texte et Musique</title>
+            <title type="short">Format pivot TEI/MEI projet ANR Maritem</title>
+            <respStmt>
+               <resp>Musique</resp>
+               <persName xml:id="CCA">Christelle Chaillou-Amadieu</persName>
+            </respStmt>
+            <respStmt>
+               <resp>Superviseur édition numérique</resp>
+               <persName xml:id="JBC">Jean-Baptiste Camps</persName>
+            </respStmt>
+            <respStmt>
+               <resp>Textes</resp>
+               <persName xml:id="VM">Viola Mariotti</persName>
+            </respStmt>
+            <respStmt>
+               <resp>Ajouts</resp>
+               <persName xml:id="FS">Federico Saviotti</persName>
+            </respStmt>
+            <respStmt>
+               <resp/>
+               <persName xml:id="PT">Pierre Tuloup</persName>
+            </respStmt>
+         </titleStmt>
+         <editionStmt>
+            <edition>Première version (0.1)<date>printemps 2021</date></edition>
+            <respStmt>
+               <orgName>CNRS/CESCM Poitiers</orgName>
+               <resp>Encodage réalisé par <name type="person">Viola Mariotti</name> et <name
+                     type="person">Pierre Tuloup</name> et validé par <name type="person"
+                     >Jean-Baptiste Camps</name></resp>
+            </respStmt>
+         </editionStmt>
+         <publicationStmt>
+            <p>Version de travail encore inédite</p>
+            <ab>
+               <address>
+                  <addrLine>Université de Poitiers</addrLine>
+                  <addrLine>Centre d’Études Supérieures de Civilisation Médiévale – CESCM</addrLine>
+                  <addrLine>24 rue de la Chaîne</addrLine>
+                  <addrLine>TSA 81118</addrLine>
+                  <addrLine>F – 86073 Poitiers cedex 9</addrLine>
+                  <addrLine>France</addrLine>
+               </address>
+            </ab>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc xml:lang="fro">
+               <msIdentifier>
+                  <country>France</country>
+                  <settlement>Paris</settlement>
+                  <institution>Bibliothèque nationale de France</institution>
+                  <repository> Département des manuscrits</repository>
+                  <collection>Français</collection>
+                  <idno>844</idno>
+               </msIdentifier>
+               <msContents>
+                  <msItem>
+                     <!-- pour le traitement des recueils la solution possible est de répéter l'élément <msItem>  -->
+                     <docImprint>
+                        <pubPlace>Paris</pubPlace>
+                        <publisher>Firmin-Didot frères, fils et Cie</publisher>
+                        <date>1884</date>
+                     </docImprint>
+                     <note>
+                        <ref target="https://catalogue.bnf.fr/ark:/12148/cb148113936">Notice créée à
+                           partir de la conversion rétrospective du Catalogue des manuscrits
+                           français, tome premier. Ancien fonds (n° 1 à 3160 du fonds
+                           français).</ref>
+                     </note>
+                  </msItem>
+               </msContents>
+
+               <physDesc>
+                  <handDesc>
+                     <handNote>
+                        <!-- Rajout des mains, quelles balises et attributs choisir ? -->
+                     </handNote>
+                  </handDesc>
+                  <decoDesc>
+                     <decoNote>
+                        <notatedMusic>
+                           <ptr target="neume_MEI_1.xml"/> <!-- Exemple de pointeur, est-ce correct ? -->
+                           <desc>Neumes</desc>
+                        </notatedMusic>
+                     </decoNote>
+                  </decoDesc>
+
+
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace cert="medium">Nord de la France</origPlace>
+                     <origPlace cert="medium">Italie</origPlace>
+                     <origPlace cert="unknown" resp="FS">Outremer</origPlace>
+                     <!-- appel du # pour le nom ? -->
+                     <origDate notBefore="1250" notAfter="1350">Composé entre la seconde moitié du
+                        XIIIe siècle et la première moitié du XIVe siècle.</origDate>
+                  </origin>
+               </history>
+
+
+
+
+               <!-- Choix de balise pour lister correctement les mains, les personnes et la musique. Faut-il construire un index avec la balise standOff ? -->
+
+               <!-- -->
+
+
+
+               <additional>
+
+                  <adminInfo>
+
+                     <recordHist>
+                        <source>Document pivot TEI/MEI ANR Maritem</source>
+                        <change when="2021-03-24" who="#PT">Description mise à jour le <date
+                              type="crea">29 avril 2021 </date>en vue de la création du fichier ODD
+                           ainsi que du RNG de référence.</change>
+                     </recordHist>
+                  </adminInfo>
+               </additional>
+            </msDesc>
+
+         </sourceDesc>
+
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p>Edition numérique du Manuscrit du Roi</p>
+            <p>Projet ANR Maritem</p>
+         </projectDesc>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="af">Ancien Français</language>
+         </langUsage>
+         <settingDesc>
+            <setting>
+               <name>Nord de la France</name>
+               <name>Italie</name>
+               <time>XIIIe siècle</time>
+            </setting>
+         </settingDesc>
+      </profileDesc>
+      <revisionDesc>
+         <change who="#VM" when="2020-10">Transcription des feuillets du Manuscrit du Roi.</change>
+         <change who="#VM" when="2021-03">OCR et Export des fichiers Transkribus</change>
+         <change who="#PT" when="2021-03">Révision majeure du modèle, dans le cadre du début du
+            projet ANR Maritem</change>
+         <change who="#VM" from="2021-03" to="2021-07">Modifications ponctuelles pour adapter aux
+            changements de pratique d'encodage du Manuscrit du Roi</change>
+         <change who="#VM" from="2021-03" to="2021-04">Première version du modèle</change>
+      </revisionDesc>
+
+   </teiHeader>
+   <text>
+      <body>
+         <div>
+            <head>Chanson</head> <!-- Exemple de titre -->
+            <lg type="chanson">
+               <lg type="décasyllabe" rhyme="abab">
+                  <!-- Exemple d'affichage -->
+                  <l n="1" met="8" real="--">
+                     <!-- Attributs à discuter. A quoi correspondent exactement real et met -->
+                     
+                        <!-- Comment interpréter tout ça ?? -->
+                        <w lemma="le" pos="DETdef">Li <!-- Indiquer les attributs de w comme suit pour le format pivot ? -->
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           <!-- Faut-il rajouter une balise supplémentaire entre ptr et desc ? -->
+                           <desc>Autres notes de musique</desc> <!-- Indication de la note dans desc ? -->
+                        </notatedMusic>
+                        </w>
+                        <w lemma="grant" pos="ADJqua">grans
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                        </w>
+                     
+                     
+                        <!-- Essai d'utilisation des indications trouvées dans les Guidelines (???) -->
+                        <w lemma="desirre2" pos="NOMcom">desirs
+                        <seg type="syll">de-
+                           <notatedMusic>
+                              <ptr target="file_1.svg"/>
+                              
+                              <desc>Autres notes de musique</desc>
+                           </notatedMusic>
+                        </seg>
+                        <seg type="syll">sirs
+                           <notatedMusic>
+                              <ptr target="file_1.svg"/>
+                              
+                              <desc>Autres notes de musique</desc>
+                           </notatedMusic>
+                        </seg>
+                        </w>
+                        
+                        <w lemma="et" pos="CONcoo">et
+                           <notatedMusic>
+                              <ptr target="file_1.svg"/>
+                              
+                              <desc>Autres notes de musique</desc>
+                              <ref/>
+                              
+                           </notatedMusic>
+                        </w>
+                        
+                        <w lemma="le" pos="DETdef">la
+                           <notatedMusic>
+                              <ptr target="file_1.svg"/>
+                              
+                              <desc>Autres notes de musique</desc>
+                           </notatedMusic>
+                        </w>
+
+                     
+                     
+                        <w lemma="douz" pos="ADJqua">douce <!-- Garder le mot entier quand seg est présent ? -->
+                        <seg type="syll">dou-
+                           <notatedMusic>
+                              <ptr target="file_1.svg"/>
+                              
+                              <desc>Autres notes de musique</desc>
+                           </notatedMusic>
+                        </seg>
+                        <seg type="syll">ce
+                           <notatedMusic>
+                              <ptr target="file_1.svg"/>
+                              
+                              <desc>Autres notes de musique</desc>
+                           </notatedMusic>
+                        </seg>
+                        </w>
+
+                        <w lemma="pensee" pos="NOMcom">pensée
+                        <seg type="syll">pen
+                           <notatedMusic>
+                              <ptr target="file_1.svg"/>
+                              
+                              <desc>Autres notes de musique</desc>
+                           </notatedMusic>
+                        </seg>
+                        <seg type="syll">sé
+                           <notatedMusic>
+                              <ptr target="file_1.svg"/>
+                              
+                              <desc>Autres notes de musique</desc>
+                           </notatedMusic>
+                        </seg>
+                        <seg type="syll">e
+                           <notatedMusic>
+                              <ptr target="file_1.svg"/>
+                              
+                              <desc>Autres notes de musique</desc>
+                           </notatedMusic>
+                        </seg>
+                        </w>
+                     
+                     <notatedMusic>
+                        <!-- Faut-il indiquer la balise ci-contre à chaque mot ? -->
+                        <ptr target="http://www.music-encoding.org/ns/mei"/>
+                        <!-- Faut-il indiquer la référence du format MEI dans le pointeur ? -->
+                        <graphic url="image_1.svg"/>
+                        <!-- Image de la note elle-même ou bien référence du fichier qui la contient ? Est-ce utile ?-->
+                        <desc>Notes de musique</desc>
+                     </notatedMusic>
+                     <notatedMusic>
+                        <ptr target="file_1.svg"/>
+
+                        <desc>Autres notes de musique</desc>
+                     </notatedMusic>
+                  </l>
+                  <l>
+                     <w lemma="que4" pos="CONsub">que
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </w>
+                     <w lemma="je" pos="PROper">j'
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </w>
+                     <w lemma="avoir" pos="VERcjg">ai
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </w>
+                     <w lemma="por2" pos="PRE">por
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </w>
+                     <w lemma="vos" pos="PROper">vos
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </w>
+                     <w lemma="dame" pos="NOMcom">dame
+                     <seg type="syll">da-
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg>
+                     <seg type="syll">me
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg>
+                     </w>
+                     <w lemma="qui" pos="PROrel">qui
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </w>
+                     <w lemma="valoir" pos="VERcjg">valez
+                     <seg type="syll">va-
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg>
+                     <seg type="syll">lez
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg>
+                     </w>
+                     <w lemma="tant" pos="ADVgen">tant
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </w>
+                  </l>
+                  <l>
+                     <w lemma="dont" pos="PROrel">dont
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </w>
+                     <w lemma="le" pos="DETdef">la
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </w>
+                     <w lemma="peine" pos="NOMcom">paine
+                     <seg type="syll">pai-
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg>
+                     <seg type="syll">ne
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg>
+                     </w>
+                     <w lemma="ne1" pos="ADVgen">ne
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </w>
+                     <w lemma="pöoir" pos="VERcjg">puet
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </w>
+                     <w lemma="estre1" pos="VERinf">estre
+                     <seg type="syll">es-
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg>
+                     <seg type="syll">tre
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg>
+                     </w>
+                     <w lemma="celer1" pos="VERppe">celée
+                     <seg type="syll">ce
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg>
+                     <seg type="syll">lé
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg>
+                     <seg type="syll">e
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg>
+                     </w>
+                  </l>
+                  <l>
+                     <w lemma="o3" pos="PROint">ou
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </w>
+                     <w lemma="je" pos="PROper">m'
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </w>
+                     <w lemma="avoir" pos="VERcjg">avez
+                     <seg type="syll">a-
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg>
+                     <seg type="syll">vez
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg>
+                     </w>
+                     <w lemma="metre2" pos="VERppe">mis
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </w>
+                     <w lemma="et" pos="CONcoo">et
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </w>
+                     <w lemma="tenir1" pos="VERppe">tenu
+                     <seg type="syll">te-
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg>
+                     <seg type="syll">nu
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg>
+                     </w>
+                     <w lemma="longement2" pos="ADVgen">longuemant
+                     <seg type="syll">lon-
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg>
+                     <seg type="syll">gue
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg>
+                     <seg type="syll">mant
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg></w>
+                  </l>
+                  <l>
+                     <w lemma="encore" pos="ADVgen">encor
+                     <seg type="syll">en-
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg>
+                     <seg type="syll">cor
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg>
+                     </w>
+                     <w lemma="tenir1" pos="VERcjg">tenez
+                     <seg type="syll">te-
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg>
+                     <seg type="syll">nez
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg>
+                     </w>
+                     <w lemma="mon1" pos="DETpos">mon
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </w>
+                     <w lemma="cuer1" pos="NOMcom">cuer
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </w>
+                     <w lemma="en1" pos="PRE">en
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </w>
+                     <w lemma="tel" pos="DETind">tel
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </w>
+                     <w lemma="torment" pos="NOMcom">tormant
+                     <seg type="syll">tor-
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg>
+                     <seg type="syll">mant
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg>
+                     </w>
+                  </l>
+                  <l>
+                     <w lemma="dont" pos="ADVgen">dont
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </w>
+                     <w lemma="ja" pos="ADVgen">ja
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </w>
+                     <w lemma="notir" pos="VERcjg">nistrai
+                     <seg type="syll">nis-
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg>
+                     <seg type="syll">trai
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg>
+                     </w>
+                     <w lemma="nul" pos="DETind">nul
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </w>
+                     <w lemma="jor" pos="NOMcom">jor
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </w>
+                     <w lemma="de" pos="PRE">de
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </w>
+                     <w lemma="mon1" pos="DETpos">mon
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </w>
+                     <w lemma="vivant" pos="NOMcom">vivant
+                     <seg type="syll">vi-
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg>
+                     <seg type="syll">vant
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg>
+                     </w>
+                  </l>
+                  <l>
+                     <w lemma="se" pos="CONsub">se
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </w>
+                     <w lemma="par" pos="PRE">par
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </w>
+                     <w lemma="vos" pos="PROper">vos
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </w>
+                     <w lemma="non" pos="ADVneg">non
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </w>
+                     <w lemma="douz" pos="ADJqua">douce
+                     <seg type="syll">dou-
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg>
+                     <seg type="syll">ce
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg>
+                     </w>
+                     <w lemma="dame" pos="NOMcom">dame
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </w>
+                     <w lemma="onorer" pos="VERppe">honorée
+                     <seg type="syll">ho-
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg>
+                     <seg type="syll">no-
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg>
+                     <seg type="syll">ré-
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg>
+                     <seg type="syll">e
+                        <notatedMusic>
+                           <ptr target="file_1.svg"/>
+                           
+                           <desc>Autres notes de musique</desc>
+                        </notatedMusic>
+                     </seg>
+                     </w>
+                  </l>
+               </lg>
+            </lg> <!-- Test d'encodage pivot correspondant au fichier musical d'export JSON n°1 -->
+         </div>
+      </body>
+   </text>
+</TEI>
