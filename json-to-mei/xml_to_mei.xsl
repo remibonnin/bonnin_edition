@@ -17,6 +17,7 @@
             <xsl:apply-templates/>
         </mei>
     </xsl:template>
+  
     <xsl:template match="TEI">
         <music>
             <xsl:apply-templates select="/root/TEI/children"/>
@@ -34,44 +35,56 @@
     </xsl:template>
     
     <xsl:template match="/root/TEI/children/item/children/item">
+        
         <mdiv>
         <score>
             <xsl:apply-templates select="/root/TEI/children/item/children/item/children/text()"/>
+            
             <scoreDef>
+                
                 <staffGrp>
+                    
                     <staffDef>
-                        <xsl:copy-of select="shape"/>
+                        
+                        <xsl:value-of select="shape"/>
+                        
                         <xsl:attribute name="clef.shape">
                             
                             <xsl:apply-templates select=".//shape/[text()]"/>
+                            
                         </xsl:attribute>
-                        <!--
-                                                <xsl:attribute name="clef.line"/>
-                                                -->
+                        
+                      
                         <xsl:attribute name="n">
-                            <xsl:number/>
+                            <xsl:number level="single"/>
                         </xsl:attribute>
+                        
                         <xsl:attribute name="clef.line">
-                            <xsl:number/>
+                            <xsl:number value="'4'"/>
                         </xsl:attribute>
+                        
                         <xsl:attribute name="lines">
                             <xsl:number value="'5'"/>
                         </xsl:attribute>
-                        <!--
+                        
+                        
                         <xsl:attribute name="notationtype">
-                            <xsl:apply-templates select="'mensural.black'"/>
+                            <xsl:apply-templates select="'neume'"/>
                         </xsl:attribute>
-                        -->
+                        
                     </staffDef>
+                    
                 </staffGrp>
+                
             </scoreDef>
-        
+            
         <section>
             <xsl:attribute name="n">
                 <xsl:number level="single"/>
             </xsl:attribute>
             
             <xsl:apply-templates select="/root/TEI/children/item/children/item/children/text()"/>
+            
 
                 <staff>
                     <xsl:attribute name="n">
@@ -82,15 +95,21 @@
                         <xsl:attribute name="n">
                             <xsl:number value="'1'"/>
                         </xsl:attribute>
+                        
                         <xsl:for-each
                             select=".//children/item">
-                            <syllabe>
-                                <xsl:element name="syl">
-                                    <xsl:apply-templates select=".//text/text()"/>
-                                </xsl:element>
-                        
+                            
+                            <neume>
+                                <xsl:attribute name="syl">
+                                    
+                                    
+                                    <xsl:apply-templates select="text"/>
+                                    
+                                </xsl:attribute>   
+                               
                             <xsl:for-each select=".//grouped/item">
-                            <xsl:element name="note">
+                            
+                                <xsl:element name="nc">
                                 
                                 <xsl:attribute name="pname">
                                     
@@ -103,7 +122,16 @@
                                     <xsl:value-of select=".//octave"/>
                                     <xsl:apply-templates select="/octave/tokenize(text())"/>
                                 </xsl:attribute>
-                                
+                                <!--
+                                <xsl:for-each select=".">
+                                <xsl:attribute name="syl">
+                                    
+                                    
+                                    <xsl:apply-templates select="../../../../../../../text"/>
+                                    
+                                </xsl:attribute>
+                                </xsl:for-each>
+                                -->
                                 <xsl:attribute name="stem.dir">
                                     <xsl:choose>
                                         
@@ -129,8 +157,9 @@
                                 
                                    
                             </xsl:element>
+                            
                             </xsl:for-each>
-                        
+                               
                                 
                                 <!--
                                 <xsl:for-each select="string-to-codepoints(base)">
@@ -141,15 +170,18 @@
                                     </neume>
                                 </xsl:for-each>
                                 -->
-                            </syllabe>
+                            </neume>
+                            
                         </xsl:for-each>
+                        
                     </layer>
                 </staff>
-               
+            
             
         </section>
         </score>
         </mdiv>
+        
     </xsl:template>
 
 
