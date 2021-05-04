@@ -84,13 +84,13 @@
                         </xsl:attribute>
                         <xsl:for-each
                             select=".//children/item">
-                            <app>
-                                <xsl:element name="lem">
+                            <syllabe>
+                                <xsl:element name="syl">
                                     <xsl:apply-templates select=".//text/text()"/>
-                                
+                                </xsl:element>
                         
                             <xsl:for-each select=".//grouped/item">
-                            <xsl:element name="nc">
+                            <xsl:element name="note">
                                 
                                 <xsl:attribute name="pname">
                                     
@@ -131,7 +131,7 @@
                             </xsl:element>
                             </xsl:for-each>
                         
-                                </xsl:element>
+                                
                                 <!--
                                 <xsl:for-each select="string-to-codepoints(base)">
                                     <neume>
@@ -141,7 +141,7 @@
                                     </neume>
                                 </xsl:for-each>
                                 -->
-                            </app>
+                            </syllabe>
                         </xsl:for-each>
                     </layer>
                 </staff>
