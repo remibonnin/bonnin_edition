@@ -42,8 +42,8 @@
                     <staffDef>
                         <xsl:copy-of select="shape"/>
                         <xsl:attribute name="clef.shape">
-                            <xsl:value-of select=".//shape/text()"/>
-                            <xsl:apply-templates select=".//shape[text()]"/>
+                            
+                            <xsl:apply-templates select=".//shape/[text()]"/>
                         </xsl:attribute>
                         <!--
                                                 <xsl:attribute name="clef.line"/>
@@ -57,10 +57,11 @@
                         <xsl:attribute name="lines">
                             <xsl:number value="'5'"/>
                         </xsl:attribute>
+                        <!--
                         <xsl:attribute name="notationtype">
                             <xsl:apply-templates select="'mensural.black'"/>
                         </xsl:attribute>
-                        
+                        -->
                     </staffDef>
                 </staffGrp>
             </scoreDef>
@@ -74,31 +75,35 @@
 
                 <staff>
                     <xsl:attribute name="n">
-                        <xsl:number level="single"/>
+                        <xsl:number value="'1'"/>
                     </xsl:attribute>
                 
                     <layer>
                         <xsl:attribute name="n">
-                            <xsl:number level="multiple"/>
+                            <xsl:number value="'1'"/>
                         </xsl:attribute>
                         <xsl:for-each
                             select=".//children/item">
-                            <syllabe>
+                            <app>
                                 <xsl:element name="lem">
                                     <xsl:apply-templates select=".//text/text()"/>
                                 
-                        <neume>
-                            
+                        
+                            <xsl:for-each select=".//grouped/item">
                             <xsl:element name="nc">
-                                <xsl:for-each select=".//nonSpaced/item">
+                                
                                 <xsl:attribute name="pname">
-                                    <xsl:value-of select=".//base/[tokenize(lower-case(text()))]"/>
-                                    <xsl:apply-templates select="base[tokenize(lower-case(text()))]"/>
+                                    
+                                    
+                                    
+                                    <xsl:apply-templates select="base/lower-case(text())"/>
                                 </xsl:attribute>
+                                
                                 <xsl:attribute name="oct">
-                                    <xsl:value-of select=".//octave/[tokenize(text())]"/>
-                                    <xsl:apply-templates select="octave[tokenize(text())]"/>
+                                    <xsl:value-of select=".//octave"/>
+                                    <xsl:apply-templates select="/octave/tokenize(text())"/>
                                 </xsl:attribute>
+                                
                                 <xsl:attribute name="stem.dir">
                                     <xsl:choose>
                                         
@@ -110,10 +115,11 @@
                                             
                                             <xsl:apply-templates select="'up'"/>
                                         </xsl:when>
+                                        
                                     </xsl:choose>
                                     
                                 </xsl:attribute>
-                               
+                                
                                 <!--
                                                         <xsl:attribute name="dur">
                                                             <xsl:apply-templates select="'brevis'"/>
@@ -121,11 +127,12 @@
                                  
                                 -->
                                 
-                                </xsl:for-each>   
+                                   
                             </xsl:element>
-                            
-                        </neume>
-                                </xsl:element>      
+                            </xsl:for-each>
+                        
+                                </xsl:element>
+                                <!--
                                 <xsl:for-each select="string-to-codepoints(base)">
                                     <neume>
                                         <xsl:attribute name="pname">
@@ -133,7 +140,8 @@
                                         </xsl:attribute>
                                     </neume>
                                 </xsl:for-each>
-                            </syllabe>
+                                -->
+                            </app>
                         </xsl:for-each>
                     </layer>
                 </staff>
@@ -143,7 +151,6 @@
         </score>
         </mdiv>
     </xsl:template>
-
 
 
 </xsl:stylesheet>
