@@ -37,9 +37,9 @@
     <xsl:template match="/root/TEI/children/item/children/item">
         
         <mdiv>
-        <score>
-            <xsl:apply-templates select="/root/TEI/children/item/children/item/children/text()"/>
             
+            <xsl:apply-templates select="/root/TEI/children/item/children/text()"/>
+            <score>
             <scoreDef>
                 
                 <staffGrp>
@@ -99,14 +99,14 @@
                         <xsl:for-each
                             select=".//children/item">
                             
-                            <neume>
-                                <xsl:attribute name="syl">
+                            <syllable>
+                                <xsl:element name="syl">
                                     
                                     
                                     <xsl:apply-templates select="text"/>
-                                    
-                                </xsl:attribute>   
-                               
+                                </xsl:element> 
+                                 
+                            <neume>
                             <xsl:for-each select=".//grouped/item">
                             
                                 <xsl:element name="nc">
@@ -171,7 +171,7 @@
                                 </xsl:for-each>
                                 -->
                             </neume>
-                            
+                            </syllable>     
                         </xsl:for-each>
                         
                     </layer>
@@ -179,7 +179,7 @@
             
             
         </section>
-        </score>
+            </score> 
         </mdiv>
         
     </xsl:template>
