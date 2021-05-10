@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mei xmlns:mei="http://www.music-encoding.org/ns/mei">
+   <music>
+      <body>
+         <mdiv>
+            <score>
+               <scoreDef>
+                  <staffGrp>
+                     <staffDef clef.shape="G"
+                               n="1"
+                               clef.line="4"
+                               lines="5"
+                               notationtype="cmn"/>
+                     <staffDef clef.shape="G"
+                        n="2"
+                        clef.line="4"
+                        lines="5"
+                        notationtype="cmn"/>
+                     <staffDef clef.shape="G"
+                        n="3"
+                        clef.line="4"
+                        lines="5"
+                        notationtype="cmn"/>
+                     <staffDef clef.shape="G"
+                        n="4"
+                        clef.line="4"
+                        lines="5"
+                        notationtype="cmn"/>
+                     <staffDef clef.shape="G"
+                        n="5"
+                        clef.line="4"
+                        lines="5"
+                        notationtype="cmn"/>
+                     <staffDef clef.shape="G"
+                        n="6"
+                        clef.line="4"
+                        lines="5"
+                        notationtype="cmn"/>
+                  </staffGrp>
+               </scoreDef>
+               <section n="1">
+                  <staff n="1">
+                     <layer n="1">
+                        <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>Li</syl>
+                           </verse>
+                        </note>
+                        <note pname="a" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>granz</syl>
+                           </verse>
+                        </note>
+                        <note pname="a" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>de-</syl>
+                           </verse>
+                        </note>
+                        <note pname="b" oct="4" dur="4" stem.dir="down" stem.with="below">
+                           <verse>
+                              <syl>de-</syl>
+                           </verse>
+                        </note>
+                        <note pname="a" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>sirs</syl>
+                           </verse>
+                        </note>
+                        <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>sirs</syl>
+                           </verse>
+                        </note>
+                        <note pname="a" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>et</syl>
+                           </verse>
+                        </note>
+                        <note pname="b" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>la</syl>
+                           </verse>
+                        </note>
+                        <note pname="a" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>dou-</syl>
+                           </verse>
+                        </note>
+                        <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>ce</syl>
+                           </verse>
+                        </note>
+                        <note pname="f" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>pen-</syl>
+                           </verse>
+                        </note>
+                        <note pname="e" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>se-</syl>
+                           </verse>
+                        </note>
+                        <note pname="d" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>se-</syl>
+                           </verse>
+                        </note>
+                        <note pname="e" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>se-</syl>
+                           </verse>
+                        </note>
+                        <note pname="e" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>e·</syl>
+                           </verse>
+                        </note>
+                        <note pname="d" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>e·</syl>
+                           </verse>
+                        </note>
+                        <note pname="d" oct="4" dur="4" stem.dir="up" stem.with="below">
+                           <verse>
+                              <syl>que</syl>
+                           </verse>
+                        </note>
+                        <note pname="e" oct="4" dur="4" stem.dir="down" stem.with="below">
+                           <verse>
+                              <syl>iai</syl>
+                           </verse>
+                        </note>
+                     </layer>
+                  </staff>
+               </section>
+            
+               <section n="2">
+                  <staff n="1">
+                     <layer n="1">
+                        <note pname="f" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>por</syl>
+                           </verse>
+                        </note>
+                        <note pname="e" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>por</syl>
+                           </verse>
+                        </note>
+                        <note pname="f" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>vos</syl>
+                           </verse>
+                        </note>
+                        <note pname="f" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>da-</syl>
+                           </verse>
+                        </note>
+                        <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>me</syl>
+                           </verse>
+                        </note>
+                        <note pname="a" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>qui</syl>
+                           </verse>
+                        </note>
+                        <note pname="b" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>qui</syl>
+                           </verse>
+                        </note>
+                        <note pname="c" oct="5" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>qui</syl>
+                           </verse>
+                        </note>
+                        <note pname="b" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>va-</syl>
+                           </verse>
+                        </note>
+                        <note pname="a" oct="4" dur="4" stem.dir="up" stem.with="below">
+                           <verse>
+                              <syl>lez</syl>
+                           </verse>
+                        </note>
+                        <note pname="a" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>tant·</syl>
+                           </verse>
+                        </note>
+                        <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>tant·</syl>
+                           </verse>
+                        </note>
+                        <note pname="b" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>dont</syl>
+                           </verse>
+                        </note>
+                        <note pname="c" oct="5" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>la</syl>
+                           </verse>
+                        </note>
+                        <note pname="d" oct="5" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>pai-</syl>
+                           </verse>
+                        </note>
+                        <note pname="d" oct="5" dur="4" stem.dir="down" stem.with="below">
+                           <verse>
+                              <syl>pai-</syl>
+                           </verse>
+                        </note>
+                        <note pname="c" oct="5" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>ne</syl>
+                           </verse>
+                        </note>
+                        <note pname="b" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>ne</syl>
+                           </verse>
+                        </note>
+                     </layer>
+                  </staff>
+               </section>
+            
+               <section n="3">
+                  <staff n="1">
+                     <layer n="1">
+                        <note pname="a" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>ne</syl>
+                           </verse>
+                        </note>
+                        <note pname="b" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>puet</syl>
+                           </verse>
+                        </note>
+                        <note pname="a" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>es-</syl>
+                           </verse>
+                        </note>
+                        <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>tre</syl>
+                           </verse>
+                        </note>
+                        <note pname="f" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>ce-</syl>
+                           </verse>
+                        </note>
+                        <note pname="e" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>le-</syl>
+                           </verse>
+                        </note>
+                        <note pname="d" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>le-</syl>
+                           </verse>
+                        </note>
+                        <note pname="e" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>le-</syl>
+                           </verse>
+                        </note>
+                        <note pname="e" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>e·</syl>
+                           </verse>
+                        </note>
+                        <note pname="d" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>e·</syl>
+                           </verse>
+                        </note>
+                        <note pname="d" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>ou</syl>
+                           </verse>
+                        </note>
+                        <note pname="e" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>ou</syl>
+                           </verse>
+                        </note>
+                        <note pname="e" oct="4" dur="4" stem.dir="down" stem.with="below">
+                           <verse>
+                              <syl>ma-</syl>
+                           </verse>
+                        </note>
+                        <note pname="d" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>uez</syl>
+                           </verse>
+                        </note>
+                        <note pname="c" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>uez</syl>
+                           </verse>
+                        </note>
+                        <note pname="d" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>mis</syl>
+                           </verse>
+                        </note>
+                        <note pname="d" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>et</syl>
+                           </verse>
+                        </note>
+                        <note pname="e" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>te-</syl>
+                           </verse>
+                        </note>
+                        <note pname="f" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>nu</syl>
+                           </verse>
+                        </note>
+                        <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>nu</syl>
+                           </verse>
+                        </note>
+                        <note pname="a" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>nu</syl>
+                           </verse>
+                        </note>
+                     </layer>
+                  </staff>
+               </section>
+           
+               <section n="4">
+                  <staff n="1">
+                     <layer n="1">
+                        <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>lon-</syl>
+                           </verse>
+                        </note>
+                        <note pname="f" oct="4" dur="4" stem.dir="up" stem.with="below">
+                           <verse>
+                              <syl>gue-</syl>
+                           </verse>
+                        </note>
+                        <note pname="f" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>mant·</syl>
+                           </verse>
+                        </note>
+                        <note pname="e" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>mant·</syl>
+                           </verse>
+                        </note>
+                        <note pname="a" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>en-</syl>
+                           </verse>
+                        </note>
+                        <note pname="b" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>cor</syl>
+                           </verse>
+                        </note>
+                        <note pname="c" oct="5" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>te-</syl>
+                           </verse>
+                        </note>
+                        <note pname="d" oct="5" dur="4" stem.dir="down" stem.with="below">
+                           <verse>
+                              <syl>nez</syl>
+                           </verse>
+                        </note>
+                        <note pname="b" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>mon</syl>
+                           </verse>
+                        </note>
+                        <note pname="a" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>cuer</syl>
+                           </verse>
+                        </note>
+                        <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>en</syl>
+                           </verse>
+                        </note>
+                        <note pname="a" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>tel</syl>
+                           </verse>
+                        </note>
+                     </layer>
+                  </staff>
+               </section>
+            
+               <section n="5">
+                  <staff n="1">
+                     <layer n="1">
+                        <note pname="c" oct="5" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>tor-</syl>
+                           </verse>
+                        </note>
+                        <note pname="b" oct="4" dur="4" stem.dir="up" stem.with="below">
+                           <verse>
+                              <syl>tor-</syl>
+                           </verse>
+                        </note>
+                        <note pname="b" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>mant·</syl>
+                           </verse>
+                        </note>
+                        <note pname="a" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>mant·</syl>
+                           </verse>
+                        </note>
+                        <note pname="c" oct="5" dur="4" stem.dir="up" stem.with="below">
+                           <verse>
+                              <syl>dont</syl>
+                           </verse>
+                        </note>
+                        <note pname="c" oct="5" dur="4" stem.dir="down" stem.with="below">
+                           <verse>
+                              <syl>ia</syl>
+                           </verse>
+                        </note>
+                        <note pname="a" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>nis-</syl>
+                           </verse>
+                        </note>
+                        <note pname="b" oct="4" dur="4" stem.dir="down" stem.with="below">
+                           <verse>
+                              <syl>trai</syl>
+                           </verse>
+                        </note>
+                        <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>nul</syl>
+                           </verse>
+                        </note>
+                        <note pname="f" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>nul</syl>
+                           </verse>
+                        </note>
+                        <note pname="e" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>ior</syl>
+                           </verse>
+                        </note>
+                        <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>de</syl>
+                           </verse>
+                        </note>
+                        <note pname="a" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>mon</syl>
+                           </verse>
+                        </note>
+                        <note pname="b" oct="4" dur="4" stem.dir="up" stem.with="below">
+                           <verse>
+                              <syl>vi-</syl>
+                           </verse>
+                        </note>
+                     </layer>
+                  </staff>
+               </section>
+            
+               <section n="6">
+                  <staff n="1">
+                     <layer n="1">
+                        <note pname="b" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>uant·</syl>
+                           </verse>
+                        </note>
+                        <note pname="a" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>uant·</syl>
+                           </verse>
+                        </note>
+                        <note pname="b" oct="4" dur="4" stem.dir="up" stem.with="below">
+                           <verse>
+                              <syl>se</syl>
+                           </verse>
+                        </note>
+                        <note pname="b" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>par</syl>
+                           </verse>
+                        </note>
+                        <note pname="a" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>vos</syl>
+                           </verse>
+                        </note>
+                        <note pname="b" oct="4" dur="4" stem.dir="down" stem.with="below">
+                           <verse>
+                              <syl>non</syl>
+                           </verse>
+                        </note>
+                        <note pname="b" oct="4" dur="4" stem.dir="down" stem.with="below">
+                           <verse>
+                              <syl>non</syl>
+                           </verse>
+                        </note>
+                        <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>dou-</syl>
+                           </verse>
+                        </note>
+                        <note pname="f" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>dou-</syl>
+                           </verse>
+                        </note>
+                        <note pname="e" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>ce</syl>
+                           </verse>
+                        </note>
+                        <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>dame</syl>
+                           </verse>
+                        </note>
+                        <note pname="a" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>ho-</syl>
+                           </verse>
+                        </note>
+                        <note pname="b" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>no-</syl>
+                           </verse>
+                        </note>
+                        <note pname="c" oct="5" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>no-</syl>
+                           </verse>
+                        </note>
+                        <note pname="d" oct="5" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>no-</syl>
+                           </verse>
+                        </note>
+                        <note pname="c" oct="5" dur="4" stem.dir="down" stem.with="below">
+                           <verse>
+                              <syl>re-</syl>
+                           </verse>
+                        </note>
+                        <note pname="c" oct="5" dur="4" stem.dir="down" stem.with="below">
+                           <verse>
+                              <syl>re-</syl>
+                           </verse>
+                        </note>
+                        <note pname="b" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>e</syl>
+                           </verse>
+                        </note>
+                        <note pname="a" oct="4" dur="4" stem.dir="" stem.with="below">
+                           <verse>
+                              <syl>e</syl>
+                           </verse>
+                        </note>
+                     </layer>
+                  </staff>
+               </section>
+            </score>
+         </mdiv>
+      </body>
+   </music>
+</mei>

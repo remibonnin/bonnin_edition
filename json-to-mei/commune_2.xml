@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mei xmlns:mei="http://www.music-encoding.org/ns/mei">
+   <music>
+      <body>
+         <mdiv>
+            <score>
+               <scoreDef>
+                  <staffGrp>
+                     <staffDef clef.shape="G"
+                               n="1"
+                               clef.line="4"
+                               lines="5"
+                               notationtype="cmn"/>
+                  </staffGrp>
+               </scoreDef>
+               <section n="1">
+                  <measure>
+                     <staff n="1">
+                        <layer n="1">
+                           <beam>
+                              <note pname="f" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                              <note pname="a" oct="4" dur="4" stem.dir="down" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                              <note pname="f" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="a" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="f" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="e" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="d" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                              <note pname="c" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                              <note pname="d" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="d" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                              <note pname="c" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                        </layer>
+                     </staff>
+                  </measure>
+               </section>
+            </score>
+            <lyrics staff="1.1.1">
+               <syl>Li</syl>
+            </lyrics>
+            <lyrics staff="1.1.2">
+               <syl>granz</syl>
+            </lyrics>
+            <lyrics staff="1.1.3">
+               <syl>de-</syl>
+            </lyrics>
+            <lyrics staff="1.1.4">
+               <syl>sirs</syl>
+            </lyrics>
+            <lyrics staff="1.1.5">
+               <syl>et</syl>
+            </lyrics>
+            <lyrics staff="1.1.6">
+               <syl>la</syl>
+            </lyrics>
+            <lyrics staff="1.1.7">
+               <syl>dou-</syl>
+            </lyrics>
+            <lyrics staff="1.1.8">
+               <syl>ce</syl>
+            </lyrics>
+            <lyrics staff="1.1.9">
+               <syl>pen-</syl>
+            </lyrics>
+            <lyrics staff="1.1.10">
+               <syl>sé-</syl>
+            </lyrics>
+            <lyrics staff="1.1.11">
+               <syl>e</syl>
+            </lyrics>
+         </mdiv>
+         <mdiv>
+            <score>
+               <scoreDef>
+                  <staffGrp>
+                     <staffDef clef.shape="G"
+                               n="2"
+                               clef.line="4"
+                               lines="5"
+                               notationtype="cmn"/>
+                  </staffGrp>
+               </scoreDef>
+               <section n="2">
+                  <measure>
+                     <staff n="1">
+                        <layer n="1">
+                           <beam>
+                              <note pname="c" oct="4" dur="4" stem.dir="up" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="d" oct="4" dur="4" stem.dir="down" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="c" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                              <note pname="b" oct="3" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="c" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="c" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="d" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="e" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                              <note pname="f" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                              <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="f" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="e" oct="4" dur="4" stem.dir="up" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="e" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                              <note pname="d" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                        </layer>
+                     </staff>
+                  </measure>
+               </section>
+            </score>
+            <lyrics staff="1.2.1">
+               <syl>que</syl>
+            </lyrics>
+            <lyrics staff="1.2.2">
+               <syl>j'ai</syl>
+            </lyrics>
+            <lyrics staff="1.2.3">
+               <syl>por</syl>
+            </lyrics>
+            <lyrics staff="1.2.4">
+               <syl>vos</syl>
+            </lyrics>
+            <lyrics staff="1.2.5">
+               <syl>da-</syl>
+            </lyrics>
+            <lyrics staff="1.2.6">
+               <syl>me</syl>
+            </lyrics>
+            <lyrics staff="1.2.7">
+               <syl>qui</syl>
+            </lyrics>
+            <lyrics staff="1.2.8">
+               <syl>va-</syl>
+            </lyrics>
+            <lyrics staff="1.2.9">
+               <syl>lez</syl>
+            </lyrics>
+            <lyrics staff="1.2.10">
+               <syl>tant</syl>
+            </lyrics>
+         </mdiv>
+         <mdiv>
+            <score>
+               <scoreDef>
+                  <staffGrp>
+                     <staffDef clef.shape="G"
+                               n="3"
+                               clef.line="4"
+                               lines="5"
+                               notationtype="cmn"/>
+                  </staffGrp>
+               </scoreDef>
+               <section n="3">
+                  <measure>
+                     <staff n="1">
+                        <layer n="1">
+                           <beam>
+                              <note pname="f" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="a" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                              <note pname="a" oct="4" dur="4" stem.dir="down" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                              <note pname="f" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="a" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="f" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="e" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="d" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                              <note pname="c" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                              <note pname="d" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="d" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                              <note pname="c" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                        </layer>
+                     </staff>
+                  </measure>
+               </section>
+            </score>
+            <lyrics staff="1.3.1">
+               <syl>dont</syl>
+            </lyrics>
+            <lyrics staff="1.3.2">
+               <syl>la</syl>
+            </lyrics>
+            <lyrics staff="1.3.3">
+               <syl>pai-</syl>
+            </lyrics>
+            <lyrics staff="1.3.4">
+               <syl>ne</syl>
+            </lyrics>
+            <lyrics staff="1.3.5">
+               <syl>ne</syl>
+            </lyrics>
+            <lyrics staff="1.3.6">
+               <syl>puet</syl>
+            </lyrics>
+            <lyrics staff="1.3.7">
+               <syl>es-</syl>
+            </lyrics>
+            <lyrics staff="1.3.8">
+               <syl>tre</syl>
+            </lyrics>
+            <lyrics staff="1.3.9">
+               <syl>ce-</syl>
+            </lyrics>
+            <lyrics staff="1.3.10">
+               <syl>lé-</syl>
+            </lyrics>
+            <lyrics staff="1.3.11">
+               <syl>e</syl>
+            </lyrics>
+         </mdiv>
+         <mdiv>
+            <score>
+               <scoreDef>
+                  <staffGrp>
+                     <staffDef clef.shape="G"
+                               n="4"
+                               clef.line="4"
+                               lines="5"
+                               notationtype="cmn"/>
+                  </staffGrp>
+               </scoreDef>
+               <section n="4">
+                  <measure>
+                     <staff n="1">
+                        <layer n="1">
+                           <beam>
+                              <note pname="c" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                              <note pname="d" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="d" oct="4" dur="4" stem.dir="down" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="c" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                              <note pname="b" oct="3" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="c" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="c" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="d" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="e" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                              <note pname="f" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                              <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="f" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="e" oct="4" dur="4" stem.dir="up" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="e" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                              <note pname="d" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                        </layer>
+                     </staff>
+                  </measure>
+               </section>
+            </score>
+            <lyrics staff="1.4.1">
+               <syl>ou</syl>
+            </lyrics>
+            <lyrics staff="1.4.2">
+               <syl>m'a-</syl>
+            </lyrics>
+            <lyrics staff="1.4.3">
+               <syl>vez</syl>
+            </lyrics>
+            <lyrics staff="1.4.4">
+               <syl>mis</syl>
+            </lyrics>
+            <lyrics staff="1.4.5">
+               <syl>et</syl>
+            </lyrics>
+            <lyrics staff="1.4.6">
+               <syl>te-</syl>
+            </lyrics>
+            <lyrics staff="1.4.7">
+               <syl>nu</syl>
+            </lyrics>
+            <lyrics staff="1.4.8">
+               <syl>lon-</syl>
+            </lyrics>
+            <lyrics staff="1.4.9">
+               <syl>gue-</syl>
+            </lyrics>
+            <lyrics staff="1.4.10">
+               <syl>mant</syl>
+            </lyrics>
+         </mdiv>
+         <mdiv>
+            <score>
+               <scoreDef>
+                  <staffGrp>
+                     <staffDef clef.shape="G"
+                               n="5"
+                               clef.line="4"
+                               lines="5"
+                               notationtype="cmn"/>
+                  </staffGrp>
+               </scoreDef>
+               <section n="5">
+                  <measure>
+                     <staff n="1">
+                        <layer n="1">
+                           <beam>
+                              <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="a" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="b" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="c" oct="5" dur="4" stem.dir="down" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="a" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="f" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="a" oct="4" dur="4" stem.dir="up" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="a" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                              <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                        </layer>
+                     </staff>
+                  </measure>
+               </section>
+            </score>
+            <lyrics staff="1.5.1">
+               <syl>en-</syl>
+            </lyrics>
+            <lyrics staff="1.5.2">
+               <syl>cor</syl>
+            </lyrics>
+            <lyrics staff="1.5.3">
+               <syl>te-</syl>
+            </lyrics>
+            <lyrics staff="1.5.4">
+               <syl>nez</syl>
+            </lyrics>
+            <lyrics staff="1.5.5">
+               <syl>mon</syl>
+            </lyrics>
+            <lyrics staff="1.5.6">
+               <syl>cuer</syl>
+            </lyrics>
+            <lyrics staff="1.5.7">
+               <syl>en</syl>
+            </lyrics>
+            <lyrics staff="1.5.8">
+               <syl>tel</syl>
+            </lyrics>
+            <lyrics staff="1.5.9">
+               <syl>tor-</syl>
+            </lyrics>
+            <lyrics staff="1.5.10">
+               <syl>mant</syl>
+            </lyrics>
+         </mdiv>
+         <mdiv>
+            <score>
+               <scoreDef>
+                  <staffGrp>
+                     <staffDef clef.shape="G"
+                               n="6"
+                               clef.line="4"
+                               lines="5"
+                               notationtype="cmn"/>
+                  </staffGrp>
+               </scoreDef>
+               <section n="6">
+                  <measure>
+                     <staff n="1">
+                        <layer n="1">
+                           <beam>
+                              <note pname="b" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                              <note pname="b" oct="4" dur="4" stem.dir="up" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="b" oct="4" dur="4" stem.dir="down" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="a" oct="4" dur="4" stem.dir="down" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="f" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                              <note pname="e" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="d" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="f" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="a" oct="4" dur="4" stem.dir="up" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="a" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                              <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                        </layer>
+                     </staff>
+                  </measure>
+               </section>
+            </score>
+            <lyrics staff="1.6.1">
+               <syl>dont</syl>
+            </lyrics>
+            <lyrics staff="1.6.2">
+               <syl>ja</syl>
+            </lyrics>
+            <lyrics staff="1.6.3">
+               <syl>nis-</syl>
+            </lyrics>
+            <lyrics staff="1.6.4">
+               <syl>trai</syl>
+            </lyrics>
+            <lyrics staff="1.6.5">
+               <syl>nul</syl>
+            </lyrics>
+            <lyrics staff="1.6.6">
+               <syl>jor</syl>
+            </lyrics>
+            <lyrics staff="1.6.7">
+               <syl>de</syl>
+            </lyrics>
+            <lyrics staff="1.6.8">
+               <syl>mon</syl>
+            </lyrics>
+            <lyrics staff="1.6.9">
+               <syl>vi-</syl>
+            </lyrics>
+            <lyrics staff="1.6.10">
+               <syl>vant</syl>
+            </lyrics>
+         </mdiv>
+         <mdiv>
+            <score>
+               <scoreDef>
+                  <staffGrp>
+                     <staffDef clef.shape="G"
+                               n="7"
+                               clef.line="4"
+                               lines="5"
+                               notationtype="cmn"/>
+                  </staffGrp>
+               </scoreDef>
+               <section n="7">
+                  <measure>
+                     <staff n="1">
+                        <layer n="1">
+                           <beam>
+                              <note pname="a" oct="4" dur="4" stem.dir="up" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="a" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="a" oct="4" dur="4" stem.dir="down" stem.with="below"/>
+                              <note pname="a" oct="4" dur="4" stem.dir="down" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="f" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                              <note pname="e" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="d" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="f" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="a" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                              <note pname="b" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                              <note pname="c" oct="5" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="b" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                              <note pname="b" oct="4" dur="4" stem.dir="down" stem.with="below"/>
+                           </beam>
+                           <beam>
+                              <note pname="a" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                              <note pname="g" oct="4" dur="4" stem.dir="" stem.with="below"/>
+                           </beam>
+                        </layer>
+                     </staff>
+                  </measure>
+               </section>
+            </score>
+            <lyrics staff="1.7.1">
+               <syl>se</syl>
+            </lyrics>
+            <lyrics staff="1.7.2">
+               <syl>par</syl>
+            </lyrics>
+            <lyrics staff="1.7.3">
+               <syl>vos</syl>
+            </lyrics>
+            <lyrics staff="1.7.4">
+               <syl>non</syl>
+            </lyrics>
+            <lyrics staff="1.7.5">
+               <syl>dou-</syl>
+            </lyrics>
+            <lyrics staff="1.7.6">
+               <syl>ce</syl>
+            </lyrics>
+            <lyrics staff="1.7.7">
+               <syl>dame</syl>
+            </lyrics>
+            <lyrics staff="1.7.8">
+               <syl>ho-</syl>
+            </lyrics>
+            <lyrics staff="1.7.9">
+               <syl>no-</syl>
+            </lyrics>
+            <lyrics staff="1.7.10">
+               <syl>ré-</syl>
+            </lyrics>
+            <lyrics staff="1.7.11">
+               <syl>e</syl>
+            </lyrics>
+         </mdiv>
+      </body>
+   </music>
+</mei>
