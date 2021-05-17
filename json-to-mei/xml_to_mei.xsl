@@ -20,19 +20,63 @@
   
     <xsl:template match="TEI">
         <music>
-            <xsl:apply-templates select="/root/TEI/children"/>
+            <xsl:apply-templates/>
         </music>
     </xsl:template>
-    <xsl:template match="/root/TEI/children">
+    <xsl:template match="children[parent::TEI]">
         <body>
-            <xsl:apply-templates select="/root/TEI/children/item"/>
+            <xsl:apply-templates/>
         </body>
     </xsl:template>
-    <xsl:template match="/root/TEI/children/item">
+    
+    <xsl:template match="item[parent::children[parent::TEI]]">
+        <mdiv>
+            <score>
+                <xsl:apply-templates/>
+            </score>
+        </mdiv>
+    </xsl:template>
+    
+    <!--/TEI/children/item/children/item-->
+    <xsl:template match="item[parent::children[parent::item[parent::children[parent::TEI]]]]">
+        <!-- D'abord, la clef -->
+        <xsl:apply-templates select="item[1]"/>
+        <!-- Ensuite, la section -->
+        <xsl:apply-templates select="item[position()>1]"/>
+    </xsl:template>
+    
+    <xsl:template match="item[kind = 'Clef']">
+        <!-- Pour traiter les clefs -->
+        <!-- Que veut-on en faire ? -->
+        <scoreDef>
+            <staffGrp>
+                <staffDef>
+                    <xsl:attribute name="clef.shape">
+                        <xsl:value-of select="shape"/>
+                    </xsl:attribute>
+                   
+                    <xsl:attribute name="n">
+                        <xsl:number/>
+                    </xsl:attribute>
+                    <xsl:attribute name="lines">
+                        <xsl:number value="'5'"/>
+                    </xsl:attribute>
+                    <xsl:attribute name="notationtype">
+                        <xsl:apply-templates select="'mensural.black'"/>
+                    </xsl:attribute>
+                </staffDef>
+            </staffGrp>
+        </scoreDef>
+    </xsl:template>
+   
+   
+   <!-- À poursuivre -->
+    <xsl:template match="item[text or notes]">
+        <!-- Pour traiter les notes -->
         
-            <xsl:apply-templates select="/root/TEI/children/item/children"/>
         
     </xsl:template>
+   
     
     <xsl:template match="/root/TEI/children/item/children/item">
         
@@ -112,15 +156,13 @@
                                 <xsl:element name="nc">
                                 
                                 <xsl:attribute name="pname">
-                                    
-                                    
-                                    
-                                    <xsl:apply-templates select="base/lower-case(text())"/>
+                                    <xsl:value-of select="lower-case(base)"/>
+
                                 </xsl:attribute>
                                 
                                 <xsl:attribute name="oct">
-                                    <xsl:value-of select=".//octave"/>
-                                    <xsl:apply-templates select="/octave/tokenize(text())"/>
+                                    <xsl:apply-templates select="octave"/>
+
                                 </xsl:attribute>
                                 <!--
                                 <xsl:for-each select=".">
@@ -158,20 +200,19 @@
                                    
                             </xsl:element>
                             
-                            </xsl:for-each>
-                               
+                        </neume>
+                         <!-- JBC: si vous voulez itérer sur la chaîne de caractères, ça ressemblera à quelque chose comme: -->
+                         <xsl:for-each select="string-to-codepoints(base)">
+                             <neume>
+                                 <xsl:attribute name="pname">
+                                     <xsl:value-of select="lower-case(codepoints-to-string(.))"/>
+                                 </xsl:attribute>
+                             </neume>
+                         </xsl:for-each>
                                 
-                                <!--
-                                <xsl:for-each select="string-to-codepoints(base)">
-                                    <neume>
-                                        <xsl:attribute name="pname">
-                                            <xsl:value-of select="lower-case(codepoints-to-string(.))"/>
-                                        </xsl:attribute>
-                                    </neume>
-                                </xsl:for-each>
-                                -->
-                            </neume>
-                            </syllable>     
+                                
+                            </syllabe>
+
                         </xsl:for-each>
                         
                     </layer>
@@ -179,9 +220,9 @@
             
             
         </section>
+
             </score> 
         </mdiv>
-        
     </xsl:template>
 
 
