@@ -67,7 +67,7 @@
         <!-- Include all modules -->
         <moduleRef key="MEI"/>
 
-        <classSpec ident="att.notationType" module="MEI" type="atts">
+        <classSpec mode="replace" ident="att.notationType" module="MEI" type="atts">
           <desc>Attributs qui fournissent la classification de la notation.</desc>
           <attList org="group">
             <attDef ident="notationtype" usage="opt">
@@ -97,7 +97,7 @@
 
         <moduleRef key="MEI.analytical"/>
         
-        <classSpec ident="att.note.anl" module="MEI.analytical" type="atts">
+        <classSpec mode="replace" ident="att.note.anl" module="MEI.analytical" type="atts">
           <desc>Attributs domaine analytique.</desc>
           <classes>
             <memberOf key="att.accidental"/>
@@ -111,10 +111,10 @@
             <memberOf key="att.solfa"/>
           </classes>
         </classSpec>
-        <classSpec ident="att.ornam.anl" module="MEI.analytical" type="atts">
+        <classSpec mode="replace" ident="att.ornam.anl" module="MEI.analytical" type="atts">
           <desc>Analytical domain attributes.</desc>
         </classSpec>
-        <classSpec ident="att.measure.anl" module="MEI.analytical" type="atts">
+        <classSpec mode="replace" ident="att.measure.anl" module="MEI.analytical" type="atts">
           <desc>Analytical domain attributes.</desc>
           <classes>
             <memberOf key="att.joined"/>
@@ -433,7 +433,7 @@
                 </elementSpec>
                 -->
         
-        <classSpec ident="att.note.anl.cmn" module="MEI.cmn" type="atts">
+        <classSpec mode="replace" ident="att.note.anl.cmn" module="MEI.cmn" type="atts">
           <desc>Attributs domain analytique Répertoire CMN.</desc>
           <classes>
             <memberOf key="att.beamPresent"/>
@@ -447,7 +447,7 @@
             <memberOf key="att.tupletPresent"/>
           </classes>
         </classSpec>
-        <classSpec ident="att.slur.log" module="MEI.cmn" type="atts">
+        <classSpec mode="replace" ident="att.slur.log" module="MEI.cmn" type="atts">
           <desc>Logical domain attributes.</desc>
           <classes>
             <memberOf key="att.controlEvent"/>
@@ -456,7 +456,7 @@
             <memberOf key="att.timestamp2.logical"/>
           </classes>
         </classSpec>
-        <classSpec ident="att.octave.log" module="MEI.cmn" type="atts">
+        <classSpec mode="replace" ident="att.octave.log" module="MEI.cmn" type="atts">
           <desc>Logical domain attributes.</desc>
           <classes>
             <memberOf key="att.controlEvent"/>
@@ -478,7 +478,7 @@
         </classSpec>
         
         
-        <classSpec ident="att.measure.log" module="MEI.cmn" type="atts">
+        <classSpec mode="replace" ident="att.measure.log" module="MEI.cmn" type="atts">
           <desc>Logical domain attributes. The n attribute contains a name or number associated with the measure (Read, p. 445). Often, this is an integer, but not always. For example, some measures, especially incomplete measures or those under an ending mark, may have labels that contain an integer plus a suffix, such as '12a'. Measures may even have labels, especially in editorial or analytical uses of MEI, that are entirely non-numeric strings. Measure numbers may be machine-generated instead of encoding them in the markup. However, an explicit measure number should restart numbering with the given value. The join attribute may be used to indicate another measure which metrically completes the current, incomplete one.</desc>
           <classes>
             <memberOf key="att.alignment"/>
@@ -515,13 +515,13 @@
         -->
         
         <moduleRef key="MEI.gestural"/>
-        <classSpec ident="att.measure.ges" module="MEI.gestural" type="atts">
+        <classSpec mode="replace" ident="att.measure.ges" module="MEI.gestural" type="atts">
           <desc>Gestural domain attributes. The tstamp.ges and tstamp.real attributes encode the onset time of the measure. In reality, this is usually the same as the onset time of the first event in the measure.</desc>
           <classes>
             <memberOf key="att.timestamp.gestural"/>
           </classes>
         </classSpec>
-        <classSpec ident="att.scoreDef.ges" module="MEI.gestural" type="atts">
+        <classSpec mode="replace" ident="att.scoreDef.ges" module="MEI.gestural" type="atts">
           <desc>Gestural domain attributes for scoreDef. The values set in these attributes act as score-wide defaults for attributes that are not set in descendant elements. For example, the grace attribute value here applies to all the grace attribute values in the score (or, more accurately, until the next
             <gi scheme="MEI">scoreDef</gi>
             element) without having to individually set each note's grace attribute value. The midi.* attributes function as default values when creating sounding output. The tune.* attributes provide the capability of recording a tuning reference pitch.</desc>
@@ -1071,18 +1071,7 @@
         </elementSpec>
 
         <moduleRef key="MEI.mensural"/>
-        <classSpec ident="att.note.anl.mensural" module="MEI.mensural" type="atts">
-          <desc>Analytical domain attributes in the Mensural repertoire.</desc>
-          <attList org="group">
-            <attDef ident="lig" usage="opt">
-              <desc>Indicates this element's participation in a ligature.</desc>
-              <valList type="closed">
-                <valItem ident="recta"/>
-                <valItem ident="obliqua"/>
-              </valList>
-            </attDef>
-          </attList>
-        </classSpec>
+        
         <!--
         <moduleRef key="MEI.midi"/>
         -->
@@ -1337,7 +1326,7 @@
           </remarks>
         </elementSpec>
         
-        <classSpec ident="att.mordent.log" module="MEI.cmnOrnaments" type="atts">
+        <classSpec mode="replace" ident="att.mordent.log" module="MEI.cmnOrnaments" type="atts">
           <desc>Logical domain attributes.</desc>
           <classes>
             <memberOf key="att.controlEvent"/>
@@ -1371,7 +1360,7 @@
           </attList>
         </classSpec>
         
-        <classSpec ident="att.ornamPresent" module="MEI.cmnOrnaments" type="atts">
+        <classSpec mode="replace" ident="att.ornamPresent" module="MEI.cmnOrnaments" type="atts">
           <desc>Attributs pour la présence d'ornements.</desc>
           <attList org="group">
             <attDef ident="ornam" usage="opt">
@@ -1673,7 +1662,7 @@
           </content>
         </elementSpec>
 
-        <classSpec ident="att.neume.log" module="MEI.neumes" type="atts">
+        <classSpec mode="replace" ident="att.neume.log" module="MEI.neumes" type="atts">
           <desc>Attributs de domaine logique.</desc>
           <classes>
             <memberOf key="att.alignment"/>
@@ -1683,7 +1672,7 @@
           </classes>
         </classSpec>
         
-        <classSpec ident="att.ncGrp.log" module="MEI.neumes" type="atts">
+        <classSpec mode="replace" ident="att.ncGrp.log" module="MEI.neumes" type="atts">
           <desc>Logical domain attributes.</desc>
           <classes>
             <memberOf key="att.alignment"/>
@@ -2797,7 +2786,7 @@
         </elementSpec>
 
         
-        <classSpec ident="att.common" module="MEI.shared" type="atts">
+        <classSpec mode="replace" ident="att.common" module="MEI.shared" type="atts">
           <desc>Attributs communs à plusieurs elements.</desc>
           <classes>
             <memberOf key="att.basic"/>
@@ -2808,7 +2797,7 @@
             <memberOf key="att.typed"/>
           </classes>
         </classSpec>
-        <classSpec ident="att.basic" module="MEI.shared" type="atts">
+        <classSpec mode="replace" ident="att.basic" module="MEI.shared" type="atts">
           <desc>Attributs qui forment la base de la classe att.common.</desc>
           <classes>
             <memberOf key="att.id"/>
@@ -2823,7 +2812,7 @@
             </attDef>
           </attList>
         </classSpec>
-        <classSpec ident="att.id" module="MEI.shared" type="atts">
+        <classSpec mode="replace" ident="att.id" module="MEI.shared" type="atts">
           <desc>Attributs qui identifient seulement un élément</desc>
           <attList org="group">
             <attDef ident="xml:id" usage="opt">
@@ -2836,7 +2825,7 @@
             </attDef>
           </attList>
         </classSpec>
-        <classSpec ident="att.labelled" module="MEI.shared" type="atts">
+        <classSpec mode="replace" ident="att.labelled" module="MEI.shared" type="atts">
           <attList org="group">
             <attDef ident="label" usage="opt">
               <desc>Capture le texte à utiliser pour générer une étiquette pour l'élément auquel il
@@ -2857,7 +2846,7 @@
             </attDef>
           </attList>
         </classSpec>
-        <classSpec ident="att.linking" module="MEI.shared" type="atts">
+        <classSpec mode="replace" ident="att.linking" module="MEI.shared" type="atts">
           <desc>Attributs qui spécifient des relations élément à élément.</desc>
           <attList org="group">
             <attDef ident="copyof" usage="opt">
@@ -3023,7 +3012,7 @@
             </attDef>
           </attList>
         </classSpec>
-        <classSpec ident="att.nNumberLike" module="MEI.shared" type="atts">
+        <classSpec mode="replace" ident="att.nNumberLike" module="MEI.shared" type="atts">
           <desc>Attributs utilisés pour fournir une désignation de type numérique pour un
             élément.</desc>
           <attList org="group">
@@ -3037,7 +3026,7 @@
             </attDef>
           </attList>
         </classSpec>
-        <classSpec ident="att.responsibility" module="MEI.shared" type="atts">
+        <classSpec mode="replace" ident="att.responsibility" module="MEI.shared" type="atts">
           <desc>Attributs capturant des informations concernant la responsabilité de certains
             aspects de la création, de la transcription, de l'édition ou du codage du texte.</desc>
           <attList org="group">
@@ -3063,7 +3052,7 @@
             </attDef>
           </attList>
         </classSpec>
-        <classSpec ident="att.typed" module="MEI.shared" type="atts">
+        <classSpec mode="replace" ident="att.typed" module="MEI.shared" type="atts">
           <desc>Attributs qui peuvent être utilisés pour classer les entités.</desc>
           <classes>
             <memberOf key="att.classed"/>
@@ -3083,7 +3072,7 @@
               utilisées.</p>
           </remarks>
         </classSpec>
-        <classSpec ident="att.classed" module="MEI.shared" type="atts">
+        <classSpec mode="replace" ident="att.classed" module="MEI.shared" type="atts">
           <desc>Attributs qui peuvent être utilisés pour classer des entités.</desc>
           <attList org="group">
             <attDef ident="class" usage="opt">
@@ -3105,7 +3094,7 @@
             </attDef>
           </attList>
         </classSpec>
-        <classSpec ident="att.bibl" module="MEI.shared" type="atts">
+        <classSpec mode="replace" ident="att.bibl" module="MEI.shared" type="atts">
           <desc>Attributs bibliographiques</desc>
           <attList org="group">
             <attDef ident="analog" usage="opt">
@@ -3125,7 +3114,7 @@
               les sous-champs dans les champs MARC.</p>
           </remarks>
         </classSpec>
-        <classSpec ident="att.lang" module="MEI.shared" type="atts">
+        <classSpec mode="replace" ident="att.lang" module="MEI.shared" type="atts">
           <desc>Attributs de langue communs aux éléments du texte</desc>
           <attList org="group">
             <attDef ident="xml:lang" usage="opt">
@@ -3160,7 +3149,7 @@
                 >https://r12a.github.io/apps/subtags</ref> .</p>
           </remarks>
         </classSpec>
-        <classSpec ident="att.tempo.log" module="MEI.shared" type="atts">
+        <classSpec mode="replace" ident="att.tempo.log" module="MEI.shared" type="atts">
           <desc>Attributs de domaine logique.</desc>
           <classes>
             <memberOf key="att.controlEvent"/>
@@ -3196,7 +3185,7 @@
           </attList>
         </classSpec> 
         
-        <classSpec ident="att.mmTempo" module="MEI.shared" type="atts">
+        <classSpec mode="replace" ident="att.mmTempo" module="MEI.shared" type="atts">
           <desc>Attributs qui enregistrent le tempo en termes de battements par minute.</desc>
           <attList org="group">
             <attDef ident="mm" usage="opt">
@@ -3225,7 +3214,7 @@
           </attList>
         </classSpec>
         
-        <classSpec ident="att.placement" module="MEI.shared" type="atts">
+        <classSpec mode="replace" ident="att.placement" module="MEI.shared" type="atts">
           <desc>Attributs capturant les informations de placement.</desc>
           <attList org="group">
             <attDef ident="place" usage="opt">
@@ -3238,11 +3227,11 @@
           </attList>
         </classSpec>
         
-        <classSpec ident="att.score.log" module="MEI.shared" type="atts">
+        <classSpec mode="replace" ident="att.score.log" module="MEI.shared" type="atts">
           <desc>Attributs de domaine logique.</desc>
         </classSpec>
         
-        <classSpec ident="att.sylText" module="MEI.shared" type="atts">
+        <classSpec mode="replace" ident="att.sylText" module="MEI.shared" type="atts">
           <desc>Attributs contenant les syllabes de texte chantées associées.</desc>
           <attList org="group">
             <attDef ident="syl" usage="opt">
@@ -3253,7 +3242,7 @@
             </attDef>
           </attList>
         </classSpec>
-        <classSpec ident="att.staffDef.log" module="MEI.shared" type="atts">
+        <classSpec mode="replace" ident="att.staffDef.log" module="MEI.shared" type="atts">
           <desc>Attributs domaine logique pour staffDef.</desc>
           <classes>
             <memberOf key="att.cleffing.log"/>

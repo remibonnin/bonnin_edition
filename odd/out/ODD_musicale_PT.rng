@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2021-05-26T14:09:07Z. .
+Schema generated from ODD source 2021-05-28T12:24:49Z. .
 TEI Edition: Version 4.0.0
 TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
@@ -7516,17 +7516,36 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ISO 24-hour time format: HH:MM:SS.ss.</a:documentation>
       </choice>
    </define>
+   <define name="mei_att.notationType.attributes">
+      <ref name="mei_att.notationType.attribute.notationtype"/>
+      <ref name="mei_att.notationType.attribute.notationsubtype"/>
+   </define>
+   <define name="mei_att.notationType.attribute.notationtype">
+      <optional>
+         <attribute name="notationtype">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contient la classification de la notation contenue ou décrite par l'élement portant cet attribut.</a:documentation>
+            <ref name="mei_data.NOTATIONTYPE"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.notationType.attribute.notationsubtype">
+      <optional>
+         <attribute name="notationsubtype">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Fournit toute sous-classification de la notation contenue ou décrite par l'élément, en plus de celle donnée par son attribut notationtype.</a:documentation>
+            <data type="NMTOKEN"/>
+         </attribute>
+      </optional>
+   </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.notationType-notationsubtype-When_notationsubtype-constraint-rule-5">
-      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:math="http://exslt.org/math"
                 context="mei:*[@notationsubtype]">
-         <sch:assert test="@notationtype">An element with a notationsubtype attribute must have
-                a notationtype attribute.</sch:assert>
+         <sch:assert test="@notationtype">Un élément avec un attribut notationsubtype
+                      doit avoir un attribut notationtype.</sch:assert>
       </sch:rule>
    </pattern>
    <define name="mei_att.clef.anl.attributes">
@@ -7610,6 +7629,9 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    <define name="mei_att.line.anl.attributes">
       <empty/>
    </define>
+   <define name="mei_att.measure.anl.attributes">
+      <ref name="mei_att.joined.attributes"/>
+   </define>
    <define name="mei_att.melodicFunction.attributes">
       <ref name="mei_att.melodicFunction.attribute.mfunc"/>
    </define>
@@ -7642,6 +7664,17 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    </define>
    <define name="mei_att.neume.anl.attributes">
       <empty/>
+   </define>
+   <define name="mei_att.note.anl.attributes">
+      <ref name="mei_att.accidental.attributes"/>
+      <ref name="mei_att.articulation.attributes"/>
+      <ref name="mei_att.harmonicFunction.attributes"/>
+      <ref name="mei_att.intervalMelodic.attributes"/>
+      <ref name="mei_att.melodicFunction.attributes"/>
+      <ref name="mei_att.note.anl.cmn.attributes"/>
+      <ref name="mei_att.note.anl.mensural.attributes"/>
+      <ref name="mei_att.pitchClass.attributes"/>
+      <ref name="mei_att.solfa.attributes"/>
    </define>
    <define name="mei_att.octave.anl.attributes">
       <empty/>
@@ -7818,15 +7851,67 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          </attribute>
       </optional>
    </define>
+   <define name="mei_att.measure.log.attributes">
+      <ref name="mei_att.alignment.attributes"/>
+      <ref name="mei_att.meterConformance.bar.attributes"/>
+      <ref name="mei_att.measure.log.attribute.left"/>
+      <ref name="mei_att.measure.log.attribute.right"/>
+   </define>
+   <define name="mei_att.measure.log.attribute.left">
+      <optional>
+         <attribute name="left">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the visual rendition of the left bar line. It is present here only for facilitation of translation from legacy encodings which use it. Usually, it can be safely ignored.</a:documentation>
+            <ref name="mei_data.BARRENDITION"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.measure.log.attribute.right">
+      <optional>
+         <attribute name="right">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates the function of the right bar line and is structurally important.</a:documentation>
+            <ref name="mei_data.BARRENDITION"/>
+         </attribute>
+      </optional>
+   </define>
    <define name="mei_att.mSpace.log.attributes">
       <ref name="mei_att.duration.additive.attributes"/>
       <ref name="mei_att.event.attributes"/>
+   </define>
+   <define name="mei_att.note.anl.cmn.attributes">
+      <ref name="mei_att.beamPresent.attributes"/>
+      <ref name="mei_att.fermataPresent.attributes"/>
+      <ref name="mei_att.glissPresent.attributes"/>
+      <ref name="mei_att.lvPresent.attributes"/>
+      <ref name="mei_att.ornamPresent.attributes"/>
+      <ref name="mei_att.slurPresent.attributes"/>
+      <ref name="mei_att.sylText.attributes"/>
+      <ref name="mei_att.tiePresent.attributes"/>
+      <ref name="mei_att.tupletPresent.attributes"/>
    </define>
    <define name="mei_att.note.log.cmn.attributes">
       <ref name="mei_att.graced.attributes"/>
    </define>
    <define name="mei_att.note.vis.cmn.attributes">
       <ref name="mei_att.beamSecondary.attributes"/>
+   </define>
+   <define name="mei_att.octave.log.attributes">
+      <ref name="mei_att.controlEvent.attributes"/>
+      <ref name="mei_att.duration.additive.attributes"/>
+      <ref name="mei_att.octaveDisplacement.attributes"/>
+      <ref name="mei_att.startEndId.attributes"/>
+      <ref name="mei_att.timestamp2.logical.attributes"/>
+      <ref name="mei_att.octave.log.attribute.coll"/>
+   </define>
+   <define name="mei_att.octave.log.attribute.coll">
+      <optional>
+         <attribute name="coll">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates whether the octave displacement should be performed simultaneously with the written notes, i.e., "coll' ottava". Unlike other octave signs which are indicated by broken lines, coll' ottava typically uses an unbroken line or a series of longer broken lines, ending with a short vertical stroke. See Read, p. 47-48.</a:documentation>
+            <choice>
+               <value>coll</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Coll' ottava (with the octave).</a:documentation>
+            </choice>
+         </attribute>
+      </optional>
    </define>
    <define name="mei_att.pianoPedals.attributes">
       <ref name="mei_att.pianoPedals.attribute.pedal.style"/>
@@ -7894,6 +7979,12 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          </attribute>
       </optional>
    </define>
+   <define name="mei_att.slur.log.attributes">
+      <ref name="mei_att.controlEvent.attributes"/>
+      <ref name="mei_att.duration.additive.attributes"/>
+      <ref name="mei_att.startEndId.attributes"/>
+      <ref name="mei_att.timestamp2.logical.attributes"/>
+   </define>
    <define name="mei_att.slurRend.attributes">
       <ref name="mei_att.slurRend.attribute.slur.lform"/>
       <ref name="mei_att.slurRend.attribute.slur.lwidth"/>
@@ -7913,6 +8004,9 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
             <ref name="mei_data.LINEWIDTH"/>
          </attribute>
       </optional>
+   </define>
+   <define name="mei_att.staffDef.log.cmn.attributes">
+      <ref name="mei_att.beaming.log.attributes"/>
    </define>
    <define name="mei_att.staffDef.vis.cmn.attributes">
       <ref name="mei_att.beaming.vis.attributes"/>
@@ -8115,8 +8209,12 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
                <ref name="mei_model.transcriptionLike"/>
             </choice>
          </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.metadataPointing.attributes"/>
          <ref name="mei_att.pointing.attributes"/>
+         <ref name="mei_att.measure.anl.attributes"/>
+         <ref name="mei_att.measure.ges.attributes"/>
+         <ref name="mei_att.measure.log.attributes"/>
          <ref name="mei_att.measure.vis.attributes"/>
          <ref name="mei_att.targetEval.attributes"/>
          <empty/>
@@ -8126,6 +8224,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
       <element name="mSpace" ns="http://www.music-encoding.org/ns/mei">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(espace de mesure) - Une mesure contenant uniquement un espace vide dans n'importe quel mètre.</a:documentation>
          <empty/>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.mSpace.log.attributes"/>
          <ref name="mei_att.mSpace.vis.attributes"/>
          <ref name="mei_att.mSpace.ges.attributes"/>
@@ -8171,6 +8270,8 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
             dur, dur.ges, endid, or tstamp2.</sch:assert>
             </sch:rule>
          </pattern>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.octave.log.attributes"/>
          <ref name="mei_att.octave.vis.attributes"/>
          <ref name="mei_att.octave.ges.attributes"/>
          <ref name="mei_att.octave.anl.attributes"/>
@@ -8243,6 +8344,8 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
             elements.</sch:assert>
             </sch:rule>
          </pattern>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.slur.log.attributes"/>
          <ref name="mei_att.slur.vis.attributes"/>
          <ref name="mei_att.slur.ges.attributes"/>
          <ref name="mei_att.slur.anl.attributes"/>
@@ -8389,6 +8492,9 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
       <ref name="mei_att.duration.gestural.attributes"/>
       <ref name="mei_att.timestamp2.gestural.attributes"/>
    </define>
+   <define name="mei_att.measure.ges.attributes">
+      <ref name="mei_att.timestamp.gestural.attributes"/>
+   </define>
    <define name="mei_att.mensur.ges.attributes">
       <empty/>
    </define>
@@ -8516,6 +8622,36 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    </define>
    <define name="mei_att.score.ges.attributes">
       <empty/>
+   </define>
+   <define name="mei_att.scoreDef.ges.attributes">
+      <ref name="mei_att.mmTempo.attributes"/>
+      <ref name="mei_att.scoreDef.ges.attribute.tune.pname"/>
+      <ref name="mei_att.scoreDef.ges.attribute.tune.Hz"/>
+      <ref name="mei_att.scoreDef.ges.attribute.tune.temper"/>
+   </define>
+   <define name="mei_att.scoreDef.ges.attribute.tune.pname">
+      <optional>
+         <attribute name="tune.pname">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Holds the pitch name of a tuning reference pitch.</a:documentation>
+            <ref name="mei_data.PITCHNAME"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.scoreDef.ges.attribute.tune.Hz">
+      <optional>
+         <attribute name="tune.Hz">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Holds a value for cycles per second, i.e., Hertz, for a tuning reference pitch.</a:documentation>
+            <data type="decimal"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.scoreDef.ges.attribute.tune.temper">
+      <optional>
+         <attribute name="tune.temper">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides an indication of the tuning system, 'just', for example.</a:documentation>
+            <ref name="mei_data.TEMPERAMENT"/>
+         </attribute>
+      </optional>
    </define>
    <define name="mei_att.section.ges.attributes">
       <ref name="mei_att.section.ges.attribute.attacca"/>
@@ -8657,6 +8793,9 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
                </choice>
             </zeroOrMore>
          </oneOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
          <empty/>
       </element>
    </define>
@@ -8666,6 +8805,8 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <zeroOrMore>
             <ref name="mei_model.headLike"/>
          </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -8685,6 +8826,8 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <optional>
             <ref name="mei_sourceDesc"/>
          </optional>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -8761,7 +8904,12 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
             'independent' only when the document element is "meiHead".</sch:assert>
             </sch:rule>
          </pattern>
+         <ref name="mei_att.basic.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.labelled.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
          <ref name="mei_att.meiVersion.attributes"/>
+         <ref name="mei_att.responsibility.attributes"/>
          <optional>
             <attribute name="type">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specifies the kind of document to which the header is attached, for example whether it is a corpus or individual text.</a:documentation>
@@ -8787,6 +8935,8 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <oneOrMore>
             <ref name="mei_model.annotLike"/>
          </oneOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -8801,6 +8951,8 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
                <ref name="mei_model.pubStmtPart"/>
             </zeroOrMore>
          </choice>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -8810,6 +8962,8 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <zeroOrMore>
             <ref name="mei_model.headLike"/>
          </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -8833,6 +8987,8 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
                <ref name="mei_seriesStmt"/>
             </choice>
          </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -8882,7 +9038,9 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
             manifestation element or be an external URI.</sch:assert>
             </sch:rule>
          </pattern>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.authorized.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
          <ref name="mei_att.componentType.attributes"/>
          <ref name="mei_att.dataPointing.attributes"/>
          <ref name="mei_att.pointing.attributes"/>
@@ -8900,6 +9058,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <oneOrMore>
             <ref name="mei_source"/>
          </oneOrMore>
+         <ref name="mei_att.common.attributes"/>
          <empty/>
       </element>
    </define>
@@ -8953,6 +9112,8 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <zeroOrMore>
             <ref name="mei_model.lbLike"/>
          </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
          <ref name="mei_att.verse.log.attributes"/>
          <ref name="mei_att.verse.vis.attributes"/>
          <ref name="mei_att.verse.ges.attributes"/>
@@ -9112,6 +9273,9 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
           </sch:assert>
       </sch:rule>
    </pattern>
+   <define name="mei_att.note.anl.mensural.attributes">
+      <empty/>
+   </define>
    <define name="mei_att.note.ges.mensural.attributes">
       <ref name="mei_att.duration.ratio.attributes"/>
    </define>
@@ -9167,6 +9331,9 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
    </define>
    <define name="mei_att.scoreDef.vis.mensural.attributes">
       <ref name="mei_att.mensural.vis.attributes"/>
+   </define>
+   <define name="mei_att.staffDef.log.mensural.attributes">
+      <ref name="mei_att.mensural.log.attributes"/>
    </define>
    <define name="mei_att.staffDef.vis.mensural.attributes">
       <ref name="mei_att.mensural.vis.attributes"/>
@@ -9386,6 +9553,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
                <ref name="mei_model.transcriptionLike"/>
             </choice>
          </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.ligature.log.attributes"/>
          <ref name="mei_att.ligature.vis.attributes"/>
          <ref name="mei_att.ligature.ges.attributes"/>
@@ -9397,6 +9565,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
       <element name="mensur">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(mensuration) – Collects information about the metrical relationship between a note value and the next smaller value; that is, either triple or duple.</a:documentation>
          <empty/>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.mensur.log.attributes"/>
          <ref name="mei_att.mensur.vis.attributes"/>
          <ref name="mei_att.mensur.ges.attributes"/>
@@ -9408,6 +9577,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
       <element name="proport">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(proportion) – Description of note duration as arithmetic ratio.</a:documentation>
          <empty/>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.proport.log.attributes"/>
          <ref name="mei_att.proport.vis.attributes"/>
          <ref name="mei_att.proport.ges.attributes"/>
@@ -9552,6 +9722,9 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
       <element name="catchwords" ns="http://www.music-encoding.org/ns/mei">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Décrit le système utilisé pour assurer le bon ordre des cahiers composant un article, généralement au moyen d'annotations en bas de page.</a:documentation>
          <ref name="mei_macro.struc-unstrucContent"/>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
          <empty/>
       </element>
    </define>
@@ -9573,6 +9746,9 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
                </choice>
             </zeroOrMore>
          </choice>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
          <empty/>
       </element>
    </define>
@@ -9594,6 +9770,9 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
                </choice>
             </zeroOrMore>
          </choice>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
          <empty/>
       </element>
    </define>
@@ -9601,6 +9780,9 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
       <element name="heraldry" ns="http://www.music-encoding.org/ns/mei">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contient une formule ou une phrase héraldique, généralement trouvée dans le cadre d'un blason, d'un blason, etc.</a:documentation>
          <ref name="mei_macro.struc-unstrucContent"/>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
          <empty/>
       </element>
    </define>
@@ -9613,6 +9795,9 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
                <ref name="mei_locus"/>
             </choice>
          </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
          <optional>
             <attribute name="scheme">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identifies the foliation scheme in terms of which the location is being specified by pointing to some foliation element defining it, or to some other equivalent resource.</a:documentation>
@@ -9640,6 +9825,9 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <zeroOrMore>
             <ref name="mei_locus"/>
          </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
          <optional>
             <attribute name="scheme">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identifies the foliation scheme in terms of which the location is being specified by pointing to some foliation element defining it, or to some other equivalent resource.</a:documentation>
@@ -9653,6 +9841,9 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
       <element name="secFolio" ns="http://www.music-encoding.org/ns/mei">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(deuxième folio) - Marque le ou les mots pris à partir d'un point fixe dans un codex (généralement le début de la deuxième feuille) afin de fournir un identifiant unique pour l'élément.</a:documentation>
          <ref name="mei_macro.struc-unstrucContent"/>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
          <empty/>
       </element>
    </define>
@@ -9660,6 +9851,9 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
       <element name="signatures" ns="http://www.music-encoding.org/ns/mei">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Fournit une description des signatures de feuille ou de cahier trouvées dans un codex.</a:documentation>
          <ref name="mei_macro.struc-unstrucContent"/>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
          <empty/>
       </element>
    </define>
@@ -9667,9 +9861,44 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
       <element name="stamp" ns="http://www.music-encoding.org/ns/mei">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contient un mot ou une phrase décrivant une marque officielle indiquant la propriété, l'authenticité, la validité, etc.</a:documentation>
          <ref name="mei_macro.struc-unstrucContent"/>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
          <ref name="mei_att.datable.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
          <empty/>
       </element>
+   </define>
+   <define name="mei_att.mordent.log.attributes">
+      <ref name="mei_att.controlEvent.attributes"/>
+      <ref name="mei_att.startEndId.attributes"/>
+      <ref name="mei_att.ornamentAccid.attributes"/>
+      <ref name="mei_att.mordent.log.attribute.form"/>
+      <ref name="mei_att.mordent.log.attribute.long"/>
+   </define>
+   <define name="mei_att.mordent.log.attribute.form">
+      <optional>
+         <attribute name="form">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records semantic meaning, i.e., intended performance, of the mordent. The <code xmlns="http://www.w3.org/1999/xhtml">@altsym</code> , <code xmlns="http://www.w3.org/1999/xhtml">@glyph.name</code> , or <code xmlns="http://www.w3.org/1999/xhtml">@glyph.num</code> attributes may be used to specify the appropriate symbol.</a:documentation>
+            <choice>
+               <value>lower</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Starts with the written note, followed by its lower neighbor, with a return to the written note. In modern practice, this is called an "inverted mordent" and indicated by a short wavy line with a vertical line through it.</a:documentation>
+               <value>upper</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Starts with the written note, followed by its upper neighbor, with a return to the principal note. In modern practice, the symbol lacks the vertical line used for the inverted form.</a:documentation>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.mordent.log.attribute.long">
+      <optional>
+         <attribute name="long">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">When set to 'true', a double or long mordent, sometimes called a "pincé double", consisting of 5 notes, is indicated.</a:documentation>
+            <ref name="mei_data.BOOLEAN"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.ornamentAccid.attributes">
+      <ref name="mei_att.ornamentAccid.attribute.accidupper"/>
+      <ref name="mei_att.ornamentAccid.attribute.accidlower"/>
    </define>
    <define name="mei_att.ornamentAccid.attribute.accidupper">
       <optional>
@@ -9684,6 +9913,21 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <attribute name="accidlower">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the written accidental associated with a lower neighboring note.</a:documentation>
             <ref name="mei_data.ACCIDENTAL.WRITTEN"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.ornamPresent.attributes">
+      <ref name="mei_att.ornamPresent.attribute.ornam"/>
+   </define>
+   <define name="mei_att.ornamPresent.attribute.ornam">
+      <optional>
+         <attribute name="ornam">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indique que cet élément a un ornement attaché. Si des informations visuelles sur l'ornement sont nécessaires, alors l'un des éléments qui représente un ornement (mordent, trille ou tour) doit être utilisé.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <ref name="mei_data.ORNAM.cmn"/>
+               </oneOrMore>
+            </list>
          </attribute>
       </optional>
    </define>
@@ -9744,6 +9988,8 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
             attributes: startid, tstamp, tstamp.ges or tstamp.real.</sch:assert>
             </sch:rule>
          </pattern>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.mordent.log.attributes"/>
          <ref name="mei_att.mordent.vis.attributes"/>
          <ref name="mei_att.mordent.ges.attributes"/>
          <ref name="mei_att.mordent.anl.attributes"/>
@@ -9757,6 +10003,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <zeroOrMore>
             <ref name="mei_mei"/>
          </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.meiVersion.attributes"/>
          <empty/>
       </element>
@@ -9821,8 +10068,10 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
                <ref name="mei_model.transcriptionLike"/>
             </choice>
          </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.edit.attributes"/>
          <ref name="mei_att.extent.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
          <ref name="mei_att.textRendition.attributes"/>
          <ref name="mei_att.trans.attributes"/>
          <empty/>
@@ -9832,6 +10081,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
       <element name="handShift" ns="http://www.music-encoding.org/ns/mei">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Marque le début d'un passage écrit d'une nouvelle main, ou d'un changement dans le scribe, le style d'écriture, l'encre ou le caractère de la main du document.</a:documentation>
          <empty/>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.edit.attributes"/>
          <ref name="mei_att.medium.attributes"/>
          <optional>
@@ -10008,6 +10258,18 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          </attribute>
       </optional>
    </define>
+   <define name="mei_att.ncGrp.log.attributes">
+      <ref name="mei_att.alignment.attributes"/>
+      <ref name="mei_att.layerIdent.attributes"/>
+      <ref name="mei_att.staffIdent.attributes"/>
+      <ref name="mei_att.sylText.attributes"/>
+   </define>
+   <define name="mei_att.neume.log.attributes">
+      <ref name="mei_att.alignment.attributes"/>
+      <ref name="mei_att.layerIdent.attributes"/>
+      <ref name="mei_att.staffIdent.attributes"/>
+      <ref name="mei_att.sylText.attributes"/>
+   </define>
    <define name="mei_att.syllable.log.attributes">
       <ref name="mei_att.alignment.attributes"/>
    </define>
@@ -10175,6 +10437,12 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
                <ref name="mei_model.transcriptionLike"/>
             </choice>
          </zeroOrMore>
+         <ref name="mei_att.basic.attributes"/>
+         <ref name="mei_att.classed.attributes"/>
+         <ref name="mei_att.labelled.attributes"/>
+         <ref name="mei_att.linking.attributes"/>
+         <ref name="mei_att.nNumberLike.attributes"/>
+         <ref name="mei_att.responsibility.attributes"/>
          <ref name="mei_att.nc.anl.attributes"/>
          <ref name="mei_att.nc.ges.attributes"/>
          <ref name="mei_att.nc.log.attributes"/>
@@ -10251,8 +10519,10 @@ Suggested values include: 1] apostropha; 2] bistropha; 3] climacus; 4] clivis; 5
                <ref name="mei_ncGrp"/>
             </choice>
          </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.ncGrp.anl.attributes"/>
          <ref name="mei_att.ncGrp.ges.attributes"/>
+         <ref name="mei_att.ncGrp.log.attributes"/>
          <ref name="mei_att.ncGrp.vis.attributes"/>
          <empty/>
       </element>
@@ -10268,8 +10538,15 @@ Suggested values include: 1] apostropha; 2] bistropha; 3] climacus; 4] clivis; 5
                <ref name="mei_model.transcriptionLike"/>
             </choice>
          </zeroOrMore>
+         <ref name="mei_att.basic.attributes"/>
+         <ref name="mei_att.classed.attributes"/>
+         <ref name="mei_att.labelled.attributes"/>
+         <ref name="mei_att.linking.attributes"/>
+         <ref name="mei_att.nNumberLike.attributes"/>
+         <ref name="mei_att.responsibility.attributes"/>
          <ref name="mei_att.neume.anl.attributes"/>
          <ref name="mei_att.neume.ges.attributes"/>
+         <ref name="mei_att.neume.log.attributes"/>
          <ref name="mei_att.neume.vis.attributes"/>
          <optional>
             <attribute name="type">
@@ -10349,6 +10626,7 @@ Suggested values include: 1] apostropha; 2] bistropha; 3] climacus; 4] clivis; 5
                <ref name="mei_model.transcriptionLike"/>
             </choice>
          </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.syllable.anl.attributes"/>
          <ref name="mei_att.syllable.ges.attributes"/>
          <ref name="mei_att.syllable.log.attributes"/>
@@ -10403,6 +10681,8 @@ Suggested values include: 1] apostropha; 2] bistropha; 3] climacus; 4] clivis; 5
             children.</sch:assert>
             </sch:rule>
          </pattern>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
          <ref name="mei_att.internetMedia.attributes"/>
          <ref name="mei_att.metadataPointing.attributes"/>
          <ref name="mei_att.pointing.attributes"/>
@@ -10431,6 +10711,7 @@ Suggested values include: 1] apostropha; 2] bistropha; 3] climacus; 4] clivis; 5
             is used, @betype should appear on clip or one of its ancestors.</sch:assert>
             </sch:rule>
          </pattern>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.dataPointing.attributes"/>
          <ref name="mei_att.mediaBounds.attributes"/>
          <ref name="mei_att.metadataPointing.attributes"/>
@@ -10444,6 +10725,7 @@ Suggested values include: 1] apostropha; 2] bistropha; 3] climacus; 4] clivis; 5
          <zeroOrMore>
             <ref name="mei_recording"/>
          </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.metadataPointing.attributes"/>
          <empty/>
       </element>
@@ -10473,6 +10755,7 @@ Suggested values include: 1] apostropha; 2] bistropha; 3] climacus; 4] clivis; 5
             present.</sch:assert>
             </sch:rule>
          </pattern>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.dataPointing.attributes"/>
          <ref name="mei_att.mediaBounds.attributes"/>
          <ref name="mei_att.metadataPointing.attributes"/>
@@ -10533,6 +10816,7 @@ Suggested values include: 1] apostropha; 2] bistropha; 3] climacus; 4] clivis; 5
             ancestor.</sch:assert>
             </sch:rule>
          </pattern>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.dataPointing.attributes"/>
          <optional>
             <attribute name="absolute">
@@ -10631,6 +10915,7 @@ Suggested values include: 1] apostropha; 2] bistropha; 3] climacus; 4] clivis; 5
       <element name="ptr">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(pointer) – Defines a traversible pointer to another location, using only attributes to describe the destination.</a:documentation>
          <empty/>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.internetMedia.attributes"/>
          <ref name="mei_att.metadataPointing.attributes"/>
          <ref name="mei_att.pointing.attributes"/>
@@ -10647,12 +10932,17 @@ Suggested values include: 1] apostropha; 2] bistropha; 3] climacus; 4] clivis; 5
                <ref name="mei_model.textPhraseLike"/>
             </choice>
          </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.internetMedia.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
          <ref name="mei_att.metadataPointing.attributes"/>
          <ref name="mei_att.pointing.attributes"/>
          <ref name="mei_att.targetEval.attributes"/>
          <empty/>
       </element>
+   </define>
+   <define name="mei_att.accidental.attributes">
+      <ref name="mei_att.accidental.attribute.accid"/>
    </define>
    <define name="mei_att.accidental.attribute.accid">
       <optional>
@@ -10671,6 +10961,9 @@ Suggested values include: 1] apostropha; 2] bistropha; 3] climacus; 4] clivis; 5
    <define name="mei_att.anchoredText.vis.attributes">
       <ref name="mei_att.visualOffset.attributes"/>
       <ref name="mei_att.xy.attributes"/>
+   </define>
+   <define name="mei_att.articulation.attributes">
+      <ref name="mei_att.articulation.attribute.artic"/>
    </define>
    <define name="mei_att.articulation.attribute.artic">
       <optional>
@@ -10773,6 +11066,29 @@ Suggested values include: 1] apostropha; 2] bistropha; 3] climacus; 4] clivis; 5
          </attribute>
       </optional>
    </define>
+   <define name="mei_att.basic.attributes">
+      <ref name="mei_att.id.attributes"/>
+      <ref name="mei_att.basic.attribute.xmlbase"/>
+   </define>
+   <define name="mei_att.basic.attribute.xmlbase">
+      <optional>
+         <attribute name="xml:base">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Fournit une référence URI de base avec laquelle les applications peuvent résoudre des références URI relatives en références URI absolues.</a:documentation>
+            <ref name="mei_data.URI"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.bibl.attributes">
+      <ref name="mei_att.bibl.attribute.analog"/>
+   </define>
+   <define name="mei_att.bibl.attribute.analog">
+      <optional>
+         <attribute name="analog">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contient une référence à un champ ou à un élément dans un autre système de codage descriptif auquel cet élément MEI est comparable.</a:documentation>
+            <data type="string"/>
+         </attribute>
+      </optional>
+   </define>
    <define name="mei_att.canonical.attributes">
       <ref name="mei_att.canonical.attribute.codedval"/>
    </define>
@@ -10788,17 +11104,31 @@ Suggested values include: 1] apostropha; 2] bistropha; 3] climacus; 4] clivis; 5
          </attribute>
       </optional>
    </define>
+   <define name="mei_att.classed.attributes">
+      <ref name="mei_att.classed.attribute.class"/>
+   </define>
+   <define name="mei_att.classed.attribute.class">
+      <optional>
+         <attribute name="class">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contient un ou plusieurs URI qui désignent les termes de classification qui s'appliquent à l'entité portant cet attribut.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <ref name="mei_data.URI"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.classed-class-check_classURI-constraint-rule-45">
-      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:math="http://exslt.org/math"
                 context="@class">
-         <sch:assert test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:category/@xml:id or matches($i, '^([a-z]+://|\.{1,2}/)')">The value in @class must either correspond to the @xml:id attribute of a category
-                element or be an external URL.</sch:assert>
+         <sch:assert test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:category/@xml:id or matches($i, '^([a-z]+://|\.{1,2}/)')">La valeur de @class doit correspondre à l'attribut @xml: id d'un élément de
+                      catégorie ou être une URL externe.</sch:assert>
       </sch:rule>
    </pattern>
    <define name="mei_att.clef.log.attributes">
@@ -10925,6 +11255,14 @@ Suggested values include: 1] apostropha; 2] bistropha; 3] climacus; 4] clivis; 5
             <ref name="mei_data.BOOLEAN"/>
          </attribute>
       </optional>
+   </define>
+   <define name="mei_att.common.attributes">
+      <ref name="mei_att.basic.attributes"/>
+      <ref name="mei_att.labelled.attributes"/>
+      <ref name="mei_att.linking.attributes"/>
+      <ref name="mei_att.nNumberLike.attributes"/>
+      <ref name="mei_att.responsibility.attributes"/>
+      <ref name="mei_att.typed.attributes"/>
    </define>
    <define name="mei_att.controlEvent.attributes">
       <ref name="mei_att.alignment.attributes"/>
@@ -11462,6 +11800,17 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
          </attribute>
       </optional>
    </define>
+   <define name="mei_att.id.attributes">
+      <ref name="mei_att.id.attribute.xmlid"/>
+   </define>
+   <define name="mei_att.id.attribute.xmlid">
+      <optional>
+         <attribute name="xml:id">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Régularise la dénomination d'un élément et facilite ainsi la création de liens entre celui-ci et d'autres ressources. Chaque attribut id dans un document doit avoir une valeur unique.</a:documentation>
+            <data type="ID"/>
+         </attribute>
+      </optional>
+   </define>
    <define name="mei_att.internetMedia.attributes">
       <ref name="mei_att.internetMedia.attribute.mimetype"/>
    </define>
@@ -11517,6 +11866,37 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
                   <ref name="mei_data.KEYFIFTHS"/>
                </oneOrMore>
             </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.labelled.attributes">
+      <ref name="mei_att.labelled.attribute.label"/>
+   </define>
+   <define name="mei_att.labelled.attribute.label">
+      <optional>
+         <attribute name="label">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Capture le texte à utiliser pour générer une étiquette pour l'élément auquel il est attaché, par exemple une "info-bulle" ou un texte préliminaire. Ne doit pas être utilisé pour enregistrer le contenu du document.</a:documentation>
+            <data type="string"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.lang.attributes">
+      <ref name="mei_att.lang.attribute.xmllang"/>
+      <ref name="mei_att.lang.attribute.translit"/>
+   </define>
+   <define name="mei_att.lang.attribute.xmllang">
+      <optional>
+         <attribute name="xml:lang">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identifie la langue du contenu de l'élément. Les valeurs de cet attribut sont des «balises» de langue telles que définies dans BCP 47. Toutes les balises de langue qui utilisent des sous-balises à usage privé doivent être documentées dans un élément de langue correspondant dans l'en-tête MEI dont l'attribut id est le même que la valeur de la balise de langue.</a:documentation>
+            <data type="language"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.lang.attribute.translit">
+      <optional>
+         <attribute name="translit">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Spécifie la technique de translittération utilisée.</a:documentation>
+            <data type="NMTOKEN"/>
          </attribute>
       </optional>
    </define>
@@ -11670,154 +12050,239 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
          </attribute>
       </optional>
    </define>
+   <define name="mei_att.linking.attributes">
+      <ref name="mei_att.linking.attribute.copyof"/>
+      <ref name="mei_att.linking.attribute.corresp"/>
+      <ref name="mei_att.linking.attribute.follows"/>
+      <ref name="mei_att.linking.attribute.next"/>
+      <ref name="mei_att.linking.attribute.precedes"/>
+      <ref name="mei_att.linking.attribute.prev"/>
+      <ref name="mei_att.linking.attribute.sameas"/>
+      <ref name="mei_att.linking.attribute.synch"/>
+   </define>
+   <define name="mei_att.linking.attribute.copyof">
+      <optional>
+         <attribute name="copyof">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Pointe vers un élément dont l'élément actuel est une copie.</a:documentation>
+            <ref name="mei_data.URI"/>
+         </attribute>
+      </optional>
+   </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.linking-copyof-When_copyof_element_empty-constraint-rule-57">
-      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:math="http://exslt.org/math"
                 context="mei:*[@copyof]">
-         <sch:assert test="count(child::*[not(comment() or processing-instruction())]) = 0">An
-                element with a copyof attribute can only have comment or processing instruction
-                descendents.</sch:assert>
+         <sch:assert test="count(child::*[not(comment() or processing-instruction())]) = 0">Un
+                      élément avec un attribut copyof ne peut avoir que des descendants de
+                      commentaire ou d'instruction de traitement.</sch:assert>
       </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.linking-copyof-check_copyofTarget-constraint-rule-58">
-      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:math="http://exslt.org/math"
                 context="@copyof">
-         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@copyof attribute
-                should have content.</sch:assert>
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">L'attribut
+                      @copyof doit avoir un contenu.</sch:assert>
          <sch:assert role="warning"
-                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">The
-                value in @copyof should correspond to the @xml:id attribute of an
-                element.</sch:assert>
+                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">La valeur de @copyof doit correspondre à l'attribut @xml: id d'un
+                      élément.</sch:assert>
       </sch:rule>
    </pattern>
+   <define name="mei_att.linking.attribute.corresp">
+      <optional>
+         <attribute name="corresp">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Utilisé pour pointer vers d'autres éléments qui correspondent à celui-ci de manière générique.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <ref name="mei_data.URI"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.linking-corresp-check_correspTarget-constraint-rule-59">
-      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:math="http://exslt.org/math"
                 context="@corresp">
-         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@corresp attribute
-                should have content.</sch:assert>
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">L'attribut
+                      @corresp doit avoir du contenu.</sch:assert>
          <sch:assert role="warning"
-                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Each
-                value in @corresp should correspond to the @xml:id attribute of an
-                element.</sch:assert>
+                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Chaque valeur de @corresp doit correspondre à l'attribut @xml: id d'un
+                      élément.</sch:assert>
       </sch:rule>
    </pattern>
+   <define name="mei_att.linking.attribute.follows">
+      <optional>
+         <attribute name="follows">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">pointe vers un ou plusieurs événements dans une collection définie par l'utilisateur qui sont connus pour être des prédécesseurs de l'élément actuel.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <ref name="mei_data.URI"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.linking-follows-check_followsTarget-constraint-rule-60">
-      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:math="http://exslt.org/math"
                 context="@follows">
-         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@follows attribute
-                should have content.</sch:assert>
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">L'attribut
+                      @follows doit avoir un contenu.</sch:assert>
          <sch:assert role="warning"
-                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Each
-                value in @follows must correspond to the @xml:id attribute of an
-                element.</sch:assert>
+                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Chaque valeur de @follows doit correspondre à l'attribut @xml: id d'un
+                      élément.</sch:assert>
       </sch:rule>
    </pattern>
+   <define name="mei_att.linking.attribute.next">
+      <optional>
+         <attribute name="next">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Utilisé pour pointer vers le ou les événements suivants dans une collection définie par l'utilisateur.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <ref name="mei_data.URI"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.linking-next-check_nextTarget-constraint-rule-61">
-      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:math="http://exslt.org/math"
                 context="@next">
-         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@next attribute should
-                have content.</sch:assert>
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">L'attribut @next
+                      doit avoir du contenu.</sch:assert>
          <sch:assert role="warning"
-                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Each
-                value in @next should correspond to the @xml:id attribute of an
-                element.</sch:assert>
+                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Chaque valeur de @next doit correspondre à l'attribut @xml: id d'un
+                      élément.</sch:assert>
       </sch:rule>
    </pattern>
+   <define name="mei_att.linking.attribute.precedes">
+      <optional>
+         <attribute name="precedes">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Pointe vers un ou plusieurs événements dans une collection définie par l'utilisateur qui sont connus pour être les successeurs de l'élément actuel.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <ref name="mei_data.URI"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.linking-precedes-check_precedesTarget-constraint-rule-62">
-      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:math="http://exslt.org/math"
                 context="@precedes">
-         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@precedes attribute
-                should have content.</sch:assert>
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">L'attribut
+                      @precedes doit avoir un contenu.</sch:assert>
          <sch:assert role="warning"
-                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Each
-                value in @precedes must correspond to the @xml:id attribute of an
-                element.</sch:assert>
+                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Chaque valeur de @precedes doit correspondre à l'attribut @xml: id d'un
+                      élément.</sch:assert>
       </sch:rule>
    </pattern>
+   <define name="mei_att.linking.attribute.prev">
+      <optional>
+         <attribute name="prev">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Pointe vers le ou les événements précédents dans une collection définie par l'utilisateur.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <ref name="mei_data.URI"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.linking-prev-check_prevTarget-constraint-rule-63">
-      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:math="http://exslt.org/math"
                 context="@prev">
-         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@prev attribute should
-                have content.</sch:assert>
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">L'attribut @prev
+                      doit avoir un contenu.</sch:assert>
          <sch:assert role="warning"
-                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Each
-                value in @prev should correspond to the @xml:id attribute of an
-                element.</sch:assert>
+                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Chaque valeur de @prev doit correspondre à l'attribut @xml: id d'un
+                      élément.</sch:assert>
       </sch:rule>
    </pattern>
+   <define name="mei_att.linking.attribute.sameas">
+      <optional>
+         <attribute name="sameas">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Pointe vers un élément identique à l'élément actuel mais qui n'est pas une copie littérale de l'élément actuel.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <ref name="mei_data.URI"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.linking-sameas-check_sameasTarget-constraint-rule-64">
-      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:math="http://exslt.org/math"
                 context="@sameas">
-         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@sameas attribute
-                should have content.</sch:assert>
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">L'attribut
+                      @sameas doit avoir un contenu.</sch:assert>
          <sch:assert role="warning"
-                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Each
-                value in @sameas should correspond to the @xml:id attribute of an
-                element.</sch:assert>
+                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Chaque valeur de @sameas doit correspondre à l'attribut @xml: id d'un
+                      élément.</sch:assert>
       </sch:rule>
    </pattern>
+   <define name="mei_att.linking.attribute.synch">
+      <optional>
+         <attribute name="synch">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Pointe vers des éléments synchrones avec l'élément actuel.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <ref name="mei_data.URI"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.linking-synch-check_synchTarget-constraint-rule-65">
-      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:math="http://exslt.org/math"
                 context="@synch">
-         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@synch attribute
-                should have content.</sch:assert>
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">L'attribut
+                      @synch doit avoir un contenu.</sch:assert>
          <sch:assert role="warning"
-                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Each
-                value in @synch should correspond to the @xml:id attribute of an
-                element.</sch:assert>
+                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Chaque valeur de @synch doit correspondre à l'attribut @xml: id d'un
+                      élément.</sch:assert>
       </sch:rule>
    </pattern>
    <define name="mei_att.lyricStyle.attributes">
@@ -12013,6 +12478,10 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
          </attribute>
       </optional>
    </define>
+   <define name="mei_att.meterConformance.bar.attributes">
+      <ref name="mei_att.meterConformance.bar.attribute.metcon"/>
+      <ref name="mei_att.meterConformance.bar.attribute.control"/>
+   </define>
    <define name="mei_att.meterConformance.bar.attribute.metcon">
       <optional>
          <attribute name="metcon">
@@ -12060,6 +12529,35 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
          </attribute>
       </optional>
    </define>
+   <define name="mei_att.mmTempo.attributes">
+      <ref name="mei_att.mmTempo.attribute.mm"/>
+      <ref name="mei_att.mmTempo.attribute.mm.unit"/>
+      <ref name="mei_att.mmTempo.attribute.mm.dots"/>
+   </define>
+   <define name="mei_att.mmTempo.attribute.mm">
+      <optional>
+         <attribute name="mm">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Utilisé pour décrire le tempo en termes de battements (souvent le dénominateur de signature du mètre) par minute, ala M.M. (Métronome de Maezel). Ne confondez pas cet attribut avec midi.bpm ou midi.mspb. En MIDI, un temps est toujours défini comme une noire, * pas le numérateur de la signature rythmique ou l'indication métronomique *.</a:documentation>
+            <ref name="mei_data.TEMPOVALUE"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.mmTempo.attribute.mm.unit">
+      <optional>
+         <attribute name="mm.unit">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Capture l'unité métronomique.</a:documentation>
+            <ref name="mei_data.DURATION"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.mmTempo.attribute.mm.dots">
+      <optional>
+         <attribute name="mm.dots">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Enregistre le nombre de points d'augmentation requis par une unité de métronome en pointillé.</a:documentation>
+            <ref name="mei_data.AUGMENTDOT"/>
+         </attribute>
+      </optional>
+   </define>
    <define name="mei_att.multinumMeasures.attributes">
       <ref name="mei_att.multinumMeasures.attribute.multi.number"/>
    </define>
@@ -12079,6 +12577,17 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] deg; 5] in; 6] issue; 7] f
          <attribute name="n">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Provides a numeric designation that indicates an element's position in a sequence of similar elements. Its value must be a non-negative integer.</a:documentation>
             <data type="nonNegativeInteger"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.nNumberLike.attributes">
+      <ref name="mei_att.nNumberLike.attribute.n"/>
+   </define>
+   <define name="mei_att.nNumberLike.attribute.n">
+      <optional>
+         <attribute name="n">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Fournit une désignation de type numérique qui indique la position d'un élément dans une séquence d'éléments similaires. Ne peut pas contenir de caractères d'espacement.</a:documentation>
+            <ref name="mei_data.WORD"/>
          </attribute>
       </optional>
    </define>
@@ -12639,20 +13148,34 @@ Suggested values include: 1] smufl</a:documentation>
                 @confidence is present.</sch:assert>
       </sch:rule>
    </pattern>
+   <define name="mei_att.responsibility.attributes">
+      <ref name="mei_att.responsibility.attribute.resp"/>
+   </define>
+   <define name="mei_att.responsibility.attribute.resp">
+      <optional>
+         <attribute name="resp">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indique le ou les agents responsables de certains aspects de la transcription, de l'édition ou de l'encodage du texte. Sa valeur doit pointer vers un ou plusieurs identifiants déclarés dans l'en-tête du document.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <ref name="mei_data.URI"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.responsibility-resp-check_respTarget-constraint-rule-73">
-      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:math="http://exslt.org/math"
                 context="@resp">
-         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@resp attribute should
-                have content.</sch:assert>
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">L'attribut @resp
+                      doit avoir du contenu.</sch:assert>
          <sch:assert role="warning"
-                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*[ancestor::mei:meiHead]/@xml:id">The value in @resp should correspond to the @xml:id attribute of an element within
-                the metadata header.</sch:assert>
+                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*[ancestor::mei:meiHead]/@xml:id">La valeur de @resp doit correspondre à l'attribut @xml: id d'un élément dans
+                      l'en-tête de métadonnées.</sch:assert>
       </sch:rule>
    </pattern>
    <define name="mei_att.rest.log.attributes">
@@ -12683,6 +13206,9 @@ Suggested values include: 1] smufl</a:documentation>
             <ref name="mei_data.PERCENT"/>
          </attribute>
       </optional>
+   </define>
+   <define name="mei_att.score.log.attributes">
+      <empty/>
    </define>
    <define name="mei_att.scoreDef.log.attributes">
       <ref name="mei_att.cleffing.log.attributes"/>
@@ -12836,6 +13362,26 @@ Suggested values include: 1] smufl</a:documentation>
                 element.</sch:assert>
       </sch:rule>
    </pattern>
+   <define name="mei_att.staffDef.log.attributes">
+      <ref name="mei_att.cleffing.log.attributes"/>
+      <ref name="mei_att.duration.default.attributes"/>
+      <ref name="mei_att.keySigDefault.log.attributes"/>
+      <ref name="mei_att.meterSigDefault.log.attributes"/>
+      <ref name="mei_att.notationType.attributes"/>
+      <ref name="mei_att.octaveDefault.attributes"/>
+      <ref name="mei_att.transposition.attributes"/>
+      <ref name="mei_att.staffDef.log.cmn.attributes"/>
+      <ref name="mei_att.staffDef.log.mensural.attributes"/>
+      <ref name="mei_att.staffDef.log.attribute.lines"/>
+   </define>
+   <define name="mei_att.staffDef.log.attribute.lines">
+      <optional>
+         <attribute name="lines">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indique le nombre de lignes pour "staff".</a:documentation>
+            <data type="positiveInteger"/>
+         </attribute>
+      </optional>
+   </define>
    <define name="mei_att.staffGroupingSym.attributes">
       <ref name="mei_att.staffGroupingSym.attribute.symbol"/>
    </define>
@@ -13149,6 +13695,17 @@ Suggested values include: 1] smufl</a:documentation>
          </attribute>
       </optional>
    </define>
+   <define name="mei_att.sylText.attributes">
+      <ref name="mei_att.sylText.attribute.syl"/>
+   </define>
+   <define name="mei_att.sylText.attribute.syl">
+      <optional>
+         <attribute name="syl">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contient une syllabe de texte chantée associée.</a:documentation>
+            <data type="string"/>
+         </attribute>
+      </optional>
+   </define>
    <define name="mei_att.systems.attributes">
       <ref name="mei_att.systems.attribute.system.leftline"/>
       <ref name="mei_att.systems.attribute.system.leftmar"/>
@@ -13201,6 +13758,29 @@ Suggested values include: 1] smufl</a:documentation>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">If an element pointed to is itself a pointer, then its target (whether a pointer or not) is taken as the target of this pointer.</a:documentation>
                <value>none</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">No further evaluation of targets is carried out beyond that needed to find the element(s) specified in plist or target attribute.</a:documentation>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.tempo.log.attributes">
+      <ref name="mei_att.controlEvent.attributes"/>
+      <ref name="mei_att.mmTempo.attributes"/>
+      <ref name="mei_att.startId.attributes"/>
+      <ref name="mei_att.tempo.log.attribute.func"/>
+   </define>
+   <define name="mei_att.tempo.log.attribute.func">
+      <optional>
+         <attribute name="func">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Enregistre la fonction d'une indication de tempo.</a:documentation>
+            <choice>
+               <value>continuous</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Marque un changement progressif de tempo, tel que "accel". ou "rit".</a:documentation>
+               <value>instantaneous</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Représente une instruction de tempo statique, comme un terme textuel comme "Adagio", un marquage de métronome comme "♩ = 70", ou une combinaison de texte et d'indication de métronome.</a:documentation>
+               <value>metricmod</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Capture un changement de fréquence du pouls (tempo) et / ou de groupement d'impulsions (subdivision) dans une «équation» de la forme [tempo avant changement] = [tempo après changement].</a:documentation>
+               <value>precedente</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indique un changement de fréquence d'impulsion (tempo) et / ou de groupement d'impulsions (subdivision) dans une "équation" de la forme [tempo après changement] = [tempo avant changement]. Le terme «précédent» apparaît souvent après «l'équation» pour distinguer ce type d'usage historique de la forme de modulation métrique moderne.</a:documentation>
             </choice>
          </attribute>
       </optional>
@@ -13347,6 +13927,22 @@ Suggested values include: 1] smufl</a:documentation>
             <list>
                <oneOrMore>
                   <ref name="mei_data.TUPLET"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="mei_att.typed.attributes">
+      <ref name="mei_att.classed.attributes"/>
+      <ref name="mei_att.typed.attribute.type"/>
+   </define>
+   <define name="mei_att.typed.attribute.type">
+      <optional>
+         <attribute name="type">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Désignation qui caractérise l'élément dans un certain sens, en utilisant n'importe quel schéma de classification ou typologie pratique qui utilise des étiquettes à un seul label.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="NMTOKEN"/>
                </oneOrMore>
             </list>
          </attribute>
@@ -14481,6 +15077,7 @@ Suggested values include: 1] smufl</a:documentation>
                <ref name="mei_model.mdivLike"/>
             </choice>
          </oneOrMore>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.metadataPointing.attributes"/>
          <empty/>
       </element>
@@ -14543,6 +15140,7 @@ Suggested values include: 1] smufl</a:documentation>
             staff.</sch:assert>
             </sch:rule>
          </pattern>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.event.attributes"/>
          <ref name="mei_att.clef.anl.attributes"/>
          <ref name="mei_att.clef.ges.attributes"/>
@@ -14557,6 +15155,7 @@ Suggested values include: 1] smufl</a:documentation>
          <oneOrMore>
             <ref name="mei_clef"/>
          </oneOrMore>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.event.attributes"/>
          <ref name="mei_att.clefGrp.log.attributes"/>
          <ref name="mei_att.clefGrp.vis.attributes"/>
@@ -14569,6 +15168,7 @@ Suggested values include: 1] smufl</a:documentation>
       <element name="dot" ns="http://www.music-encoding.org/ns/mei">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Point d'augmentation ou de division.</a:documentation>
          <empty/>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.dot.log.attributes"/>
          <ref name="mei_att.dot.vis.attributes"/>
          <ref name="mei_att.dot.ges.attributes"/>
@@ -14594,6 +15194,7 @@ Suggested values include: 1] smufl</a:documentation>
                <ref name="mei_model.transcriptionLike"/>
             </choice>
          </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.ending.anl.attributes"/>
          <ref name="mei_att.ending.ges.attributes"/>
          <ref name="mei_att.ending.log.attributes"/>
@@ -14616,6 +15217,7 @@ Suggested values include: 1] smufl</a:documentation>
                <ref name="mei_group"/>
             </choice>
          </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.metadataPointing.attributes"/>
          <empty/>
       </element>
@@ -14631,6 +15233,8 @@ Suggested values include: 1] smufl</a:documentation>
                <ref name="mei_model.transcriptionLike"/>
             </choice>
          </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
          <ref name="mei_att.source.attributes"/>
          <empty/>
       </element>
@@ -14648,8 +15252,13 @@ Suggested values include: 1] smufl</a:documentation>
                <ref name="mei_model.transcriptionLike"/>
             </choice>
          </zeroOrMore>
+         <ref name="mei_att.basic.attributes"/>
+         <ref name="mei_att.labelled.attributes"/>
+         <ref name="mei_att.linking.attributes"/>
          <ref name="mei_att.metadataPointing.attributes"/>
          <ref name="mei_att.nInteger.attributes"/>
+         <ref name="mei_att.responsibility.attributes"/>
+         <ref name="mei_att.typed.attributes"/>
          <ref name="mei_att.layer.log.attributes"/>
          <ref name="mei_att.layer.vis.attributes"/>
          <ref name="mei_att.layer.ges.attributes"/>
@@ -14666,8 +15275,13 @@ Suggested values include: 1] smufl</a:documentation>
          <zeroOrMore>
             <ref name="mei_model.instrDefLike"/>
          </zeroOrMore>
+         <ref name="mei_att.basic.attributes"/>
+         <ref name="mei_att.labelled.attributes"/>
+         <ref name="mei_att.linking.attributes"/>
          <ref name="mei_att.metadataPointing.attributes"/>
          <ref name="mei_att.nInteger.attributes"/>
+         <ref name="mei_att.responsibility.attributes"/>
+         <ref name="mei_att.typed.attributes"/>
          <ref name="mei_att.layerDef.log.attributes"/>
          <ref name="mei_att.layerDef.vis.attributes"/>
          <ref name="mei_att.layerDef.ges.attributes"/>
@@ -14691,6 +15305,7 @@ Suggested values include: 1] smufl</a:documentation>
                <ref name="mei_model.mdivLike"/>
             </zeroOrMore>
          </choice>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.metadataPointing.attributes"/>
          <ref name="mei_att.mdiv.anl.attributes"/>
          <ref name="mei_att.mdiv.ges.attributes"/>
@@ -14729,7 +15344,9 @@ Suggested values include: 1] smufl</a:documentation>
             element.</sch:assert>
             </sch:rule>
          </pattern>
+         <ref name="mei_att.id.attributes"/>
          <ref name="mei_att.meiVersion.attributes"/>
+         <ref name="mei_att.responsibility.attributes"/>
          <empty/>
       </element>
    </define>
@@ -14740,6 +15357,7 @@ Suggested values include: 1] smufl</a:documentation>
             <ref name="mei_model.resourceLike"/>
          </zeroOrMore>
          <ref name="mei_macro.musicPart"/>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.meiVersion.attributes"/>
          <ref name="mei_att.metadataPointing.attributes"/>
          <empty/>
@@ -14757,9 +15375,11 @@ Suggested values include: 1] smufl</a:documentation>
                <ref name="mei_model.transcriptionLike"/>
             </choice>
          </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.note.log.attributes"/>
          <ref name="mei_att.note.vis.attributes"/>
          <ref name="mei_att.note.ges.attributes"/>
+         <ref name="mei_att.note.anl.attributes"/>
          <empty/>
       </element>
    </define>
@@ -14779,6 +15399,7 @@ Suggested values include: 1] smufl</a:documentation>
                <ref name="mei_model.transcriptionLike"/>
             </choice>
          </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.metadataPointing.attributes"/>
          <ref name="mei_att.part.log.attributes"/>
          <ref name="mei_att.part.vis.attributes"/>
@@ -14793,6 +15414,7 @@ Suggested values include: 1] smufl</a:documentation>
          <zeroOrMore>
             <ref name="mei_model.partLike"/>
          </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.metadataPointing.attributes"/>
          <ref name="mei_att.parts.log.attributes"/>
          <ref name="mei_att.parts.vis.attributes"/>
@@ -14838,6 +15460,7 @@ Suggested values include: 1] smufl</a:documentation>
             staff.</sch:assert>
             </sch:rule>
          </pattern>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.rest.log.attributes"/>
          <ref name="mei_att.rest.vis.attributes"/>
          <ref name="mei_att.rest.ges.attributes"/>
@@ -14862,7 +15485,9 @@ Suggested values include: 1] smufl</a:documentation>
                <ref name="mei_model.transcriptionLike"/>
             </choice>
          </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.metadataPointing.attributes"/>
+         <ref name="mei_att.score.log.attributes"/>
          <ref name="mei_att.score.vis.attributes"/>
          <ref name="mei_att.score.ges.attributes"/>
          <ref name="mei_att.score.anl.attributes"/>
@@ -14884,8 +15509,10 @@ Suggested values include: 1] smufl</a:documentation>
          <optional>
             <ref name="mei_model.staffGrpLike"/>
          </optional>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.scoreDef.log.attributes"/>
          <ref name="mei_att.scoreDef.vis.attributes"/>
+         <ref name="mei_att.scoreDef.ges.attributes"/>
          <ref name="mei_att.scoreDef.anl.attributes"/>
          <empty/>
       </element>
@@ -14932,6 +15559,7 @@ Suggested values include: 1] smufl</a:documentation>
             elements.</sch:assert>
             </sch:rule>
          </pattern>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.metadataPointing.attributes"/>
          <ref name="mei_att.pointing.attributes"/>
          <ref name="mei_att.section.anl.attributes"/>
@@ -14985,8 +15613,13 @@ Suggested values include: 1] smufl</a:documentation>
             a matching @n value containing a staffDef, or a staffDef child element.</sch:assert>
             </sch:rule>
          </pattern>
+         <ref name="mei_att.basic.attributes"/>
+         <ref name="mei_att.labelled.attributes"/>
+         <ref name="mei_att.linking.attributes"/>
          <ref name="mei_att.metadataPointing.attributes"/>
          <ref name="mei_att.nInteger.attributes"/>
+         <ref name="mei_att.responsibility.attributes"/>
+         <ref name="mei_att.typed.attributes"/>
          <ref name="mei_att.staff.log.attributes"/>
          <ref name="mei_att.staff.vis.attributes"/>
          <ref name="mei_att.staff.ges.attributes"/>
@@ -15306,8 +15939,14 @@ Suggested values include: 1] smufl</a:documentation>
               the value of ppq on a preceding scoreDef.</sch:assert>
             </sch:rule>
          </sch:pattern>
+         <ref name="mei_att.basic.attributes"/>
+         <ref name="mei_att.labelled.attributes"/>
+         <ref name="mei_att.linking.attributes"/>
          <ref name="mei_att.metadataPointing.attributes"/>
          <ref name="mei_att.nInteger.attributes"/>
+         <ref name="mei_att.responsibility.attributes"/>
+         <ref name="mei_att.typed.attributes"/>
+         <ref name="mei_att.staffDef.log.attributes"/>
          <ref name="mei_att.staffDef.vis.attributes"/>
          <ref name="mei_att.staffDef.ges.attributes"/>
          <ref name="mei_att.staffDef.anl.attributes"/>
@@ -15360,6 +15999,7 @@ Suggested values include: 1] smufl</a:documentation>
             for the n attribute.</sch:assert>
             </sch:rule>
          </pattern>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.metadataPointing.attributes"/>
          <ref name="mei_att.staffGrp.log.attributes"/>
          <ref name="mei_att.staffGrp.vis.attributes"/>
@@ -15379,6 +16019,8 @@ Suggested values include: 1] smufl</a:documentation>
                <ref name="mei_model.transcriptionLike"/>
             </choice>
          </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
          <ref name="mei_att.syl.log.attributes"/>
          <ref name="mei_att.syl.vis.attributes"/>
          <ref name="mei_att.syl.ges.attributes"/>
@@ -15450,6 +16092,10 @@ Suggested values include: 1] smufl</a:documentation>
             attributes: startid, tstamp, tstamp.ges or tstamp.real.</sch:assert>
             </sch:rule>
          </pattern>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.bibl.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
+         <ref name="mei_att.tempo.log.attributes"/>
          <ref name="mei_att.tempo.vis.attributes"/>
          <ref name="mei_att.tempo.ges.attributes"/>
          <ref name="mei_att.tempo.anl.attributes"/>
@@ -15598,6 +16244,8 @@ Suggested values include: 1] smufl</a:documentation>
                <ref name="mei_model.relationLike"/>
             </choice>
          </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
          <ref name="mei_att.metadataPointing.attributes"/>
          <empty/>
       </element>
@@ -15613,6 +16261,8 @@ Suggested values include: 1] smufl</a:documentation>
                <ref name="mei_model.relationLike"/>
             </choice>
          </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
          <ref name="mei_att.metadataPointing.attributes"/>
          <empty/>
       </element>
@@ -15728,6 +16378,8 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
                <ref name="mei_model.transcriptionLike"/>
             </choice>
          </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
+         <ref name="mei_att.lang.attributes"/>
          <ref name="mei_att.anchoredText.anl.attributes"/>
          <ref name="mei_att.anchoredText.ges.attributes"/>
          <ref name="mei_att.anchoredText.log.attributes"/>
@@ -15756,6 +16408,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
             bezier or bulge attribute.</sch:assert>
             </sch:rule>
          </pattern>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.curve.anl.attributes"/>
          <ref name="mei_att.curve.ges.attributes"/>
          <ref name="mei_att.curve.log.attributes"/>
@@ -15801,6 +16454,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
             y2 attributes.</sch:assert>
             </sch:rule>
          </pattern>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.line.anl.attributes"/>
          <ref name="mei_att.line.ges.attributes"/>
          <ref name="mei_att.line.log.attributes"/>
@@ -15816,6 +16470,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
                <text/>
             </choice>
          </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
          <empty/>
       </element>
    </define>
@@ -15823,6 +16478,11 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <element name="propName">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(property name) – Name of a property of the symbol.</a:documentation>
          <text/>
+         <ref name="mei_att.basic.attributes"/>
+         <ref name="mei_att.labelled.attributes"/>
+         <ref name="mei_att.linking.attributes"/>
+         <ref name="mei_att.nNumberLike.attributes"/>
+         <ref name="mei_att.responsibility.attributes"/>
          <attribute name="type">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Characterizes the property name.</a:documentation>
             <choice>
@@ -15839,6 +16499,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <element name="propValue">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(property value) – A single property value.</a:documentation>
          <text/>
+         <ref name="mei_att.common.attributes"/>
          <empty/>
       </element>
    </define>
@@ -15867,6 +16528,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
          <zeroOrMore>
             <ref name="mei_model.annotLike"/>
          </zeroOrMore>
+         <ref name="mei_att.common.attributes"/>
          <ref name="mei_att.coordinated.attributes"/>
          <empty/>
       </element>
@@ -15875,6 +16537,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <element name="symName">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(symbol name) – Contains the name of a symbol, expressed following Unicode conventions.</a:documentation>
          <text/>
+         <ref name="mei_att.common.attributes"/>
          <empty/>
       </element>
    </define>
@@ -15883,6 +16546,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(symbol property) – Provides a name and value for some property of the parent symbol.</a:documentation>
          <ref name="mei_propName"/>
          <ref name="mei_propValue"/>
+         <ref name="mei_att.common.attributes"/>
          <empty/>
       </element>
    </define>
@@ -15892,6 +16556,7 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
          <oneOrMore>
             <ref name="mei_symbolDef"/>
          </oneOrMore>
+         <ref name="mei_att.common.attributes"/>
          <empty/>
       </element>
    </define>
@@ -16493,191 +17158,6 @@ Suggested values include: 1] coloration; 2] ligature; 3] unknown</a:documentatio
       <ref name="mei_att.voltaGroupingSym.attributes"/>
       <ref name="mei_att.xy.attributes"/>
    </define>
-   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.notationType-notationsubtype-When_notationsubtype-constraint-rule-123">
-      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                xmlns="http://www.tei-c.org/ns/1.0"
-                xmlns:math="http://exslt.org/math"
-                context="mei:*[@notationsubtype]">
-         <sch:assert test="@notationtype">Un élément avec un attribut notationsubtype
-                      doit avoir un attribut notationtype.</sch:assert>
-      </sch:rule>
-   </pattern>
-   <define name="mei_att.note.anl.mensural.attribute.lig">
-      <optional>
-         <attribute name="lig">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicates this element's participation in a ligature.</a:documentation>
-            <choice>
-               <value>recta</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>obliqua</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-            </choice>
-         </attribute>
-      </optional>
-   </define>
-   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.linking-copyof-When_copyof_element_empty-constraint-rule-124">
-      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                xmlns="http://www.tei-c.org/ns/1.0"
-                xmlns:math="http://exslt.org/math"
-                context="mei:*[@copyof]">
-         <sch:assert test="count(child::*[not(comment() or processing-instruction())]) = 0">Un
-                      élément avec un attribut copyof ne peut avoir que des descendants de
-                      commentaire ou d'instruction de traitement.</sch:assert>
-      </sch:rule>
-   </pattern>
-   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.linking-copyof-check_copyofTarget-constraint-rule-125">
-      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                xmlns="http://www.tei-c.org/ns/1.0"
-                xmlns:math="http://exslt.org/math"
-                context="@copyof">
-         <sch:assert role="warning" test="not(normalize-space(.) eq '')">L'attribut
-                      @copyof doit avoir un contenu.</sch:assert>
-         <sch:assert role="warning"
-                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">La valeur de @copyof doit correspondre à l'attribut @xml: id d'un
-                      élément.</sch:assert>
-      </sch:rule>
-   </pattern>
-   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.linking-corresp-check_correspTarget-constraint-rule-126">
-      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                xmlns="http://www.tei-c.org/ns/1.0"
-                xmlns:math="http://exslt.org/math"
-                context="@corresp">
-         <sch:assert role="warning" test="not(normalize-space(.) eq '')">L'attribut
-                      @corresp doit avoir du contenu.</sch:assert>
-         <sch:assert role="warning"
-                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Chaque valeur de @corresp doit correspondre à l'attribut @xml: id d'un
-                      élément.</sch:assert>
-      </sch:rule>
-   </pattern>
-   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.linking-follows-check_followsTarget-constraint-rule-127">
-      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                xmlns="http://www.tei-c.org/ns/1.0"
-                xmlns:math="http://exslt.org/math"
-                context="@follows">
-         <sch:assert role="warning" test="not(normalize-space(.) eq '')">L'attribut
-                      @follows doit avoir un contenu.</sch:assert>
-         <sch:assert role="warning"
-                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Chaque valeur de @follows doit correspondre à l'attribut @xml: id d'un
-                      élément.</sch:assert>
-      </sch:rule>
-   </pattern>
-   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.linking-next-check_nextTarget-constraint-rule-128">
-      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                xmlns="http://www.tei-c.org/ns/1.0"
-                xmlns:math="http://exslt.org/math"
-                context="@next">
-         <sch:assert role="warning" test="not(normalize-space(.) eq '')">L'attribut @next
-                      doit avoir du contenu.</sch:assert>
-         <sch:assert role="warning"
-                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Chaque valeur de @next doit correspondre à l'attribut @xml: id d'un
-                      élément.</sch:assert>
-      </sch:rule>
-   </pattern>
-   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.linking-precedes-check_precedesTarget-constraint-rule-129">
-      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                xmlns="http://www.tei-c.org/ns/1.0"
-                xmlns:math="http://exslt.org/math"
-                context="@precedes">
-         <sch:assert role="warning" test="not(normalize-space(.) eq '')">L'attribut
-                      @precedes doit avoir un contenu.</sch:assert>
-         <sch:assert role="warning"
-                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Chaque valeur de @precedes doit correspondre à l'attribut @xml: id d'un
-                      élément.</sch:assert>
-      </sch:rule>
-   </pattern>
-   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.linking-prev-check_prevTarget-constraint-rule-130">
-      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                xmlns="http://www.tei-c.org/ns/1.0"
-                xmlns:math="http://exslt.org/math"
-                context="@prev">
-         <sch:assert role="warning" test="not(normalize-space(.) eq '')">L'attribut @prev
-                      doit avoir un contenu.</sch:assert>
-         <sch:assert role="warning"
-                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Chaque valeur de @prev doit correspondre à l'attribut @xml: id d'un
-                      élément.</sch:assert>
-      </sch:rule>
-   </pattern>
-   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.linking-sameas-check_sameasTarget-constraint-rule-131">
-      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                xmlns="http://www.tei-c.org/ns/1.0"
-                xmlns:math="http://exslt.org/math"
-                context="@sameas">
-         <sch:assert role="warning" test="not(normalize-space(.) eq '')">L'attribut
-                      @sameas doit avoir un contenu.</sch:assert>
-         <sch:assert role="warning"
-                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Chaque valeur de @sameas doit correspondre à l'attribut @xml: id d'un
-                      élément.</sch:assert>
-      </sch:rule>
-   </pattern>
-   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.linking-synch-check_synchTarget-constraint-rule-132">
-      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                xmlns="http://www.tei-c.org/ns/1.0"
-                xmlns:math="http://exslt.org/math"
-                context="@synch">
-         <sch:assert role="warning" test="not(normalize-space(.) eq '')">L'attribut
-                      @synch doit avoir un contenu.</sch:assert>
-         <sch:assert role="warning"
-                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Chaque valeur de @synch doit correspondre à l'attribut @xml: id d'un
-                      élément.</sch:assert>
-      </sch:rule>
-   </pattern>
-   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.responsibility-resp-check_respTarget-constraint-rule-133">
-      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                xmlns="http://www.tei-c.org/ns/1.0"
-                xmlns:math="http://exslt.org/math"
-                context="@resp">
-         <sch:assert role="warning" test="not(normalize-space(.) eq '')">L'attribut @resp
-                      doit avoir du contenu.</sch:assert>
-         <sch:assert role="warning"
-                     test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*[ancestor::mei:meiHead]/@xml:id">La valeur de @resp doit correspondre à l'attribut @xml: id d'un élément dans
-                      l'en-tête de métadonnées.</sch:assert>
-      </sch:rule>
-   </pattern>
-   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="mei-att.classed-class-check_classURI-constraint-rule-134">
-      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                xmlns="http://www.tei-c.org/ns/1.0"
-                xmlns:math="http://exslt.org/math"
-                context="@class">
-         <sch:assert test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:category/@xml:id or matches($i, '^([a-z]+://|\.{1,2}/)')">La valeur de @class doit correspondre à l'attribut @xml: id d'un élément de
-                      catégorie ou être une URL externe.</sch:assert>
-      </sch:rule>
-   </pattern>
    <start>
       <choice>
          <ref name="mei_mei"/>
