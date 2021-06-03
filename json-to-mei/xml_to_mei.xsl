@@ -7,11 +7,17 @@
     <xsl:strip-space elements="*"/>
     
     
+    <!--
+    <xsl:variable name="typeNote" select="noteType/text()"/>
+    <xsl:variable name="liquescence" select="focus/text()"/>
+    -->
+    
     <xsl:template match="/">
         <mei>
             <xsl:apply-templates/>
         </mei>
     </xsl:template>
+  
     <xsl:template match="TEI">
         <music>
             <xsl:apply-templates select="/root/TEI/children"/>
@@ -29,85 +35,154 @@
     </xsl:template>
     
     <xsl:template match="/root/TEI/children/item/children/item">
+        
         <mdiv>
-        <score>
-            <xsl:apply-templates select="/root/TEI/children/item/children/item/children/text()"/>
+            
+            <xsl:apply-templates select="/root/TEI/children/item/children/text()"/>
+            <score>
             <scoreDef>
+                
                 <staffGrp>
+                    
                     <staffDef>
-                        <xsl:copy-of select="shape"/>
+                        
+                        <xsl:value-of select="shape"/>
+                        
                         <xsl:attribute name="clef.shape">
-                            <xsl:value-of select=".//shape/text()"/>
-                            <xsl:apply-templates select=".//shape[text()]"/>
+                            
+                            <xsl:apply-templates select=".//shape/[text()]"/>
+                            
                         </xsl:attribute>
-                        <!--
-                                                <xsl:attribute name="clef.line"/>
-                                                -->
+                        
+                      
                         <xsl:attribute name="n">
-                            <xsl:number/>
+                            <xsl:number level="single"/>
                         </xsl:attribute>
+                        
+                        <xsl:attribute name="clef.line">
+                            <xsl:number value="'4'"/>
+                        </xsl:attribute>
+                        
                         <xsl:attribute name="lines">
                             <xsl:number value="'5'"/>
                         </xsl:attribute>
+                        
+                        
                         <xsl:attribute name="notationtype">
-                            <xsl:apply-templates select="'mensural.black'"/>
+                            <xsl:apply-templates select="'neume'"/>
                         </xsl:attribute>
                         
                     </staffDef>
+                    
                 </staffGrp>
+                
             </scoreDef>
-        </score>
+            
         <section>
             <xsl:attribute name="n">
                 <xsl:number level="single"/>
             </xsl:attribute>
-            <measure>
+            
             <xsl:apply-templates select="/root/TEI/children/item/children/item/children/text()"/>
-           
+            
+
                 <staff>
                     <xsl:attribute name="n">
-                        <xsl:number level="single"/>
+                        <xsl:number value="'1'"/>
                     </xsl:attribute>
                 
                     <layer>
                         <xsl:attribute name="n">
-                            <xsl:number level="multiple"/>
+                            <xsl:number value="'1'"/>
                         </xsl:attribute>
+                        
                         <xsl:for-each
                             select=".//children/item">
-                            <syllabe>
+                            
+                            <syllable>
                                 <xsl:element name="syl">
-                                    <xsl:apply-templates select=".//text/[text()]"/>
-                                </xsl:element>
-                        <neume>
-                            <xsl:element name="nc">
+                                    
+                                    
+                                    <xsl:apply-templates select="text"/>
+                                </xsl:element> 
+                                 
+                            <neume>
+                            <xsl:for-each select=".//grouped/item">
+                            
+                                <xsl:element name="nc">
+                                
                                 <xsl:attribute name="pname">
-                                    <xsl:value-of select=".//base/[lower-case(text())]"/>
-                                    <xsl:apply-templates select="base[lower-case(text())]"/>
+                                    
+                                    
+                                    
+                                    <xsl:apply-templates select="base/lower-case(text())"/>
                                 </xsl:attribute>
+                                
                                 <xsl:attribute name="oct">
-                                    <xsl:value-of select=".//octave/[text()]"/>
-                                    <xsl:apply-templates select="octave[text()]"/>
+                                    <xsl:value-of select=".//octave"/>
+                                    <xsl:apply-templates select="/octave/tokenize(text())"/>
                                 </xsl:attribute>
+                                <!--
+                                <xsl:for-each select=".">
+                                <xsl:attribute name="syl">
+                                    
+                                    
+                                    <xsl:apply-templates select="../../../../../../../text"/>
+                                    
+                                </xsl:attribute>
+                                </xsl:for-each>
+                                -->
+                                <xsl:attribute name="stem.dir">
+                                    <xsl:choose>
+                                        
+                                    <xsl:when test=".//noteType/text()='Descending'">
+                                       
+                                        <xsl:apply-templates select="'down'"/>
+                                    </xsl:when>
+                                        <xsl:when test=".//noteType/text()='Ascending'">
+                                            
+                                            <xsl:apply-templates select="'up'"/>
+                                        </xsl:when>
+                                        
+                                    </xsl:choose>
+                                    
+                                </xsl:attribute>
+                                
                                 <!--
                                                         <xsl:attribute name="dur">
                                                             <xsl:apply-templates select="'brevis'"/>
                                                         </xsl:attribute>
-                                                        -->
-                                <xsl:element name="plica"/>                                
+                                 
+                                -->
+                                
+                                   
                             </xsl:element>
                             
-                        </neume>
-                            </syllabe>
+                            </xsl:for-each>
+                               
+                                
+                                <!--
+                                <xsl:for-each select="string-to-codepoints(base)">
+                                    <neume>
+                                        <xsl:attribute name="pname">
+                                            <xsl:value-of select="lower-case(codepoints-to-string(.))"/>
+                                        </xsl:attribute>
+                                    </neume>
+                                </xsl:for-each>
+                                -->
+                            </neume>
+                            </syllable>     
                         </xsl:for-each>
+                        
                     </layer>
                 </staff>
-               
-            </measure>
+            
+            
         </section>
+            </score> 
         </mdiv>
+        
     </xsl:template>
-
 
 
 </xsl:stylesheet>
