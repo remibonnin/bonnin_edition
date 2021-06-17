@@ -5237,9 +5237,15 @@ CC 3778 Li casteax ne doutoit assaut
                     </classSpec>
 
                     <moduleRef key="gaiji" include="g"/>
-                    <!--
-                    <moduleRef key="figures" include="formula table"/>
-                    -->
+                    
+                    <!-- Autre option d'inclusion MEI via un pointer -->
+                    <moduleRef key="figures" include="notatedMusic"/>
+                    
+                    <elementSpec ident="notatedMusic" mode="change">
+                        <content>
+                            <classRef key="model.ptrLike" minOccurs="1" maxOccurs="1"/>
+                        </content>
+                    </elementSpec>
                 </schemaSpec>
             </div>
         </body>
