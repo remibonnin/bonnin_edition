@@ -177,8 +177,9 @@
             <notatedMusic>
                <ptr target="music/mei_separee.xml"/>
             </notatedMusic>
-            <lg type="chanson">
-               <lg type="décasyllabe" rhyme="abab">
+            
+            <lg type="chanson" rhyme="abab aabb">
+               <lg type="strophe" rhyme="abab">
                   
                   <!-- Exemple d'affichage -->
                   <l n="1" met="10'" real="10">
@@ -260,9 +261,280 @@
                         <seg type="syll">mant </seg></w>
                   </l>
                </lg>
+            </lg>
+            <notatedMusic>
+               <mei:mei xmlns:mei="http://www.music-encoding.org/ns/mei">
+                  <mei:music>
+                     <mei:body>
+                        <mei:mdiv>
+                           <mei:score>
+                              <mei:scoreDef meter.count="4" meter.unit="4">
+                                 <mei:staffGrp>
 
-               <lg type="décasyllabe" rhyme="aabb">
-                  
+                                    <mei:staffDef clef.shape="C" n="1" clef.line="4" oct="4"
+                                       lines="5" notationtype="neume"/>
+                                    <mei:staffDef clef.shape="F" n="2" clef.line="4" oct="4"
+                                       lines="5" notationtype="neume"/>
+                                    <mei:staffDef clef.shape="C" n="3" clef.line="4" oct="4"
+                                       lines="5" notationtype="neume"/>
+                                    <mei:staffDef clef.shape="C" n="4" clef.line="4" oct="4"
+                                       lines="5" notationtype="neume"/>
+                                    <mei:staffDef clef.shape="C" n="5" clef.line="4" oct="4"
+                                       lines="5" notationtype="neume"/>
+                                    <mei:staffDef clef.shape="C" n="6" clef.line="4" oct="4"
+                                       lines="5" notationtype="neume"/>
+                                 </mei:staffGrp>
+                              </mei:scoreDef>
+                              <mei:section n="4">
+
+                                 <mei:staff n="1">
+                                    <mei:layer n="1">
+                                       <mei:syllable>
+                                          <mei:syl>en-</mei:syl>
+                                          <mei:neume>
+                                             <mei:nc pname="a" oct="4"/>
+                                          </mei:neume>
+                                       </mei:syllable>
+                                       <mei:syllable>
+                                          <mei:syl>cor</mei:syl>
+                                          <mei:neume>
+                                             <mei:nc pname="b" oct="4"/>
+                                          </mei:neume>
+                                       </mei:syllable>
+                                       <mei:syllable>
+                                          <mei:syl>te-</mei:syl>
+                                          <mei:neume>
+                                             <mei:nc pname="c" oct="5"/>
+                                          </mei:neume>
+                                       </mei:syllable>
+                                       <mei:syllable>
+                                          <mei:syl>nez</mei:syl>
+                                          <mei:neume>
+                                             <mei:nc pname="d" oct="5" stem.dir="down"/>
+                                          </mei:neume>
+                                       </mei:syllable>
+                                       <mei:syllable>
+                                          <mei:syl>mon</mei:syl>
+                                          <mei:neume>
+                                             <mei:nc pname="b" oct="4"/>
+                                          </mei:neume>
+                                       </mei:syllable>
+                                       <mei:syllable>
+                                          <mei:syl>cuer</mei:syl>
+                                          <mei:neume>
+                                             <mei:nc pname="a" oct="4"/>
+                                          </mei:neume>
+                                       </mei:syllable>
+                                       <mei:syllable>
+                                          <mei:syl>en</mei:syl>
+                                          <mei:neume>
+                                             <mei:nc pname="g" oct="4"/>
+                                          </mei:neume>
+                                       </mei:syllable>
+                                       <mei:syllable>
+                                          <mei:syl>tel</mei:syl>
+                                          <mei:neume>
+                                             <mei:nc pname="a" oct="4"/>
+                                          </mei:neume>
+                                       </mei:syllable>
+                                    </mei:layer>
+                                 </mei:staff>
+
+                              </mei:section>
+
+                              <mei:section n="5">
+
+                                 <mei:staff n="1">
+                                    <mei:layer n="1">
+                                       <mei:syllable>
+                                          <mei:syl/>
+                                          <mei:neume/>
+                                       </mei:syllable>
+                                       <mei:syllable>
+                                          <mei:syl>tor-</mei:syl>
+                                          <mei:neume>
+                                             <mei:nc pname="c" oct="5"/>
+                                             <mei:nc pname="b" oct="4" stem.dir="up"/>
+                                          </mei:neume>
+                                       </mei:syllable>
+                                       <mei:syllable>
+                                          <mei:syl>mant·</mei:syl>
+                                          <mei:neume>
+                                             <mei:nc pname="b" oct="4"/>
+                                             <mei:nc pname="a" oct="4"/>
+                                          </mei:neume>
+                                       </mei:syllable>
+                                       <mei:syllable>
+                                          <mei:syl/>
+                                          <mei:neume/>
+                                       </mei:syllable>
+                                       <mei:syllable>
+                                          <mei:syl>dont</mei:syl>
+                                          <mei:neume>
+                                             <mei:nc pname="c" oct="5" stem.dir="up"/>
+                                          </mei:neume>
+                                       </mei:syllable>
+                                       <mei:syllable>
+                                          <mei:syl>ia</mei:syl>
+                                          <mei:neume>
+                                             <mei:nc pname="c" oct="5" stem.dir="down"/>
+                                          </mei:neume>
+                                       </mei:syllable>
+                                       <mei:syllable>
+                                          <mei:syl>nis-</mei:syl>
+                                          <mei:neume>
+                                             <mei:nc pname="a" oct="4"/>
+                                          </mei:neume>
+                                       </mei:syllable>
+                                       <mei:syllable>
+                                          <mei:syl>trai</mei:syl>
+                                          <mei:neume>
+                                             <mei:nc pname="b" oct="4" stem.dir="down"/>
+                                          </mei:neume>
+                                       </mei:syllable>
+                                       <mei:syllable>
+                                          <mei:syl>nul</mei:syl>
+                                          <mei:neume>
+                                             <mei:nc pname="g" oct="4"/>
+                                             <mei:nc pname="f" oct="4"/>
+                                          </mei:neume>
+                                       </mei:syllable>
+                                       <mei:syllable>
+                                          <mei:syl>ior</mei:syl>
+                                          <mei:neume>
+                                             <mei:nc pname="e" oct="4"/>
+                                          </mei:neume>
+                                       </mei:syllable>
+                                       <mei:syllable>
+                                          <mei:syl>de</mei:syl>
+                                          <mei:neume>
+                                             <mei:nc pname="g" oct="4"/>
+                                          </mei:neume>
+                                       </mei:syllable>
+                                       <mei:syllable>
+                                          <mei:syl>mon</mei:syl>
+                                          <mei:neume>
+                                             <mei:nc pname="a" oct="4"/>
+                                          </mei:neume>
+                                       </mei:syllable>
+                                       <mei:syllable>
+                                          <mei:syl>vi-</mei:syl>
+                                          <mei:neume>
+                                             <mei:nc pname="b" oct="4" stem.dir="up"/>
+                                          </mei:neume>
+                                       </mei:syllable>
+                                    </mei:layer>
+                                 </mei:staff>
+
+                              </mei:section>
+
+                              <mei:section n="6">
+
+                                 <mei:staff n="1">
+                                    <mei:layer n="1">
+                                       <mei:syllable>
+                                          <mei:syl/>
+                                          <mei:neume/>
+                                       </mei:syllable>
+                                       <mei:syllable>
+                                          <mei:syl>uant·</mei:syl>
+                                          <mei:neume>
+                                             <mei:nc pname="b" oct="4"/>
+                                             <mei:nc pname="a" oct="4"/>
+                                          </mei:neume>
+                                       </mei:syllable>
+                                       <mei:syllable>
+                                          <mei:syl/>
+                                          <mei:neume/>
+                                       </mei:syllable>
+                                       <mei:syllable>
+                                          <mei:syl>se</mei:syl>
+                                          <mei:neume>
+                                             <mei:nc pname="b" oct="4" stem.dir="up"/>
+                                          </mei:neume>
+                                       </mei:syllable>
+                                       <mei:syllable>
+                                          <mei:syl>par</mei:syl>
+                                          <mei:neume>
+                                             <mei:nc pname="b" oct="4"/>
+                                          </mei:neume>
+                                       </mei:syllable>
+                                       <mei:syllable>
+                                          <mei:syl>vos</mei:syl>
+                                          <mei:neume>
+                                             <mei:nc pname="a" oct="4"/>
+                                          </mei:neume>
+                                       </mei:syllable>
+                                       <mei:syllable>
+                                          <mei:syl>non</mei:syl>
+                                          <mei:neume>
+                                             <mei:nc pname="b" oct="4" stem.dir="down"/>
+                                             <mei:nc pname="b" oct="4" stem.dir="down"/>
+                                          </mei:neume>
+                                       </mei:syllable>
+                                       <mei:syllable>
+                                          <mei:syl>dou-</mei:syl>
+                                          <mei:neume>
+                                             <mei:nc pname="g" oct="4"/>
+                                             <mei:nc pname="f" oct="4"/>
+                                          </mei:neume>
+                                       </mei:syllable>
+                                       <mei:syllable>
+                                          <mei:syl>ce</mei:syl>
+                                          <mei:neume>
+                                             <mei:nc pname="e" oct="4"/>
+                                          </mei:neume>
+                                       </mei:syllable>
+                                       <mei:syllable>
+                                          <mei:syl>dame</mei:syl>
+                                          <mei:neume>
+                                             <mei:nc pname="g" oct="4"/>
+                                          </mei:neume>
+                                       </mei:syllable>
+                                       <mei:syllable>
+                                          <mei:syl>ho-</mei:syl>
+                                          <mei:neume>
+                                             <mei:nc pname="a" oct="4"/>
+                                          </mei:neume>
+                                       </mei:syllable>
+                                       <mei:syllable>
+                                          <mei:syl>no-</mei:syl>
+                                          <mei:neume>
+                                             <mei:nc pname="b" oct="4"/>
+                                             <mei:nc pname="c" oct="5"/>
+                                             <mei:nc pname="d" oct="5"/>
+                                          </mei:neume>
+                                       </mei:syllable>
+                                       <mei:syllable>
+                                          <mei:syl>re-</mei:syl>
+                                          <mei:neume>
+                                             <mei:nc pname="c" oct="5" stem.dir="down"/>
+                                             <mei:nc pname="c" oct="5" stem.dir="down"/>
+                                          </mei:neume>
+                                       </mei:syllable>
+                                       <mei:syllable>
+                                          <mei:syl>e</mei:syl>
+                                          <mei:neume>
+                                             <mei:nc pname="b" oct="4"/>
+                                             <mei:nc pname="a" oct="4"/>
+                                          </mei:neume>
+                                       </mei:syllable>
+                                    </mei:layer>
+                                 </mei:staff>
+
+                              </mei:section>
+                           </mei:score>
+                        </mei:mdiv>
+                     </mei:body>
+                  </mei:music>
+               </mei:mei>
+
+            </notatedMusic>
+
+            <lg type="chanson" rhyme="abab aabb">
+               
+               <lg type="strophe" rhyme="aabb">
+
                   <l n="5" met="10'" real="10">
                      <w lemma="encore" pos="ADVgen">
                         <seg type="syll">en- </seg>
