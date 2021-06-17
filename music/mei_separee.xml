@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://music-encoding.org/schema/4.0.0/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://music-encoding.org/schema/4.0.0/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<!-- + notre schéma -->
+<mei:mei xmlns:mei="http://www.music-encoding.org/ns/mei">
+    <mei:meiHead>
+        <mei:fileDesc>
+            <mei:titleStmt>
+                <mei:title></mei:title>
+            </mei:titleStmt>
+            <mei:pubStmt></mei:pubStmt>
+        </mei:fileDesc>
+    </mei:meiHead>
+    <mei:music>
+        <mei:body>
+            <mei:mdiv xml:id="">
+                <mei:score xml:id="">
+                    <mei:scoreDef xml:id="" meter.count="4" meter.unit="4">
+                        <mei:staffGrp xml:id="">
+                            <mei:staffDef xml:id="clef_1" clef.shape="G" n="1"
+                                clef.line="2" lines="5" notationtype="cmn"/>
+                        </mei:staffGrp>
+                    </mei:scoreDef>
+                    <mei:section xml:id="" n="4">
+                        
+                        <mei:staff xml:id="" n="1">
+                            <mei:layer xml:id="" n="1">
+                                <mei:note xml:id="note_62" pname="a" oct="4" dur="4"
+                                    stem.dir="" stem.len="0" accid.ges="n">
+                                    <mei:verse xml:id="" n="1">
+                                        <mei:syl xml:id="" con="" wordpos="">en-</mei:syl>
+                                    </mei:verse>
+                                </mei:note>
+                                <mei:note xml:id="note_63" pname="b" oct="4" dur="4"
+                                    stem.dir="" stem.len="0" accid.ges="n">
+                                    <mei:verse xml:id="" n="1">
+                                        <mei:syl xml:id="" con="" wordpos="">cor</mei:syl>
+                                    </mei:verse>
+                                </mei:note>
+                                <mei:note xml:id="note_64" pname="c" oct="5" dur="4"
+                                    stem.dir="" stem.len="0" accid.ges="n">
+                                    <mei:verse xml:id="" n="1">
+                                        <mei:syl xml:id="" con="" wordpos="">te-</mei:syl>
+                                    </mei:verse>
+                                </mei:note>
+                                <mei:note xml:id="note_65" pname="d" oct="5" dur="4"
+                                    stem.dir="down" stem.len="0" accid.ges="n">
+                                    <mei:verse xml:id="" n="1">
+                                        <mei:syl xml:id="" con="" wordpos="">nez</mei:syl>
+                                    </mei:verse>
+                                </mei:note>
+                                <mei:note xml:id="note_66" pname="b" oct="4" dur="4"
+                                    stem.dir="" stem.len="0" accid.ges="n">
+                                    <mei:verse xml:id="" n="1">
+                                        <mei:syl xml:id="" con="" wordpos="">mon</mei:syl>
+                                    </mei:verse>
+                                </mei:note>
+                                <mei:note xml:id="note_67" pname="a" oct="4" dur="4"
+                                    stem.dir="" stem.len="0" accid.ges="n">
+                                    <mei:verse xml:id="" n="1">
+                                        <mei:syl xml:id="" con="" wordpos="">cuer</mei:syl>
+                                    </mei:verse>
+                                </mei:note>
+                                <mei:note xml:id="note_68" pname="g" oct="4" dur="4"
+                                    stem.dir="" stem.len="0" accid.ges="n">
+                                    <mei:verse xml:id="" n="1">
+                                        <mei:syl xml:id="" con="" wordpos="">en</mei:syl>
+                                    </mei:verse>
+                                </mei:note>
+                                <mei:note xml:id="note_69" pname="a" oct="4" dur="4"
+                                    stem.dir="" stem.len="0" accid.ges="n">
+                                    <mei:verse xml:id="" n="1">
+                                        <mei:syl xml:id="" con="" wordpos="">tel</mei:syl>
+                                    </mei:verse>
+                                </mei:note>
+                            </mei:layer>
+                        </mei:staff>
+                        <mei:measure>
+                            <mei:slur xml:id="slur_14" staff="1" startid="note_60"
+                                endid="note_61"/>
+                        </mei:measure>
+                    </mei:section>
+                    
+                    <mei:section xml:id="" n="5">
+                        
+                        <mei:staff xml:id="" n="1">
+                            <mei:layer xml:id="" n="1">
+                                <mei:note xml:id="note_70" pname="c" oct="5" dur="4"
+                                    stem.dir="" stem.len="0" accid.ges="n">
+                                    <mei:verse xml:id="" n="1">
+                                        <mei:syl xml:id="" con="" wordpos="">tor-</mei:syl>
+                                    </mei:verse>
+                                </mei:note>
+                                <mei:note xml:id="note_71" pname="b" oct="4" dur="4"
+                                    stem.dir="up" stem.len="0" accid.ges="n"> </mei:note>
+                                <mei:note xml:id="note_72" pname="b" oct="4" dur="4"
+                                    stem.dir="" stem.len="0" accid.ges="n">
+                                    <mei:verse xml:id="" n="1">
+                                        <mei:syl xml:id="" con="" wordpos="">mant·</mei:syl>
+                                    </mei:verse>
+                                </mei:note>
+                                <mei:note xml:id="note_73" pname="a" oct="4" dur="4"
+                                    stem.dir="" stem.len="0" accid.ges="n"> </mei:note>
+                                <mei:note xml:id="note_74" pname="c" oct="5" dur="4"
+                                    stem.dir="up" stem.len="0" accid.ges="n">
+                                    <mei:verse xml:id="" n="1">
+                                        <mei:syl xml:id="" con="" wordpos="">dont</mei:syl>
+                                    </mei:verse>
+                                </mei:note>
+                                <mei:note xml:id="note_75" pname="c" oct="5" dur="4"
+                                    stem.dir="down" stem.len="0" accid.ges="n">
+                                    <mei:verse xml:id="" n="1">
+                                        <mei:syl xml:id="" con="" wordpos="">ia</mei:syl>
+                                    </mei:verse>
+                                </mei:note>
+                                <mei:note xml:id="note_76" pname="a" oct="4" dur="4"
+                                    stem.dir="" stem.len="0" accid.ges="n">
+                                    <mei:verse xml:id="" n="1">
+                                        <mei:syl xml:id="" con="" wordpos="">nis-</mei:syl>
+                                    </mei:verse>
+                                </mei:note>
+                                <mei:note xml:id="note_77" pname="b" oct="4" dur="4"
+                                    stem.dir="down" stem.len="0" accid.ges="n">
+                                    <mei:verse xml:id="" n="1">
+                                        <mei:syl xml:id="" con="" wordpos="">trai</mei:syl>
+                                    </mei:verse>
+                                </mei:note>
+                                <mei:note xml:id="note_78" pname="g" oct="4" dur="4"
+                                    stem.dir="" stem.len="0" accid.ges="n">
+                                    <mei:verse xml:id="" n="1">
+                                        <mei:syl xml:id="" con="" wordpos="">nul</mei:syl>
+                                    </mei:verse>
+                                </mei:note>
+                                <mei:note xml:id="note_79" pname="f" oct="4" dur="4"
+                                    stem.dir="" stem.len="0" accid.ges="n"> </mei:note>
+                                <mei:note xml:id="note_80" pname="e" oct="4" dur="4"
+                                    stem.dir="" stem.len="0" accid.ges="n">
+                                    <mei:verse xml:id="" n="1">
+                                        <mei:syl xml:id="" con="" wordpos="">ior</mei:syl>
+                                    </mei:verse>
+                                </mei:note>
+                                <mei:note xml:id="note_81" pname="g" oct="4" dur="4"
+                                    stem.dir="" stem.len="0" accid.ges="n">
+                                    <mei:verse xml:id="" n="1">
+                                        <mei:syl xml:id="" con="" wordpos="">de</mei:syl>
+                                    </mei:verse>
+                                </mei:note>
+                                <mei:note xml:id="note_82" pname="a" oct="4" dur="4"
+                                    stem.dir="" stem.len="0" accid.ges="n">
+                                    <mei:verse xml:id="" n="1">
+                                        <mei:syl xml:id="" con="" wordpos="">mon</mei:syl>
+                                    </mei:verse>
+                                </mei:note>
+                                <mei:note xml:id="note_83" pname="b" oct="4" dur="4"
+                                    stem.dir="up" stem.len="0" accid.ges="n">
+                                    <mei:verse xml:id="" n="1">
+                                        <mei:syl xml:id="" con="" wordpos="">vi-</mei:syl>
+                                    </mei:verse>
+                                </mei:note>
+                            </mei:layer>
+                        </mei:staff>
+                        <mei:measure>
+                            <mei:slur xml:id="slur_15" staff="1" startid="note_70"
+                                endid="note_71"/>
+                            <mei:slur xml:id="slur_16" staff="1" startid="note_72"
+                                endid="note_73"/>
+                            <mei:slur xml:id="slur_17" staff="1" startid="note_78"
+                                endid="note_79"/>
+                        </mei:measure>
+                    </mei:section>
+                    
+                    <mei:section xml:id="" n="6">
+                        
+                        <mei:staff xml:id="" n="1">
+                            <mei:layer xml:id="" n="1">
+                                <mei:note xml:id="note_84" pname="b" oct="4" dur="4"
+                                    stem.dir="" stem.len="0" accid.ges="n">
+                                    <mei:verse xml:id="" n="1">
+                                        <mei:syl xml:id="" con="" wordpos="">uant·</mei:syl>
+                                    </mei:verse>
+                                </mei:note>
+                                <mei:note xml:id="note_85" pname="a" oct="4" dur="4"
+                                    stem.dir="" stem.len="0" accid.ges="n"> </mei:note>
+                                <mei:note xml:id="note_86" pname="b" oct="4" dur="4"
+                                    stem.dir="up" stem.len="0" accid.ges="n">
+                                    <mei:verse xml:id="" n="1">
+                                        <mei:syl xml:id="" con="" wordpos="">se</mei:syl>
+                                    </mei:verse>
+                                </mei:note>
+                                <mei:note xml:id="note_87" pname="b" oct="4" dur="4"
+                                    stem.dir="" stem.len="0" accid.ges="n">
+                                    <mei:verse xml:id="" n="1">
+                                        <mei:syl xml:id="" con="" wordpos="">par</mei:syl>
+                                    </mei:verse>
+                                </mei:note>
+                                <mei:note xml:id="note_88" pname="a" oct="4" dur="4"
+                                    stem.dir="" stem.len="0" accid.ges="n">
+                                    <mei:verse xml:id="" n="1">
+                                        <mei:syl xml:id="" con="" wordpos="">vos</mei:syl>
+                                    </mei:verse>
+                                </mei:note>
+                                <mei:note xml:id="note_89" pname="b" oct="4" dur="4"
+                                    stem.dir="down" stem.len="0" accid.ges="n">
+                                    <mei:verse xml:id="" n="1">
+                                        <mei:syl xml:id="" con="" wordpos="">non</mei:syl>
+                                    </mei:verse>
+                                </mei:note>
+                                <mei:note xml:id="note_90" pname="b" oct="4" dur="4"
+                                    stem.dir="down" stem.len="0" accid.ges="n"> </mei:note>
+                                <mei:note xml:id="note_91" pname="g" oct="4" dur="4"
+                                    stem.dir="" stem.len="0" accid.ges="n">
+                                    <mei:verse xml:id="" n="1">
+                                        <mei:syl xml:id="" con="" wordpos="">dou-</mei:syl>
+                                    </mei:verse>
+                                </mei:note>
+                                <mei:note xml:id="note_92" pname="f" oct="4" dur="4"
+                                    stem.dir="" stem.len="0" accid.ges="n"> </mei:note>
+                                <mei:note xml:id="note_93" pname="e" oct="4" dur="4"
+                                    stem.dir="" stem.len="0" accid.ges="n">
+                                    <mei:verse xml:id="" n="1">
+                                        <mei:syl xml:id="" con="" wordpos="">ce</mei:syl>
+                                    </mei:verse>
+                                </mei:note>
+                                <mei:note xml:id="note_94" pname="g" oct="4" dur="4"
+                                    stem.dir="" stem.len="0" accid.ges="n">
+                                    <mei:verse xml:id="" n="1">
+                                        <mei:syl xml:id="" con="" wordpos="">dame</mei:syl>
+                                    </mei:verse>
+                                </mei:note>
+                                <mei:note xml:id="note_95" pname="a" oct="4" dur="4"
+                                    stem.dir="" stem.len="0" accid.ges="n">
+                                    <mei:verse xml:id="" n="1">
+                                        <mei:syl xml:id="" con="" wordpos="">ho-</mei:syl>
+                                    </mei:verse>
+                                </mei:note>
+                                <mei:note xml:id="note_96" pname="b" oct="4" dur="4"
+                                    stem.dir="" stem.len="0" accid.ges="n">
+                                    <mei:verse xml:id="" n="1">
+                                        <mei:syl xml:id="" con="" wordpos="">no-</mei:syl>
+                                    </mei:verse>
+                                </mei:note>
+                                <mei:note xml:id="note_97" pname="c" oct="5" dur="4"
+                                    stem.dir="" stem.len="0" accid.ges="n"> </mei:note>
+                                <mei:note xml:id="note_98" pname="d" oct="5" dur="4"
+                                    stem.dir="" stem.len="0" accid.ges="n"> </mei:note>
+                                <mei:note xml:id="note_99" pname="c" oct="5" dur="4"
+                                    stem.dir="down" stem.len="0" accid.ges="n">
+                                    <mei:verse xml:id="" n="1">
+                                        <mei:syl xml:id="" con="" wordpos="">re-</mei:syl>
+                                    </mei:verse>
+                                </mei:note>
+                                <mei:note xml:id="note_100" pname="c" oct="5" dur="4"
+                                    stem.dir="down" stem.len="0" accid.ges="n"> </mei:note>
+                                <mei:note xml:id="note_101" pname="b" oct="4" dur="4"
+                                    stem.dir="" stem.len="0" accid.ges="n">
+                                    <mei:verse xml:id="" n="1">
+                                        <mei:syl xml:id="" con="" wordpos="">e</mei:syl>
+                                    </mei:verse>
+                                </mei:note>
+                                <mei:note xml:id="note_102" pname="a" oct="4" dur="4"
+                                    stem.dir="" stem.len="0" accid.ges="n"> </mei:note>
+                            </mei:layer>
+                        </mei:staff>
+                        <mei:measure>
+                            <mei:slur xml:id="slur_18" staff="1" startid="note_84"
+                                endid="note_85"/>
+                            <mei:slur xml:id="slur_19" staff="1" startid="note_89"
+                                endid="note_90"/>
+                            <mei:slur xml:id="slur_20" staff="1" startid="note_91"
+                                endid="note_92"/>
+                            <mei:slur xml:id="slur_21" staff="1" startid="note_96"
+                                endid="note_98"/>
+                            <mei:slur xml:id="slur_22" staff="1" startid="note_99"
+                                endid="note_100"/>
+                            <mei:slur xml:id="slur_23" staff="1" startid="note_101"
+                                endid="note_102"/>
+                        </mei:measure>
+                    </mei:section>
+                </mei:score>
+            </mei:mdiv>
+        </mei:body>
+    </mei:music>
+</mei:mei>
+
