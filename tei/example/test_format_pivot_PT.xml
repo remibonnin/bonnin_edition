@@ -92,7 +92,9 @@
                         <foliation></foliation>
                         <collation></collation>
                      </supportDesc>
-                     <layoutDesc><layout></layout></layoutDesc>
+                     <layoutDesc>
+                        <layout></layout>
+                     </layoutDesc>
                   </objectDesc>
                   <handDesc>                   
                      <handNote>
@@ -101,7 +103,8 @@
                      </handNote>
                   </handDesc>
                   <scriptDesc>
-                     <summary></summary>
+                     <summary/>                        
+                     <scriptNote/>                   
                   </scriptDesc>
                   <decoDesc>
                      <decoNote>
@@ -112,7 +115,8 @@
                      </decoNote>
                   </decoDesc>
                  <bindingDesc>
-                    <binding>
+                    <binding contemporary="true">
+                       <decoNote></decoNote>
                        <condition/>
                     </binding>
                  </bindingDesc>
@@ -123,6 +127,8 @@
                      <origDate notBefore="1250" notAfter="1350" resp="FS">Composé entre la seconde moitié du
                         XIIIe siècle et la première moitié du XIVe siècle.</origDate>
                      <origPlace cert="medium" resp="FS">Italie</origPlace>
+                     <origDate notBefore="1250" notAfter="1350" resp="FS">Composé entre la seconde moitié du
+                        XIIIe siècle et la première moitié du XIVe siècle.</origDate>
                      <origPlace cert="unknown" resp="FS">Outremer</origPlace>
                      <!-- appel du # pour le nom ? -->
                      <origDate notBefore="1250" notAfter="1350" resp="FS">Composé entre la seconde moitié du
@@ -157,7 +163,7 @@
 
       </fileDesc>
       <profileDesc>
-         <creation></creation>
+         <creation>Chansons de geste</creation>
          <langUsage>
             <language ident="af">Ancien Français</language>
          </langUsage>
