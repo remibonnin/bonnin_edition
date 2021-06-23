@@ -1542,7 +1542,7 @@
                         docLang="fr" xml:lang="fr">
                         <!-- SS header -->
                         <moduleRef key="header"
-                            include="citeStructure creation cRefPattern change edition editionStmt encodingDesc fileDesc handNote idno language langUsage profileDesc projectDesc publicationStmt revisionDesc sourceDesc teiHeader titleStmt"/>
+                            include="citeStructure creation cRefPattern change edition editionStmt encodingDesc fileDesc handNote idno language langUsage profileDesc projectDesc publicationStmt revisionDesc scriptNote sourceDesc teiHeader titleStmt"/>
                         
                         <elementSpec ident="citeStructure" mode="change">
                             <content>
@@ -1702,6 +1702,11 @@
                                     <elementRef key="change" minOccurs="1"
                                         maxOccurs="unbounded"/>
                                 </alternate>
+                            </content>
+                        </elementSpec>
+                        <elementSpec ident="scriptNote" mode="change">
+                            <content> 
+                                <macroRef key="macro.specialPara "/> 
                             </content>
                         </elementSpec>
                         <elementSpec ident="sourceDesc" mode="change">
@@ -3274,7 +3279,7 @@ hi imprint item l lb lg list listBibl measure mentioned monogr name note num ori
                         <!-- retirés: notamment msItem (d'autres également: informations biblioth.)-->
                         
                         <moduleRef key="msdescription"
-                            include=" accMat acquisition additional additions adminInfo altIdentifier binding bindingDesc catchwords collation collection colophon condition decoDesc decoNote depth dim dimensions explicit filiation finalRubric foliation handDesc height heraldry history incipit institution layout layoutDesc locus locusGrp material msContents msDesc msFrag msIdentifier msItem msName musicNotation objectDesc objectType origDate origPlace origin physDesc provenance recordHist repository rubric scriptDesc scriptNote seal sealDesc secFol signatures source stamp summary support supportDesc surrogates watermark width"/>
+                            include=" accMat acquisition additional additions adminInfo altIdentifier binding bindingDesc catchwords collation collection colophon condition decoDesc decoNote depth dim dimensions explicit filiation finalRubric foliation handDesc height heraldry history incipit institution layout layoutDesc locus locusGrp material msContents msDesc msFrag msIdentifier msItem msName musicNotation objectDesc objectType origDate origPlace origin physDesc provenance recordHist repository rubric scriptDesc seal sealDesc secFol signatures source stamp summary support supportDesc surrogates watermark width"/>
                         <!-- À voir ce qu'on fait de celui-là -->
                         <elementSpec ident="accMat" mode="change">
                             <content>
@@ -3394,7 +3399,7 @@ hi imprint item l lb lg list listBibl measure mentioned monogr name note num ori
                                     </sequence>
                                 </alternate>
                             </content>
-                        </elementSpec>
+                        </elementSpec>                        
                         <elementSpec ident="incipit" mode="change">
                             <content>
                                 <macroRef key="macro.phraseSeq"/>
@@ -3649,10 +3654,13 @@ hi imprint item l lb lg list listBibl measure mentioned monogr name note num ori
                             </content>
                         </elementSpec>
                         <elementSpec ident="origPlace" mode="change">
+                            <content>
+                                <macroRef key="macro.phraseSeq"/>
+                            </content>
                             <attList>
                                 <attDef ident="cert" mode="change" usage="rec"/>
                                 <attDef ident="resp" mode="change" usage="rec"/>
-                                <attDef ident="type" mode="change">
+                                <attDef ident="type" mode="change" usage="rec">
                                     <valList mode="add" type="semi">
                                         <valItem ident="lieuManuscrit">
                                             <desc>lieu d'origine du témoin</desc>
@@ -3665,6 +3673,15 @@ hi imprint item l lb lg list listBibl measure mentioned monogr name note num ori
                             </attList>
                         </elementSpec>
                         <elementSpec ident="origDate" mode="change">
+                            <content>
+                                <alternate minOccurs="0"
+                                    maxOccurs="unbounded">
+                                    <textNode/>
+                                    <classRef key="model.gLike"/>
+                                    <classRef key="model.phrase"/>
+                                    <classRef key="model.global"/>
+                                </alternate>
+                            </content>
                             <constraintSpec scheme="schematron"
                                 ident="origDate-when-or-from-to-or-notBefore-notAfteer">
                                 <constraint>
