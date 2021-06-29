@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="Modele.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="Modele.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../odd/Modele.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../odd/Modele.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-stylesheet type="text/css" href="../css/tei_imitatif.css" title="imitative" alternate="yes"?>
 <?xml-stylesheet type="text/css" href="../css/tei_diplomatique.css" title="diplomatique" alternate="yes"?>
 <?xml-stylesheet type="text/css" href="../css/tei_edition.css" title="edition" alternate="yes"?>
-<!DOCTYPE TEI SYSTEM "./dtd/abreviations.dtd" [
-
+<!DOCTYPE TEI SYSTEM "../dtd/abreviations.dtd" [
+<!--VM ajouter ici les entités-->
 ]>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
@@ -130,9 +130,7 @@
                 <w>talent</w>
                 <w>·</w>
                <w rend="elision">d</w><w>amer</w>
-                <w>fausse¬</w><!-- VM rend="tiret" -->
-                <lb facs="#facs_31_r1l27" n="N010"/>
-                  <w>ment</w>
+                <w>fausse<lb facs="#facs_31_r1l27" n="N010" rend="tiret"/>ment</w>
                 <w>·</w>
                 <w>amender</w>
                 <w>·</w>
@@ -238,7 +236,7 @@
                 <w>ṭọụẓ</w>
                 <w>ḍịṣ</w>
                 <w></w>
-                <w>dauancier</w>
+                <w rend="elision">d</w><w>uancier</w>
                 <w>·</w>
                 <w>amors</w>
                 <w>·</w>
@@ -299,7 +297,7 @@
                 <w>que</w>
                 <w>ne</w>
                 <w>puis</w>
-                <w>eslong̃</w><!--VM tilde vertical -->
+                <w>eslong&tilde2-er-pour-ier;</w>
                 <w>·</w>
                 <lb facs="#facs_31_r2l11" n="N011"/>
                 <w>>de</w>
@@ -668,9 +666,7 @@
                 <w rend="elision">n</w><w>autres</w>
                 <w>cent</w>
                 <w></w>
-              <w>les</w><!-- VM aggl -->
-                <lb facs="#facs_33_r2l5" n="N005"/>
-                <w>queus</w>
+              <w>les<lb facs="#facs_33_r2l5" n="N005"/>queus</w>
                 <w>ie</w>
                 <w>sai</w>
                 <w>que</w>
@@ -1181,8 +1177,7 @@
                 <w>·</w>
                 <w>en</w>
                 <w>terre</w>
-               <!-- VM aggl <w>mal</w>
-                <w>euree</w>-->
+               <w>mal<space/>euree</w>
                 <w>·</w>
                 <w>pour</w>
                 <w>ce</w>
@@ -1256,9 +1251,7 @@
                 <w>eure</w>
                 <w>dame</w>
                 <w>que</w>
-                <w>uo</w><!-- VM aggl -->
-                <lb facs="#facs_145_r2l8" n="N005"/>
-                <w>stre</w>
+                <w>uo<lb facs="#facs_145_r2l8" n="N005"/>stre</w>
                 <w>fui</w>
                 <w>·</w>
                 <w>que</w>
@@ -1280,7 +1273,7 @@
                 <w>que</w>
                 <lb facs="#facs_145_line_1607001976770_2204" n="N007"/>
                 <w>ie</w>
-                <w>lencrui</w><!-- VM aggl + elision -->
+                <w rend="elision"> l</w><w rend="aggl">en</w><w>crui</w><!-- VM rend="aggl" : <w>lencrui</w>-->
                 <w>·</w>
                 <w><comment>S</comment>i</w>
                 <w>sui</w>
@@ -1388,9 +1381,7 @@
                 <w>matinee</w>
                 <w>ne</w>
                 <w>por</w>
-                <w>nu</w>
-                <lb facs="#facs_145_r2l46" n="N020"/><!-- VM aggl -->
-                <w>le</w>
+                <w>nu<lb facs="#facs_145_r2l46" n="N020"/>le</w>
                 <w>autre</w>
                 <w>riens</w>
                 <w>nee</w>
@@ -1429,9 +1420,7 @@
                 <w>dex</w>
                 <w>car</w>
                 <w>me</w>
-                <w>fu</w>
-                <lb facs="#facs_145_r2l55" n="N025"/><!-- VM aggl -->
-                <w>st</w>
+                <w>fu<lb facs="#facs_145_r2l55" n="N025"/>st</w>
                 <w>dounee</w>
                 <w rend="elision">l</w><w>amors</w>
                 <w>que</w>
@@ -1448,9 +1437,7 @@
                 <w rend="elision">i</w><w>en</w>
                 <w>morra</w>
                 <w>·</w>
-                <w>va¬</w>
-                <lb facs="#facs_145_r2l57" n="N027"/><!-- VM aggl -->
-                <w>lara</w>
+                <w>va<lb facs="#facs_145_r2l57" n="N027" rend="tiret"/>lara</w>
                 <w>·</w>
                 <w><comment>D</comment>ame</w>
                 <w>en</w>
@@ -1526,9 +1513,7 @@
                 <w>ne</w>
                 <w>me</w>
                 <w>soi</w>
-                <w>plain</w>
-                <lb facs="#facs_145_r3l2" n="N002"/>
-                <w>dre</w><!-- VM aggl -->
+                <w>plain<lb facs="#facs_145_r3l2" n="N002"/>dre</w>
                 <w>tant</w>
                 <w>seroit</w>
                 <w>ma</w>
@@ -1547,9 +1532,7 @@
                 <w>sa</w>
                 <w>mai&tilde1-nasale-n;</w>
                 <w>·</w>
-                <w>va</w><!-- VM aggl -->
-                <lb facs="#facs_145_r3l4" n="N004"/>
-                <w>lara</w>
+                <w>va<lb facs="#facs_145_r3l4" n="N004"/>lara</w>
                 <w>·</w>
                 <w><comment>T</comment>rop</w>
                 <w>seroit</w>
@@ -1638,9 +1621,7 @@
                 <w>amors</w>
                 <w>ne</w>
                 <w>porroie</w>
-                <w>du</w><!-- VM aggl -->
-                <lb facs="#facs_145_r3l33" n="N015"/>
-                <w>rer</w>
+                <w>du<lb facs="#facs_145_r3l33" n="N015"/>rer</w>
                 <w>tant</w>
                 <w>par</w>
                 <w rend="aggl">i</w><w>truis</w>
@@ -1683,9 +1664,7 @@
                 <w>uoi</w>
                 <w>&com-9-tironien;ment</w>
                 <w>puisse</w>
-                <w>du¬</w><!-- VM aggl -->
-                <lb facs="#facs_145_r3l38" n="N020"/>
-                <w>rer</w>
+                <w>du<lb facs="#facs_145_r3l38" n="N020" rend="tiret"/>rer</w>
                 <w>de</w>
                 <w>ioie</w>
                 <w>auoir</w>
@@ -1753,9 +1732,7 @@
                 <w>serai</w>
                 <w>repentiz</w>
                 <w>q&a-suscrit-ua;nt</w>
-                <w>ion</w><!-- VM aggl -->
-                <lb facs="#facs_145_r3l47" n="N027"/>
-                <w>ques</w> 
+                <w>ion<lb facs="#facs_145_r3l47" n="N027"/>ques</w>
                 <w>uols</w>
                 <w>aler</w>
                 <w>en</w>
@@ -1906,9 +1883,7 @@
                 <w>rubinz</w>
                 <w rend="elision">l</w><w>esmeraude</w>
                 <w>la</w>
-                <w>da</w><!-- VM aggl -->
-                <lb facs="#facs_146_r2l15" n="N015"/>
-                <w>me</w>
+                <w>da<lb facs="#facs_146_r2l15" n="N015"/>me</w>
                 <w>qui</w>
                 <w>tost</w>
                 <w>garist</w>
@@ -1932,9 +1907,7 @@
                 <w>secoranz</w>
                 <w>de</w>
                 <w>uos</w>
-                <w>a¬</w><!-- VM aggl -->
-                <lb facs="#facs_146_r2l18" n="N018"/>
-                <w>mer</w>
+                <w>a<lb facs="#facs_146_r2l18" n="N018" rend="tiret"/>mer</w>
                 <w>puisse</w>
                 <w>auoir</w>
                 <w>droite</w>
@@ -1981,9 +1954,7 @@
                 <w>parler</w>
                 <w>de</w>
                 <w>ma</w>
-                <w>chan</w><!-- VM aggl -->
-               <lb facs="#facs_146_r2l33" n="N024"/>
-                <w>con</w>
+                <w>chan<lb facs="#facs_146_r2l33" n="N024"/>con</w>
                 <w>faz</w>
                 <w>message</w>
                 <w>que</w>
@@ -2007,9 +1978,7 @@
                 <w>·</w>
                 <w>er</w>
                 <w>sa</w>
-                <w>biau</w><!-- VM aggl -->
-               <lb facs="#facs_146_r2l38" n="N028"/>
-                <w>te</w>
+                <w>biau<lb facs="#facs_146_r2l38" n="N028"/>te</w>
                 <w>&et-tironien;</w>
                 <w>ses</w>
                 <w>bons</w>
@@ -2045,10 +2014,7 @@
                 <w>mes</w>
                 <w>moi</w>
                 <w>couient</w>
-                <w>en¬</w><!-- VM aggl  -->
-            <ab facs="#facs_146_r4" type="" n="17"/>
-                <lb facs="#facs_146_r4l2" n="N001"/>
-                <w>durer</w>
+                <w>en<ab facs="#facs_146_r4" type="" n="17"/><lb facs="#facs_146_r4l2" n="N001" rend="tiret"/>durer</w>
                 <w><comment>C</comment>hascuns</w>
                 <w>dit</w>
                 <w>qui</w>
@@ -2063,9 +2029,7 @@
                 <w>morir</w>
                 <w>mielz</w>
                 <w>aim</w>
-                <w>sos¬</w><!-- VM aggl -->
-                <lb facs="#facs_146_r4l4" n="N003"/>
-                <w>frir</w>
+                <w>sos<lb facs="#facs_146_r4l4" n="N003" rend="tiret"/>frir</w>
                 <w>ma</w>
                 <w>dolor</w>
                 <w>uuire</w>
@@ -2194,9 +2158,7 @@
                 <w>tot</w>
                 <w>mon</w>
                 <w>pooir</w>
-                <w>mo¬</w><!-- VM aggl -->
-                <lb facs="#facs_146_r4l35" n="N017"/>
-                <w>tro</w>
+                <w>mo<lb facs="#facs_146_r4l35" n="N017" rend="tiret"/>tro</w><!-- VM revoir ms -->
                 <w>auos</w>
                 <w>sanz</w>
                 <w>&con-9-tironien;tendre</w>
@@ -2231,9 +2193,7 @@
                 <w>mon</w>
                 <w>cuer</w>
                 <w>espanre</w>
-                <w rend="aggl">de</w><w>cha&tilde1-nasale-n;</w><!-- VM aggl -->
-                <lb facs="#facs_146_r4l48" n="N022"/>
-                <w>ter</w>
+                <w rend="aggl">de</w><w>cha&tilde1-nasale-n;<lb facs="#facs_146_r4l48" n="N022"/>ter</w>
                 <w>&et-tironien;</w>
                 <w>fine</w>
                 <w>amor</w>
@@ -2326,9 +2286,7 @@
                 <w>ce</w>
                 <w>uos</w>
                 <w>pri</w>
-                <w rend="elision">d</w><w>a</w><!-- VM aggl -->
-                <lb facs="#facs_147_r1l12" n="N007"/>
-                <w>mors</w>
+                <w rend="elision">d</w><w>a<lb facs="#facs_147_r1l12" n="N007"/>mors</w>
                 <w>droite</w>
                 <w>semblance</w>
                 <w rend="elision">qu</w><w>en</w>
@@ -2389,9 +2347,7 @@
                 <w>uos</w>
                 <w>os</w>
                 <w>bien</w>
-                <w>a</w><!-- VM aggl -->
-                <lb facs="#facs_147_r1l19" n="N014"/>
-                <w>uiser</w>
+                <w>a<lb facs="#facs_147_r1l19" n="N014"/>uiser</w>
                 <w>ice</w>
                 <w>me</w>
                 <w>font</w>
@@ -2433,9 +2389,7 @@
                 <w>de</w>
                 <w>uos</w>
                 <w>loignier</w>
-                <w>on</w><!-- VM aggl -->
-                <lb facs="#facs_147_r1l24" n="N019"/>
-                <w>ques</w>
+                <w>on<lb facs="#facs_147_r1l24" n="N019"/>ques</w>
                 <w>certes</w>
                 <w>plus</w>
                 <w>dolens</w>
@@ -2454,18 +2408,14 @@
                 <w>uertu</w>
                 <w>se</w>
                 <w>ie</w>
-                <w>ia¬</w><!-- VM aggl -->
-                <lb facs="#facs_147_r1l26" n="N021"/>
-                <w>mes</w>
+                <w>i<lb facs="#facs_147_r1l26" n="N021" rend="tiret"/>mes</w>
                 <w>uos</w>
                 <w>pooie</w>
                 <w>aprochier</w>
                 <w>que</w>
                 <w>toz</w>
                 <w>les</w>
-                <w>bi</w><!-- VM aggl -->
-                <lb facs="#facs_147_r1l27" n="N022"/>
-                <w>ens</w>
+                <w>bi<lb facs="#facs_147_r1l27" n="N022"/>ens</w>
                 <w>&et-tironien;</w>
                 <w>toz</w>
                 <w>les</w>
@@ -2497,9 +2447,7 @@
                 <w>il</w>
                 <w>qui</w>
                 <w>ni</w>
-                <w>a</w><!-- VM aggl -->
-                <lb facs="#facs_147_r1l30" n="N025"/>
-                <w>uroit</w>
+                <w>a<lb facs="#facs_147_r1l30" n="N025"/>uroit</w>
                 <w>mestier</w>
                 <w>·</w>
                 <w><comment>D</comment>es</w>
@@ -2515,17 +2463,13 @@
                 <w>en</w>
                 <w>deust</w>
                 <w>la</w>
-                <w>cin¬</w><!-- VM aggl -->
-                <lb facs="#facs_147_r1l32" n="N027"/>
-                <w>quantisme</w>
+                <w>cin<lb facs="#facs_147_r1l32" n="N027" rend="tiret"/>quantisme</w>
                 <w>part</w>
                 <w>li</w>
                 <w>dit</w>
                 <w>plaisant</w>
                 <w>li</w>
-                <w>amo¬</w><!-- VM aggl -->
-                <lb facs="#facs_147_r1l33" n="N028"/>
-                <w>reus</w>
+                <w>amo<lb facs="#facs_147_r1l33" n="N028" rend="tiret"/>reus</w>
                 <w>regart</w>
                 <w>mi</w>
                 <w>font</w>
@@ -2579,9 +2523,7 @@
                 <w>saluz</w>
                 <w>uos</w>
                 <w>mant</w>
-                <w>dou</w><!-- VM aggl -->
-                <lb facs="#facs_147_r1l39" n="N034"/>
-                <w>tre</w>
+                <w>dou<lb facs="#facs_147_r1l39" n="N034"/>tre</w>
                 <w>la</w>
                 <w>mer</w>
                 <w>salee</w>
@@ -2695,9 +2637,7 @@
                 <w>&vostre;</w><!-- VM entité à vérifier -->
                 <w>prison</w>
                 <w>mielz</w>
-                <w>a</w><!-- VM aggl -->
-                <lb facs="#facs_147_r2l14" n="N009"/>
-                <w>meroie</w>
+                <w>a<lb facs="#facs_147_r2l14" n="N009"/>meroie</w>
                 <w>estre</w>
                 <w>ocis</w>
                 <w>que</w>
@@ -2723,9 +2663,7 @@
                 <w rend="elision">n</w><w>en</w>
                 <w>quier</w>
                 <w>raencon</w>
-                <w><comment>Q</comment>&a-suscrit-ua;n</w><!-- VM aggl -->
-                <lb facs="#facs_147_r2l17" n="N012"/>
-                <w>que</w>
+                <w><comment>Q</comment>&a-suscrit-ua;n<lb facs="#facs_147_r2l17" n="N012"/>que</w>
                 <w>il</w>
                 <w>uos</w>
                 <w>est</w>
@@ -2774,9 +2712,7 @@
                 <w>poi</w>
                 <w>plus</w>
                 <w>bel</w>
-                <w>sen</w><!-- VM aggl -->
-                <lb facs="#facs_147_r2l22" n="N017"/>
-                <w>blant</w>
+                <w>sen<lb facs="#facs_147_r2l22" n="N017"/>blant</w>
                 <w>·</w>
                 <w>ie</w>
                 <w>ne</w>
@@ -2804,9 +2740,7 @@
                 <w>seroient</w>
                 <w>uers</w>
                 <w>moi</w>
-                <w>do</w><!-- VM aggl -->
-                <lb facs="#facs_147_r2l25" n="N020"/>
-                <w>lent</w>
+                <w>do<lb facs="#facs_147_r2l25" n="N020"/>lent</w>
                 <w>·</w>
                 <w><comment>D</comment>ame</w>
                 <w>ou</w>
@@ -2814,9 +2748,7 @@
                 <w>mos</w>
                 <w>biens</w>
                 <w>atent</w>
-                <w>sa¬</w><!-- VM aggl -->
-                <lb facs="#facs_147_r2l26" n="N021"/>
-                <w>chiez</w>
+                <w>sa<lb facs="#facs_147_r2l26" n="N021" rend="tiret"/>chiez</w>
                 <w>q&a-suscrit-ua;nt</w>
                 <w>uos</w>
                 <w>puis</w>
@@ -2854,9 +2786,7 @@
                 <w>se</w>
                 <w>fait</w>
                 <w>bon</w>
-                <w>resio</w>
-                <lb facs="#facs_147_r2l43" n="N026"/><!-- VM aggl -->
-                <w>ir</w>
+                <w>resio<lb facs="#facs_147_r2l43" n="N026"/>ir</w>
                 <w rend="elision">qu</w><w>en</w>
                 <w>fere</w>
                 <w>duel</w>
@@ -2962,9 +2892,7 @@
                 <w>&et-tironien;</w>
                 <w>sa</w>
                 <w>douce</w>
-                <w>acoi&tilde1-nasale-n;</w><!-- VM aggl -->
-                <lb facs="#facs_148_r1l17" n="N012"/>
-                <w>tance</w>
+                <w>acoi&tilde1-nasale-n;<lb facs="#facs_148_r1l17" n="N012"/>tance</w>
                <w rend="elision">qu</w><w>estre</w>
                 <w>sires</w>
                 <w>de</w>
@@ -2990,9 +2918,7 @@
                 <w>·</w>
                     <w rend="elision">s</w><w>est</w>
                 <w>il</w>
-                <w>rai</w><!-- VM aggl -->
-                    <lb facs="#facs_148_r1l20" n="N015"/>
-                <w>sons</w>
+                <w>rai<lb facs="#facs_148_r1l20" n="N015"/>sons</w>
                 <w>qui</w>
                 <w>a</w>
                 <w>amer</w>
@@ -3031,8 +2957,7 @@
                 <w>ou</w>
                 <w>ie</w>
                 <w>raura</w>
-                <w>ma</w><!-- VM aggl -->
-                <w><lb facs="#facs_148_r1l24" n="N019"/>mie</w>
+                <w rend="elision">m</w><w>a<lb facs="#facs_148_r1l24" n="N019"/>mie</w>
                 <w>ou</w>
                 <w>ma</w>
                 <w>uie</w>
@@ -3109,9 +3034,7 @@
                 <w>&et-tironien;</w>
                 <w>la</w>
                 <w>g&a-suscrit-ra;ns</w>
-                <w>uo¬</w><!-- VM aggl -->
-                    <lb facs="#facs_148_r1l32" n="N027"/>
-                <w>lentez</w>
+                <w>uo<lb facs="#facs_148_r1l32" n="N027" rend="tiret"/>lentez</w>
                 <w>·</w>
                 <w><comment>D</comment>ame</w>
                 <w>merci</w>
@@ -3126,14 +3049,15 @@
                 <w>&et-tironien;</w>
                 <w>toutez</w>
                 <w>g&a-suscrit-ra;ns</w>
-                <w>bon¬</w><!-- VM aggl -->
-                <lb facs="#facs_148_r1l34" n="N029"/>
-                <w>tez</w>
+                <w>bon<lb facs="#facs_148_r1l34" n="N029" rend="tiret"/></w><w>tez</w>
                 <w>sont</w>
                 <w>plus</w>
                 <w>en</w>
                 <w>uos</w>
                 <w>&que-q-tilde;n</w><!-- VM abr + élision -->
+                <!-- TODO: ajouter au modèle ODD la doc sur ce point -->
+                <w rend="elision"><choice><abbr xml:id="abbr_01">q&#x0303;</abbr><expan>qu</expan></choice></w><w><choice><abbr sameAs="#abbr_01"
+                    /><expan><ex>e</ex>n</expan></choice></w>
                 <w>dame</w>
                 <w>qui</w>
                 <w>soit</w>
@@ -3176,9 +3100,7 @@
                 <w>ier</w>
                 <w>mes</w>
                 <w>de</w>
-                <w>be</w><!-- VM aggl -->
-                    <lb facs="#facs_148_r1l39" n="N034"/>
-                <w>le</w>
+                <w>be<lb facs="#facs_148_r1l39" n="N034"/>le</w>
                 <w>dame</w>
                 <w>amez</w>
                 <w>·</w></ab>
@@ -3236,9 +3158,7 @@
                 <w>ne</w>
                 <w>daigne</w>
                 <w>·</w>
-                <w><comment>C</comment>has</w><!-- VM aggl -->
-                <lb facs="#facs_148_r2l19" n="N007"/>
-                <w>cuns</w>
+                <w><comment>C</comment>has<lb facs="#facs_148_r2l19" n="N007"/>cuns</w>
                 <w>dit</w>
                 <w rend="elision">qu</w><w>il</w>
                 <w>a</w>
@@ -3329,9 +3249,7 @@
                 <w>li</w>
                 <w>crie</w>
                 <w>nul</w>
-                <w>mer¬</w><!-- VM aggl -->
-                <lb facs="#facs_148_r2l36" n="N017"/>
-                <w>ciz</w>
+                <w>mer<lb facs="#facs_148_r2l36" n="N017" rend="tiret"/>ciz</w>
                 <w>besant</w>
                 <w>ses</w>
                 <w>piez</w>
@@ -3339,9 +3257,7 @@
                 <w>de</w>
                 <w>moi</w>
                 <w>li</w>
-                <w>souuie</w><!-- VM aggl-->
-                <lb facs="#facs_148_r2l37" n="N018"/>
-                <w>gne</w>
+                <w>souuie<lb facs="#facs_148_r2l37" n="N018"/>gne</w>
                 <w>·</w>
                 <w><comment>L</comment>en</w>
                 <w>trairai</w>
@@ -3358,7 +3274,7 @@
                 <w>se</w>
                 <w>nus</w>
                 <w>puet</w>
-                <w>am&tilde2-er;</w><!-- VM tilde vertical -->
+                <w>am&tilde2-er;</w>
                 <lb facs="#facs_148_r2l39" n="N020"/>
                 <w>plus</w>
                 <w>que</w>
@@ -3426,18 +3342,14 @@
                 <w>encor</w>
                 <w>salemon</w>
                 <w>ne</w>
-                <w>da</w><!-- VM aggl -->
-                <lb facs="#facs_148_r2l47" n="N028"/>
-                <w>uid</w>
+                <w>da<lb facs="#facs_148_r2l47" n="N028"/>uid</w>
                 <w>ne</w>
                 <w>si</w>
                 <w>tindrent</w>
                 <w>ne</w>
                 <w>cuns</w>
                 <w>fox</w>
-                <w>dalemai¬</w><!-- VM aggl -->
-                <lb facs="#facs_148_r2l48" n="N029"/>
-                <w>gne</w>
+                <w rend="elision">d</w><w>alemai<lb facs="#facs_148_r2l48" n="N029" rend="tiret"/>gne</w>
                 <w>·</w>
                 <w><comment>N</comment>est</w>
                 <w>merueille</w>
