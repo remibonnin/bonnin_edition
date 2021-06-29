@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!-- + lien vers l'ODD du texte -->
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="odd/texte/out/ODD_Ms_Roi_21_juin.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="transcr" xml:id="pivot" xml:lang="fr">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title type="main">Maritem</title>
             <title type="full">Format pivot pour le projet d'édition du Manuscrit du Roi : Image,
                Texte et Musique</title>
-            <title type="short">Format pivot TEI/MEI projet ANR Maritem</title>
-            <respStmt>
-               <resp>Musique</resp>
+            <title type="short">Format pivot TEI/MEI projet ANR Maritem</title>        
+         <respStmt>
+            <resp>Musique</resp>
                <persName xml:id="CCA">Christelle Chaillou-Amadieu</persName>
             </respStmt>
             <respStmt>
@@ -41,8 +40,7 @@
             </respStmt>
          </editionStmt>
          <publicationStmt>
-            <p>Version de travail encore inédite</p>
-            <ab>
+            <ab>           
                <address>
                   <addrLine>Université de Poitiers</addrLine>
                   <addrLine>Centre d’Études Supérieures de Civilisation Médiévale – CESCM</addrLine>
@@ -54,7 +52,7 @@
             </ab>
          </publicationStmt>
          <sourceDesc>
-            <msDesc xml:lang="fro">
+            <msDesc xml:lang="fro" xml:id="axy_vdn_1qb">
                <msIdentifier>
                   <country>France</country>
                   <settlement>Paris</settlement>
@@ -63,6 +61,7 @@
                   <collection>Français</collection>
                   <idno>844</idno>
                </msIdentifier>
+               <head/>
                <msContents>
                   <msItem>
                      <!-- pour le traitement des recueils la solution possible est de répéter l'élément <msItem>  -->
@@ -79,34 +78,60 @@
                            français, tome premier. Ancien fonds (n° 1 à 3160 du fonds
                            français).</ref>
                      </note>
+                                         
                   </msItem>
                </msContents>
 
                <physDesc>
-                  <handDesc>
+                  <objectDesc>
+                     <supportDesc material="manuscrit">
+                        <support>
+                           <material></material>
+                           <dimensions></dimensions>
+                        </support>
+                        <foliation></foliation>
+                        <collation></collation>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout></layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>                   
                      <handNote>
+                        
                         <!-- Rajout des mains, quels balises et attributs choisir ? -->
                      </handNote>
                   </handDesc>
+                  <scriptDesc>
+                     <summary/>                        
+                     <scriptNote/>                   
+                  </scriptDesc>
                   <decoDesc>
                      <decoNote>
                         <notatedMusic>
                            <ptr target="neume_MEI_1.xml"/>
-                           <!-- Exemple de pointeur, est-ce correct ? -->
-                           <desc>Neumes</desc>
+                           <!-- Exemple de pointeur, est-ce correct ? -->                          
                         </notatedMusic>
                      </decoNote>
                   </decoDesc>
-
-
+                 <bindingDesc>
+                    <binding contemporary="true">
+                       <decoNote></decoNote>
+                       <condition/>
+                    </binding>
+                 </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origPlace cert="medium">Nord de la France</origPlace>
-                     <origPlace cert="medium">Italie</origPlace>
+                     <origPlace cert="medium" resp="FS">Nord de la France</origPlace>
+                     <origDate notBefore="1250" notAfter="1350" resp="FS">Composé entre la seconde moitié du
+                        XIIIe siècle et la première moitié du XIVe siècle.</origDate>
+                     <origPlace cert="medium" resp="FS">Italie</origPlace>
+                     <origDate notBefore="1250" notAfter="1350" resp="FS">Composé entre la seconde moitié du
+                        XIIIe siècle et la première moitié du XIVe siècle.</origDate>
                      <origPlace cert="unknown" resp="FS">Outremer</origPlace>
                      <!-- appel du # pour le nom ? -->
-                     <origDate notBefore="1250" notAfter="1350">Composé entre la seconde moitié du
+                     <origDate notBefore="1250" notAfter="1350" resp="FS">Composé entre la seconde moitié du
                         XIIIe siècle et la première moitié du XIVe siècle.</origDate>
                   </origin>
                </history>
@@ -137,24 +162,25 @@
          </sourceDesc>
 
       </fileDesc>
+      <profileDesc>
+         <creation>Chansons de geste</creation>
+         <langUsage>
+            <language ident="af">Ancien Français</language>
+         </langUsage>
+         <settingDesc>
+            <setting>
+               <name type="place">Nord de la France</name>
+               <name type="place">Italie</name>
+               <time>XIIIe siècle</time>
+            </setting>
+         </settingDesc>
+      </profileDesc>
       <encodingDesc>
          <projectDesc>
             <p>Edition numérique du Manuscrit du Roi</p>
             <p>Projet ANR Maritem</p>
          </projectDesc>
       </encodingDesc>
-      <profileDesc>
-         <langUsage>
-            <language ident="af">Ancien Français</language>
-         </langUsage>
-         <settingDesc>
-            <setting>
-               <name>Nord de la France</name>
-               <name>Italie</name>
-               <time>XIIIe siècle</time>
-            </setting>
-         </settingDesc>
-      </profileDesc>
       <revisionDesc>
          <change who="#VM" when="2020-10">Transcription des feuillets du Manuscrit du Roi.</change>
          <change who="#VM" when="2021-03">OCR et Export des fichiers Transkribus</change>
@@ -166,17 +192,17 @@
       </revisionDesc>
 
    </teiHeader>
-   <text>
+   <text xml:lang="fr">
       <body>
          <div>
             <head>Chanson</head>
             <!-- Exemple de titre -->
             <notatedMusic>
-               <ptr target="pivot_music_1.xml"/>
+               <ptr target="pivot_music_1.xml" type="pointeur"/>
                <desc>Musique associée à la première chanson</desc>
             </notatedMusic>
             
-            <lg type="chanson" rhyme="abab aabb">
+            <lg type="chanson">
                <lg type="strophe" rhyme="abab">
                   
                   <!-- Exemple d'affichage -->
@@ -261,6 +287,7 @@
                </lg>
                
                <lg type="strophe" rhyme="aabb">
+                  
 
                   <l n="5" met="10'" real="10">
                      <w lemma="encore" pos="ADVgen">

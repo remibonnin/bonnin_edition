@@ -1542,13 +1542,27 @@
                         docLang="fr" xml:lang="fr">
                         <!-- SS header -->
                         <moduleRef key="header"
-                            include="creation change fileDesc language profileDesc publicationStmt revisionDesc sourceDesc teiHeader"/>
+                            include="citeStructure creation cRefPattern change edition editionStmt encodingDesc fileDesc handNote idno language langUsage profileDesc projectDesc publicationStmt revisionDesc scriptNote sourceDesc teiHeader titleStmt"/>
                         
+                        <elementSpec ident="citeStructure" mode="change">
+                            <content>
+                                <sequence>
+                                    <elementRef key="citeData" minOccurs="0"
+                                        maxOccurs="unbounded"/>
+                                    <elementRef key="citeStructure"
+                                        minOccurs="0" maxOccurs="unbounded"/>
+                                    <classRef key="model.descLike"
+                                        minOccurs="0" maxOccurs="unbounded"/>
+                                </sequence>
+                            </content>
+                        </elementSpec>
                         <elementSpec ident="creation" mode="change">
                             <content>
-                                <alternate minOccurs="4" maxOccurs="unbounded">
-                                    <elementRef key="origPlace"/>
-                                    <elementRef key="origDate"/>
+                                <alternate minOccurs="0"
+                                    maxOccurs="unbounded">
+                                    <textNode/>
+                                    <classRef key="model.limitedPhrase"/>
+                                    <elementRef key="listChange"/>
                                 </alternate>
                             </content>
                             <constraintSpec scheme="schematron" ident="change-when-or-from-to">
@@ -1562,6 +1576,12 @@
                                 </constraint>
                             </constraintSpec>
                         </elementSpec>
+                        <elementSpec ident="cRefPattern" mode="change">
+                            <content>
+                                <classRef key="model.pLike" minOccurs="0"
+                                    maxOccurs="unbounded"/>
+                            </content>
+                        </elementSpec>
                         <elementSpec ident="change" mode="change">
                             <constraintSpec scheme="schematron" ident="change-when-or-from-to">
                                 <constraint>
@@ -1573,20 +1593,66 @@
                                 <attDef ident="who" mode="change" usage="req"/>
                             </attList>
                         </elementSpec>
+                        <elementSpec ident="edition" mode="change">
+                            <content>
+                                <macroRef key="macro.phraseSeq"/>
+                                <elementRef key="date"/>
+                            </content>
+                        </elementSpec>
+                        <elementSpec ident="editionStmt" mode="change">
+                            <content>
+                                <alternate>
+                                    <classRef key="model.pLike" minOccurs="1"
+                                        maxOccurs="unbounded"/>
+                                    <sequence>
+                                        <elementRef key="edition"/>
+                                        <classRef key="model.respLike"
+                                            minOccurs="0" maxOccurs="unbounded"/>
+                                    </sequence>
+                                </alternate>
+                            </content>
+                        </elementSpec>
+                        <elementSpec ident="encodingDesc" mode="change">
+                            <content>
+                                <alternate minOccurs="1"
+                                    maxOccurs="unbounded">
+                                    <classRef key="model.encodingDescPart"/>
+                                    <classRef key="model.pLike"/>
+                                    <elementRef key="projectDesc"/>
+                                </alternate>
+                            </content>
+                        </elementSpec>
+                        <elementSpec ident="idno" mode="change">
+                            <content>
+                                <alternate minOccurs="0"
+                                    maxOccurs="unbounded">
+                                    <textNode/>
+                                    <classRef key="model.gLike"/>
+                                    <elementRef key="idno"/>
+                                </alternate>
+                            </content>
+                        </elementSpec>
                         <elementSpec ident="fileDesc" mode="change">
                             <content>
                                 <sequence>
                                     <elementRef key="titleStmt"/>
+                                    <elementRef key="editionStmt"/>
                                     <elementRef key="publicationStmt"/>
                                     <elementRef key="sourceDesc"/>
+                                    
                                 </sequence>
+                            </content>
+                        </elementSpec>
+                        <elementSpec ident="handNote" mode="change">
+                            <content>
+                                <macroRef key="macro.specialPara"/>
                             </content>
                         </elementSpec>
                         <elementSpec ident="language" mode="change">
                             <attList>
-                                <attDef ident="usage" mode="change" usage="req"/>
-                                <attDef ident="cert" mode="change" usage="req"/>
-                                <attDef ident="resp" mode="change" usage="req"/>
+                                <attDef ident="usage" mode="change" usage="rec"/>
+                                <attDef ident="cert" mode="change" usage="rec"/>
+                                <attDef ident="resp" mode="change" usage="rec"/>
                             </attList>
                         </elementSpec>
                         <elementSpec ident="profileDesc" mode="change">
@@ -1594,21 +1660,53 @@
                                 <sequence>
                                     <elementRef key="creation"/>
                                     <elementRef key="langUsage"/>
+                                    <elementRef key="settingDesc"/>
                                 </sequence>
+                            </content>
+                        </elementSpec>
+                        <elementSpec ident="langUsage" mode="change">
+                            <content>
+                                <alternate>
+                                    <classRef key="model.pLike" minOccurs="1"
+                                        maxOccurs="unbounded"/>
+                                    <elementRef key="language" minOccurs="1"
+                                        maxOccurs="unbounded"/>
+                                </alternate>
+                            </content>
+                        </elementSpec>
+                        <elementSpec ident="projectDesc" mode="change">
+                            <content>
+                                <classRef key="model.pLike" minOccurs="1"
+                                    maxOccurs="unbounded"/>
                             </content>
                         </elementSpec>
                         <elementSpec ident="publicationStmt" mode="change">
                             <content>
-                                <sequence>
-                                    <classRef key="model.publicationStmtPart.agency"/>
-                                    <classRef key="model.publicationStmtPart.detail" minOccurs="1"
+                                <alternate>
+                                    <sequence minOccurs="1"
+                                        maxOccurs="unbounded">
+                                        <classRef key="model.publicationStmtPart.agency"/>
+                                        <classRef key="model.publicationStmtPart.detail"
+                                            minOccurs="0" maxOccurs="unbounded"/>
+                                    </sequence>
+                                    <classRef key="model.pLike" minOccurs="1"
                                         maxOccurs="unbounded"/>
-                                </sequence>
+                                </alternate>
                             </content>
                         </elementSpec>
                         <elementSpec ident="revisionDesc" mode="change">
                             <content>
-                                <elementRef key="change" minOccurs="1" maxOccurs="unbounded"/>
+                                <alternate>
+                                    <elementRef key="list"/>
+                                    <elementRef key="listChange"/>
+                                    <elementRef key="change" minOccurs="1"
+                                        maxOccurs="unbounded"/>
+                                </alternate>
+                            </content>
+                        </elementSpec>
+                        <elementSpec ident="scriptNote" mode="change">
+                            <content> 
+                                <macroRef key="macro.specialPara "/> 
                             </content>
                         </elementSpec>
                         <elementSpec ident="sourceDesc" mode="change">
@@ -1625,14 +1723,26 @@
                                 <sequence>
                                     <elementRef key="fileDesc"/>
                                     <elementRef key="profileDesc"/>
-                                    <elementRef key="revisionDesc"/>
+                                    <elementRef key="encodingDesc"/>
+                                    <elementRef key="revisionDesc"/>                                   
                                 </sequence>
                             </content>
                             <attList>
                                 <attDef ident="type" mode="delete"/>
                             </attList>
                         </elementSpec>
-
+                        <elementSpec ident="titleStmt" mode="change">
+                            <content>
+                                <sequence>
+                                    <elementRef key="title" minOccurs="1"
+                                        maxOccurs="unbounded"/>
+                                    <elementRef key="respStmt"/>
+                                    
+                                    <classRef key="model.respLike"
+                                        minOccurs="0" maxOccurs="unbounded"/>
+                                </sequence>
+                            </content>
+                        </elementSpec>
                         
                         
                         
@@ -1647,8 +1757,44 @@
                         
                         <!-- VM schemaSpec core -->
                         <moduleRef key="core"
-                            include="abbr add address addrLine analytic author bibl biblScope biblStruct cb choice citedRange corr date del edition editor email emph expan extent gap gb graphic head
-hi imprint item l lb lg list listBibl measure mentioned monogr name note num orig p pb pubPlace publisher q quote ref reg resp respStmt series sic term textLang title unclear"/>
+                            include="abbr add address addrLine analytic author bibl biblScope biblStruct cb choice citedRange corr date del desc edition editor email emph expan extent gap gb graphic head
+hi imprint item l lb lg list listBibl measure mentioned monogr name note num orig p pb ptr pubPlace publisher q quote ref reg resp respStmt series sic term textLang title time unclear"/>
+                       
+                        <elementSpec ident="address" mode="change">
+                            <content>
+                                <sequence>
+                                    <classRef key="model.global"
+                                        minOccurs="0" maxOccurs="unbounded"/>
+                                    <sequence minOccurs="1"
+                                        maxOccurs="unbounded">
+                                        <classRef key="model.addrPart"/>
+                                        <classRef key="model.global"
+                                            minOccurs="0" maxOccurs="unbounded"/>
+                                    </sequence>
+                                </sequence>
+                            </content>
+                        </elementSpec>
+                        <elementSpec ident="desc" mode="change">
+                            <content>
+                                <macroRef key="macro.limitedContent"/>
+                            </content>
+                        </elementSpec>
+                        <elementSpec ident="time" mode="change">
+                            <content>
+                                <alternate minOccurs="0"
+                                    maxOccurs="unbounded">
+                                    <textNode/>
+                                    <classRef key="model.gLike"/>
+                                    <classRef key="model.phrase"/>
+                                    <classRef key="model.global"/>
+                                </alternate>
+                            </content>
+                        </elementSpec>
+                        <elementSpec ident="publisher" mode="change">
+                            <content>
+                                <macroRef key="macro.phraseSeq"/>
+                            </content>
+                        </elementSpec>
                         <elementSpec ident="gb" mode="change">
                             <desc> (gathering begins) marque le début d'un nouveau cahier dans un
                                 manuscrit transcrit.</desc>
@@ -2003,6 +2149,8 @@ hi imprint item l lb lg list listBibl measure mentioned monogr name note num ori
                                         qui le permettent, l'usage des éléments spécialisés
                                             <gi>persName</gi> et <gi>placeName</gi> est préférable. </desc>
                                     <valList mode="add" type="closed">
+                                        <valItem ident="person"/>
+                                        <valItem ident="place"/>
                                         <valItem ident="épée"/>
                                         <valItem ident="cheval"/>
                                         <valItem ident="enseigne">
@@ -2028,10 +2176,39 @@ hi imprint item l lb lg list listBibl measure mentioned monogr name note num ori
                                 </attDef>
                             </attList>
                         </elementSpec>
-                        <elementSpec ident="date" mode="change"> </elementSpec>
+                        <elementSpec ident="date" mode="change">
+                            <content>
+                                <alternate minOccurs="0"
+                                    maxOccurs="unbounded">
+                                    <textNode/>
+                                    <classRef key="model.gLike"/>
+                                    <classRef key="model.phrase"/>
+                                    <classRef key="model.global"/>
+                                </alternate>
+                            </content>
+                        </elementSpec>
+                        <elementSpec ident="ptr" mode="change">
+                            <attList>
+                                <attDef ident="target" mode="change" usage="req"/>
+                                <attDef ident="type" mode="change" usage="rec"/>
+                            </attList>
+                        </elementSpec>
                         <elementSpec ident="abbr" mode="change"> </elementSpec>
                         <elementSpec ident="expan" mode="change"> </elementSpec>
-                        <elementSpec ident="head" mode="change"> </elementSpec>
+                        <elementSpec ident="head" mode="change">
+                            <content>
+                                <alternate minOccurs="0"
+                                    maxOccurs="unbounded">
+                                    <textNode/>
+                                    <elementRef key="lg"/>
+                                    <classRef key="model.gLike"/>
+                                    <classRef key="model.phrase"/>
+                                    <classRef key="model.inter"/>
+                                    <classRef key="model.lLike"/>
+                                    <classRef key="model.global"/>
+                                </alternate>
+                            </content>
+                        </elementSpec>
                         <elementSpec ident="pb" mode="change">
                             <classes mode="change">
                                 <memberOf key="att.global.facs" mode="add"/>
@@ -2101,9 +2278,38 @@ hi imprint item l lb lg list listBibl measure mentioned monogr name note num ori
                                         occurrence</hi> decelle-ci</ab>
                             </exemplum>
                         </elementSpec>
-                        <elementSpec ident="editor" mode="change"> </elementSpec>
-                        <elementSpec ident="respStmt" mode="change"> </elementSpec>
-                        <elementSpec ident="resp" mode="change"> </elementSpec>
+                        <elementSpec ident="editor" mode="change">
+                            <content>
+                                <macroRef key="macro.phraseSeq"/>
+                            </content>
+                        </elementSpec>
+                        <elementSpec ident="respStmt" mode="change">
+                            <content>
+                                <sequence>
+                                    <alternate>
+                                        <sequence>
+                                            <elementRef key="resp" minOccurs="1"
+                                                maxOccurs="unbounded"/>
+                                            <classRef key="model.nameLike.agent"
+                                                minOccurs="1" maxOccurs="unbounded"/>
+                                        </sequence>
+                                        <sequence>
+                                            <classRef key="model.nameLike.agent"
+                                                minOccurs="1" maxOccurs="unbounded"/>
+                                            <elementRef key="resp" minOccurs="1"
+                                                maxOccurs="unbounded"/>
+                                        </sequence>
+                                    </alternate>
+                                    <elementRef key="note" minOccurs="0"
+                                        maxOccurs="unbounded"/>
+                                </sequence>
+                            </content>
+                        </elementSpec>
+                        <elementSpec ident="resp" mode="change">
+                            <content>
+                                <macroRef key="macro.phraseSeq.limited"/>
+                            </content>
+                        </elementSpec>
                         <elementSpec ident="title" mode="change">
                             <attList>
                                 <attDef ident="type" mode="change">
@@ -2118,6 +2324,14 @@ hi imprint item l lb lg list listBibl measure mentioned monogr name note num ori
                                             <desc>contient le sous-titre de l'œuvre ou un titre
                                                 secondaire (par exemple, le titre tel qu'il figure
                                                 dans un manuscrit)</desc>
+                                        </valItem>
+                                        <valItem ident="full">
+                                            <gloss>titre entier</gloss>
+                                            <desc>contient le titre en entier</desc>
+                                        </valItem>
+                                        <valItem ident="short">
+                                            <gloss>titre court</gloss>
+                                            <desc>contient une version abrégée du titre</desc>
                                         </valItem>
                                     </valList>
                                 </attDef>
@@ -2215,14 +2429,33 @@ hi imprint item l lb lg list listBibl measure mentioned monogr name note num ori
                         </elementSpec>
                         <elementSpec ident="lg" mode="change">
                             <content>
-                                <!-- Je retire le model.divTop, car on ne veut pas de head en tête des laisses -->
-                                <alternate minOccurs="1" maxOccurs="unbounded">
-                                    <classRef key="model.lLike"/>
-                                    <elementRef key="lg"/>
-                                    <classRef key="model.global.edit"/>
-                                    <classRef key="model.milestoneLike"/>
-                                    <classRef key="model.noteLike"/>
-                                </alternate>
+                                <sequence>
+                                    <alternate minOccurs="0"
+                                        maxOccurs="unbounded">
+                                        <classRef key="model.divTop"/>
+                                        <classRef key="model.global"/>
+                                    </alternate>
+                                    <alternate>
+                                        <classRef key="model.lLike"/>
+                                        <classRef key="model.stageLike"/>
+                                        <classRef key="model.labelLike"/>
+                                        <elementRef key="lg"/>
+                                    </alternate>
+                                    <alternate minOccurs="0"
+                                        maxOccurs="unbounded">
+                                        <classRef key="model.lLike"/>
+                                        <classRef key="model.stageLike"/>
+                                        <classRef key="model.labelLike"/>
+                                        <classRef key="model.global"/>
+                                        <elementRef key="lg"/>
+                                    </alternate>
+                                    <sequence minOccurs="0"
+                                        maxOccurs="unbounded">
+                                        <classRef key="model.divBottom"/>
+                                        <classRef key="model.global"
+                                            minOccurs="0" maxOccurs="unbounded"/>
+                                    </sequence>
+                                </sequence>
                             </content>
                             <attList>
                                 <attDef ident="xml:id" mode="change" usage="rec"/>
@@ -2244,22 +2477,29 @@ hi imprint item l lb lg list listBibl measure mentioned monogr name note num ori
                                 </attDef>-->
 
 
-                                <attDef ident="type" usage="req" mode="change">
+                                <attDef ident="type" usage="rec" mode="change">
                                     <gloss>Précise qu'il s'agit d'un texte lyrique ou d'une strophe
                                         et caractérise le groupe de vers comme une laisse.</gloss>
                                     <valList type="closed">
                                         <valItem ident="lyrical_text"/>
                                         <valItem ident="stanza"/>
                                         <valItem ident="laisse"/>
+                                        <valItem ident="chanson"/>
+                                        <valItem ident="strophe"/>
                                     </valList>
                                 </attDef>
-                                <attDef ident="rhyme" usage="req" mode="change">
+                                <attDef ident="rhyme" usage="rec" mode="replace">
                                     <gloss>Précise le schéma rymique de la pièce lyrique. Les
                                         valeurs sont libres car il y a autant de valeurs que de
-                                        schémas rimiques.</gloss>
-                                    <valList type="open"/>
+                                        schémas rimiques.</gloss>                                   
+                                    <valList mode="add" type="closed">
+                                        <valItem ident="abab"/>
+                                        <valItem ident="aabb"/>
+                                        <valItem ident="abba"/>
+                                    </valList>                                      
+                                    
                                 </attDef>
-                                <attDef ident="n" usage="req" mode="change">
+                                <attDef ident="n" usage="rec" mode="change">
                                     <gloss>Précise le numéro de la strophe. Les valeurs sont
                                         libres.</gloss>
                                     <valList type="open"/>
@@ -2305,6 +2545,7 @@ hi imprint item l lb lg list listBibl measure mentioned monogr name note num ori
                                 </alternate>
                             </content>
                         </elementSpec>
+                        
                         <classSpec ident="att.milestoneUnit" module="core" type="atts" mode="delete"/>
                         <!-- À restreindre avec les seules classes et macros nécessaires -->
                         <moduleRef key="tei"/>
@@ -2569,6 +2810,7 @@ hi imprint item l lb lg list listBibl measure mentioned monogr name note num ori
                             <!-- TODO: ajouter un exemple -->
                         </elementSpec>
                         <elementSpec ident="div" mode="change">
+                            
                             <attList>
                                 <attDef ident="type" mode="change" usage="rec">
                                     <gloss>Décrit une section thématique du Manuscrit du Roi. Les
@@ -2583,8 +2825,40 @@ hi imprint item l lb lg list listBibl measure mentioned monogr name note num ori
                                 </attDef>
                                 
                             </attList>
+                            
                         </elementSpec>
                         
+                        <moduleRef key="corpus" include="setting settingDesc"/>
+                        <elementSpec ident="setting" mode="change">
+                            <content>
+                                <alternate>
+                                    <classRef key="model.pLike" minOccurs="1"
+                                        maxOccurs="unbounded"/>
+                                    <alternate minOccurs="0"
+                                        maxOccurs="unbounded">
+                                        <classRef key="model.nameLike.agent"/>
+                                        <classRef key="model.dateLike"/>
+                                        <classRef key="model.settingPart"/>
+                                        <elementRef key="name"/>
+                                        <elementRef key="time"/>
+                                    </alternate>
+                                </alternate>
+                            </content>
+                        </elementSpec>
+                        <elementSpec ident="settingDesc" mode="change">
+                            <content>
+                                <alternate>
+                                    <classRef key="model.pLike" minOccurs="1"
+                                        maxOccurs="unbounded"/>
+                                    <alternate minOccurs="1"
+                                        maxOccurs="unbounded">
+                                        <elementRef key="setting"/>
+                                        <classRef key="model.placeLike"/>
+                                        <elementRef key="listPlace"/>
+                                    </alternate>
+                                </alternate>
+                            </content>
+                        </elementSpec>
                         
                         
                         <moduleRef key="verse" include="rhyme"/>
@@ -2598,6 +2872,7 @@ hi imprint item l lb lg list listBibl measure mentioned monogr name note num ori
                             </attList>
                         </elementSpec>
                         <!-- SS textcrit -->
+                        
                         <moduleRef key="textcrit"
                             include="app lacunaStart lacunaEnd lem listWit rdg wit witDetail witness"/>
                         <elementSpec ident="app" mode="change">
@@ -2646,6 +2921,7 @@ hi imprint item l lb lg list listBibl measure mentioned monogr name note num ori
                             mode="change">
                             <!-- TODO: à redéfinir en détail lors de la modélisation de l'apparat critique -->
                         </classSpec>
+                        
                         <moduleRef key="analysis" include="c pc w"/>
                         <!-- je remet c : mais il faudra le documenter, le préciser, et voir comment on définit sa complémentarité vis-à-vis de reg/orig - de g
                         tel que je le vois
@@ -2783,6 +3059,7 @@ hi imprint item l lb lg list listBibl measure mentioned monogr name note num ori
                             </attList>
                         </elementSpec>
                         <!-- nameLink : pour le "de" Truc, mais pas forcément indispensable, à voir.-->
+                        
                         <moduleRef key="namesdates"
                             include="addName country forename listPerson listPlace nameLink orgName persName person placeName roleName settlement surname"/>
                         <!-- Modèle de person et listPerson à préciser -->
@@ -2790,6 +3067,40 @@ hi imprint item l lb lg list listBibl measure mentioned monogr name note num ori
                             mode="delete"/>
                         <classSpec type="atts" module="namesdates" ident="att.datable.custom"
                             mode="delete"/>
+                        <elementSpec ident="listPlace" mode="change">
+                            <content>
+                                <sequence>
+                                    <classRef key="model.headLike"
+                                        minOccurs="0" maxOccurs="unbounded"/>
+                                    <elementRef key="desc" minOccurs="0"
+                                        maxOccurs="unbounded"/>
+                                    <alternate minOccurs="0"
+                                        maxOccurs="unbounded">
+                                        <elementRef key="relation" minOccurs="1"
+                                            maxOccurs="1"/>
+                                        <elementRef key="listRelation"
+                                            minOccurs="1" maxOccurs="1"/>
+                                    </alternate>
+                                    <sequence minOccurs="1"
+                                        maxOccurs="unbounded">
+                                        <alternate minOccurs="1"
+                                            maxOccurs="unbounded">
+                                            <classRef key="model.placeLike"
+                                                minOccurs="1" maxOccurs="1"/>
+                                            <elementRef key="listPlace"
+                                                minOccurs="1" maxOccurs="1"/>
+                                        </alternate>
+                                        <alternate minOccurs="0"
+                                            maxOccurs="unbounded">
+                                            <elementRef key="relation"
+                                                minOccurs="1" maxOccurs="1"/>
+                                            <elementRef key="listRelation"
+                                                minOccurs="1" maxOccurs="1"/>
+                                        </alternate>
+                                    </sequence>
+                                </sequence>
+                            </content>
+                        </elementSpec>
                         <elementSpec ident="persName" module="namesdates" mode="change">
                             <constraintSpec scheme="schematron" ident="persNameContent">
                                 <constraint>
@@ -2801,6 +3112,9 @@ hi imprint item l lb lg list listBibl measure mentioned monogr name note num ori
                                     </s:rule>
                                 </constraint>
                             </constraintSpec>
+                            <attList>
+                                <attDef ident="xml:id" mode="change" usage="req"/>                                
+                            </attList>
                         </elementSpec>
                         <elementSpec ident="person" module="namesdates" mode="change">
                             <content>
@@ -2818,6 +3132,7 @@ hi imprint item l lb lg list listBibl measure mentioned monogr name note num ori
                                     l'indexation des occurrences.</p>
                             </remarks>
                         </elementSpec>
+                        
                         <moduleRef key="transcr"
                             include="am damage ex facsimile handShift space subst supplied surface surfaceGrp zone"/>
                         <!-- TODO: configuration de facsimile, surface, surfaceGrp et zone à faire -->
@@ -2949,16 +3264,147 @@ hi imprint item l lb lg list listBibl measure mentioned monogr name note num ori
                             mode="delete"/>
                         <classSpec ident="att.coordinated" module="transcr" type="atts"
                             mode="delete"/>
+                        
                         <moduleRef key="linking" include="ab seg"/>
+                        <elementSpec ident="ab" mode="change">
+                            <content>
+                                <macroRef key="macro.paraContent"/>
+                            </content>
+                        </elementSpec>
                         <elementSpec ident="seg" mode="change">
                             <classes mode="change">
                                 <memberOf key="model.choicePart" mode="delete"/>
                             </classes>
                         </elementSpec>
                         <!-- retirés: notamment msItem (d'autres également: informations biblioth.)-->
+                        
                         <moduleRef key="msdescription"
-                            include=" accMat acquisition additional additions altIdentifier binding bindingDesc catchwords collation collection colophon condition decoDesc decoNote depth dim dimensions explicit filiation finalRubric foliation handDesc height heraldry history incipit institution layout layoutDesc locus locusGrp material msContents msDesc msFrag msIdentifier msItem msName musicNotation objectDesc objectType origDate origPlace origin physDesc provenance recordHist repository rubric scriptDesc scriptNote seal sealDesc secFol signatures source stamp summary support supportDesc surrogates watermark width"/>
+                            include=" accMat acquisition additional additions adminInfo altIdentifier binding bindingDesc catchwords collation collection colophon condition decoDesc decoNote depth dim dimensions explicit filiation finalRubric foliation handDesc height heraldry history incipit institution layout layoutDesc locus locusGrp material msContents msDesc msFrag msIdentifier msItem msName musicNotation objectDesc objectType origDate origPlace origin physDesc provenance recordHist repository rubric scriptDesc seal sealDesc secFol signatures source stamp summary support supportDesc surrogates watermark width"/>
                         <!-- À voir ce qu'on fait de celui-là -->
+                        <elementSpec ident="accMat" mode="change">
+                            <content>
+                                <macroRef key="macro.specialPara"/>
+                            </content>
+                        </elementSpec>
+                        <elementSpec ident="acquisition" mode="change">
+                            <content>
+                                <macroRef key="macro.specialPara"/>
+                            </content>
+                        </elementSpec>
+                        <elementSpec ident="additional" mode="change">
+                            <content>
+                                <sequence>
+                                    <elementRef key="adminInfo" minOccurs="0"/>
+                                    <elementRef key="surrogates"
+                                        minOccurs="0"/>
+                                    <elementRef key="listBibl" minOccurs="0"/>
+                                </sequence>
+                            </content>
+                        </elementSpec>
+                        <elementSpec ident="additions" mode="change">
+                            <content>
+                                <macroRef key="macro.specialPara"/>
+                            </content>
+                        </elementSpec>
+                        <elementSpec ident="adminInfo" mode="change">
+                            <content>
+                                <sequence>
+                                    <elementRef key="recordHist"
+                                        minOccurs="0"/>
+                                    <elementRef key="availability"
+                                        minOccurs="0"/>
+                                    <elementRef key="custodialHist"
+                                        minOccurs="0"/>
+                                    <classRef key="model.noteLike"
+                                        minOccurs="0"/>
+                                </sequence>
+                            </content>
+                        </elementSpec>
+                        <elementSpec ident="binding" mode="change">
+                            <content>
+                                <alternate minOccurs="1"
+                                    maxOccurs="unbounded">
+                                    <classRef key="model.pLike"/>
+                                    <elementRef key="condition"/>
+                                    <elementRef key="decoNote"/>
+                                </alternate>
+                            </content>
+                        </elementSpec>
+                        <elementSpec ident="bindingDesc" mode="change">
+                            <content>
+                                <alternate>
+                                    <alternate minOccurs="1"
+                                        maxOccurs="unbounded">
+                                        <classRef key="model.pLike"/>
+                                        <elementRef key="decoNote"/>
+                                        <elementRef key="condition"/>
+                                    </alternate>
+                                    <elementRef key="binding" minOccurs="1"
+                                        maxOccurs="unbounded"/>
+                                </alternate>
+                            </content>
+                        </elementSpec>
+                        <elementSpec ident="catchwords" mode="change">
+                            <content>
+                                <macroRef key="macro.phraseSeq"/>
+                            </content>
+                        </elementSpec>
+                        <elementSpec ident="collation" mode="change">
+                            <content>
+                                <macroRef key="macro.specialPara"/>
+                            </content>
+                        </elementSpec>
+                        <elementSpec ident="collection" mode="change">
+                            <content>
+                                <macroRef key="macro.phraseSeq.limited"/>
+                            </content>
+                        </elementSpec>
+                        <elementSpec ident="colophon" mode="change">
+                            <content>
+                                <macroRef key="macro.phraseSeq"/>
+                            </content>
+                        </elementSpec>
+                        <elementSpec ident="condition" mode="change">
+                            <content>
+                                <macroRef key="macro.specialPara"/>
+                            </content>
+                        </elementSpec>
+                        <elementSpec ident="handDesc" mode="change">
+                            <content>
+                                <alternate>
+                                    <classRef key="model.pLike" minOccurs="1"
+                                        maxOccurs="unbounded"/>
+                                    <sequence>
+                                        <elementRef key="summary" minOccurs="0"/>
+                                        <elementRef key="handNote" minOccurs="1"
+                                            maxOccurs="unbounded"/>
+                                    </sequence>
+                                </alternate>
+                            </content>
+                        </elementSpec>                    
+                        <elementSpec ident="summary" mode="change">
+                            <content>
+                                <macroRef key="macro.specialPara"/>
+                            </content>
+                        </elementSpec>
+                        <elementSpec ident="scriptDesc" mode="change">
+                            <content>
+                                <alternate>
+                                    <classRef key="model.pLike" minOccurs="1"
+                                        maxOccurs="unbounded"/>
+                                    <sequence>
+                                        <elementRef key="summary" minOccurs="0"/>
+                                        <elementRef key="scriptNote"
+                                            minOccurs="1" maxOccurs="unbounded"/>
+                                    </sequence>
+                                </alternate>
+                            </content>
+                        </elementSpec>                        
+                        <elementSpec ident="incipit" mode="change">
+                            <content>
+                                <macroRef key="macro.phraseSeq"/>
+                            </content>
+                        </elementSpec>
                         <elementSpec ident="msDesc" mode="change">
                             <classes mode="change">
                                 <memberOf key="model.biblLike" mode="delete"/>
@@ -3027,24 +3473,24 @@ hi imprint item l lb lg list listBibl measure mentioned monogr name note num ori
                         </elementSpec>
                         <elementSpec ident="msItem" mode="change">
                             <content>
-                                <alternate>
-                                    <elementRef key="locus"/>
-                                    <elementRef key="locusGrp"/>
-                                </alternate>
-                                <elementRef key="author" minOccurs="0"/>
-                                <elementRef key="respStmt" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="title"/>
-                                <elementRef key="idno"/>
-                                <elementRef key="note" minOccurs="0"/>
-                                <elementRef key="rubric" minOccurs="0"/>
-                                <elementRef key="incipit"/>
-                                <elementRef key="explicit"/>
-                                <elementRef key="finalRubric" minOccurs="0"/>
-                                <elementRef key="colophon" minOccurs="0"/>
-                                <elementRef key="decoNote" minOccurs="0"/>
-                                <elementRef key="listBibl" minOccurs="0"/>
-                                <elementRef key="textLang"/>
-                                <elementRef key="filiation" minOccurs="0"/>
+                                <sequence>
+                                    <elementRef key="locus" minOccurs="0"/>
+                                    <elementRef key="locusGrp" minOccurs="0"/>                                
+                                    <elementRef key="author" minOccurs="0"/>
+                                    <elementRef key="respStmt" minOccurs="0" maxOccurs="unbounded"/>
+                                    <elementRef key="title" minOccurs="0"/>
+                                    <elementRef key="idno" minOccurs="0"/>
+                                    <elementRef key="note" minOccurs="0"/>
+                                    <elementRef key="rubric" minOccurs="0"/>
+                                    <elementRef key="incipit" minOccurs="0"/>
+                                    <elementRef key="explicit" minOccurs="0"/>
+                                    <elementRef key="finalRubric" minOccurs="0"/>
+                                    <elementRef key="colophon" minOccurs="0"/>
+                                    <elementRef key="decoNote" minOccurs="0"/>
+                                    <elementRef key="listBibl" minOccurs="0"/>
+                                    <elementRef key="textLang" minOccurs="0"/>
+                                    <elementRef key="filiation" minOccurs="0"/>
+                                </sequence>
                             </content>
                         </elementSpec>
                         <elementSpec ident="locusGrp" mode="change">
@@ -3208,10 +3654,13 @@ hi imprint item l lb lg list listBibl measure mentioned monogr name note num ori
                             </content>
                         </elementSpec>
                         <elementSpec ident="origPlace" mode="change">
+                            <content>
+                                <macroRef key="macro.phraseSeq"/>
+                            </content>
                             <attList>
-                                <attDef ident="cert" mode="change" usage="req"/>
-                                <attDef ident="resp" mode="change" usage="req"/>
-                                <attDef ident="type" mode="change">
+                                <attDef ident="cert" mode="change" usage="rec"/>
+                                <attDef ident="resp" mode="change" usage="rec"/>
+                                <attDef ident="type" mode="change" usage="rec">
                                     <valList mode="add" type="semi">
                                         <valItem ident="lieuManuscrit">
                                             <desc>lieu d'origine du témoin</desc>
@@ -3224,6 +3673,15 @@ hi imprint item l lb lg list listBibl measure mentioned monogr name note num ori
                             </attList>
                         </elementSpec>
                         <elementSpec ident="origDate" mode="change">
+                            <content>
+                                <alternate minOccurs="0"
+                                    maxOccurs="unbounded">
+                                    <textNode/>
+                                    <classRef key="model.gLike"/>
+                                    <classRef key="model.phrase"/>
+                                    <classRef key="model.global"/>
+                                </alternate>
+                            </content>
                             <constraintSpec scheme="schematron"
                                 ident="origDate-when-or-from-to-or-notBefore-notAfteer">
                                 <constraint>
@@ -3234,8 +3692,8 @@ hi imprint item l lb lg list listBibl measure mentioned monogr name note num ori
                                 </constraint>
                             </constraintSpec>
                             <attList>
-                                <attDef ident="cert" mode="change" usage="req"/>
-                                <attDef ident="resp" mode="change" usage="req"/>
+                                <attDef ident="cert" mode="change" usage="rec"/>
+                                <attDef ident="resp" mode="change" usage="rec"/>
                                 <attDef ident="type" mode="change">
                                     <valList mode="add" type="semi">
                                         <valItem ident="dateManuscrit">
@@ -3248,8 +3706,64 @@ hi imprint item l lb lg list listBibl measure mentioned monogr name note num ori
                                 </attDef>
                             </attList>
                         </elementSpec>
+                        
                         <moduleRef key="gaiji" include="g"/>
-                        <moduleRef key="figures" include="formula table"/>
+                        
+                        <moduleRef key="figures" include="formula notatedMusic table"/>
+                        <elementSpec ident="formula" mode="change">
+                            <content>
+                                <alternate minOccurs="0"
+                                    maxOccurs="unbounded">
+                                    <textNode/>
+                                    <classRef key="model.graphicLike"/>
+                                    <classRef key="model.hiLike"/>
+                                </alternate>
+                            </content>
+                        </elementSpec>
+                        <elementSpec ident="notatedMusic" mode="change">
+                            <content>
+                                <alternate minOccurs="0"
+                                    maxOccurs="unbounded">
+                                    <classRef key="model.labelLike"/>
+                                    <classRef key="model.ptrLike"/>
+                                    <elementRef key="graphic"/>
+                                    <elementRef key="binaryObject"/>
+                                    <elementRef key="seg"/>
+                                    <elementRef key="desc"/>
+                                </alternate>
+                            </content>
+                        </elementSpec>
+                        <elementSpec ident="table" mode="change">
+                            <content>
+                                <sequence>
+                                    <alternate minOccurs="0"
+                                        maxOccurs="unbounded">
+                                        <classRef key="model.headLike"/>
+                                        <classRef key="model.global"/>
+                                    </alternate>
+                                    <alternate>
+                                        <sequence minOccurs="1"
+                                            maxOccurs="unbounded">
+                                            <elementRef key="row"/>
+                                            <classRef key="model.global"
+                                                minOccurs="0" maxOccurs="unbounded"/>
+                                        </sequence>
+                                        <sequence minOccurs="1"
+                                            maxOccurs="unbounded">
+                                            <classRef key="model.graphicLike"/>
+                                            <classRef key="model.global"
+                                                minOccurs="0" maxOccurs="unbounded"/>
+                                        </sequence>
+                                    </alternate>
+                                    <sequence minOccurs="0"
+                                        maxOccurs="unbounded">
+                                        <classRef key="model.divBottom"/>
+                                        <classRef key="model.global"
+                                            minOccurs="0" maxOccurs="unbounded"/>
+                                    </sequence>
+                                </sequence>
+                            </content>
+                        </elementSpec>
                     </schemaSpec>
                 </div>
             </div>

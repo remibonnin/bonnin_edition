@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mei xmlns:mei="http://www.music-encoding.org/ns/mei">
+<mei xmlns="http://www.music-encoding.org/ns/mei">
    <music>
       <body>
          <mdiv>
@@ -15,28 +15,28 @@
                                
                                notationtype="neume"/>
                      <staffDef clef.shape="F"
-                        n="1"
+                        n="2"
                         clef.line="4"
                         oct="4"
                         lines="5"
                        
                         notationtype="neume"/>
                      <staffDef clef.shape="C"
-                        n="1"
+                        n="3"
                         clef.line="4"
                         oct="4"
                         lines="5"
                        
                         notationtype="neume"/>
                      <staffDef clef.shape="C"
-                        n="1"
+                        n="4"
                         clef.line="4"
                         oct="4"
                         lines="5"
 
                         notationtype="neume"/>
                      <staffDef clef.shape="C"
-                        n="1"
+                        n="5"
                         clef.line="4"
                         oct="4"
                         lines="5"
@@ -44,7 +44,7 @@
                         
                         notationtype="neume"/>
                      <staffDef clef.shape="C"
-                        n="1"
+                        n="6"
                         clef.line="4"
                         oct="4"
                         lines="5"
