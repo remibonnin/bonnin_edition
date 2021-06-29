@@ -96,7 +96,7 @@
                 <w>et</w>
                 <w>cors</w>
                 <lb facs="#facs_31_line_1606067048880_373" n="N006"/>
-                <w>>joli</w>
+                <w>joli</w>
                 <w>·</w>
                 <lb facs="#facs_31_r1l24" n="N007"/>
                 <w><comment>S</comment>e</w>
@@ -3301,7 +3301,7 @@
                 <w>fox</w>
                 <w rend="elision">d</w><w>alemai<lb facs="#facs_148_r2l48" n="N029" rend="hyphen"/>gne</w>
                 <w>·</w>
-                <w><comment>N</comment>est</w>
+                <w rend="elision"><comment>N</comment></w><w>est</w>
                 <w>merueille</w>
                 <w>se</w>
                 <w>ie</w>
