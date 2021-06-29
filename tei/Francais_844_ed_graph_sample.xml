@@ -7,8 +7,8 @@
 <!DOCTYPE TEI SYSTEM "../dtd/abreviations.dtd" [
 <!--VM ajouter ici les entités-->
 ]>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="fro">
+    <teiHeader xml:lang="fr">
         <fileDesc>
             <titleStmt>
                 <title type="main">Français 844_tr_graphematique</title>
@@ -32,11 +32,10 @@
            <pb facs="#facs_31" n="31" xml:id="img_0031"/>
             <ab facs="#facs_31_region_1606066921800_248" type="" n="1"><w/>
                 <lb facs="#facs_31_line_1606066943996_260" n="N001"/>
-                <w><comment>li dux
-                    de</comment></w>
+                <comment><w>li</w> <w>dux</w>
+                    <w>de</w></comment>
                 <lb facs="#facs_31_line_1606066946464_263" n="N002"/>
-                <w><comment>brabant
-                    ·</comment></w></ab>
+                <w><comment>brabant·</comment></w></ab>
             <ab facs="#facs_31_r1" type="" n="2">
                 <lb facs="#facs_31_r1l5" n="N001"/>
                 <w>mors</w>
@@ -130,7 +129,7 @@
                 <w>talent</w>
                 <w>·</w>
                <w rend="elision">d</w><w>amer</w>
-                <w>fausse<lb facs="#facs_31_r1l27" n="N010" rend="tiret"/>ment</w>
+                <w>fausse<lb facs="#facs_31_r1l27" n="N010" rend="hyphen"/>ment</w>
                 <w>·</w>
                 <w>amender</w>
                 <w>·</w>
@@ -179,9 +178,7 @@
                 <w></w>
                 <w>temprement</w>
                 <w>·</w>
-                <w>a¬</w>
-                <lb facs="#facs_31_r1l32" n="N015"/>
-                <w>morousement</w>
+                <w>a<lb rend="hyphen"  facs="#facs_31_r1l32" n="N015"/>morousement</w>
                 <w>·</w>
                 <w>sanz</w>
                 <w>fausser</w>
@@ -262,9 +259,7 @@
                 <w>poissance</w>
                 <w>·</w>
                 <w>et</w>
-                <w>volen¬</w>
-                <lb facs="#facs_31_r2l8" n="N008"/>
-                <w>tez</w>
+                <w>volen<lb rend="hyphen"  facs="#facs_31_r2l8" n="N008"/>tez</w>
                 <w>de</w>
                 <w>seruir</w>
                 <w>·</w>
@@ -275,9 +270,7 @@
                 <w>fiance</w>
                 <w>·</w>
                 <w>ne</w>
-                <w>por¬</w>
-            <lb facs="#facs_31_r2l9" n="N009"/>
-                <w>rai</w>
+                <w>por<lb rend="hyphen"  facs="#facs_31_r2l9" n="N009"/>rai</w>
                 <w>mie</w>
                 <w>guarir</w>
                 <w>·</w>
@@ -348,9 +341,7 @@
                 <w>dites</w>
                 <w rend="elision">s</w><w>il</w>
                 <w>vos</w>
-                <w>a¬</w>
-                <lb facs="#facs_31_r2l21" n="N016"/>
-                <w>gree</w>
+                <w>a<lb rend="hyphen"  facs="#facs_31_r2l21" n="N016"/>gree</w>
                 <w>·</w>
                 <w>respondez</w>
                 <w>moi</w>
@@ -389,9 +380,7 @@
                 <w>·</w>
                 <w>tant</w>
                 <w>ont</w>
-                <w>a¬</w>
-                <lb facs="#facs_31_r2l36" n="N020"/>
-                <w>mors</w>
+                <w>a<lb rend="hyphen"  facs="#facs_31_r2l36" n="N020"/>mors</w>
                 <w>la</w>
                 <w>dame</w>
                 <w>abandonee</w>
@@ -443,9 +432,7 @@
                  <w>la</w>
                 <w>dame</w>
                 <w>a</w>
-                <w>do¬</w>
-                <lb facs="#facs_31_r2l45" n="N026"/>
-                <w>ne</w>
+                <w>do<lb rend="hyphen"  facs="#facs_31_r2l45" n="N026"/>ne</w>
                 <w>a</w>                   
                 <w>son</w>
                 <w>amant</w>
@@ -470,10 +457,9 @@
                        <ab facs="#facs_31_region_1606066923709_251" type="page-numberpage-number" n="4"><w/>
                 <w><lb facs="#facs_31_line_1606066987789_286" n="N001"/>6</w></ab>
             <ab facs="#facs_31_r3" type="" n="5"><w/>
-                <w><lb facs="#facs_31_line_1606066970698_277" n="N001"/><comment>li dux
-                    de</comment></w>
-                <w><lb facs="#facs_31_line_1606066973547_280" n="N002"/><comment>brabant
-                    ·</comment></w></ab>
+                <lb facs="#facs_31_line_1606066970698_277" n="N001"/><comment><w>li</w> <w>dux</w>
+                    <w>de</w></comment>
+                <lb facs="#facs_31_line_1606066973547_280" n="N002"/><comment><w>brabant</w><w>·</w></comment></ab>
             <note facs="#facs_31_region_1606066929141_254" place="[direction]">
                 <lb facs="#facs_31_line_1606066991726_289" n="N001"/>? <lb
                     facs="#facs_31_line_1606066993817_292" n="N002"/>?</note>
@@ -495,9 +481,7 @@
                 <w>trouee</w>
                 <w>·</w>
                 <w>ceste</w>
-                <w>rai¬</w>
-            <lb facs="#facs_32_r1l3" n="N003"/>
-                <w>son</w>
+                <w>rai<lb rend="hyphen"  facs="#facs_32_r1l3" n="N003"/>son</w>
                 <w>·</w>
                 <w>trop</w>
                 <w>vos</w>
@@ -518,9 +502,7 @@
                 <w>ce</w>
                 <w>&con-9-tironien;</w>
                 <w>a</w>
-                <w>abando¬</w>
-            <lb facs="#facs_32_r1l5" n="N005"/>
-                <w>neement</w>
+                <w>abando<lb rend="hyphen"  facs="#facs_32_r1l5" n="N005"/>neement</w>
                 <w>·</w>
                 <w>ne</w>
                 <w rend="elision">m</w><w>alez</w>
@@ -539,9 +521,7 @@
                 <w>·</w>
             <w>&con-9-tironien;</w>
                 <w>la</w>
-                <w>da¬</w>
-            <lb facs="#facs_32_r1l7" n="N007"/>
-                <w>me</w>
+                <w>da<lb rend="hyphen"  facs="#facs_32_r1l7" n="N007"/>me</w>
                 <w>se</w>
                 <w>garde</w>
                 <w>sainnemant</w>
@@ -551,8 +531,8 @@
             <pb facs="#facs_33" n="33" xml:id="img_0033"/>
             <note facs="#facs_33_region_1606122562343_144" place="[direction]"/>
             <ab facs="#facs_33_region_1606067284360_551" type="" n="7"><w/>
-                <w><lb facs="#facs_33_line_1606067289510_554" n="N001"/><comment>li vidames de
-                        chartres ·</comment></w></ab>
+                <lb facs="#facs_33_line_1606067289510_554" n="N001"/><comment><w>li</w> <w>vidames</w> <w>de</w>
+                        <w>chartres</w><w>·</w></comment></ab>
             <ab facs="#facs_33_r1" type="" n="8"><w/>
                 <w rend="elision"><lb facs="#facs_33_line_1606122566096_147" n="N001"/>D</w>
                 <w><lb facs="#facs_33_r1l3" n="N002"/>amours</w>
@@ -560,9 +540,7 @@
                 <w>ioie</w>
                 <w>et</w>
                 <w>honours</w>
-                <w>en¬</w>
-                <lb facs="#facs_33_r1l5" n="N003"/>
-                <w>ement</w>
+                <w>en<lb rend="hyphen"  facs="#facs_33_r1l5" n="N003"/>ement</w>
                 <w>·</w>
                 <w rend="aggl">a</w><w>ceus</w>
                 <w>qui</w>
@@ -585,9 +563,7 @@
                 <w>ne</w>
                 <w>valour</w>
                 <w>·</w>
-                <w>sa¬</w>
-                <lb facs="#facs_33_r1l11" n="N006"/>
-                <w>mours</w>
+                <w>sa<lb rend="hyphen"  facs="#facs_33_r1l11" n="N006"/>mours</w>
                 <w>ne</w>
                 <w>le</w>
                 <w>iustice</w>
@@ -613,9 +589,7 @@
                 <w>loiaument</w>
                 <w>·</w>
                 <w>et</w>
-                <w>a¬</w>
-                <lb facs="#facs_33_r1l14" n="N009"/>
-                <w>merai</w>
+                <w>a<lb rend="hyphen"  facs="#facs_33_r1l14" n="N009"/>merai</w>
                 <w>sanz</w>
                 <w>nul</w>
                 <w>definement</w>
@@ -647,9 +621,7 @@
                 <w>son</w>
                 <w>cuer</w>
                 <w>nait</w>
-                <w>faus¬</w>
-                <lb facs="#facs_33_r2l3" n="N003"/>
-                <w>sete</w>
+                <w>faus<lb rend="hyphen"  facs="#facs_33_r2l3" n="N003"/>sete</w>
                 <w>·</w>
                 <w>ne</w>
                 <w>faintise</w>
@@ -755,9 +727,7 @@
                 <w>ne</w>
                 <w>puiz</w>
                 <w>sauoir</w>
-                <w>co&tilde1-nasale-n;¬</w>
-                <lb facs="#facs_33_r2l16" n="N016"/>
-                <w>ment</w>
+                <w>co&tilde1-nasale-n;<lb rend="hyphen"  facs="#facs_33_r2l16" n="N016"/>ment</w>
                 <w>·</w>
                 <w>ne</w>
                 <w>en</w>
@@ -790,9 +760,7 @@
                 <w>et</w>
                 <w>est</w>
                 <w>asa</w>
-                <w>de¬</w>
-                <lb facs="#facs_33_r2l20" n="N020"/>
-                <w>uise</w>
+                <w>de<lb rend="hyphen"  facs="#facs_33_r2l20" n="N020"/>uise</w>
                 <w>·</w></ab>
             <ab facs="#facs_33_region_1606067298332_558" type="page-numberpage-number" n="10"><w/>
             <w><lb facs="#facs_33_line_1606067302119_561" n="N001"/>7</w></ab>
@@ -800,7 +768,7 @@
             <note facs="#facs_34_region_1612281703505_1460" place="[direction]">
                 <lb facs="#facs_34_line_1612281708162_1463" n="N001"/>2</note>
             <ab facs="#facs_34_r1" type="" n="11"><w/>
-                <w><lb facs="#facs_34_r1l1" n="N001"/><comment>li vidames de cartres ·</comment></w>
+                <lb facs="#facs_34_r1l1" n="N001"/><comment><w>li</w> <w>vidames</w> <w>de</w> <w>cartres</w> <w>·</w></comment>
                 <lb facs="#facs_34_r1l3" n="N002"/>
                 <w>vant</w>
                 <w>la</w>
@@ -853,9 +821,7 @@
                 <w>conforter</w>
                 <w>ma</w>
                 <w>cruel</w>
-                <w>auen¬</w>
-                <lb facs="#facs_34_r1l34" n="N009"/>
-                <w>ture</w>
+                <w>auen<lb rend="hyphen"  facs="#facs_34_r1l34" n="N009"/>ture</w>
                 <w>·</w>
                 <w>qui</w>
                 <w rend="elision">m</w><w>est</w>
@@ -987,9 +953,7 @@
                 <w>de</w>
                 <w>li</w>
                 <w>nule</w>
-                <w>a¬</w>
-                <lb facs="#facs_34_r3l3" n="N003"/>
-                <w>mour</w>
+                <w>a<lb rend="hyphen"  facs="#facs_34_r3l3" n="N003"/>mour</w>
                 <w>traire</w>
                 <w>·</w>
                 <w>ses</w>
@@ -1005,9 +969,7 @@
                 <w rend="elision">m</w><w>auera</w>
                 <w>se</w>
                 <w>sa</w>
-                <w>guer¬</w>
-                <lb facs="#facs_34_line_1606067492262_783" n="N005"/>
-                <w>re</w>
+                <w>guer<lb rend="hyphen"  facs="#facs_34_line_1606067492262_783" n="N005"/>re</w>
                 <w>me</w>
                 <w>dure</w>
                 <w>·</w>
@@ -1087,9 +1049,7 @@
                 <w>cuers</w>
                 <w rend="elision">s</w><w>il</w>
                 <w>li</w>
-                <w>o¬</w>
-                <lb facs="#facs_34_r3l15" n="N015"/>
-                <w>troie</w>
+                <w>o<lb rend="hyphen"  facs="#facs_34_r3l15" n="N015"/>troie</w>
                 <w>·</w>
                 <w>moi</w>
                 <w rend="aggl">a</w><w>hair</w>
@@ -1097,9 +1057,7 @@
                 <w>ie</w>
                 <w>la</w>
                 <w>voi</w>
-                <w>certein¬</w>
-                <lb facs="#facs_34_r3l16" n="N016"/>
-                <w>>ne</w>
+                <w>certein<lb rend="hyphen"  facs="#facs_34_r3l16" n="N016"/>>ne</w>
                 <w>·</w>
                 <w rend="elision">qu</w><w>en</w>
                 <w>tout</w>
@@ -1107,9 +1065,7 @@
                 <w>mont</w>
                 <w>ne</w>
                 <w>li</w>
-                <w>deman¬</w>
-               <lb facs="#facs_34_r3l17" n="N017"/>
-                <w>deroie</w>
+                <w>deman<lb rend="hyphen"  facs="#facs_34_r3l17" n="N017"/>deroie</w>
                 <w>·</w>
                 <w>rienz</w>
                 <w>fors</w>
@@ -1152,8 +1108,8 @@
                 <w>voudroie</w>
                 <w>·</w>
                 <lb facs="#facs_34_line_1606067529288_821" n="N022"/>
-                <w><comment>li vidames de
-                        chartres</comment></w>
+                <comment><w>li</w> <w>vidames</w> <w>de</w>
+                        <w>chartres</w></comment>
                     <lb facs="#facs_34_r3l23" n="N023"/>
                 <w>ombien</w>
            <w rend="elision">qu</w><w>aie</w>
@@ -1163,17 +1119,13 @@
                 <w>de</w>
                 <w>ma</w>
                 <w>douce</w>
-                <w>con¬</w>
-              <lb facs="#facs_34_r3l28" n="N025"/>
-                <w>tre</w>
+                <w>con<lb rend="hyphen"  facs="#facs_34_r3l28" n="N025"/>tre</w>
                 <w>·</w>
                 <w>et</w>
                 <w>maint</w>
                 <w>grant</w>
                 <w>trauaill</w>
-                <w>endu¬</w>
-                <lb facs="#facs_34_r3l32" n="N026"/>
-                <w>re</w>
+                <w>endu<lb rend="hyphen"  facs="#facs_34_r3l32" n="N026"/>re</w>
                 <w>·</w>
                 <w>en</w>
                 <w>terre</w>
@@ -1273,7 +1225,7 @@
                 <w>que</w>
                 <lb facs="#facs_145_line_1607001976770_2204" n="N007"/>
                 <w>ie</w>
-                <w rend="elision"> l</w><w rend="aggl">en</w><w>crui</w><!-- VM rend="aggl" : <w>lencrui</w>-->
+                <w rend="elision">l</w><w rend="aggl">en</w><w>crui</w><!-- VM rend="aggl" : <w>lencrui</w>-->
                 <w>·</w>
                 <w><comment>S</comment>i</w>
                 <w>sui</w>
@@ -1437,7 +1389,7 @@
                 <w rend="elision">i</w><w>en</w>
                 <w>morra</w>
                 <w>·</w>
-                <w>va<lb facs="#facs_145_r2l57" n="N027" rend="tiret"/>lara</w>
+                <w>va<lb facs="#facs_145_r2l57" n="N027" rend="hyphen"/>lara</w>
                 <w>·</w>
                 <w><comment>D</comment>ame</w>
                 <w>en</w>
@@ -1664,7 +1616,7 @@
                 <w>uoi</w>
                 <w>&com-9-tironien;ment</w>
                 <w>puisse</w>
-                <w>du<lb facs="#facs_145_r3l38" n="N020" rend="tiret"/>rer</w>
+                <w>du<lb facs="#facs_145_r3l38" n="N020" rend="hyphen"/>rer</w>
                 <w>de</w>
                 <w>ioie</w>
                 <w>auoir</w>
@@ -1907,7 +1859,7 @@
                 <w>secoranz</w>
                 <w>de</w>
                 <w>uos</w>
-                <w>a<lb facs="#facs_146_r2l18" n="N018" rend="tiret"/>mer</w>
+                <w>a<lb facs="#facs_146_r2l18" n="N018" rend="hyphen"/>mer</w>
                 <w>puisse</w>
                 <w>auoir</w>
                 <w>droite</w>
@@ -2014,7 +1966,7 @@
                 <w>mes</w>
                 <w>moi</w>
                 <w>couient</w>
-                <w>en<ab facs="#facs_146_r4" type="" n="17"/><lb facs="#facs_146_r4l2" n="N001" rend="tiret"/>durer</w>
+                <w>en<ab facs="#facs_146_r4" type="" n="17"/><lb facs="#facs_146_r4l2" n="N001" rend="hyphen"/>durer</w>
                 <w><comment>C</comment>hascuns</w>
                 <w>dit</w>
                 <w>qui</w>
@@ -2029,7 +1981,7 @@
                 <w>morir</w>
                 <w>mielz</w>
                 <w>aim</w>
-                <w>sos<lb facs="#facs_146_r4l4" n="N003" rend="tiret"/>frir</w>
+                <w>sos<lb facs="#facs_146_r4l4" n="N003" rend="hyphen"/>frir</w>
                 <w>ma</w>
                 <w>dolor</w>
                 <w>uuire</w>
@@ -2158,7 +2110,7 @@
                 <w>tot</w>
                 <w>mon</w>
                 <w>pooir</w>
-                <w>mo<lb facs="#facs_146_r4l35" n="N017" rend="tiret"/>tro</w><!-- VM revoir ms -->
+                <w>mo<lb facs="#facs_146_r4l35" n="N017" rend="hyphen"/>tro</w><!-- VM revoir ms -->
                 <w>auos</w>
                 <w>sanz</w>
                 <w>&con-9-tironien;tendre</w>
@@ -2408,7 +2360,7 @@
                 <w>uertu</w>
                 <w>se</w>
                 <w>ie</w>
-                <w>i<lb facs="#facs_147_r1l26" n="N021" rend="tiret"/>mes</w>
+                <w>i<lb facs="#facs_147_r1l26" n="N021" rend="hyphen"/>mes</w>
                 <w>uos</w>
                 <w>pooie</w>
                 <w>aprochier</w>
@@ -2463,13 +2415,13 @@
                 <w>en</w>
                 <w>deust</w>
                 <w>la</w>
-                <w>cin<lb facs="#facs_147_r1l32" n="N027" rend="tiret"/>quantisme</w>
+                <w>cin<lb facs="#facs_147_r1l32" n="N027" rend="hyphen"/>quantisme</w>
                 <w>part</w>
                 <w>li</w>
                 <w>dit</w>
                 <w>plaisant</w>
                 <w>li</w>
-                <w>amo<lb facs="#facs_147_r1l33" n="N028" rend="tiret"/>reus</w>
+                <w>amo<lb facs="#facs_147_r1l33" n="N028" rend="hyphen"/>reus</w>
                 <w>regart</w>
                 <w>mi</w>
                 <w>font</w>
@@ -2748,7 +2700,7 @@
                 <w>mos</w>
                 <w>biens</w>
                 <w>atent</w>
-                <w>sa<lb facs="#facs_147_r2l26" n="N021" rend="tiret"/>chiez</w>
+                <w>sa<lb facs="#facs_147_r2l26" n="N021" rend="hyphen"/>chiez</w>
                 <w>q&a-suscrit-ua;nt</w>
                 <w>uos</w>
                 <w>puis</w>
@@ -2819,7 +2771,7 @@
                 <w>&et-tironien;</w>
                 <w>esgarez</w>
                 <w>&que-q-tilde;</w>
-                   <w> ie</w>
+                   <w>ie</w>
                 <lb facs="#facs_148_r1l7" n="N003"/>
                 <w rend="elision">n</w><w>ai</w>
                 <w>mais</w>
@@ -2937,9 +2889,7 @@
                 <w>me</w>
                 <w>sui</w>
                 <w>a</w>
-                <w>ma¬</w>
-                <lb facs="#facs_148_r1l22" n="N017"/>
-                <w>dame</w>
+                <w>ma<lb rend="hyphen"  facs="#facs_148_r1l22" n="N017"/>dame</w>
                 <w>dounez</w>
                 <w>amors</w>
                 <w>le</w>
@@ -3034,7 +2984,7 @@
                 <w>&et-tironien;</w>
                 <w>la</w>
                 <w>g&a-suscrit-ra;ns</w>
-                <w>uo<lb facs="#facs_148_r1l32" n="N027" rend="tiret"/>lentez</w>
+                <w>uo<lb facs="#facs_148_r1l32" n="N027" rend="hyphen"/>lentez</w>
                 <w>·</w>
                 <w><comment>D</comment>ame</w>
                 <w>merci</w>
@@ -3049,7 +2999,7 @@
                 <w>&et-tironien;</w>
                 <w>toutez</w>
                 <w>g&a-suscrit-ra;ns</w>
-                <w>bon<lb facs="#facs_148_r1l34" n="N029" rend="tiret"/></w><w>tez</w>
+                <w>bon<lb facs="#facs_148_r1l34" n="N029" rend="hyphen"/></w><w>tez</w>
                 <w>sont</w>
                 <w>plus</w>
                 <w>en</w>
@@ -3249,7 +3199,7 @@
                 <w>li</w>
                 <w>crie</w>
                 <w>nul</w>
-                <w>mer<lb facs="#facs_148_r2l36" n="N017" rend="tiret"/>ciz</w>
+                <w>mer<lb facs="#facs_148_r2l36" n="N017" rend="hyphen"/>ciz</w>
                 <w>besant</w>
                 <w>ses</w>
                 <w>piez</w>
@@ -3349,7 +3299,7 @@
                 <w>ne</w>
                 <w>cuns</w>
                 <w>fox</w>
-                <w rend="elision">d</w><w>alemai<lb facs="#facs_148_r2l48" n="N029" rend="tiret"/>gne</w>
+                <w rend="elision">d</w><w>alemai<lb facs="#facs_148_r2l48" n="N029" rend="hyphen"/>gne</w>
                 <w>·</w>
                 <w><comment>N</comment>est</w>
                 <w>merueille</w>
