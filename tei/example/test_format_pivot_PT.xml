@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="odd/texte/out/ODD_Ms_Roi_21_juin.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" type="transcr" xml:id="pivot" xml:lang="fr">
+<?xml-model href="odd/texte/out/ODD_Ms_Roi_29_juin.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" 
+type="ed" 
+xml:id="modele1" 
+xml:lang="fr"
+corresp="pivot">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -52,7 +56,7 @@
             </ab>
          </publicationStmt>
          <sourceDesc>
-            <msDesc xml:lang="fro" xml:id="axy_vdn_1qb">
+            <msDesc xml:lang="fro" xml:id="maritem">
                <msIdentifier>
                   <country>France</country>
                   <settlement>Paris</settlement>
@@ -162,6 +166,20 @@
          </sourceDesc>
 
       </fileDesc>
+      <encodingDesc>
+         <refsDecl n="CTS">
+            <cRefPattern n="vers"
+                         matchPattern="(\w+)"
+                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body//tei:l[@n='$1'])">
+               <p>Ce pointeur extrait les vers</p>
+            </cRefPattern>
+         </refsDecl>
+         <projectDesc>
+            <p>Edition numérique du Manuscrit du Roi</p>
+            <p>Projet ANR Maritem</p>
+         </projectDesc>
+      
+      </encodingDesc>
       <profileDesc>
          <creation>Chansons de geste</creation>
          <langUsage>
@@ -175,12 +193,6 @@
             </setting>
          </settingDesc>
       </profileDesc>
-      <encodingDesc>
-         <projectDesc>
-            <p>Edition numérique du Manuscrit du Roi</p>
-            <p>Projet ANR Maritem</p>
-         </projectDesc>
-      </encodingDesc>
       <revisionDesc>
          <change who="#VM" when="2020-10">Transcription des feuillets du Manuscrit du Roi.</change>
          <change who="#VM" when="2021-03">OCR et Export des fichiers Transkribus</change>
@@ -192,15 +204,17 @@
       </revisionDesc>
 
    </teiHeader>
-   <text xml:lang="fr">
+   <text xml:lang="fr" xml:base="urn:cts:froLit:maritem.pivot.modele1">
       <body>
          <div>
             <head>Chanson</head>
             <!-- Exemple de titre -->
+            
             <notatedMusic>
                <ptr target="pivot_music_1.xml" type="pointeur"/>
                <desc>Musique associée à la première chanson</desc>
             </notatedMusic>
+            
             
             <lg type="chanson">
                <lg type="strophe" rhyme="abab">

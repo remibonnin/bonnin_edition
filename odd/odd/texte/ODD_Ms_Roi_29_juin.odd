@@ -1542,8 +1542,13 @@
                         docLang="fr" xml:lang="fr">
                         <!-- SS header -->
                         <moduleRef key="header"
-                            include="citeStructure creation cRefPattern change edition editionStmt encodingDesc fileDesc handNote idno language langUsage profileDesc projectDesc publicationStmt revisionDesc scriptNote sourceDesc teiHeader titleStmt"/>
+                            include="citeData citeStructure creation cRefPattern change edition editionStmt encodingDesc fileDesc handNote idno language langUsage profileDesc projectDesc publicationStmt refsDecl revisionDesc scriptNote sourceDesc teiHeader titleStmt"/>
                         
+                        <elementSpec ident="citeData" mode="change">
+                            <content>
+                                <empty/>
+                            </content>
+                        </elementSpec>
                         <elementSpec ident="citeStructure" mode="change">
                             <content>
                                 <sequence>
@@ -1580,7 +1585,13 @@
                             <content>
                                 <classRef key="model.pLike" minOccurs="0"
                                     maxOccurs="unbounded"/>
+                                <elementRef key="p"/>
                             </content>
+                            <attList>
+                                <attDef ident="n" mode="change" usage="req"/>
+                                <attDef ident="matchPattern" mode="change" usage="req"/>
+                                <attDef ident="replacementPattern" mode="change" usage="req"/>
+                            </attList>
                         </elementSpec>
                         <elementSpec ident="change" mode="change">
                             <constraintSpec scheme="schematron" ident="change-when-or-from-to">
@@ -1619,6 +1630,7 @@
                                     <classRef key="model.encodingDescPart"/>
                                     <classRef key="model.pLike"/>
                                     <elementRef key="projectDesc"/>
+                                    <elementRef key="refsDecl"/>
                                 </alternate>
                             </content>
                         </elementSpec>
@@ -1694,6 +1706,23 @@
                                 </alternate>
                             </content>
                         </elementSpec>
+                        <elementSpec ident="refsDecl" mode="change">
+                            <content>
+                                <alternate>
+                                    <classRef key="model.pLike" minOccurs="1"
+                                        maxOccurs="unbounded"/>
+                                    <elementRef key="citeStructure"
+                                        minOccurs="1" maxOccurs="unbounded"/>
+                                    <elementRef key="cRefPattern"
+                                        minOccurs="1" maxOccurs="unbounded"/>
+                                    <elementRef key="refState" minOccurs="1"
+                                        maxOccurs="unbounded"/>
+                                </alternate>
+                            </content>
+                            <attList>
+                                <attDef ident="n" mode="change" usage="req"></attDef>
+                            </attList>
+                        </elementSpec>
                         <elementSpec ident="revisionDesc" mode="change">
                             <content>
                                 <alternate>
@@ -1722,8 +1751,8 @@
                             <content>
                                 <sequence>
                                     <elementRef key="fileDesc"/>
-                                    <elementRef key="profileDesc"/>
                                     <elementRef key="encodingDesc"/>
+                                    <elementRef key="profileDesc"/>                                  
                                     <elementRef key="revisionDesc"/>                                   
                                 </sequence>
                             </content>
@@ -2633,8 +2662,7 @@ hi imprint item l lb lg list listBibl measure mentioned monogr name note num ori
                                 <memberOf key="att.global.facs" mode="delete"/>
                                 <!-- Réfléchir à la nécessité de conserver @source partout -->
                             </classes>
-                            <attList>
-                                <attDef ident="xml:base" mode="delete"/>
+                            <attList>                               
                                 <attDef ident="xml:space" mode="delete"/>
                                 <!-- On pourrait hésiter pour celui-là -->
                             </attList>
@@ -2792,6 +2820,28 @@ hi imprint item l lb lg list listBibl measure mentioned monogr name note num ori
                             </attList>
                         </elementSpec>
                         <elementSpec ident="text" mode="change">
+                            <content>
+                                <sequence>
+                                    <classRef key="model.global"
+                                        minOccurs="0" maxOccurs="unbounded"/>
+                                    <sequence minOccurs="0">
+                                        <elementRef key="front"/>
+                                        <classRef key="model.global"
+                                            minOccurs="0" maxOccurs="unbounded"/>
+                                    </sequence>
+                                    <alternate>
+                                        <elementRef key="body"/>
+                                        <elementRef key="group"/>
+                                    </alternate>
+                                    <classRef key="model.global"
+                                        minOccurs="0" maxOccurs="unbounded"/>
+                                    <sequence minOccurs="0">
+                                        <elementRef key="back"/>
+                                        <classRef key="model.global"
+                                            minOccurs="0" maxOccurs="unbounded"/>
+                                    </sequence>
+                                </sequence>
+                            </content>
                             <attList>
                                 <attDef ident="xml:lang" mode="change" usage="req">
                                     <remarks xml:lang="fr">
@@ -2804,6 +2854,7 @@ hi imprint item l lb lg list listBibl measure mentioned monogr name note num ori
                                             attribut à chaque fois que cela est nécessaire.</p>
                                     </remarks>
                                 </attDef>
+                                <attDef ident="xml:base" mode="change" usage="req"/>
                             </attList>
                         </elementSpec>
                         <elementSpec ident="body" mode="change">
