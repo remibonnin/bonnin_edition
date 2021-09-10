@@ -3,18 +3,8 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.tei-c.org/ns/1.0"
     xmlns:tei="http://www.tei-c.org/ns/1.0" exclude-result-prefixes="xs tei" version="2.0">
     
-    <!-- L'XSL de tokénisation de Montferrand peut être plus efficace que celle-ci -->
-
-    <!-- 
-        XSL de tokenization à peaufiner,
-        notamment pour la gestion des niveaux de 
-        profondeur au sein des TEI:l,
-        mais qui donne des résultats corrects.
-    -->
-    <!-- La gestion de la ponctuation est un peu alambiquée. On pourrait la simplifier en la prenant en compte plus tôt -->
-    <!-- Tenir compte des ' pour créer des mots avec rend="elision": fait -->
-    <!-- /!\ si une ligne ne contient qu'un seul w, elle est vidée: corrigé -->
-
+    <xsl:output method="xml" indent="yes"/>
+   
     <xsl:template match="@* | node()" mode="#all">
         <xsl:copy>
             <xsl:apply-templates select="@* | node()" mode="#current"/>
