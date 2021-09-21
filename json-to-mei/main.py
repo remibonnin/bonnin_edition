@@ -1,9 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:mei="http://www.music-encoding.org/ns/mei" xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:math="http://www.w3.org/2005/xpath-functions/math"
-    xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" exclude-result-prefixes="xs math xd">
+from json import load
+from dicttoxml import dicttoxml
+from lxml import etree
+
+
+def JSON_to_MEI(json_path):
+    """
+    Get main text from xml file
+    :param json_path: path to json file
+    """
+
+    # first, json to xml
+    with open(json_path, 'r') as input_var:
+        d = load(input_var)
+        di = {"TEI": d}
+        xm = dicttoxml(di)  # returns xm as <class 'bytes'> object
+
+    myxsl = etree.XML('''
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns="http://www.music-encoding.org/ns/mei" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" 
+    exclude-result-prefixes="xs xd">
     <xsl:output method="xml" indent="yes" encoding="UTF-8"/>
+    
     <xsl:strip-space elements="*"/>
     
     <xsl:template match="/">
@@ -121,72 +140,105 @@
     <xsl:template match="item[kind = 'Syllable'] | item[kind = 'LineChange']">
         
         
-        <xsl:apply-templates select=".//children/item"/>
+        <xsl:apply-templates select="children/item"/>
         <syllable>
             
             <xsl:element name="syl">
                 
-                
-                <xsl:value-of select=".//text"/>
+                <xsl:apply-templates select="text"/>
             </xsl:element>
             
             <neume>
                 
-                <xsl:for-each select=".//grouped/item">
+                <xsl:for-each select="descendant::grouped/item">
                     
                     <xsl:element name="nc">
-                        
                         <xsl:attribute name="pname">
-                            
-                            
-                            
-                            <xsl:apply-templates select="base/lower-case(text())"/>
+                            <xsl:value-of select="translate(base/text(), 'ABCDEFG', 'abcdefg')"/>
                         </xsl:attribute>
                         
                         <xsl:attribute name="oct">
-                            
-                            <xsl:apply-templates select="'2'"/>
+                            <xsl:value-of select="'2'"/>
                         </xsl:attribute>
                         
                         
                         <xsl:attribute name="intm">
-                            
                             <xsl:choose>
-                                
-                                <xsl:when test=".//noteType/text() = 'Descending'">
-                                    
-                                    <xsl:apply-templates select="'d'"/>
+                                <xsl:when test="noteType = 'Descending'">
+                                    <xsl:text>d</xsl:text>
                                 </xsl:when>
-                                <xsl:when test=".//noteType/text() = 'Ascending'">
-                                    
-                                    <xsl:apply-templates select="'u'"/>
+                                <xsl:when test="noteType = 'Ascending'">
+                                    <xsl:text>u</xsl:text>
                                 </xsl:when>
-                                <xsl:when test=".//noteType/text() = 'Normal'">
-                                    
-                                    <xsl:apply-templates select="'n'"/>
+                                <xsl:when test="noteType = 'Normal'">
+                                    <xsl:text>n</xsl:text>
                                 </xsl:when>
-                                
                             </xsl:choose>
-                            
                         </xsl:attribute>
-                        
                         
                         <xsl:attribute name="tilt">
-                            <xsl:apply-templates select="'se'"/>
+                            <xsl:text>se</xsl:text>
                         </xsl:attribute>
-                        
-                        
-                        
-                        
                     </xsl:element>
-                    
                 </xsl:for-each>
-                
-                
-                
             </neume>
-            
         </syllable>
-        
     </xsl:template>
+</xsl:stylesheet>''')
+    myxsl = etree.XSLT(myxsl)
+    #myxsl(etree.parse("tests/ANO_RS1098_Tres_haute_amours,_qui_tant_sest_abessie-M12v.json.xml"))
+
+    return myxsl(etree.fromstring(xm))
+
+
+def MEI_to_TXT(mei):
+    '''
+    Takes an etree mei document, and outputs a simple txt.
+    :param mei:
+    :return:
+    '''
+    myxsl = etree.XML('''
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mei="http://www.music-encoding.org/ns/mei"
+    exclude-result-prefixes="xs" version="1.0">
+    <xsl:output method="text" encoding="UTF-8"/>
+
+    <xsl:template match="/">
+        <xsl:apply-templates select="descendant::mei:syllable"/>
+    </xsl:template>
+
+    <xsl:template match="mei:syllable">
+        <xsl:text>/</xsl:text>
+        <xsl:apply-templates select="mei:neume"/>
+    </xsl:template>
+
+    <xsl:template match="mei:neume">
+        <xsl:apply-templates select="mei:nc"/>
+    </xsl:template>
+
+    <xsl:template match="mei:nc">
+        <xsl:value-of select="@pname"/>
+    </xsl:template>
+
 </xsl:stylesheet>
+    ''')
+    myxsl = etree.XSLT(myxsl)
+    return myxsl(mei)
+
+
+if __name__ == '__main__':
+
+    import argparse
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-s', nargs='+', help="paths to files")
+    args = parser.parse_args()
+
+    for path in args.s:
+        print(path)
+        my_mei = JSON_to_MEI(path)
+        # output mei
+        my_mei.write_output('mei/'+path.split('/')[-1].split('.')[0]+'.xml')
+        # output txt
+        my_txt = MEI_to_TXT(my_mei)
+        my_txt.write_output('txt/' + path.split('/')[-1].split('.')[0] + '.txt')
