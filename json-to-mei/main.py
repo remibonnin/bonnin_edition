@@ -142,26 +142,19 @@ def JSON_to_MEI(json_path):
         
         <xsl:apply-templates select="children/item"/>
         <syllable>
-            
             <xsl:element name="syl">
-                
                 <xsl:apply-templates select="text"/>
             </xsl:element>
             
             <neume>
-                
                 <xsl:for-each select="descendant::grouped/item">
-                    
                     <xsl:element name="nc">
                         <xsl:attribute name="pname">
                             <xsl:value-of select="translate(base/text(), 'ABCDEFG', 'abcdefg')"/>
                         </xsl:attribute>
-                        
                         <xsl:attribute name="oct">
-                            <xsl:value-of select="'2'"/>
+                            <xsl:value-of select="octave"/>
                         </xsl:attribute>
-                        
-                        
                         <xsl:attribute name="intm">
                             <xsl:choose>
                                 <xsl:when test="noteType = 'Descending'">
@@ -191,37 +184,67 @@ def JSON_to_MEI(json_path):
     return myxsl(etree.fromstring(xm))
 
 
-def MEI_to_TXT(mei):
+def MEI_to_TXT(mei, withOctaves=False):
     '''
     Takes an etree mei document, and outputs a simple txt.
     :param mei:
     :return:
     '''
-    myxsl = etree.XML('''
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mei="http://www.music-encoding.org/ns/mei"
-    exclude-result-prefixes="xs" version="1.0">
-    <xsl:output method="text" encoding="UTF-8"/>
+    if withOctaves:
+        myxsl = etree.XML('''
+            <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mei="http://www.music-encoding.org/ns/mei"
+                exclude-result-prefixes="xs" version="1.0">
+                <xsl:output method="text" encoding="UTF-8"/>
 
-    <xsl:template match="/">
-        <xsl:apply-templates select="descendant::mei:syllable"/>
-    </xsl:template>
+                <xsl:template match="/">
+                    <xsl:apply-templates select="descendant::mei:syllable"/>
+                </xsl:template>
 
-    <xsl:template match="mei:syllable">
-        <xsl:text>/</xsl:text>
-        <xsl:apply-templates select="mei:neume"/>
-    </xsl:template>
+                <xsl:template match="mei:syllable">
+                    <xsl:text>/</xsl:text>
+                    <xsl:apply-templates select="mei:neume"/>
+                </xsl:template>
 
-    <xsl:template match="mei:neume">
-        <xsl:apply-templates select="mei:nc"/>
-    </xsl:template>
+                <xsl:template match="mei:neume">
+                    <xsl:apply-templates select="mei:nc"/>
+                </xsl:template>
 
-    <xsl:template match="mei:nc">
-        <xsl:value-of select="@pname"/>
-    </xsl:template>
+                <xsl:template match="mei:nc">
+                    <xsl:value-of select="@pname"/>
+                    <xsl:value-of select="@oct"/>
+                </xsl:template>
 
-</xsl:stylesheet>
-    ''')
+            </xsl:stylesheet>
+                ''')
+
+    else:
+        myxsl = etree.XML('''
+    <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mei="http://www.music-encoding.org/ns/mei"
+        exclude-result-prefixes="xs" version="1.0">
+        <xsl:output method="text" encoding="UTF-8"/>
+    
+        <xsl:template match="/">
+            <xsl:apply-templates select="descendant::mei:syllable"/>
+        </xsl:template>
+    
+        <xsl:template match="mei:syllable">
+            <xsl:text>/</xsl:text>
+            <xsl:apply-templates select="mei:neume"/>
+        </xsl:template>
+    
+        <xsl:template match="mei:neume">
+            <xsl:apply-templates select="mei:nc"/>
+        </xsl:template>
+    
+        <xsl:template match="mei:nc">
+            <xsl:value-of select="@pname"/>
+        </xsl:template>
+    
+    </xsl:stylesheet>
+        ''')
+
     myxsl = etree.XSLT(myxsl)
     return myxsl(mei)
 
@@ -241,4 +264,6 @@ if __name__ == '__main__':
         my_mei.write_output('mei/'+path.split('/')[-1].split('.')[0]+'.xml')
         # output txt
         my_txt = MEI_to_TXT(my_mei)
-        my_txt.write_output('txt/' + path.split('/')[-1].split('.')[0] + '.txt')
+        my_txt.write_output('txt/noOctaves/' + path.split('/')[-1].split('.')[0] + '.txt')
+        my_txt = MEI_to_TXT(my_mei, withOctaves=True)
+        my_txt.write_output('txt/withOctaves/' + path.split('/')[-1].split('.')[0] + '.txt')
