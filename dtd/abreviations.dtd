@@ -30,6 +30,14 @@ e-accentue => e
 <!ENTITY punctinter "&#61792;">
 
 <!-- ENTITÉS ÉDITORIALES -->
+<!--accents modernes, cédille et tréma -->
+<!ENTITY e-pour-é "<choice><reg>é</reg><orig>e</orig></choice>">
+<!ENTITY c-pour-ç "<choice><reg>é</reg><orig>e</orig></choice>">
+<!ENTITY i-pour-ï "<choice><reg>ï</reg><orig>i</orig></choice>">
+<!ENTITY u-pour-ü "<choice><reg>ü</reg><orig>u</orig></choice>">
+<!ENTITY e-pour-ë "<choice><reg>ë</reg><orig>e</orig></choice>">
+
+
 <!--entité ed-palatalisation-cedille (avec U+0327 COMBINING CEDILLA)-->
 <!ENTITY ed-palatalisation-cedille "<reg>&#807;</reg>">
 <!--entité: ed-accent-tonique -->
@@ -97,7 +105,10 @@ le caractère Unicode U+FB00 LATIN SMALL LIGATURE FF
 <!-- TILDES et abréviations tironiennes -->
 <!ENTITY tilde1-nasale-m "<choice><expan><ex>m</ex></expan><abbr>&#x0303;</abbr></choice>">
 <!ENTITY tilde1-nasale-n "<choice><expan><ex>n</ex></expan><abbr>&#x0303;</abbr></choice>">
+<!ENTITY tilde1-nasale-en "<choice><expan><ex>en</ex></expan><abbr>&#x0303;</abbr></choice>">
+<!ENTITY tilde1-nasale-an "<choice><expan><ex>an</ex><abbr>&#x303;</abbr></choice>">
 <!ENTITY tilde4-us "<choice><expan><ex>us</ex></expan><abbr>⁹</abbr></choice>">
+<!ENTITY et-tironien-non-barré "<choice><expan>et</expan><abbr><am>&#x204A;</am></abbr></choice>">
 
 <!-- Lettres barrées-->
 <!--Corr ce nom d'entité... en barré...-->
@@ -112,6 +123,11 @@ le caractère Unicode U+FB00 LATIN SMALL LIGATURE FF
 <!ENTITY vostre "<choice><expan>v<ex>ost</ex>re</expan><abbr>vre&#x0303;</abbr></choice>">
 <!ENTITY uostre "<choice><expan>v<ex>ost</ex>re</expan><abbr>ure&#x0303;</abbr></choice>">
 <!ENTITY nostre "<choice><expan>n<ex>ost</ex>re</expan><abbr>nre&#x0303;</abbr></choice>">
+<!ENTITY mlt-tilde-mout "<choice><expan>m<ex>out</ex></expan><abbr>mlt&#x0303;</abbr></choice>">
+<!ENTITY bn-tilde-bien "<choice><expan>b<ex>ie</ex>n</expan><abbr>bn&#x0303;</abbr></choice>">
+<!ENTITY gnt-tilde-grant "<choice><expan>gr<ex>an</ex>t</expan><abbr>gnt&#x0303;</abbr></choice>">
+<!ENTITY uers "<choice><expan>u<ex>er</ex>s</expan><abbr>us&#x0303;</abbr></choice>">
+<!ENTITY est "<choice><expan>e<ex>st</ex></expan><abbr>e&#x0303;</abbr></choice>">
 
 <!ENTITY ihu-jesus "<choice><expan>jh<ex>es</ex>u</expan><abbr>ıh<c rend='apos'>&#x0303;</c>u</abbr></choice>" >
 <!ENTITY Ihu-jesus "<choice><expan>jh<ex>es</ex>u</expan><abbr>Jh<c rend='apos'>&#x0303;</c>u</abbr></choice>" >
