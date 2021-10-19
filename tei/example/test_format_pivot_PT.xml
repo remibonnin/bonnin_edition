@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="odd/texte/out/ODD_Ms_Roi_29_juin.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" 
+type="ed" 
+xml:id="modele1" 
+xml:lang="fr"
+corresp="pivot">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title type="main">Maritem</title>
+            <title type="full">Format pivot pour le projet d'édition du Manuscrit du Roi : Image,
+               Texte et Musique</title>
+            <title type="short">Format pivot TEI/MEI projet ANR Maritem</title>        
+         <respStmt>
+            <resp>Musique</resp>
+               <persName xml:id="CCA">Christelle Chaillou-Amadieu</persName>
+            </respStmt>
+            <respStmt>
+               <resp>Superviseur édition numérique</resp>
+               <persName xml:id="JBC">Jean-Baptiste Camps</persName>
+            </respStmt>
+            <respStmt>
+               <resp>Textes</resp>
+               <persName xml:id="VM">Viola Mariotti</persName>
+            </respStmt>
+            <respStmt>
+               <resp>Ajouts</resp>
+               <persName xml:id="FS">Federico Saviotti</persName>
+            </respStmt>
+            <respStmt>
+               <resp/>
+               <persName xml:id="PT">Pierre Tuloup</persName>
+            </respStmt>
+         </titleStmt>
+         <editionStmt>
+            <edition>Première version (0.1)<date>printemps 2021</date></edition>
+            <respStmt>
+               <orgName>CNRS/CESCM Poitiers</orgName>
+               <resp>Encodage réalisé par <name type="person">Viola Mariotti</name> et <name
+                     type="person">Pierre Tuloup</name> et validé par <name type="person"
+                     >Jean-Baptiste Camps</name></resp>
+            </respStmt>
+         </editionStmt>
+         <publicationStmt>
+            <ab>           
+               <address>
+                  <addrLine>Université de Poitiers</addrLine>
+                  <addrLine>Centre d’Études Supérieures de Civilisation Médiévale – CESCM</addrLine>
+                  <addrLine>24 rue de la Chaîne</addrLine>
+                  <addrLine>TSA 81118</addrLine>
+                  <addrLine>F – 86073 Poitiers cedex 9</addrLine>
+                  <addrLine>France</addrLine>
+               </address>
+            </ab>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc xml:lang="fro" xml:id="maritem">
+               <msIdentifier>
+                  <country>France</country>
+                  <settlement>Paris</settlement>
+                  <institution>Bibliothèque nationale de France</institution>
+                  <repository> Département des manuscrits</repository>
+                  <collection>Français</collection>
+                  <idno>844</idno>
+               </msIdentifier>
+               <head/>
+               <msContents>
+                  <msItem>
+                     <!-- pour le traitement des recueils la solution possible est de répéter l'élément <msItem>  -->
+                     <!--
+                     <docImprint>
+                        <pubPlace>Paris</pubPlace>
+                        <publisher>Firmin-Didot frères, fils et Cie</publisher>
+                        <date>1884</date>
+                     </docImprint>
+                     -->
+                     <note>
+                        <ref target="https://catalogue.bnf.fr/ark:/12148/cb148113936">Notice créée à
+                           partir de la conversion rétrospective du Catalogue des manuscrits
+                           français, tome premier. Ancien fonds (n° 1 à 3160 du fonds
+                           français).</ref>
+                     </note>
+                                         
+                  </msItem>
+               </msContents>
+
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc material="manuscrit">
+                        <support>
+                           <material></material>
+                           <dimensions></dimensions>
+                        </support>
+                        <foliation></foliation>
+                        <collation></collation>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout></layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>                   
+                     <handNote>
+                        
+                        <!-- Rajout des mains, quels balises et attributs choisir ? -->
+                     </handNote>
+                  </handDesc>
+                  <scriptDesc>
+                     <summary/>                        
+                     <scriptNote/>                   
+                  </scriptDesc>
+                  <decoDesc>
+                     <decoNote>
+                        <notatedMusic>
+                           <ptr target="neume_MEI_1.xml"/>
+                           <!-- Exemple de pointeur, est-ce correct ? -->                          
+                        </notatedMusic>
+                     </decoNote>
+                  </decoDesc>
+                 <bindingDesc>
+                    <binding contemporary="true">
+                       <decoNote></decoNote>
+                       <condition/>
+                    </binding>
+                 </bindingDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace cert="medium" resp="FS">Nord de la France</origPlace>
+                     <origDate notBefore="1250" notAfter="1350" resp="FS">Composé entre la seconde moitié du
+                        XIIIe siècle et la première moitié du XIVe siècle.</origDate>
+                     <origPlace cert="medium" resp="FS">Italie</origPlace>
+                     <origDate notBefore="1250" notAfter="1350" resp="FS">Composé entre la seconde moitié du
+                        XIIIe siècle et la première moitié du XIVe siècle.</origDate>
+                     <origPlace cert="unknown" resp="FS">Outremer</origPlace>
+                     <!-- appel du # pour le nom ? -->
+                     <origDate notBefore="1250" notAfter="1350" resp="FS">Composé entre la seconde moitié du
+                        XIIIe siècle et la première moitié du XIVe siècle.</origDate>
+                  </origin>
+               </history>
+
+
+
+
+               <!-- Choix de balise pour lister correctement les mains, les personnes et la musique. Faut-il construire un index avec la balise standOff ? -->
+
+               <!-- -->
+
+
+
+               <additional>
+
+                  <adminInfo>
+
+                     <recordHist>
+                        <source>Document pivot TEI/MEI ANR Maritem</source>
+                        <change when="2021-03-24" who="#PT">Description mise à jour le <date
+                              type="crea">29 avril 2021 </date>en vue de la création du fichier ODD
+                           ainsi que du RNG de référence.</change>
+                     </recordHist>
+                  </adminInfo>
+               </additional>
+            </msDesc>
+
+         </sourceDesc>
+
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl n="CTS">
+            <cRefPattern n="vers"
+                         matchPattern="(\w+)"
+                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body//tei:l[@n='$1'])">
+               <p>Ce pointeur extrait les vers</p>
+            </cRefPattern>
+         </refsDecl>
+         <projectDesc>
+            <p>Edition numérique du Manuscrit du Roi</p>
+            <p>Projet ANR Maritem</p>
+         </projectDesc>
+      
+      </encodingDesc>
+      <profileDesc>
+         <creation>Chansons de geste</creation>
+         <langUsage>
+            <language ident="af">Ancien Français</language>
+         </langUsage>
+         <settingDesc>
+            <setting>
+               <name type="place">Nord de la France</name>
+               <name type="place">Italie</name>
+               <time>XIIIe siècle</time>
+            </setting>
+         </settingDesc>
+      </profileDesc>
+      <revisionDesc>
+         <change who="#VM" when="2020-10">Transcription des feuillets du Manuscrit du Roi.</change>
+         <change who="#VM" when="2021-03">OCR et Export des fichiers Transkribus</change>
+         <change who="#PT" when="2021-03">Révision majeure du modèle, dans le cadre du début du
+            projet ANR Maritem</change>
+         <change who="#VM" from="2021-03" to="2021-07">Modifications ponctuelles pour adapter aux
+            changements de pratique d'encodage du Manuscrit du Roi</change>
+         <change who="#VM" from="2021-03" to="2021-04">Première version du modèle</change>
+      </revisionDesc>
+
+   </teiHeader>
+   <text xml:lang="fr" xml:base="urn:cts:froLit:maritem.pivot.modele1">
+      <body>
+         <div>
+            <head>Chanson</head>
+            <!-- Exemple de titre -->
+            
+            <notatedMusic>
+               <ptr target="pivot_music_1.xml" type="pointeur"/>
+               <desc>Musique associée à la première chanson</desc>
+            </notatedMusic>
+            
+            
+            <lg type="chanson">
+               <lg type="strophe" rhyme="abab">
+                  
+                  <!-- Exemple d'affichage -->
+                  <l n="1" met="10'" real="10">
+                     <!-- Attributs à discuter. A quoi correspondent exactement real et met -->
+                     <!-- Comment interpréter tout ça ?? -->
+                     <w lemma="le" pos="DETdef">Li
+                        <!-- Indiquer les attributs de w comme suit pour le format pivot ? -->
+                     </w>
+                     <w lemma="grant" pos="ADJqua">grans </w>
+                     <!-- Essai d'utilisation des indications trouvées dans les Guidelines (???) -->
+                     <w lemma="desirre2" pos="NOMcom">
+                        <seg type="syll">de- </seg>
+                        <seg type="syll">sirs </seg>
+                     </w>
+                     <w lemma="et" pos="CONcoo">et </w>
+                     <w lemma="le" pos="DETdef">la </w>
+                     <w lemma="douz" pos="ADJqua">douce <!-- Garder le mot entier quand seg est présent ? -->
+                        <seg type="syll">dou- </seg>
+                        <seg type="syll">ce </seg>
+                     </w>
+                     <w lemma="pensee" pos="NOMcom">
+                        <seg type="syll">pen </seg>
+                        <seg type="syll">sé </seg>
+                        <seg type="syll">e </seg>
+                     </w>
+                  </l>
+                  <l n="2" met="10'" real="10">
+                     <w lemma="que4" pos="CONsub">que </w>
+                     <w lemma="je" pos="PROper">j' </w>
+                     <w lemma="avoir" pos="VERcjg">ai </w>
+                     <w lemma="por2" pos="PRE">por </w>
+                     <w lemma="vos" pos="PROper">vos </w>
+                     <w lemma="dame" pos="NOMcom">
+                        <seg type="syll">da- </seg>
+                        <seg type="syll">me </seg>
+                     </w>
+                     <w lemma="qui" pos="PROrel">qui </w>
+                     <w lemma="valoir" pos="VERcjg">
+                        <seg type="syll">va- </seg>
+                        <seg type="syll">lez </seg>
+                     </w>
+                     <w lemma="tant" pos="ADVgen">tant </w>
+                  </l>
+                  <l n="3" met="10'" real="10">
+                     <w lemma="dont" pos="PROrel">dont </w>
+                     <w lemma="le" pos="DETdef">la </w>
+                     <w lemma="peine" pos="NOMcom">
+                        <seg type="syll">pai- </seg>
+                        <seg type="syll">ne </seg>
+                     </w>
+                     <w lemma="ne1" pos="ADVgen">ne </w>
+                     <w lemma="pöoir" pos="VERcjg">puet </w>
+                     <w lemma="estre1" pos="VERinf">
+                        <seg type="syll">es- </seg>
+                        <seg type="syll">tre </seg>
+                     </w>
+                     <w lemma="celer1" pos="VERppe">
+                        <seg type="syll">ce </seg>
+                        <seg type="syll">lé </seg>
+                        <seg type="syll">e </seg>
+                     </w>
+                  </l>
+                  <l n="4" met="10'" real="10">
+                     <w lemma="o3" pos="PROint">ou </w>
+                     <w lemma="je" pos="PROper">m' </w>
+                     <w lemma="avoir" pos="VERcjg">
+                        <seg type="syll">a- </seg>
+                        <seg type="syll">vez </seg>
+                     </w>
+                     <w lemma="metre2" pos="VERppe">mis </w>
+                     <w lemma="et" pos="CONcoo">et </w>
+                     <w lemma="tenir1" pos="VERppe">
+                        <seg type="syll">te- </seg>
+                        <seg type="syll">nu </seg>
+                     </w>
+                     <w lemma="longement2" pos="ADVgen">
+                        <seg type="syll">lon- </seg>
+                        <seg type="syll">gue </seg>
+                        <seg type="syll">mant </seg></w>
+                  </l>
+               </lg>
+               
+               <lg type="strophe" rhyme="aabb">
+                  
+
+                  <l n="5" met="10'" real="10">
+                     <w lemma="encore" pos="ADVgen">
+                        <seg type="syll">en- </seg>
+                        <seg type="syll">cor </seg>
+                     </w>
+                     <w lemma="tenir1" pos="VERcjg">
+                        <seg type="syll">te- </seg>
+                        <seg type="syll">nez </seg>
+                     </w>
+                     <w lemma="mon1" pos="DETpos">mon </w>
+                     <w lemma="cuer1" pos="NOMcom">cuer </w>
+                     <w lemma="en1" pos="PRE">en </w>
+                     <w lemma="tel" pos="DETind">tel </w>
+                     <w lemma="torment" pos="NOMcom">
+                        <seg type="syll">tor- </seg>
+                        <seg type="syll">mant </seg>
+                     </w>
+                  </l>
+                  <l n="6" met="10'" real="10">
+                     <w lemma="dont" pos="ADVgen">dont </w>
+                     <w lemma="ja" pos="ADVgen">ja </w>
+                     <w lemma="notir" pos="VERcjg">
+                        <seg type="syll">nis- </seg>
+                        <seg type="syll">trai </seg>
+                     </w>
+                     <w lemma="nul" pos="DETind">nul </w>
+                     <w lemma="jor" pos="NOMcom">jor </w>
+                     <w lemma="de" pos="PRE">de </w>
+                     <w lemma="mon1" pos="DETpos">mon </w>
+                     <w lemma="vivant" pos="NOMcom">
+                        <seg type="syll">vi- </seg>
+                        <seg type="syll">vant </seg>
+                     </w>
+                  </l>
+                  <l n="7" met="10'" real="10">
+                     <w lemma="se" pos="CONsub">se </w>
+                     <w lemma="par" pos="PRE">par </w>
+                     <w lemma="vos" pos="PROper">vos </w>
+                     <w lemma="non" pos="ADVneg">non </w>
+                     <w lemma="douz" pos="ADJqua">
+                        <seg type="syll">dou- </seg>
+                        <seg type="syll">ce </seg>
+                     </w>
+                     <w lemma="dame" pos="NOMcom">dame </w>
+                     <w lemma="onorer" pos="VERppe">
+                        <seg type="syll">ho- </seg>
+                        <seg type="syll">no- </seg>
+                        <seg type="syll">ré- </seg>
+                        <seg type="syll">e </seg>
+                     </w>
+                  </l>
+               </lg>
+            </lg>
+            <!-- Test d'encodage pivot correspondant au fichier musical d'export JSON n°1 -->
+         </div>
+      </body>
+   </text>
+</TEI>

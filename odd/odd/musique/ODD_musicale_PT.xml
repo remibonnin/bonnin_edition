@@ -1,0 +1,3796 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  © 2018 by the Music Encoding Initiative (MEI).
+  Licensed under the Educational Community License, Version 2.0 (the "License"); you may
+  not use this file except in compliance with the License. You may obtain a copy of the License
+  at http://opensource.org/licenses/ECL-2.0.
+  
+  Unless required by applicable law or agreed to in writing, software distributed under the
+  License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS
+  OF ANY KIND, either express or implied. See the License for the specific language
+  governing permissions and limitations under the License.
+  
+  This is a derivative work based on earlier versions of the schema © 2001-2006 Perry Roland
+  and the Rector and Visitors of the University of Virginia; licensed under the Educational
+  Community License version 1.0.
+  
+  CONTACT: info@music-encoding.org
+-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+  xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://www.tei-c.org/ns/1.0"
+  xmlns:math="http://exslt.org/math">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Music Encoding Initiative Guidelines: <title type="sub">All AnyStart
+            Customization</title></title>
+        <respStmt>
+          <resp>Créé par</resp>
+          <name xml:id="PT">Pierre Tuloup</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <p/>
+      </sourceDesc>
+    </fileDesc>
+    <revisionDesc>
+      <change n="1" when="2021-05-28" who="#PT">
+        <desc>Creation of the initial ODD.</desc>
+      </change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <front>
+      <divGen type="toc"/>
+    </front>
+    <body>
+      <!-- This file is a superset of the other customizations. It permits the validation of MEI fragments, 
+        whereas mei-all and the other customizations presume a smaller set of possible start elements: mei, 
+        meiHead, meiCorpus, and music. -->
+      <schemaSpec ident="mei" ns="http://www.music-encoding.org/ns/mei" prefix="mei_" start="mei meiHead meiCorpus music">
+        <!-- Declare MEI and XLink namespaces for use in Schematron -->
+        <constraintSpec ident="set_ns" scheme="schematron" mode="add">
+          <constraint>
+            <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="mei"
+              uri="http://www.music-encoding.org/ns/mei"/>
+            <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron" prefix="xlink"
+              uri="http://www.w3.org/1999/xlink"/>
+          </constraint>
+        </constraintSpec>
+
+        <!-- Include all modules -->
+        <moduleRef key="MEI"/>
+
+        <classSpec mode="replace" ident="att.notationType" module="MEI" type="atts">
+          <desc>Attributs qui fournissent la classification de la notation.</desc>
+          <attList org="group">
+            <attDef ident="notationtype" usage="opt">
+              <desc>Contient la classification de la notation contenue ou décrite par l'élement
+                portant cet attribut.</desc>
+              <datatype maxOccurs="1" minOccurs="1">
+                <rng:ref name="data.NOTATIONTYPE"/>
+              </datatype>
+            </attDef>
+            <attDef ident="notationsubtype" usage="opt">
+              <desc>Fournit toute sous-classification de la notation contenue ou décrite par
+                l'élément, en plus de celle donnée par son attribut notationtype.</desc>
+              <datatype maxOccurs="1" minOccurs="1">
+                <rng:data type="NMTOKEN"/>
+              </datatype>
+              <constraintSpec ident="When_notationsubtype" scheme="schematron">
+                <constraint>
+                  <sch:rule context="mei:*[@notationsubtype]">
+                    <sch:assert test="@notationtype">Un élément avec un attribut notationsubtype
+                      doit avoir un attribut notationtype.</sch:assert>
+                  </sch:rule>
+                </constraint>
+              </constraintSpec>
+            </attDef>
+          </attList>
+        </classSpec>
+
+        <moduleRef key="MEI.analytical"/>
+        
+        <classSpec mode="replace" ident="att.note.anl" module="MEI.analytical" type="atts">
+          <desc>Attributs domaine analytique.</desc>
+          <classes>
+            <memberOf key="att.accidental"/>
+            <memberOf key="att.articulation"/>
+            <memberOf key="att.harmonicFunction"/>
+            <memberOf key="att.intervalMelodic"/>
+            <memberOf key="att.melodicFunction"/>
+            <memberOf key="att.note.anl.cmn"/>
+            <memberOf key="att.note.anl.mensural"/>
+            <memberOf key="att.pitchClass"/>
+            <memberOf key="att.solfa"/>
+          </classes>
+        </classSpec>
+        <classSpec mode="replace" ident="att.ornam.anl" module="MEI.analytical" type="atts">
+          <desc>Analytical domain attributes.</desc>
+        </classSpec>
+        <classSpec mode="replace" ident="att.measure.anl" module="MEI.analytical" type="atts">
+          <desc>Analytical domain attributes.</desc>
+          <classes>
+            <memberOf key="att.joined"/>
+          </classes>
+        </classSpec>
+
+
+        <moduleRef key="MEI.cmn" include="measure mSpace octave slur"/>
+        <elementSpec ident="measure" mode="change" ns="http://www.music-encoding.org/ns/mei" module="MEI.cmn">
+          <desc>Unité de temps musical consistant en un nombre fixe de valeurs de note d'un type
+            donné, tel que déterminé par le mètre dominant, et délimité en notation musicale par des
+            barres de mesures.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.metadataPointing"/>
+            <memberOf key="att.pointing"/>
+            <memberOf key="att.measure.anl"/>
+            <memberOf key="att.measure.ges"/>
+            <memberOf key="att.measure.log"/>
+            <memberOf key="att.measure.vis"/>
+            <memberOf key="att.targetEval"/>
+            <memberOf key="model.measureLike"/>
+          </classes>
+          <content>
+            <rng:optional>
+              <rng:ref name="mNum"/>
+            </rng:optional>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:ref name="model.annotLike"/>
+                <rng:ref name="model.appLike"/>
+                <rng:ref name="model.editLike"/>
+                <rng:ref name="model.graphicPrimitiveLike"/>
+                <rng:ref name="model.measurePart"/>
+                <rng:ref name="model.milestoneLike.music"/>
+                <rng:ref name="model.relationLike"/>
+                <rng:ref name="model.staffDefLike"/>
+                <rng:ref name="model.transcriptionLike"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+          <remarks>
+            <p part="N">En MEI, l'élément <gi scheme="MEI">measure</gi> est un mécanisme de
+              regroupement des événements et des événements de contrôle. Les attributs de pointage
+              permettent de connecter cet élément à d'autres entités internes ou externes, telles
+              que des objets multimédias ou des annotations. L'attribut <att scheme="TEI"
+                >width</att> peut être utilisé pour capturer la largeur de la mesure pour l'échange
+              avec des systèmes d'impression de musique qui utilisent ces informations pour
+              l'impression.</p>
+          </remarks>
+        </elementSpec>
+        
+        <elementSpec ident="mSpace" mode="change" ns="http://www.music-encoding.org/ns/mei" module="MEI.cmn">
+          <desc>(espace de mesure) - Une mesure contenant uniquement un espace vide dans n'importe
+            quel mètre.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.mSpace.log"/>
+            <memberOf key="att.mSpace.vis"/>
+            <memberOf key="att.mSpace.ges"/>
+            <memberOf key="att.mSpace.anl"/>
+            <memberOf key="model.eventLike.measureFilling"/>
+          </classes>
+          <content>
+            <rng:empty/>
+          </content>
+          <remarks>
+            <p part="N">La numérotation automatique des mesures consécutives d'espaces peut être
+              contrôlée par l'attribut <att scheme="TEI">multi.number</att> dans les éléments <gi
+                scheme="MEI">scoreDef</gi> ou <gi scheme="MEI">staffDef</gi> .</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="octave" mode="change" ns="http://www.music-encoding.org/ns/mei" module="MEI.cmn">
+          <desc>Une indication qu'un passage doit être exécuté une ou plusieurs octaves au-dessus ou
+            en dessous de sa hauteur écrite.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.octave.log"/>
+            <memberOf key="att.octave.vis"/>
+            <memberOf key="att.octave.ges"/>
+            <memberOf key="att.octave.anl"/>
+            <memberOf key="model.controlEventLike.cmn"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:text/>
+                <rng:ref name="model.textPhraseLike.limited"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+          <constraintSpec ident="octave_start-_and_end-type_attributes_required" scheme="schematron">
+            <constraint>
+              <sch:rule context="mei:octave">
+                <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Doit avoir
+                  l'un des attributs: startid, tstamp, tstamp.ges ou tstamp.real.</sch:assert>
+                <sch:assert test="@dur or @dur.ges or @endid or @tstamp2">Doit avoir l'un des
+                  attributs: dur, dur.ges, endid ou tstamp2.</sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <remarks>
+            <p part="N">Les attributs <att scheme="TEI">dis</att> et <att scheme="TEI"
+                >dis.place</att> enregistrez la quantité et la direction du déplacement,
+              respectivement. Les attributs <att scheme="TEI">lform</att> et <att scheme="TEI"
+                >lwidth</att> capturent l'apparence de la ligne continue associée au déplacement
+              d'octave. Le point de départ du déplacement d'octave peut être indiqué soit par un
+              attribut <att scheme="TEI">startid</att> , <att scheme="TEI">tstamp</att> , <att
+                scheme="TEI">tstamp.ges</att> , ou <att scheme="TEI">tstamp.real</att> tandis que le
+              point final peut être enregistré soit par un attribut <att scheme="TEI">dur</att> ,
+                <att scheme="TEI">dur.ges</att> , <att scheme="TEI">endid</att> , ou <att
+                scheme="TEI">tstamp2</att> . C'est une erreur sémantique de ne pas spécifier un type
+              d'attribut de début et de fin. Notez également que l'attribut <att scheme="TEI"
+                >dur</att> n'est pas nécessaire car le déplacement d'octave peut être visuellement
+              instantané.</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="slur" mode="change" ns="http://www.music-encoding.org/ns/mei" module="MEI.cmn">
+          <desc>Indication de 1) une "idée mélodique unifiée" ou 2) une technique
+            d'interprétation.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.slur.log"/>
+            <memberOf key="att.slur.vis"/>
+            <memberOf key="att.slur.ges"/>
+            <memberOf key="att.slur.anl"/>
+            <memberOf key="model.controlEventLike.cmn"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:ref name="curve"/>
+            </rng:zeroOrMore>
+          </content>
+          <constraintSpec ident="slur_start-_and_end-type_attributes_required" scheme="schematron">
+            <constraint>
+              <sch:rule context="mei:slur">
+                <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Doit avoir
+                  l'un de ces attributs: startid, tstamp, tstamp.ges or tstamp.real.</sch:assert>
+                <sch:assert test="@dur or @dur.ges or @endid or @tstamp2">Doit avoir l'un de ces
+                  attributs: dur, dur.ges, endid, or tstamp2.</sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <constraintSpec ident="slur_containing_curve" scheme="schematron">
+            <constraint>
+              <sch:rule
+                context="mei:slur[mei:curve[@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or @startho or @endho or @to or @startto or @endto or @vo or @startvo or @endvo or @x or @y or @x2 or @y2]]">
+                <sch:assert role="warning"
+                  test="not(@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or @startho or @endho or @to or @startto or @endto or @vo or @startvo or @endvo or @x or @y or @x2 or @y2)"
+                  >Les attributs visuels de l'élément slur (@bezier, @bulge, @curvedir, @lform,
+                  @lwidth, @ho, @startho, @endho, @to, @startto, @endto, @vo, @startvo, @endvo, @x,
+                  @y, @x2, and @y2) seront remplacés par les attributs visuels des éléments de
+                  curve.</sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <remarks>
+            <p part="N">Historiquement, le terme «slur» désignait deux notes exécutées en legato,
+              tandis que le terme «phrase» était utilisé pour une «idée mélodique unifiée». De nos
+              jours, cependant, "slur" a souvent la même signification que "phrase" (voir Read, p.
+              265-266), puisque la représentation visuelle des deux concepts est la même. La MEI
+              fournit deux éléments distincts afin que les utilisateurs souhaitant maintenir une
+              distinction pour des raisons historiques puissent le faire. Si l'utilisateur ne veut
+              pas maintenir la distinction, alors l'élément <gi scheme="MEI">slur</gi> le plus
+              générique doit être employé. Le point de départ de la phrase / liaison peut être
+              indiqué soit par un attribut <att scheme="TEI">startid</att> , <att scheme="TEI"
+                >tstamp</att> , <att scheme="TEI">tstamp.ges</att> , or <att scheme="TEI"
+                >tstamp.real</att> , tandis que le point final peut être renseigné soit par un
+              attribut <att scheme="TEI">dur</att> , <att scheme="TEI">dur.ges</att> , <att
+                scheme="TEI">endid</att> , ou <att scheme="TEI">tstamp2</att> . C'est une erreur
+              sémantique de ne pas spécifier un type d'attribut de début et de fin. Soit les
+              attributs <att scheme="TEI">place</att> , <att scheme="TEI">bulge</att> , ou <att
+                scheme="TEI">bezier</att> peuvent être utilisé pour enregistrer la courbure de la
+              phrase / liaison. Les éléments <gi scheme="MEI">slur</gi> et <gi scheme="MEI">tie</gi>
+              peuvent être utilisés à la place des attributs slur. * et tie. * fournis sur les
+              éléments <gi scheme="MEI">chord</gi> et <gi scheme="MEI">note</gi> lorsque 1) ils sont
+              requis par le logiciel, ou 2) plusieurs liaisons alternatives sont nécessaires.</p>
+          </remarks>
+        </elementSpec>
+        <!--
+                <elementSpec ident="arpeg" mode="change" ns="http://www.music-encoding.org/ns/mei" module="MEI.cmn">
+                    <desc>(arpégiation) - Indique que les notes d'un accord doivent être exécutées successivement plutôt que simultanément, généralement de la plus basse à la plus haute. Parfois appelé un «rouleau».</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.facsimile"/>
+                        <memberOf key="att.arpeg.log"/>
+                        <memberOf key="att.arpeg.vis"/>
+                        <memberOf key="att.arpeg.ges"/>
+                        <memberOf key="att.arpeg.anl"/>
+                        <memberOf key="model.controlEventLike.cmn"/>
+                    </classes>
+                    <content>
+                        <rng:empty/>
+                    </content>
+                    <remarks>
+                        <p part="N">Le symbole d'arpégiation moderne est une ligne ondulée verticale précédant l'accord. Lorsque les notes de l'accord doivent être exécutées de la plus haute à la plus basse, une pointe de flèche peut être ajoutée à l'extrémité inférieure de la ligne. Même s'il est redondant, une pointe de flèche est parfois ajoutée à l'extrémité supérieure de la ligne par souci de cohérence ou lorsque la direction des arpèges successifs alterne. Dans la musique pour instruments à clavier, on distingue parfois un arpège unique dans lequel les deux mains jouent successivement et des arpèges simultanés à deux mains. Dans le cas du premier, plusieurs valeurs peuvent être requises dans les attributs
+                            <att scheme="TEI">staff</att>
+                            et
+                            <att scheme="TEI">layer</att>
+                            . Les arpèges qui ne traversent pas de portées, mais impliquent toujours plus d'une couche nécessitent plusieurs valeurs pour l'attribut
+                            <att scheme="TEI">layer</att>
+                            .</p>
+                    </remarks>
+                </elementSpec>
+                <elementSpec ident="bracketSpan" mode="change" ns="http://www.music-encoding.org/ns/mei" module="MEI.cmn">
+                    <desc>Marque une séquence d'événements de notation regroupés par un crochet.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.bracketSpan.log"/>
+                        <memberOf key="att.bracketSpan.vis"/>
+                        <memberOf key="att.bracketSpan.ges"/>
+                        <memberOf key="att.bracketSpan.anl"/>
+                        <memberOf key="att.facsimile"/>
+                        <memberOf key="model.controlEventLike.cmn"/>
+                    </classes>
+                    <content>
+                        <rng:zeroOrMore>
+                            <rng:choice>
+                                <rng:text/>
+                                <rng:ref name="model.textPhraseLike.limited" />
+                            </rng:choice>
+                        </rng:zeroOrMore>
+                    </content>
+                    <constraintSpec ident="bracketSpan_start-_and_end-type_attributes_required" scheme="schematron">
+                        <constraint>
+                            <sch:rule context="mei:bracketSpan">
+                                <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Doit avoir l'un des attributs: startid, tstamp, tstamp.ges ou tstamp.real.</sch:assert>
+                                <sch:assert test="@dur or @dur.ges or @endid or @tstamp2">Doit avoir l'un des attributs: dur, dur.ges, endid ou tstamp2.</sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    <attList org="group">
+                        <attDef ident="func" usage="req">
+                            <desc>Décrit la fonction de la séquence d'événements entre crochets.</desc>
+                            <datatype maxOccurs="1" minOccurs="1">
+                                <rng:data type="NMTOKENS"/>
+                            </datatype>
+                            <valList type="semi">
+                                <valItem ident="coloration">
+                                    <desc>Représente la coloration dans le matériau source de la notation mensurale.</desc>
+                                </valItem>
+                                <valItem ident="cross-rhythm">
+                                    <desc>Marque une séquence qui ne correspond pas au compteur actuel.</desc>
+                                </valItem>
+                                <valItem ident="ligature">
+                                    <desc>Représente une ligature dans le matériau source de la notation mensurale.</desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                    </attList>
+                    <remarks>
+                        <p part="N">Le texte qui interrompt le crochet utilisé pour marquer le groupe d'événements peut être capturé comme contenu de
+                            <gi scheme="MEI">bracketSpan</gi>
+                            . Le point de départ du groupe / support peut être indiqué soit par un attribut
+                            <att scheme="TEI">startid</att>
+                            ,
+                            <att scheme="TEI">tstamp</att>
+                            ,
+                            <att scheme="TEI">tstamp.ges</att>
+                            , ou
+                            <att scheme="TEI">tstamp.real</att>
+                            , tandis que le point final peut être enregistré soit par un attribut
+                            <att scheme="TEI">dur</att>
+                            ,
+                            <att scheme="TEI">dur.ges</att>
+                            ,
+                            <att scheme="TEI">endid</att>
+                            , ou
+                            <att scheme="TEI">tstamp2</att>
+                            . C'est une erreur sémantique de ne pas spécifier un type d'attribut de début et de fin.</p>
+                    </remarks>
+                </elementSpec>
+                
+                <elementSpec ident="fermata" mode="change" ns="http://www.music-encoding.org/ns/mei" module="MEI.cmn">
+                    <desc>Une indication placée sur une note ou un repos pour indiquer qu'elle doit être tenue plus longtemps que sa valeur écrite. Peut également apparaître sur une barre de mesure pour indiquer la fin d'une phrase ou d'une section. Parfois appelé 'hold' ou 'pause'.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.facsimile"/>
+                        <memberOf key="att.fermata.log"/>
+                        <memberOf key="att.fermata.vis"/>
+                        <memberOf key="att.fermata.ges"/>
+                        <memberOf key="att.fermata.anl"/>
+                        <memberOf key="model.controlEventLike.cmn"/>
+                    </classes>
+                    <content>
+                        <rng:empty/>
+                    </content>
+                    <constraintSpec ident="fermata_start-type_attributes_required" scheme="schematron">
+                        <constraint>
+                            <sch:rule context="mei:fermata">
+                                <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Doit avoir l'un des attributs: startid, tstamp, tstamp.ges ou tstamp.real.</sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    <remarks>
+                        <p part="N">L'attribut
+                            <att scheme="TEI">shape</att>
+                            peut être utilisé pour enregistrer si le fermata est courbe, carrée ou triangulaire, tandis que l'attribut
+                            <att scheme="TEI">form</att>
+                            peut être utilisé pour capturer si le fermata est "debout", c'est-à-dire a la courbe ou le crochet au-dessus du point, ou inversé, c'est-à-dire qu'il a la courbe ou le crochet au-dessous du point. D'autres formes visuelles d'un fermata peuvent être indiquées via l'attribut
+                            <att scheme="TEI">altsym</att>
+                            . Le point de départ du fermata peut être indiqué soit par un attribut
+                            <att scheme="TEI">startid</att>
+                            ,
+                            <att scheme="TEI">tstamp</att>
+                            ,
+                            <att scheme="TEI">tstamp.ges</att>
+                            , ou
+                            <att scheme="TEI">tstamp.real</att>
+                            . Ne pas spécifier d'attribut de point de départ est une erreur sémantique.</p>
+                    </remarks>
+                </elementSpec>
+                -->
+        
+        <classSpec mode="replace" ident="att.note.anl.cmn" module="MEI.cmn" type="atts">
+          <desc>Attributs domain analytique Répertoire CMN.</desc>
+          <classes>
+            <memberOf key="att.beamPresent"/>
+            <memberOf key="att.fermataPresent"/>
+            <memberOf key="att.glissPresent"/>
+            <memberOf key="att.lvPresent"/>
+            <memberOf key="att.ornamPresent"/>
+            <memberOf key="att.slurPresent"/>
+            <memberOf key="att.sylText"/>
+            <memberOf key="att.tiePresent"/>
+            <memberOf key="att.tupletPresent"/>
+          </classes>
+        </classSpec>
+        <classSpec mode="replace" ident="att.slur.log" module="MEI.cmn" type="atts">
+          <desc>Logical domain attributes.</desc>
+          <classes>
+            <memberOf key="att.controlEvent"/>
+            <memberOf key="att.duration.additive"/>
+            <memberOf key="att.startEndId"/>
+            <memberOf key="att.timestamp2.logical"/>
+          </classes>
+        </classSpec>
+        <classSpec mode="replace" ident="att.octave.log" module="MEI.cmn" type="atts">
+          <desc>Logical domain attributes.</desc>
+          <classes>
+            <memberOf key="att.controlEvent"/>
+            <memberOf key="att.duration.additive"/>
+            <memberOf key="att.octaveDisplacement"/>
+            <memberOf key="att.startEndId"/>
+            <memberOf key="att.timestamp2.logical"/>
+          </classes>
+          <attList org="group">
+            <attDef ident="coll" usage="opt">
+              <desc>Indicates whether the octave displacement should be performed simultaneously with the written notes, i.e., "coll' ottava". Unlike other octave signs which are indicated by broken lines, coll' ottava typically uses an unbroken line or a series of longer broken lines, ending with a short vertical stroke. See Read, p. 47-48.</desc>
+              <valList type="closed">
+                <valItem ident="coll">
+                  <desc>Coll' ottava (with the octave).</desc>
+                </valItem>
+              </valList>
+            </attDef>
+          </attList>
+        </classSpec>
+        
+        
+        <classSpec mode="replace" ident="att.measure.log" module="MEI.cmn" type="atts">
+          <desc>Logical domain attributes. The n attribute contains a name or number associated with the measure (Read, p. 445). Often, this is an integer, but not always. For example, some measures, especially incomplete measures or those under an ending mark, may have labels that contain an integer plus a suffix, such as '12a'. Measures may even have labels, especially in editorial or analytical uses of MEI, that are entirely non-numeric strings. Measure numbers may be machine-generated instead of encoding them in the markup. However, an explicit measure number should restart numbering with the given value. The join attribute may be used to indicate another measure which metrically completes the current, incomplete one.</desc>
+          <classes>
+            <memberOf key="att.alignment"/>
+            <memberOf key="att.meterConformance.bar"/>
+          </classes>
+          <attList org="group">
+            <attDef ident="left" usage="opt">
+              <desc>Indicates the visual rendition of the left bar line. It is present here only for facilitation of translation from legacy encodings which use it. Usually, it can be safely ignored.</desc>
+              <datatype maxOccurs="1" minOccurs="1">
+                <rng:ref name="data.BARRENDITION" />
+              </datatype>
+            </attDef>
+            <attDef ident="right" usage="opt">
+              <desc>Indicates the function of the right bar line and is structurally important.</desc>
+              <datatype maxOccurs="1" minOccurs="1">
+                <rng:ref name="data.BARRENDITION" />
+              </datatype>
+            </attDef>
+          </attList>
+        </classSpec>
+        
+        
+        <!--
+         
+        <moduleRef key="MEI.critapp"/> 
+        <moduleRef key="MEI.drama"/>  
+        <moduleRef key="MEI.edittrans"/>
+        <moduleRef key="MEI.externalsymbols"/>
+        <moduleRef key="MEI.facsimile"/>
+        <moduleRef key="MEI.figtable"/>
+        <moduleRef key="MEI.fingering"/>
+        <moduleRef key="MEI.frbr"/>
+        <moduleRef key="MEI.genetic"/>
+        -->
+        
+        <moduleRef key="MEI.gestural"/>
+        <classSpec mode="replace" ident="att.measure.ges" module="MEI.gestural" type="atts">
+          <desc>Gestural domain attributes. The tstamp.ges and tstamp.real attributes encode the onset time of the measure. In reality, this is usually the same as the onset time of the first event in the measure.</desc>
+          <classes>
+            <memberOf key="att.timestamp.gestural"/>
+          </classes>
+        </classSpec>
+        <classSpec mode="replace" ident="att.scoreDef.ges" module="MEI.gestural" type="atts">
+          <desc>Gestural domain attributes for scoreDef. The values set in these attributes act as score-wide defaults for attributes that are not set in descendant elements. For example, the grace attribute value here applies to all the grace attribute values in the score (or, more accurately, until the next
+            <gi scheme="MEI">scoreDef</gi>
+            element) without having to individually set each note's grace attribute value. The midi.* attributes function as default values when creating sounding output. The tune.* attributes provide the capability of recording a tuning reference pitch.</desc>
+          <classes>
+            <memberOf key="att.channelized"/>
+            <memberOf key="att.timeBase"/>
+            <memberOf key="att.midiTempo"/>
+            <memberOf key="att.mmTempo"/>
+          </classes>
+          <attList org="group">
+            <attDef ident="tune.pname" usage="opt">
+              <desc>Holds the pitch name of a tuning reference pitch.</desc>
+              <datatype maxOccurs="1" minOccurs="1">
+                <rng:ref name="data.PITCHNAME" />
+              </datatype>
+            </attDef>
+            <attDef ident="tune.Hz" usage="opt">
+              <desc>Holds a value for cycles per second, i.e., Hertz, for a tuning reference pitch.</desc>
+              <datatype maxOccurs="1" minOccurs="1">
+                <rng:data type="decimal"/>
+              </datatype>
+            </attDef>
+            <attDef ident="tune.temper" usage="opt">
+              <desc>Provides an indication of the tuning system, 'just', for example.</desc>
+              <datatype maxOccurs="1" minOccurs="1">
+                <rng:ref name="data.TEMPERAMENT" />
+              </datatype>
+            </attDef>
+          </attList>
+        </classSpec>
+        
+        <!--
+        <moduleRef key="MEI.harmony"/>
+        -->
+
+
+        <moduleRef key="MEI.header"
+          include="contentItem contents editionStmt encodingDesc fileDesc meiHead notesStmt physDesc pubStmt revisionDesc seriesStmt source sourceDesc titleStmt work workList"/>
+        
+        <elementSpec ident="contentItem" mode="change" ns="http://www.music-encoding.org/ns/mei" module="MEI.header">
+          <desc>Contains a single entry within a content description element.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.bibl"/>
+            <memberOf key="att.lang"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:text/>
+                <rng:ref name="model.textPhraseLike" />
+                <rng:ref name="model.editLike" />
+                <rng:ref name="model.transcriptionLike" />
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+        </elementSpec>
+        <elementSpec ident="contents" mode="change" ns="http://www.music-encoding.org/ns/mei" module="MEI.header">
+          <desc>List of the material contained within a resource.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.bibl"/>
+            <memberOf key="att.pointing"/>
+            <memberOf key="model.titlePagePart"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:ref name="model.headLike" />
+            </rng:zeroOrMore>
+            <rng:choice>
+              <rng:optional>
+                <rng:ref name="model.pLike" />
+              </rng:optional>
+              <rng:oneOrMore>
+                <rng:optional>
+                  <rng:ref name="label" />
+                </rng:optional>
+                <rng:ref name="contentItem" />
+              </rng:oneOrMore>
+            </rng:choice>
+          </content>
+          <constraintSpec ident="checkContentsLabels" scheme="schematron">
+            <constraint>
+              <sch:rule context="mei:contents[mei:label]">
+                <sch:assert role="warning" test="count(mei:label) = count(mei:contentItem)">When labels are used, usually each content item has one.</sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          
+          <remarks>
+            <p part="N">Use this element to provide an enumeration of the contents of a bibliographic entity, like that often found in a table of contents. When a detailed bibliographic description of included material is desired, use the
+              <gi scheme="MEI">componentList</gi>
+              element instead.</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="editionStmt" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.header">
+          <desc>(mention d'édition) - Conteneur pour les métadonnées relatives à une édition
+            particulière du matériel décrit.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.bibl"/>
+            <memberOf key="att.lang"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:ref name="model.headLike"/>
+            </rng:zeroOrMore>
+            <rng:oneOrMore>
+              <rng:ref name="model.editionLike"/>
+              <rng:zeroOrMore>
+                <rng:choice>
+                  <rng:ref name="model.respLikePart"/>
+                  <rng:ref name="respStmt"/>
+                </rng:choice>
+              </rng:zeroOrMore>
+            </rng:oneOrMore>
+          </content>
+          <remarks>
+            <p part="N">Cet élément est calqué sur les éléments des normes Text Encoding Initiative
+              (TEI) et Encoded Archival Description (EAD).</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="encodingDesc" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.header">
+          <desc>(description de l'encodage) - Documente la relation entre un fichier électronique et
+            la ou les sources dont il a été dérivé ainsi que les applications utilisées dans le
+            processus d'encodage / d'édition.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.bibl"/>
+            <memberOf key="model.headerPart"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:ref name="model.headLike"/>
+            </rng:zeroOrMore>
+            <rng:optional>
+              <rng:ref name="appInfo"/>
+            </rng:optional>
+            <rng:optional>
+              <rng:ref name="editorialDecl"/>
+            </rng:optional>
+            <rng:optional>
+              <rng:ref name="projectDesc"/>
+            </rng:optional>
+            <rng:optional>
+              <rng:ref name="samplingDecl"/>
+            </rng:optional>
+            <rng:zeroOrMore>
+              <rng:ref name="domainsDecl"/>
+            </rng:zeroOrMore>
+            <rng:optional>
+              <rng:ref name="tagsDecl"/>
+            </rng:optional>
+            <rng:optional>
+              <rng:ref name="classDecls"/>
+            </rng:optional>
+          </content>
+          <remarks>
+            <p part="N">Cet élément est calqué sur un élément de la norme TEI (Text Encoding
+              Initiative).</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="fileDesc" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.header">
+          <desc>(description du fichier) - Contient une description bibliographique complète du
+            fichier MEI.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.bibl"/>
+          </classes>
+          <content>
+            <rng:ref name="titleStmt"/>
+            <rng:optional>
+              <rng:ref name="editionStmt"/>
+            </rng:optional>
+            <rng:optional>
+              <rng:ref name="extent"/>
+            </rng:optional>
+            <rng:ref name="pubStmt"/>
+            <rng:optional>
+              <rng:ref name="seriesStmt"/>
+            </rng:optional>
+            <rng:optional>
+              <rng:ref name="notesStmt"/>
+            </rng:optional>
+            <rng:optional>
+              <rng:ref name="sourceDesc"/>
+            </rng:optional>
+          </content>
+          <remarks>
+            <p part="N">L'étendue dans ce contexte représente la taille du fichier.</p>
+          </remarks>
+          <remarks>
+            <p part="N">Cet élément est calqué sur les éléments des normes Text Encoding Initiative
+              (TEI) et Encoded Archival Description (EAD).</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="meiHead" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.header">
+          <desc>(En-tête MEI) – Fournit les métadonnées descriptives et déclaratives préfixées à
+            chaque texte conforme MEI.</desc>
+          <classes>
+            <memberOf key="att.basic"/>
+            <memberOf key="att.bibl"/>
+            <memberOf key="att.labelled"/>
+            <memberOf key="att.lang"/>
+            <memberOf key="att.meiVersion"/>
+            <memberOf key="att.responsibility"/>
+            <memberOf key="model.startLike.header"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:ref name="altId"/>
+            </rng:zeroOrMore>
+            <rng:ref name="fileDesc"/>
+            <rng:optional>
+              <rng:ref name="encodingDesc"/>
+            </rng:optional>
+            <rng:optional>
+              <rng:ref name="workList"/>
+            </rng:optional>
+            <rng:optional>
+              <rng:ref name="manifestationList"/>
+            </rng:optional>
+            <rng:zeroOrMore>
+              <rng:ref name="extMeta"/>
+            </rng:zeroOrMore>
+            <rng:optional>
+              <rng:ref name="revisionDesc"/>
+            </rng:optional>
+          </content>
+          <constraintSpec ident="check_meiHead_type" scheme="schematron">
+            <constraint>
+              <sch:rule context="mei:meiHead[@type eq 'music']">
+                <sch:assert test="ancestor::mei:mei">L'attribut de type meiHead ne peut avoir la
+                  valeur 'music' que lorsque l'élément de document est "mei".</sch:assert>
+              </sch:rule>
+              <sch:rule context="mei:meiHead[@type eq 'corpus']">
+                <sch:assert test="ancestor::mei:meiCorpus">L'attribut de type meiHead ne peut avoir
+                  la valeur 'corpus' que lorsque l'élément de document est "meiCorpus".</sch:assert>
+              </sch:rule>
+              <sch:rule context="mei:meiHead[@type eq 'independent']">
+                <sch:assert test="not(ancestor::mei:*)">L'attribut de type meiHead ne peut avoir la
+                  valeur 'independent' que lorsque l'élément de document est "meiHead".</sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          
+        </elementSpec>
+        <elementSpec ident="notesStmt" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.header">
+          <desc>(déclaration des notes) - Recueille toutes les notes fournissant des informations
+            sur un texte en plus de celles enregistrées dans d'autres parties de la description
+            bibliographique.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.bibl"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:ref name="model.headLike"/>
+            </rng:zeroOrMore>
+            <rng:oneOrMore>
+              <rng:ref name="model.annotLike"/>
+            </rng:oneOrMore>
+          </content>
+          <remarks>
+            <p part="N">Cet élément est calqué sur un élément de la norme TEI (Text Encoding
+              Initiative).</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="physDesc" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.header">
+          <desc>(description physique) - Conteneur d'informations sur l'apparence, la construction
+            ou la manipulation des matériaux physiques, tels que leurs dimensions, leur quantité,
+            leur couleur, leur style et leur technique de création.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.bibl"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:ref name="model.headLike"/>
+            </rng:zeroOrMore>
+            <rng:zeroOrMore>
+              <rng:ref name="model.pLike"/>
+            </rng:zeroOrMore>
+            <rng:zeroOrMore>
+              <rng:ref name="model.physDescPart"/>
+            </rng:zeroOrMore>
+          </content>
+          <remarks>
+            <p part="N">Le texte de dédicace et les caractéristiques de la page de titre peuvent
+              également être codés ici lorsqu'ils ne sont pas transcrits dans le cadre du recto ou
+              du verso; c'est-à-dire lorsqu'ils sont considérés comme des méta-données plutôt que
+              comme une transcription.</p>
+          </remarks>
+          <remarks>
+            <p part="N">Cet élément est calqué sur un élément de la norme EAD (Encoded Archival
+              Description).</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="pubStmt" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.header">
+          <desc>(déclaration de publication) - Conteneur d'informations concernant la publication ou
+            la distribution d'un élément bibliographique, y compris le nom et l'adresse de
+            l'éditeur, la date de publication et d'autres détails pertinents.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.bibl"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:ref name="model.headLike"/>
+            </rng:zeroOrMore>
+            <rng:choice>
+              <rng:optional>
+                <rng:ref name="unpub"/>
+              </rng:optional>
+              <rng:zeroOrMore>
+                <rng:ref name="model.pubStmtPart"/>
+              </rng:zeroOrMore>
+            </rng:choice>
+          </content>
+          <remarks>
+            <p part="N">Quand un item n'est pas publié, utiliser le sous-élément <gi scheme="MEI"
+                >unpub</gi> .</p>
+          </remarks>
+          <remarks>
+            <p part="N">Cet élément est calqué sur un élément de la norme TEI (Text Encoding
+              Initiative).</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="revisionDesc" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.header">
+          <desc>(description de la révision) - Conteneur d'informations sur les modifications
+            apportées à un fichier MEI.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.bibl"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:ref name="model.headLike"/>
+            </rng:zeroOrMore>
+            <rng:oneOrMore>
+              <rng:ref name="change"/>
+            </rng:oneOrMore>
+          </content>
+          <remarks>
+            <p part="N">Il est recommandé que les changements soient enregistrés dans l'ordre
+              chronologique inverse, avec la modification la plus récente en premier.</p>
+          </remarks>
+          <remarks>
+            <p part="N">Cet élément est calqué sur un élément de la norme TEI (Text Encoding
+              Initiative).</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="seriesStmt" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.header">
+          <desc>(déclaration de la série) - Regroupe les informations sur la série, le cas échéant,
+            à laquelle appartient une publication.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.bibl"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:ref name="model.headLike"/>
+            </rng:zeroOrMore>
+            <rng:oneOrMore>
+              <rng:ref name="model.titleLike"/>
+            </rng:oneOrMore>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:ref name="model.respLikePart"/>
+                <rng:ref name="respStmt"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:ref name="model.identifierLike"/>
+                <rng:ref name="biblScope"/>
+                <rng:ref name="contents"/>
+                <rng:ref name="seriesStmt"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+          <remarks>
+            <p part="N">Le sous-élément <gi scheme="MEI">title</gi> enregistre le titre de la série,
+                <gi scheme="MEI">respStmt</gi> enregistre la personne ou le groupe responsable de la
+              série, et <gi scheme="MEI">identifier</gi> contient un identifiant de série. L'élément
+                <gi scheme="MEI">contents</gi> doit être utilisé lorsqu'il est nécessaire d'énumérer
+              le contenu de la série, mais pas de décrire chaque composant. L'élément <gi
+                scheme="MEI">seriesStmt</gi> est fourni dans seriesStmt pour la description d'une
+              sous-série.</p>
+          </remarks>
+          <remarks>
+            <p part="N">Cet élément est calqué sur un élément de la norme TEI (Text Encoding
+              Initiative).</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="source" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.header">
+          <desc>Une description bibliographique d'une source utilisée dans la création du fichier
+            électronique.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.authorized"/>
+            <memberOf key="att.bibl"/>
+            <memberOf key="att.componentType"/>
+            <memberOf key="att.dataPointing"/>
+            <memberOf key="att.pointing"/>
+            <memberOf key="att.recordType"/>
+            <memberOf key="att.targetEval"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:ref name="model.headLike"/>
+            </rng:zeroOrMore>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:ref name="locus"/>
+                <rng:ref name="locusGrp"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:ref name="model.biblLike"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+          <constraintSpec ident="check_source_target" scheme="schematron">
+            <constraint>
+              <sch:rule context="mei:source/@target">
+                <sch:assert role="warning" test="not(normalize-space(.) eq '')">L'attribut @target
+                  doit avoir du contenu.</sch:assert>
+                <sch:assert role="warning"
+                  test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*[local-name() eq 'source' or local-name() eq 'manifestation']/@xml:id or matches($i, '^([a-z]+://|\.{1,2}/)')"
+                  >Chaque valeur de @target doit correspondre à l'attribut @xml: id d'un élément
+                  source ou de manifestation ou être un URI externe.</sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <remarks>
+            <p part="N">Cet élément contient ou réfère via l'attribut <att scheme="TEI">target</att>
+              , une description d'une source utilisée dans la création du fichier électronique. Pour
+              la description d'une incarnation physique d'une expression d'une œuvre, utilisez
+              l'élément <gi scheme="MEI">manifestation</gi> .</p>
+            <p part="N">L'attribut <att scheme="TEI">data</att> peut être utilisé pour référencer
+              une ou plusieurs caractéristiques musicales trouvées dans le contenu de cette source
+              particulière.</p>
+          </remarks>
+          <remarks>
+            <p part="N">Cet élément est calqué sur les éléments des normes Text Encoding Initiative
+              (TEI) et Encoded Archival Description (EAD).</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="sourceDesc" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.header">
+          <desc>(description de la source) - Un conteneur pour les descriptions de la ou des sources
+            utilisées dans la création du fichier électronique.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:ref name="model.headLike"/>
+            </rng:zeroOrMore>
+            <rng:oneOrMore>
+              <rng:ref name="source"/>
+            </rng:oneOrMore>
+          </content>
+          <remarks>
+            <p part="N">Cet élément est recommandé lorsque le fichier MEI est une transcription de
+              musique existante, mais n'est pas requis lorsque les données sont initialement créées
+              sous forme MEI.</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="titleStmt" mode="change" ns="http://www.music-encoding.org/ns/mei" module="MEI.header">
+          <desc>(title statement) – Container for title and responsibility meta-data.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.bibl"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:ref name="model.headLike" />
+            </rng:zeroOrMore>
+            <rng:oneOrMore>
+              <rng:ref name="model.titleLike" />
+            </rng:oneOrMore>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:ref name="model.respLike" />
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+          <remarks>
+            <p part="N">This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="work" mode="change" ns="http://www.music-encoding.org/ns/mei" module="MEI.header">
+          <desc>Provides a detailed description of a work — a distinct intellectual or artistic creation — specifically its history, language use, and high-level musical attributes (e.g., key, tempo, meter, medium of performance, and intended duration).</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.authorized"/>
+            <memberOf key="att.bibl"/>
+            <memberOf key="att.dataPointing"/>
+            <memberOf key="att.pointing"/>
+            <memberOf key="att.targetEval"/>
+            <memberOf key="model.workLike"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:ref name="model.headLike" />
+            </rng:zeroOrMore>
+            <rng:zeroOrMore>
+              <rng:ref name="model.identifierLike" />
+            </rng:zeroOrMore>
+            <rng:oneOrMore>
+              <rng:ref name="model.titleLike" />
+            </rng:oneOrMore>
+            <rng:zeroOrMore>
+              <rng:ref name="model.respLikePart" />
+            </rng:zeroOrMore>
+            <rng:zeroOrMore>
+              <rng:ref name="model.workIdent" />
+            </rng:zeroOrMore>
+            <rng:zeroOrMore>
+              <rng:ref name="otherChar" />
+            </rng:zeroOrMore>
+            <rng:optional>
+              <rng:ref name="creation" />
+            </rng:optional>
+            <rng:optional>
+              <rng:ref name="history" />
+            </rng:optional>
+            <rng:optional>
+              <rng:ref name="langUsage" />
+            </rng:optional>
+            <rng:optional>
+              <rng:ref name="perfMedium" />
+            </rng:optional>
+            <rng:optional>
+              <rng:ref name="perfDuration" />
+            </rng:optional>
+            <rng:optional>
+              <rng:ref name="audience" />
+            </rng:optional>
+            <rng:optional>
+              <rng:ref name="contents" />
+            </rng:optional>
+            <rng:optional>
+              <rng:ref name="context" />
+            </rng:optional>
+            <rng:zeroOrMore>
+              <rng:ref name="biblList" />
+            </rng:zeroOrMore>
+            <rng:optional>
+              <rng:ref name="notesStmt" />
+            </rng:optional>
+            <rng:optional>
+              <rng:ref name="classification" />
+            </rng:optional>
+            <rng:optional>
+              <rng:ref name="expressionList" />
+            </rng:optional>
+            <rng:optional>
+              <rng:ref name="componentList" />
+            </rng:optional>
+            <rng:optional>
+              <rng:ref name="relationList" />
+            </rng:optional>
+            <rng:zeroOrMore>
+              <rng:ref name="extMeta" />
+            </rng:zeroOrMore>
+          </content>
+          <remarks>
+            <p part="N">The
+              <gi scheme="MEI">perfDuration</gi>
+              element captures the
+              <emph>intended duration</emph>
+              of the work.</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="workList" mode="change" ns="http://www.music-encoding.org/ns/mei" module="MEI.header">
+          <desc>(work list) – Grouping mechanism for information describing non-bibliographic aspects of a text.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="model.headerPart"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:ref name="model.headLike" />
+            </rng:zeroOrMore>
+            <rng:oneOrMore>
+              <rng:ref name="work" />
+            </rng:oneOrMore>
+          </content>
+        </elementSpec>
+        <!--
+                <elementSpec ident="perfResList" mode="change" ns="http://www.music-encoding.org/ns/mei" module="MEI.header">
+                    <desc>Plusieurs ressources instrumentales ou vocales traitées en groupe.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.authorized"/>
+                        <memberOf key="att.bibl"/>
+                        <memberOf key="att.edit"/>
+                        <memberOf key="att.lang"/>
+                    </classes>
+                    <content>
+                        <rng:zeroOrMore>
+                            <rng:ref name="model.headLike" />
+                        </rng:zeroOrMore>
+                        <rng:zeroOrMore>
+                            <rng:choice>
+                                <rng:ref name="annot" />
+                                <rng:ref name="perfRes" />
+                                <rng:ref name="perfResList" />
+                            </rng:choice>
+                        </rng:zeroOrMore>
+                    </content>
+                    <attList org="group">
+                        <attDef ident="count" usage="opt">
+                            <desc>Indique le nombre d'interprètes.</desc>
+                            <datatype maxOccurs="1" minOccurs="1">
+                                <rng:data type="positiveInteger"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
+                    <remarks>
+                        <p part="N">La fonction des instrumentistes ou des chanteurs est représentée par le choix de
+                            <gi scheme="MEI">perfRes</gi>
+                            et
+                            <gi scheme="MEI">perfResList</gi>
+                            . Les dispositions sont codées pour le support de l'œuvre décrite et non pour le support d'origine.</p>
+                    </remarks>
+                </elementSpec>
+                <elementSpec ident="perfRes" mode="change" ns="http://www.music-encoding.org/ns/mei" module="MEI.header">
+                    <desc>(ressource de performance) - Nom d'un instrument sur lequel joue un interprète, gamme de voix d'un interprète ou une désignation d'ensemble standard.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.authorized"/>
+                        <memberOf key="att.bibl"/>
+                        <memberOf key="att.edit"/>
+                        <memberOf key="att.lang"/>
+                    </classes>
+                    <content>
+                        <rng:zeroOrMore>
+                            <rng:choice>
+                                <rng:text/>
+                                <rng:ref name="model.textPhraseLike.limited" />
+                                <rng:ref name="perfRes" />
+                            </rng:choice>
+                        </rng:zeroOrMore>
+                    </content>
+                    <attList org="group">
+                        <attDef ident="count" usage="opt">
+                            <desc>Indique le nombre d'interprètes.</desc>
+                            <datatype maxOccurs="1" minOccurs="1">
+                                <rng:data type="positiveInteger"/>
+                            </datatype>
+                        </attDef>
+                        <attDef ident="solo" usage="opt">
+                            <desc>Marque cet instrument ou partie vocale en tant que soliste. N'utilisez pas cet attribut pour un instrument solo qui n'est pas accompagné.</desc>
+                            <datatype maxOccurs="1" minOccurs="1">
+                                <rng:ref name="data.BOOLEAN" />
+                            </datatype>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                -->
+
+        <moduleRef key="MEI.lyrics" include="verse"/>
+        <elementSpec ident="verse" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.lyrics">
+          <desc>Division d'un poème ou des paroles d'une chanson, ayant parfois une longueur, un
+            mètre ou un schéma de rimes fixes; une strophe.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.lang"/>
+            <memberOf key="att.verse.log"/>
+            <memberOf key="att.verse.vis"/>
+            <memberOf key="att.verse.ges"/>
+            <memberOf key="att.verse.anl"/>
+            <memberOf key="model.verseLike"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:ref name="label"/>
+            </rng:zeroOrMore>
+            <rng:zeroOrMore>
+              <rng:ref name="labelAbbr"/>
+            </rng:zeroOrMore>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:ref name="dir"/>
+                <rng:ref name="dynam"/>
+                <rng:ref name="tempo"/>
+                <rng:ref name="space"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+            <rng:oneOrMore>
+              <rng:choice>
+                <rng:ref name="volta"/>
+                <rng:ref name="model.sylLike"/>
+                <rng:ref name="model.appLike"/>
+              </rng:choice>
+            </rng:oneOrMore>
+            <rng:zeroOrMore>
+              <rng:ref name="model.lbLike"/>
+            </rng:zeroOrMore>
+          </content>
+          <remarks>
+            <p part="N">L'élément <gi scheme="MEI">lb</gi> est autorisé ici pour faciliter les
+              applications pour karaoke. L'attribut <att scheme="TEI">func</att> sur <gi
+                scheme="MEI">lb</gi> peut être utilisé pour distinguer les fins de lignes réelles de
+              celles des groupes de lignes pour ces applications.</p>
+          </remarks>
+        </elementSpec>
+
+        <moduleRef key="MEI.mensural"/>
+        
+        <!--
+        <moduleRef key="MEI.midi"/>
+        -->
+
+
+        <moduleRef key="MEI.msDesc"
+          include="catchwords decoDesc decoNote heraldry locus locusGrp secFolio signatures stamp"/>
+        <elementSpec ident="catchwords" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.msDesc">
+          <desc>Décrit le système utilisé pour assurer le bon ordre des cahiers composant un
+            article, généralement au moyen d'annotations en bas de page.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.bibl"/>
+            <memberOf key="att.lang"/>
+            <memberOf key="model.msInline"/>
+            <memberOf key="model.physDescPart"/>
+          </classes>
+          <content>
+            <rng:ref name="macro.struc-unstrucContent"/>
+          </content>
+          <remarks>
+            <p part="N">Cet élément est calqué sur un élément de la norme TEI (Text Encoding
+              Initiative).</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="decoDesc" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.msDesc">
+          <desc>(description de la décoration) - Contient une description de la décoration d'un
+            objet.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.bibl"/>
+            <memberOf key="att.lang"/>
+            <memberOf key="model.physDescPart"/>
+          </classes>
+          <content>
+            <rng:choice>
+              <rng:group>
+                <rng:zeroOrMore>
+                  <rng:ref name="head"/>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                  <rng:choice>
+                    <rng:ref name="condition"/>
+                    <rng:ref name="decoNote"/>
+                    <rng:ref name="p"/>
+                  </rng:choice>
+                </rng:zeroOrMore>
+              </rng:group>
+              <rng:zeroOrMore>
+                <rng:choice>
+                  <rng:text/>
+                  <rng:ref name="model.textPhraseLike.limited"/>
+                </rng:choice>
+              </rng:zeroOrMore>
+            </rng:choice>
+          </content>
+          <remarks>
+            <p part="N">Cet élément est calqué sur un élément de la norme TEI (Text Encoding
+              Initiative).</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="decoNote" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.msDesc">
+          <desc>(note de décoration) - Contient une description d'une ou plusieurs caractéristiques
+            décoratives d'un item.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.bibl"/>
+            <memberOf key="att.lang"/>
+          </classes>
+          <content>
+            <rng:choice>
+              <rng:group>
+                <rng:zeroOrMore>
+                  <rng:ref name="head"/>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                  <rng:choice>
+                    <rng:ref name="condition"/>
+                    <rng:ref name="decoNote"/>
+                    <rng:ref name="p"/>
+                  </rng:choice>
+                </rng:zeroOrMore>
+              </rng:group>
+              <rng:zeroOrMore>
+                <rng:choice>
+                  <rng:text/>
+                  <rng:ref name="model.textPhraseLike.limited"/>
+                </rng:choice>
+              </rng:zeroOrMore>
+            </rng:choice>
+          </content>
+          <remarks>
+            <p part="N">Cet élément est calqué sur un élément de la norme TEI (Text Encoding
+              Initiative).</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="heraldry" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.msDesc">
+          <desc>Contient une formule ou une phrase héraldique, généralement trouvée dans le cadre
+            d'un blason, d'un blason, etc.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.bibl"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.lang"/>
+            <memberOf key="model.msInline"/>
+            <memberOf key="model.physDescPart"/>
+          </classes>
+          <content>
+            <rng:ref name="macro.struc-unstrucContent"/>
+          </content>
+          <remarks>
+            <p part="N">This element is modelled on an element in the Text Encoding Initiative (TEI)
+              standard.</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="locus" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.msDesc">
+          <desc>Définit un emplacement dans un manuscrit ou un composant de manuscrit, généralement
+            sous la forme d'une séquence (éventuellement discontinue) de références de folio.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.bibl"/>
+            <memberOf key="att.lang"/>
+            <memberOf key="model.msInline"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:text/>
+                <rng:ref name="locus"/>
+                <rng:ref name="rend"/>
+                <rng:ref name="symbol"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+        </elementSpec>
+        <elementSpec ident="locusGrp" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.msDesc">
+          <desc>(groupe de locus) - regroupe des emplacements qui forment ensemble un élément
+            distinct mais discontinu dans un manuscrit ou une partie de manuscrit, selon une
+            foliation spécifique.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.bibl"/>
+            <memberOf key="att.lang"/>
+            <memberOf key="model.msInline"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:ref name="locus"/>
+            </rng:zeroOrMore>
+          </content>
+        </elementSpec>
+        <elementSpec ident="secFolio" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.msDesc">
+          <desc>(deuxième folio) - Marque le ou les mots pris à partir d'un point fixe dans un codex
+            (généralement le début de la deuxième feuille) afin de fournir un identifiant unique
+            pour l'élément.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.bibl"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.lang"/>
+            <memberOf key="model.msInline"/>
+            <memberOf key="model.physDescPart"/>
+          </classes>
+          <content>
+            <rng:ref name="macro.struc-unstrucContent"/>
+          </content>
+          <remarks>
+            <p part="N">Cet élément est calqué sur un élément de la norme TEI (Text Encoding
+              Initiative).</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="signatures" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.msDesc">
+          <desc>Fournit une description des signatures de feuille ou de cahier trouvées dans un
+            codex.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.bibl"/>
+            <memberOf key="att.lang"/>
+            <memberOf key="model.msInline"/>
+            <memberOf key="model.physDescPart"/>
+          </classes>
+          <content>
+            <rng:ref name="macro.struc-unstrucContent"/>
+          </content>
+          <remarks>
+            <p part="N">Cet élément est calqué sur un élément de la norme TEI (Text Encoding
+              Initiative).</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="stamp" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.msDesc">
+          <desc>Contient un mot ou une phrase décrivant une marque officielle indiquant la
+            propriété, l'authenticité, la validité, etc.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.bibl"/>
+            <memberOf key="att.datable"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.lang"/>
+            <memberOf key="model.msInline"/>
+            <memberOf key="model.physDescPart"/>
+          </classes>
+          <content>
+            <rng:ref name="macro.struc-unstrucContent"/>
+          </content>
+          <remarks>
+            <p part="N">Cet élément est calqué sur un élément de la norme TEI (Text Encoding
+              Initiative).</p>
+          </remarks>
+        </elementSpec>
+        
+        
+        <moduleRef key="MEI.cmnOrnaments" include="mordent"/>
+        <elementSpec ident="mordent" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.cmnOrnaments">
+          <desc>Un ornement indiquant une alternance rapide de la note principale avec une note
+            secondaire, généralement un échelon en dessous, mais parfois un échelon
+            au-dessus.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.mordent.log"/>
+            <memberOf key="att.mordent.vis"/>
+            <memberOf key="att.mordent.ges"/>
+            <memberOf key="att.mordent.anl"/>
+            <memberOf key="model.ornamentLike.cmn"/>
+          </classes>
+          <content>
+            <rng:empty/>
+          </content>
+          <constraintSpec ident="mordent_start-type_attributes_required" scheme="schematron">
+            <constraint>
+              <sch:rule context="mei:mordent">
+                <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Doit avoir
+                  l'un des attributs: startid, tstamp, tstamp.ges ou tstamp.real.</sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <remarks>
+            <p part="N">Le point de départ du mordent peut être indiqué soit par un attribut <att
+                scheme="TEI">startid</att> , <att scheme="TEI">tstamp</att> , <att scheme="TEI"
+                >tstamp.ges</att> , ou <att scheme="TEI">tstamp.real</att> . C'est une erreur
+              sémantique de ne pas spécifier l'un de ces attributs.</p>
+          </remarks>
+        </elementSpec>
+        
+        <classSpec mode="replace" ident="att.mordent.log" module="MEI.cmnOrnaments" type="atts">
+          <desc>Logical domain attributes.</desc>
+          <classes>
+            <memberOf key="att.controlEvent"/>
+            <memberOf key="att.startEndId"/>
+            <memberOf key="att.ornamentAccid"/>
+          </classes>
+          <attList org="group">
+            <attDef ident="form" usage="opt">
+              <desc>Records semantic meaning, i.e., intended performance, of the mordent. The
+                <att scheme="TEI">altsym</att>
+                ,
+                <att scheme="TEI">glyph.name</att>
+                , or
+                <att scheme="TEI">glyph.num</att>
+                attributes may be used to specify the appropriate symbol.</desc>
+              <valList type="closed">
+                <valItem ident="lower">
+                  <desc>Starts with the written note, followed by its lower neighbor, with a return to the written note. In modern practice, this is called an "inverted mordent" and indicated by a short wavy line with a vertical line through it.</desc>
+                </valItem>
+                <valItem ident="upper">
+                  <desc>Starts with the written note, followed by its upper neighbor, with a return to the principal note. In modern practice, the symbol lacks the vertical line used for the inverted form.</desc>
+                </valItem>
+              </valList>
+            </attDef>
+            <attDef ident="long" usage="opt">
+              <desc>When set to 'true', a double or long mordent, sometimes called a "pincé double", consisting of 5 notes, is indicated.</desc>
+              <datatype maxOccurs="1" minOccurs="1">
+                <rng:ref name="data.BOOLEAN" />
+              </datatype>
+            </attDef>
+          </attList>
+        </classSpec>
+        
+        <classSpec mode="replace" ident="att.ornamPresent" module="MEI.cmnOrnaments" type="atts">
+          <desc>Attributs pour la présence d'ornements.</desc>
+          <attList org="group">
+            <attDef ident="ornam" usage="opt">
+              <desc>Indique que cet élément a un ornement attaché. Si des informations visuelles sur l'ornement sont nécessaires, alors l'un des éléments qui représente un ornement (mordent, trille ou tour) doit être utilisé.</desc>
+              <datatype maxOccurs="unbounded" minOccurs="1">
+                <rng:ref name="data.ORNAM.cmn" />
+              </datatype>
+            </attDef>
+          </attList>
+        </classSpec>
+        
+
+        <moduleRef key="MEI.corpus" include="meiCorpus"/>
+        <elementSpec ident="meiCorpus" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.corpus">
+          <desc>(MEI corpus) - Un groupe de documents MEI connexes, composé d'un en-tête pour le
+            groupe et d'un ou plusieurs éléments <gi scheme="MEI">mei</gi> , chacun avec son propre
+            en-tête complet.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.meiVersion"/>
+            <memberOf key="model.startLike.corpus"/>
+          </classes>
+          <content>
+            <rng:ref name="meiHead"/>
+            <rng:zeroOrMore>
+              <rng:ref name="mei"/>
+            </rng:zeroOrMore>
+          </content>
+          <remarks>
+            <p part="N">Cet élément est calqué sur l'élément teiCorpus de la norme TEI (Text
+              Encoding Initiative). Les instances MEI qui composent le corpus peuvent être liées de
+              plusieurs manières, par exemple, par compositeur, par une instrumentation similaire,
+              par une institution holding, etc. Le nom de cet élément ne doit pas être changé afin
+              d'assurer un niveau minimum absolu de conformité MEI.</p>
+          </remarks>
+        </elementSpec>
+
+        
+
+        <moduleRef key="MEI.edittrans" include="del handShift"/>
+        <elementSpec ident="del" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.edittrans">
+          <desc>(suppression) - Contient des informations supprimées, marquées comme supprimées ou
+            autrement indiquées comme superflues ou fausses dans le texte de la copie par un auteur,
+            un scribe, un annotateur ou un correcteur.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.edit"/>
+            <memberOf key="att.extent"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.lang"/>
+            <memberOf key="att.textRendition"/>
+            <memberOf key="att.trans"/>
+            <memberOf key="model.transcriptionLike"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:text/>
+                <rng:ref name="model.divLike"/>
+                <rng:ref name="model.editLike"/>
+                <rng:ref name="model.editTransPart"/>
+                <rng:ref name="model.fLike"/>
+                <rng:ref name="model.graphicPrimitiveLike"/>
+                <rng:ref name="model.keyAccidLike"/>
+                <rng:ref name="model.layerPart"/>
+                <rng:ref name="model.milestoneLike.music"/>
+                <rng:ref name="model.neumeComponentModifierLike"/>
+                <rng:ref name="model.neumeModifierLike"/>
+                <rng:ref name="model.neumePart"/>
+                <rng:ref name="model.sectionPart"/>
+                <rng:ref name="model.staffGrpLike"/>
+                <rng:ref name="model.transcriptionLike"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+          <remarks>
+            <p part="N">L'attribut <att scheme="TEI">resp</att> contient une référence
+              d'identification à un élément contenant le nom de l'éditeur ou du transcripteur chargé
+              d'identifier la main de la suppression. L'attribut <att scheme="TEI">cert</att>
+              signifie le degré de certitude attribué à l'identification de la main de la
+              suppression. La main de l'agent qui a effectué la suppression doit être pointée vers
+              l'attribut <att scheme="TEI">hand</att> . L'attribut <att scheme="TEI">rend</att> peut
+              être utilisé pour enregistrer la méthode utilisée pour effectuer la suppression
+              (surimpression, barré [à travers], etc.).</p>
+            <p part="N">Dans aucun cas <gi scheme="MEI">del</gi> ne doit contenir d'éléments qui
+              autrement ne serait pas autorisé à se produire au sein de la société mère de son
+              propre <gi scheme="MEI">app</gi> ancêtre. Par exemple, lorsqu'il est utilisé comme
+              descendant de <gi scheme="MEI">verse</gi> , <gi scheme="MEI">del</gi> ne doit contenir
+              que les éléments autorisés dans <gi scheme="MEI">verse</gi> .</p>
+          </remarks>
+          <remarks>
+            <p part="N">Cet élément est calqué sur les éléments des normes Text Encoding Initiative
+              (TEI) et Encoded Archival Description (EAD).</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="handShift" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.edittrans">
+          <desc>Marque le début d'un passage écrit d'une nouvelle main, ou d'un changement dans le
+            scribe, le style d'écriture, l'encre ou le caractère de la main du document.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.edit"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.medium"/>
+            <memberOf key="model.transcriptionLike"/>
+          </classes>
+          <content>
+            <rng:empty/>
+          </content>
+          
+        </elementSpec>
+        <!--
+        <moduleRef key="MEI.externalsymbols"/>
+        -->
+        <moduleRef key="MEI.namesdates" include="corpName persName"/>
+        <elementSpec ident="corpName" mode="change" ns="http://www.music-encoding.org/ns/mei" module="MEI.namesdates">
+          <desc>(corporate name) – Identifies an organization or group of people that acts as a single entity.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.bibl"/>
+            <memberOf key="att.edit"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.lang"/>
+            <memberOf key="att.name"/>
+            <memberOf key="model.nameLike.agent"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:text/>
+                <rng:ref name="model.textPhraseLike" />
+                <rng:ref name="model.editLike" />
+                <rng:ref name="model.transcriptionLike" />
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+          <remarks>
+            <p part="N">Examples of corporate entities include names of associations, institutions, business firms, non-profit enterprises, governments, government agencies, projects, programs, religious bodies, churches, conferences, athletic contests, exhibitions, expeditions, fairs, and ships. Usually, secondary name parts are encoded in
+              <gi scheme="MEI">corpName</gi>
+              sub-elements. The name of the list from which a controlled value is taken may be recorded using the
+              <att scheme="TEI">auth</att>
+              attribute.</p>
+          </remarks>
+          <remarks>
+            <p part="N">This element is modelled on an element in the Encoded Archival Description (EAD) standard.</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="persName" mode="change" ns="http://www.music-encoding.org/ns/mei" module="MEI.namesdates">
+          <desc>(personal name) – Designation for an individual, including any or all of that individual's forenames, surnames, honorific titles, and added names.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.bibl"/>
+            <memberOf key="att.edit"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.lang"/>
+            <memberOf key="att.name"/>
+            <memberOf key="model.nameLike.agent"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:text/>
+                <rng:ref name="model.textPhraseLike" />
+                <rng:ref name="model.editLike" />
+                <rng:ref name="model.transcriptionLike" />
+                <rng:ref name="model.persNamePart" />
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+          <remarks>
+            <p part="N">Parts of a personal name may be captured using
+              <gi scheme="MEI">persName</gi>
+              sub-elements. For greater specificity, however, use foreName, famName, genName, addName, genName, nameLink, and roleName elements. The name of the list from which a controlled value for persName is taken may be recorded using the
+              <att scheme="TEI">auth</att>
+              attribute.</p>
+          </remarks>
+          <remarks>
+            <p part="N">This element is modelled on an element in the Encoded Archival Description (EAD) standard.</p>
+          </remarks>
+        </elementSpec>
+        
+
+        <moduleRef key="MEI.neumes" include="nc ncGrp neume syllable"/>
+        <elementSpec ident="nc" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.neumes">
+          <desc>Signe représentant un événement à hauteur unique, bien que la hauteur exacte puisse
+            ne pas être connue.</desc>
+          <classes>
+            <memberOf key="att.basic"/>
+            <memberOf key="att.classed"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.labelled"/>
+            <memberOf key="att.linking"/>
+            <memberOf key="att.nNumberLike"/>
+            <memberOf key="att.responsibility"/>
+            <memberOf key="att.nc.anl"/>
+            <memberOf key="att.nc.ges"/>
+            <memberOf key="att.nc.log"/>
+            <memberOf key="att.nc.vis"/>
+            <memberOf key="model.neumePart"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:ref name="model.appLike"/>
+                <rng:ref name="model.editLike"/>
+                <rng:ref name="model.neumeComponentModifierLike"/>
+                <rng:ref name="model.neumeModifierLike"/>
+                <rng:ref name="model.transcriptionLike"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+          
+        </elementSpec>
+        <elementSpec ident="ncGrp" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.neumes">
+          <desc>Collection d'un ou plusieurs composants neumatique.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.ncGrp.anl"/>
+            <memberOf key="att.ncGrp.ges"/>
+            <memberOf key="att.ncGrp.log"/>
+            <memberOf key="att.ncGrp.vis"/>
+            <memberOf key="model.neumePart"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:ref name="model.appLike"/>
+                <rng:ref name="model.editLike"/>
+                <rng:ref name="model.neumeModifierLike"/>
+                <rng:ref name="model.transcriptionLike"/>
+                <rng:ref name="nc"/>
+                <rng:ref name="ncGrp"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+        </elementSpec>
+        <elementSpec ident="neume" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.neumes">
+          <desc>Signe représentant un ou plusieurs emplacements musicaux.</desc>
+          <classes>
+            <memberOf key="att.basic"/>
+            <memberOf key="att.classed"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.labelled"/>
+            <memberOf key="att.linking"/>
+            <memberOf key="att.nNumberLike"/>
+            <memberOf key="att.responsibility"/>
+            <memberOf key="att.neume.anl"/>
+            <memberOf key="att.neume.ges"/>
+            <memberOf key="att.neume.log"/>
+            <memberOf key="att.neume.vis"/>
+            <memberOf key="model.eventLike.neumes"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:ref name="model.appLike"/>
+                <rng:ref name="model.editLike"/>
+                <rng:ref name="model.neumeModifierLike"/>
+                <rng:ref name="model.neumePart"/>
+                <rng:ref name="model.transcriptionLike"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+          
+        </elementSpec>
+        <!--
+                <elementSpec ident="oriscus" mode="change" ns="http://www.music-encoding.org/ns/mei" module="MEI.neumes">
+                    <desc>Oriscus.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.facsimile"/>
+                        <memberOf key="att.oriscus.anl"/>
+                        <memberOf key="att.oriscus.ges"/>
+                        <memberOf key="att.oriscus.log"/>
+                        <memberOf key="att.oriscus.vis"/>
+                        <memberOf key="model.neumeComponentModifierLike"/>
+                    </classes>
+                </elementSpec>
+                <elementSpec ident="quilisma" mode="change" ns="http://www.music-encoding.org/ns/mei" module="MEI.neumes">
+                    <desc>Quilisma.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.facsimile"/>
+                        <memberOf key="att.quilisma.anl"/>
+                        <memberOf key="att.quilisma.ges"/>
+                        <memberOf key="att.quilisma.log"/>
+                        <memberOf key="att.quilisma.vis"/>
+                        <memberOf key="model.neumeComponentModifierLike"/>
+                    </classes>
+                </elementSpec>
+                <elementSpec ident="signifLet" mode="change" ns="http://www.music-encoding.org/ns/mei" module="MEI.neumes">
+                    <desc>Lettres significatives.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.facsimile"/>
+                        <memberOf key="att.signifLet.anl"/>
+                        <memberOf key="att.signifLet.ges"/>
+                        <memberOf key="att.signifLet.log"/>
+                        <memberOf key="att.signifLet.vis"/>
+                        <memberOf key="model.neumeModifierLike"/>
+                    </classes>
+                    <content>
+                        <rng:zeroOrMore>
+                            <rng:choice>
+                                <rng:text/>
+                                <rng:ref name="model.textPhraseLike.limited" />
+                                <rng:ref name="model.graphicPrimitiveLike" />
+                                <rng:ref name="model.editLike" />
+                                <rng:ref name="model.transcriptionLike" />
+                            </rng:choice>
+                        </rng:zeroOrMore>
+                    </content>
+                </elementSpec>
+                <elementSpec ident="strophicus" mode="change" ns="http://www.music-encoding.org/ns/mei" module="MEI.neumes">
+                    <desc>Strophicus.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.facsimile"/>
+                        <memberOf key="att.strophicus.anl"/>
+                        <memberOf key="att.strophicus.ges"/>
+                        <memberOf key="att.strophicus.log"/>
+                        <memberOf key="att.strophicus.vis"/>
+                        <memberOf key="model.neumeComponentModifierLike"/>
+                    </classes>
+                </elementSpec>
+                -->
+        <elementSpec ident="syllable" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.neumes">
+          <desc>La notation neumatique peut être considérée comme un "texte neumatique". Par
+            conséquent, l'élément syllable fournit une organisation de haut niveau dans ce
+            répertoire.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.syllable.anl"/>
+            <memberOf key="att.syllable.ges"/>
+            <memberOf key="att.syllable.log"/>
+            <memberOf key="att.syllable.vis"/>
+            <memberOf key="model.syllableLike"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:ref name="model.annotLike"/>
+                <rng:ref name="model.appLike"/>
+                <rng:ref name="model.divLike"/>
+                <rng:ref name="model.editLike"/>
+                <rng:ref name="model.graphicPrimitiveLike"/>
+                <rng:ref name="model.milestoneLike.music"/>
+                <rng:ref name="model.neumeModifierLike"/>
+                <rng:ref name="model.scoreDefLike"/>
+                <rng:ref name="model.staffDefLike"/>
+                <rng:ref name="model.staffGrpLike"/>
+                <rng:ref name="model.syllablePart"/>
+                <rng:ref name="model.transcriptionLike"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+        </elementSpec>
+
+        <classSpec mode="replace" ident="att.neume.log" module="MEI.neumes" type="atts">
+          <desc>Attributs de domaine logique.</desc>
+          <classes>
+            <memberOf key="att.alignment"/>
+            <memberOf key="att.layerIdent"/>
+            <memberOf key="att.staffIdent"/>
+            <memberOf key="att.sylText"/>
+          </classes>
+        </classSpec>
+        
+        <classSpec mode="replace" ident="att.ncGrp.log" module="MEI.neumes" type="atts">
+          <desc>Logical domain attributes.</desc>
+          <classes>
+            <memberOf key="att.alignment"/>
+            <memberOf key="att.layerIdent"/>
+            <memberOf key="att.staffIdent"/>
+            <memberOf key="att.sylText"/>
+          </classes>
+        </classSpec>
+        
+        
+        <moduleRef key="MEI.performance"/>
+        <moduleRef key="MEI.ptrref"/>
+
+
+
+        <moduleRef key="MEI.shared"
+          include="body clef clefGrp composer dot ending group label layer layerDef mdiv mei music name note part parts resp respStmt rest score scoreDef 
+          section staff staffDef staffGrp syl tempo title"/>
+
+        <!--
+                <elementSpec ident="annot" mode="change" ns="http://www.music-encoding.org/ns/mei" module="MEI.shared">
+                    <desc>(annotation) – Fournit une déclaration expliquant le texte ou indiquant la base d'une assertion.</desc>
+                    <classes>
+                        <memberOf key="att.common"/>
+                        <memberOf key="att.annot.log"/>
+                        <memberOf key="att.annot.vis"/>
+                        <memberOf key="att.annot.ges"/>
+                        <memberOf key="att.annot.anl"/>
+                        <memberOf key="att.audience"/>
+                        <memberOf key="att.bibl"/>
+                        <memberOf key="att.dataPointing"/>
+                        <memberOf key="att.facsimile"/>
+                        <memberOf key="att.lang"/>
+                        <memberOf key="att.plist"/>
+                        <memberOf key="att.source"/>
+                        <memberOf key="att.targetEval"/>
+                        <memberOf key="model.annotLike"/>
+                    </classes>
+                    <content>
+                        <rng:choice>
+                            <rng:group>
+                                <rng:zeroOrMore>
+                                    <rng:ref name="model.headLike" />
+                                </rng:zeroOrMore>
+                                <rng:zeroOrMore>
+                                    <rng:ref name="model.textComponentLike" />
+                                </rng:zeroOrMore>
+                            </rng:group>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:text/>
+                                    <rng:ref name="model.editLike" />
+                                    <rng:ref name="model.textPhraseLike" />
+                                    <rng:ref name="model.transcriptionLike" />
+                                </rng:choice>
+                            </rng:zeroOrMore>
+                        </rng:choice>
+                    </content>
+                    <constraintSpec ident="Check_annot_data" scheme="schematron">
+                        <constraint>
+                            <sch:rule context="mei:annot[@data]">
+                                <sch:assert test="ancestor::mei:notesStmt">L'attribut @data ne peut apparaître que sur une annotation dans l'élément notesStmt.</sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    <remarks>
+                        <p part="N">L'élément
+                            <gi scheme="MEI">annot</gi>
+                            peut être utilisé à la fois pour les commentaires généraux et pour les annotations du texte musical. Il fournit un moyen de regrouper les * événements * et / ou les * événements de contrôle * participants, par exemple, les notes qui forment une ligne de basse descendante, et fournit une étiquette et un commentaire concernant le groupe. Les entités participantes peuvent être identifiées dans le
+                            <att scheme="TEI">plist</att>
+                            attribut. Un commentaire ou une observation rédactionnelle ou analytique peut être inclus directement dans le
+                            <gi scheme="MEI">annoter</gi>
+                            élément. Le point de départ de l'annotation peut être indiqué soit par un
+                            <att scheme="TEI">tstamp</att>
+                            ,
+                            <att scheme="TEI">tstamp.ges</att>
+                            ,
+                            <att scheme="TEI">tstamp.real</att>
+                            ou alors
+                            <att scheme="TEI">startid</att>
+                            attribut, tandis que le point final peut être enregistré soit par un
+                            <att scheme="TEI">dur</att>
+                            ,
+                            <att scheme="TEI">dur.ges</att>
+                            ou alors
+                            <att scheme="TEI">endid</att>
+                            attribut. le
+                            <att scheme="TEI">resp</att>
+                            attribut enregistre le ou les éditeurs chargés d'identifier ou de créer l'annotation.</p>
+                    </remarks>
+                </elementSpec>
+                -->
+        <elementSpec ident="body" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.shared">
+          <desc>Contient la totalité d'un seul texte musical, à l'exclusion de toute matière recto
+            ou verso.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.metadataPointing"/>
+            <memberOf key="model.musicPart"/>
+          </classes>
+          <content>
+            <rng:oneOrMore>
+              <rng:choice>
+                <rng:ref name="model.divLike"/>
+                <rng:ref name="model.mdivLike"/>
+              </rng:choice>
+            </rng:oneOrMore>
+          </content>
+          <remarks>
+            <p part="N">Quand la musique peut être divisée par segments, il peut y avoir de
+              multiples éléments <gi scheme="MEI">mdiv</gi> dans le <gi scheme="MEI">body</gi> .
+              C'est la première indication d'une structure musicale.</p>
+            <p part="N">Le contenu du <gi scheme="MEI">body</gi> permet également d'entrelacer des
+              blocs de texte et de notation musicale. Cela permet le codage d'un large éventail de
+              documents musicaux, y compris ceux qui sont principalement textuels avec seulement du
+              matériel musical occasionnel ou même ceux qui manquent complètement de notation
+              musicale.</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="clef" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.shared">
+          <desc>Indication de l'emplacement exact d'une note particulière sur la portée et, par
+            conséquent, des autres notes également.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.event"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.clef.anl"/>
+            <memberOf key="att.clef.ges"/>
+            <memberOf key="att.clef.log"/>
+            <memberOf key="att.clef.vis"/>
+            <memberOf key="model.eventLike"/>
+            <memberOf key="model.staffDefPart"/>
+          </classes>
+          <content>
+            <rng:empty/>
+          </content>
+          <constraintSpec ident="Clef_position_lines" scheme="schematron">
+            <constraint>
+              <sch:rule context="mei:clef[ancestor::mei:staffDef[@lines]]">
+                <sch:let name="thisstaff" value="ancestor::mei:staffDef/@n"/>
+                <sch:assert
+                  test="number(@line) = number(ancestor::mei:staffDef[@n=$thisstaff and @lines][1]/@lines)"
+                  >La position de la clé doit être inférieure ou égale au nombre de lignes d'une
+                  portée ancêtre.</sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <constraintSpec ident="Clef_position_nolines" scheme="schematron">
+            <constraint>
+              <sch:rule context="mei:clef[ancestor::mei:staffDef[not(@lines)]]">
+                <sch:let name="thisstaff" value="ancestor::mei:staffDef/@n"/>
+                <sch:assert
+                  test="number(@line) = number(preceding::mei:staffDef[@n=$thisstaff and @lines][1]/@lines)"
+                  >La position de la clé doit être inférieure ou égale au nombre de lignes d'une
+                  portée précédente.</sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <remarks>
+            <p part="N">Cela peut être une alternative à l'attribut clef de l'élément <gi
+                scheme="MEI">staff</gi> . Il doit être utilisé lorsque des informations d'affichage
+              spécifiques, telles que la taille ou la couleur, doivent être enregistrées pour la clé
+              ou lorsque plusieurs clés simultanées se produisent sur une seule portée. Cet élément
+              peut également être utilisé dans le contexte de la portée pour indiquer des
+              changements de clé.</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="clefGrp" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.shared">
+          <desc>(groupe de clés) - Un ensemble de clés se produisant simultanément.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.event"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.clefGrp.log"/>
+            <memberOf key="att.clefGrp.vis"/>
+            <memberOf key="att.clefGrp.ges"/>
+            <memberOf key="att.clefGrp.anl"/>
+            <memberOf key="model.eventLike"/>
+            <memberOf key="model.staffDefPart"/>
+          </classes>
+          <content>
+            <rng:oneOrMore>
+              <rng:ref name="clef"/>
+            </rng:oneOrMore>
+          </content>
+        </elementSpec>
+        <elementSpec ident="composer" mode="change" ns="http://www.music-encoding.org/ns/mei" module="MEI.shared">
+          <desc>The name of the creator of the intellectual content of a musical work.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.bibl"/>
+            <memberOf key="att.evidence"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.lang"/>
+            <memberOf key="model.respLikePart"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:text/>
+                <rng:ref name="model.textPhraseLike.limited" />
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+        </elementSpec>
+        <elementSpec ident="dot" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.shared">
+          <desc>Point d'augmentation ou de division.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.dot.log"/>
+            <memberOf key="att.dot.vis"/>
+            <memberOf key="att.dot.ges"/>
+            <memberOf key="att.dot.anl"/>
+            <memberOf key="model.noteModifierLike"/>
+          </classes>
+          <content>
+            <rng:empty/>
+          </content>
+          <remarks>
+            <p part="N">Cet élément offre une alternative au <att scheme="TEI">points</att> attribut
+              activé <gi scheme="MEI">note</gi> et <gi scheme="MEI">reste</gi> éléments. Il doit
+              être utilisé lorsque des informations d'affichage spécifiques, telles que la taille ou
+              la couleur, doivent être enregistrées pour le point. Cet élément peut également être
+              utilisé pour les points de division dans le répertoire mensural.</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="ending" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.shared">
+          <desc>Fin alternative pour un passage répété de la musique; c'est-à-dire prima volta,
+            seconda volta, etc.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.ending.anl"/>
+            <memberOf key="att.ending.ges"/>
+            <memberOf key="att.ending.log"/>
+            <memberOf key="att.ending.vis"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.pointing"/>
+            <memberOf key="att.targetEval"/>
+            <memberOf key="model.endingLike"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:ref name="expansion"/>
+            </rng:zeroOrMore>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:ref name="model.annotLike"/>
+                <rng:ref name="model.appLike"/>
+                <rng:ref name="model.editLike"/>
+                <rng:ref name="model.graphicPrimitiveLike"/>
+                <rng:ref name="model.milestoneLike.music"/>
+                <rng:ref name="model.relationLike"/>
+                <rng:ref name="model.scoreDefLike"/>
+                <rng:ref name="model.sectionLike"/>
+                <rng:ref name="model.sectionPart.cmn"/>
+                <rng:ref name="model.sectionPart.mensuralAndNeumes"/>
+                <rng:ref name="model.staffDefLike"/>
+                <rng:ref name="model.transcriptionLike"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+          <remarks>
+            <p part="N">L'élément <gi scheme="MEI">scoreDef</gi> est autorisé comme sous-élément
+              pour qu'un élément ending ait ses propres métadonnées sans être encadré par des
+              éléments <gi scheme="MEI">section</gi> . Les sous-éléments <gi scheme="MEI">div</gi>
+              ne sont pas autorisés dans les ending. Ils peuvent néanmoins être contenus dans les
+              sous-éléments measure. Les éléments ending ne contiennent pas d'autres éléments
+              ending.</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="group" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.shared">
+          <desc>Contient un texte musical composite, regroupant une séquence de textes musicaux
+            distincts (ou des groupes de ces textes musicaux) qui sont considérés comme une unité
+            dans un certain but, par exemple, les œuvres rassemblées d'un compositeur.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.metadataPointing"/>
+            <memberOf key="model.musicPart"/>
+          </classes>
+          <content>
+            <rng:choice>
+              <rng:ref name="music"/>
+              <rng:ref name="group"/>
+            </rng:choice>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:ref name="music"/>
+                <rng:ref name="group"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+          <remarks>
+            <p part="N">Étant donné que son modèle contient l'élément musical, chacun des documents
+              MEI subordonnés peut avoir son propre recto et verso.</p>
+          </remarks>
+          <remarks>
+            <p part="N">Cet élément est calqué sur un élément de la norme TEI (Text Encoding
+              Initiative).</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="label" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.shared">
+          <desc>Un conteneur pour le texte du document qui identifie la fonction à laquelle il est
+            attaché. Pour une "info-bulle" ou une autre étiquette générée, utiliser le <att
+              scheme="TEI">label</att> attribute.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.lang"/>
+            <memberOf key="att.source"/>
+            <memberOf key="model.labelLike"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:text/>
+                <rng:ref name="model.textPhraseLike.limited"/>
+                <rng:ref name="model.editLike"/>
+                <rng:ref name="model.transcriptionLike"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+          <remarks>
+            <p part="N">Cet élément est calqué sur un élément de la norme TEI (Text Encoding
+              Initiative).</p>
+            <p part="N">Ne confondez pas cet élément, qui est utilisé pour capturer le texte
+              d'étiquetage apparaissant dans le document, avec le <att scheme="TEI"> label </att>
+              attribut, qui enregistre le texte à utiliser pour générer une désignation pour
+              l'élément auquel il est attaché, une "info-bulle" par exemple.</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="layer" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.shared">
+          <desc>Un flux d'événements indépendant sur les portées.</desc>
+          <classes>
+            <memberOf key="att.basic"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.labelled"/>
+            <memberOf key="att.linking"/>
+            <memberOf key="att.metadataPointing"/>
+            <memberOf key="att.nInteger"/>
+            <memberOf key="att.responsibility"/>
+            <memberOf key="att.typed"/>
+            <memberOf key="att.layer.log"/>
+            <memberOf key="att.layer.vis"/>
+            <memberOf key="att.layer.ges"/>
+            <memberOf key="att.layer.anl"/>
+            <memberOf key="model.layerLike"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:ref name="model.annotLike"/>
+                <rng:ref name="model.appLike"/>
+                <rng:ref name="model.editLike"/>
+                <rng:ref name="model.graphicPrimitiveLike"/>
+                <rng:ref name="model.layerPart"/>
+                <rng:ref name="model.milestoneLike.music"/>
+                <rng:ref name="model.transcriptionLike"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+          <remarks>
+            <p part="N">Le terme 'couche' est utilisé à la place de 'voix' afin d'éviter toute
+              confusion entre 'voix' et 'voix dirigeante'. L'attribut <att scheme="TEI">def</att>
+              peut être utilisé pour créer une connexion avec un élément <gi scheme="MEI"
+                >layerDef</gi> où les informations logiques et visuelles sur le layer sont
+              indiquées. Autrement, l'attribut <att scheme="TEI">n</att> peut être utilisé comme
+              référence à l'élément <gi scheme="MEI">layerDef</gi> avec la même valeur <att
+                scheme="TEI">n</att> d'attribut. Si ni l'attribut <att scheme="TEI">def</att> ni
+              l'attribut <att scheme="TEI">n</att> ne sont présents, alors l'ordre de codage des
+              couches est supposé correspondre à l'ordre de codage des définitions de couche.</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="layerDef" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.shared">
+          <desc>(définition de couche) - Conteneur pour les méta-informations de couche.</desc>
+          <classes>
+            <memberOf key="att.basic"/>
+            <memberOf key="att.labelled"/>
+            <memberOf key="att.linking"/>
+            <memberOf key="att.metadataPointing"/>
+            <memberOf key="att.nInteger"/>
+            <memberOf key="att.responsibility"/>
+            <memberOf key="att.typed"/>
+            <memberOf key="att.layerDef.log"/>
+            <memberOf key="att.layerDef.vis"/>
+            <memberOf key="att.layerDef.ges"/>
+            <memberOf key="att.layerDef.anl"/>
+            <memberOf key="model.layerDefLike"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:ref name="model.labelLike"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+            <rng:zeroOrMore>
+              <rng:ref name="model.instrDefLike"/>
+            </rng:zeroOrMore>
+            <rng:optional>
+              <rng:ref name="ambitus"/>
+            </rng:optional>
+          </content>
+        </elementSpec>
+        <elementSpec ident="mdiv" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.shared">
+          <desc>(division musicale) – Contient une subdivision du corps du texte musical.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.metadataPointing"/>
+            <memberOf key="att.mdiv.anl"/>
+            <memberOf key="att.mdiv.ges"/>
+            <memberOf key="att.mdiv.log"/>
+            <memberOf key="att.mdiv.vis"/>
+            <memberOf key="model.mdivLike"/>
+          </classes>
+          <content>
+            <rng:choice>
+              <rng:group>
+                <rng:optional>
+                  <rng:ref name="model.scoreLike"/>
+                </rng:optional>
+                <rng:optional>
+                  <rng:ref name="model.partsLike"/>
+                </rng:optional>
+              </rng:group>
+              <rng:zeroOrMore>
+                <rng:ref name="model.mdivLike"/>
+              </rng:zeroOrMore>
+            </rng:choice>
+          </content>
+          <remarks>
+            <p part="N">L'élément <gi scheme="MEI">mdiv</gi> doit contenir une ou l'ensemble des
+              deux représentations musicales. La vue partition est la partition complète et ouverte
+              traditionnelle tandis que la vue des parties contient la vue de chaque interprète de
+              la partition; c'est-à-dire sa partie. Ces 2 représentations sont nécessaires car il
+              n'est pas toujours possible ou souhaitable de générer l'une à partir de l'autre.
+              L'élément <gi scheme="MEI">score</gi> et l'élément <gi scheme="MEI">parts</gi> sont
+              indiqués ici indirectement dans l'élément <gi scheme="MEI">body</gi> car leurs
+              caractéristiques peuvent varier d'une <gi scheme="MEI">mdiv</gi> à une autre <gi
+                scheme="MEI">mdiv</gi> . Par exemple, le 2ème mouvement d'une symphonie peut
+              nécessiter des forces d'exécution différentes (et donc une partition et une
+              disposition de partie différentes) que les autres mouvements. L'élément <gi
+                scheme="MEI">mdiv</gi> peut être récursif pour représenter une partition musicale
+              qui présente ce genre de structure. Par exemple, un opera est normalement divisé en
+              actes, qui sont eux-mêmes divisés en scènes.</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="mei" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.shared">
+          <desc>Contient un seul document conforme MEI, composé d'un en-tête MEI et d'un texte
+            musical, soit isolément, soit dans le cadre d'un élément meiCorpus.</desc>
+          <classes>
+            <memberOf key="att.id"/>
+            <memberOf key="att.meiVersion"/>
+            <memberOf key="att.responsibility"/>
+          </classes>
+          <content>
+            <rng:ref name="meiHead"/>
+            <rng:ref name="music"/>
+          </content>
+          <constraintSpec ident="Check_staff" scheme="schematron">
+            <constraint>
+              <sch:rule context="mei:*[@staff]">
+                <sch:assert
+                  test="every $i in tokenize(normalize-space(@staff), '\s+') satisfies $i=//mei:staffDef/@n"
+                  >Les valeurs de @staff doivent correspondre à l'attribut @n d'un élément
+                  staffDef.</sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <remarks>
+            <p part="N">L'élément <gi scheme="MEI">mei</gi> définit une instance d'un document
+              encodé avec le schéma MEI. C'est l'élément de document pour un seul document contenant
+              un en-tête et des données. Le nom de cet élément ne doit être modifié par aucune
+              personnalisation afin de garantir un niveau minimum absolu de conformité MEI.</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="music" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.shared">
+          <desc>Contient un seul texte musical de toute nature, qu'il soit unitaire ou composite,
+            par exemple, une étude, un opéra, un cycle de chanson, une symphonie ou une anthologie
+            de solos de piano.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.meiVersion"/>
+            <memberOf key="att.metadataPointing"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:ref name="model.resourceLike"/>
+            </rng:zeroOrMore>
+            <rng:ref name="macro.musicPart"/>
+          </content>
+        </elementSpec>
+        <elementSpec ident="name" mode="change" ns="http://www.music-encoding.org/ns/mei" module="MEI.shared">
+          <desc>Proper noun or noun phrase.</desc>
+          <classes>
+            <memberOf key="att.basic"/>
+            <memberOf key="att.bibl"/>
+            <memberOf key="att.classed"/>
+            <memberOf key="att.edit"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.labelled"/>
+            <memberOf key="att.lang"/>
+            <memberOf key="att.linking"/>
+            <memberOf key="att.name"/>
+            <memberOf key="att.nNumberLike"/>
+            <memberOf key="att.responsibility"/>
+            <memberOf key="model.eventPart"/>
+            <memberOf key="model.nameLike"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:text/>
+                <rng:ref name="model.textPhraseLike" />
+                <rng:ref name="model.editLike" />
+                <rng:ref name="model.transcriptionLike" />
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+          <constraintSpec ident="nameParts" scheme="schematron">
+            <constraint>
+              <sch:rule context="mei:name">
+                <sch:assert role="warning" test="not(mei:geogName or mei:persName or mei:corpName)">Recommended practice is to use name elements to capture sub-parts of a generic name.</sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+
+          <remarks>
+            <p part="N">Contains the name of an entity that is difficult to tag more specifically, for example, as a
+              <gi scheme="MEI">corpName</gi>
+              ,
+              <gi scheme="MEI">geogName</gi>
+              ,
+              <gi scheme="MEI">persName</gi>
+              , or
+              <gi scheme="MEI">title</gi>
+              . The
+              <gi scheme="MEI">name</gi>
+              element may be used in place of the more specific elements when it is not known what kind of name is being described or when a high degree of precision is not necessary. For example, the
+              <gi scheme="MEI">name</gi>
+              element might be used when it is not clear whether the name "Bach" refers to a person or a geographic feature. The
+              <gi scheme="MEI">name</gi>
+              element may be used for an individual, such as 'Henry VIII, King of England'; a corporate body, such as 'The Beatles'; a geographical place; an expanse of time, such as 'The Romantic Era'; or a mechanical (often generative) process. When name parts are needed,
+              <gi scheme="MEI">name</gi>
+              sub-elements are recommended. The recommended values for the
+              <att scheme="TEI">type</att>
+              attribute are: person, corporation, location, period, and process. Dates associated with
+              <emph>the name</emph>
+              (not necessarily the same as those pertaining to the
+              <emph>entity described by the name</emph>
+              ) may be recorded using
+              <att scheme="TEI">startdate</att>
+              ,
+              <att scheme="TEI">enddate</att>
+              ,
+              <att scheme="TEI">notbefore</att>
+              ,
+              <att scheme="TEI">notafter</att>
+              , and
+              <att scheme="TEI">isodate</att>
+              attributes. The name of the list from which a controlled value is taken, such as the Thesaurus of Geographic Names (TGN) or Library of Congress Name Authority File (LCNAF), and its electronically-available location may be recorded using the
+              <att scheme="TEI">auth</att>
+              and
+              <att scheme="TEI">auth.uri</att>
+              attributes.</p>
+          </remarks>
+          <remarks>
+            <p part="N">This element is modelled on an element in the Encoded Archival Description (EAD) standard.</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="note" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.shared">
+          <desc>Un evènement unique.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.note.log"/>
+            <memberOf key="att.note.vis"/>
+            <memberOf key="att.note.ges"/>
+            <memberOf key="att.note.anl"/>
+            <memberOf key="model.chordPart"/>
+            <memberOf key="model.eventLike"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:ref name="model.noteModifierLike"/>
+                <rng:ref name="model.verseLike"/>
+                <rng:ref name="model.sylLike"/>
+                <rng:ref name="model.appLike"/>
+                <rng:ref name="model.editLike"/>
+                <rng:ref name="model.transcriptionLike"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+          <remarks>
+            <p part="N">Les sous-éléments <gi scheme="MEI"> accid </gi> et <gi scheme="MEI"> artic
+              </gi> des sous-éléments peuvent être utilisés à la place des attributs de l'élément
+              note lorsque accid et artic représentent des objets de première classe, par exemple,
+              lorsqu'ils nécessitent des attributs, tels que <att scheme="TEI"> x </att> et <att
+                scheme="TEI"> y </att> attributs de localisation. De même, le <gi scheme="MEI"> syl
+              </gi> le sous-élément peut être utilisé à la place du <att scheme="TEI"> syl </att>
+              attribut. Le sous-élément verset peut être utilisé pour regrouper les syllabes du
+              texte par verset. le <att scheme="TEI"> coloré </att> l'attribut peut être utilisé
+              pour indiquer la coloration. Dans le répertoire mensural, la coloration est un
+              changement temporaire de la mensuration sous-jacente de parfait à imparfait. Dans le
+              répertoire CMN, la coloration est une inversion du rendu normal de la tête de note,
+              c'est-à-dire que la tête de note est vide alors qu'elle serait autrement remplie et
+              vice versa. Ne confondez pas cela avec la couleur visuelle.</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="part" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.shared">
+          <desc>Une interprétation visuelle alternative de la partition du point de vue d'un
+            interprète particulier (ou d'un groupe d'interprètes).</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.metadataPointing"/>
+            <memberOf key="att.part.log"/>
+            <memberOf key="att.part.vis"/>
+            <memberOf key="att.part.ges"/>
+            <memberOf key="att.part.anl"/>
+            <memberOf key="model.partLike"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:ref name="model.annotLike"/>
+                <rng:ref name="model.appLike"/>
+                <rng:ref name="model.divLike"/>
+                <rng:ref name="model.editLike"/>
+                <rng:ref name="model.graphicPrimitiveLike"/>
+                <rng:ref name="model.milestoneLike.music"/>
+                <rng:ref name="model.scoreDefLike"/>
+                <rng:ref name="model.scorePart"/>
+                <rng:ref name="model.staffDefLike"/>
+                <rng:ref name="model.transcriptionLike"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+          <remarks>
+            <p part="N"> Les éléments <gi scheme="MEI">part</gi> ne sont pas utilisés en MEI pour
+              indiquer la voix principale. Les attributs <att scheme="TEI">next</att> sur les
+              éléments event ne doivent pas être utilisés dans ce but. Les éléments <gi scheme="MEI"
+                >part</gi> sont utiles à l'encodage des parties individuelles quand l'élément score
+              est absent, comme les livres de partitions de musique ancienne, lorsque la musique a
+              des barres de mesure non alignées, lorsque des mises en page différentes, telles que
+              des tours de page, sont nécessaires pour la partition et les parties, ou pour
+              accueillir un logiciel qui nécessite un codage partie par partie. Lorsque l'assemblage
+              des pièces en une partition est souhaité et qu'il y a des barres de mesure non
+              alignées, des barres de barres qui indiquent des points d'alignement sur toutes les
+              pièces peuvent être marquées comme 'controlling', tandis que celles qui ne sont pas
+              alignées peuvent être marquées comme 'non-controlling'.</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="parts" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.shared">
+          <desc>Fournit un contenu pour la performance musicale</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.metadataPointing"/>
+            <memberOf key="att.parts.log"/>
+            <memberOf key="att.parts.vis"/>
+            <memberOf key="att.parts.ges"/>
+            <memberOf key="att.parts.anl"/>
+            <memberOf key="model.partsLike"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:ref name="model.partLike"/>
+            </rng:zeroOrMore>
+          </content>
+        </elementSpec>
+        <elementSpec ident="resp" mode="change" ns="http://www.music-encoding.org/ns/mei" module="MEI.shared">
+          <desc>(responsibility) – A phrase describing the nature of intellectual responsibility.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.authorized"/>
+            <memberOf key="att.bibl"/>
+            <memberOf key="att.datable"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.lang"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:text/>
+                <rng:ref name="model.textPhraseLike.limited" />
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+          <remarks>
+            <p part="N">The name of the list from which a controlled value is taken may be recorded using the
+              <att scheme="TEI">auth</att>
+              attribute.</p>
+          </remarks>
+          <remarks>
+            <p part="N">This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="respStmt" mode="change" ns="http://www.music-encoding.org/ns/mei" module="MEI.shared">
+          <desc>(responsibility statement) – Transcription of text that names one or more individuals, groups, or in rare cases, mechanical processes, responsible for creation, realization, production, funding, or distribution of the intellectual or artistic content.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.bibl"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="model.pubStmtPart"/>
+            <memberOf key="model.respLike"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:ref name="model.headLike" />
+            </rng:zeroOrMore>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:ref name="name" />
+                <rng:ref name="resp" />
+                <rng:ref name="model.nameLike.agent" />
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+          <constraintSpec ident="check_respStmt" scheme="schematron">
+            <constraint>
+              <sch:rule context="mei:respStmt[not(ancestor::mei:change)]">
+                <sch:assert role="warning" test="(mei:resp and (mei:name or mei:corpName or mei:persName)) or count(mei:*[@role]) = count(mei:*) and count(mei:*) > 0">At least one element pair (a resp element and a name-like element) is recommended. Alternatively, each name-like element may have a @role attribute.</sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <remarks>
+            <p part="N">This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="rest" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.shared">
+          <desc>Transcription d'un silence musical</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.rest.log"/>
+            <memberOf key="att.rest.vis"/>
+            <memberOf key="att.rest.ges"/>
+            <memberOf key="att.rest.anl"/>
+            <memberOf key="model.eventLike"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:ref name="dot"/>
+                <rng:ref name="model.appLike"/>
+                <rng:ref name="model.editLike"/>
+                <rng:ref name="model.transcriptionLike"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+          <constraintSpec ident="Check_restline" scheme="schematron">
+            <constraint>
+              <sch:rule context="mei:rest[@line]">
+                <sch:let name="thisstaff" value="ancestor::mei:staff/@n"/>
+                <sch:assert
+                  test="number(@line) = number(preceding::mei:staffDef[@n=$thisstaff and @lines][1]/@lines)"
+                  >La valeur de @line doit être inférieure ou égale au nombre de lignes sur la
+                  portée.</sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <remarks>
+            <p part="N">Voir (Read, p. 96-102). Ne pas confondre cet element avec l'élément <gi
+                scheme="MEI">space</gi> qui est utilisé comme aide à l'alignement des notes.</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="score" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.shared">
+          <desc>Vue générale du contenu musical.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.metadataPointing"/>
+            <memberOf key="att.score.log"/>
+            <memberOf key="att.score.vis"/>
+            <memberOf key="att.score.ges"/>
+            <memberOf key="att.score.anl"/>
+            <memberOf key="model.scoreLike"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:ref name="model.annotLike"/>
+                <rng:ref name="model.appLike"/>
+                <rng:ref name="model.divLike"/>
+                <rng:ref name="model.editLike"/>
+                <rng:ref name="model.graphicPrimitiveLike"/>
+                <rng:ref name="model.milestoneLike.music"/>
+                <rng:ref name="model.relationLike"/>
+                <rng:ref name="model.scoreDefLike"/>
+                <rng:ref name="model.scorePart"/>
+                <rng:ref name="model.staffDefLike"/>
+                <rng:ref name="model.transcriptionLike"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+          <remarks>
+            <p part="N">Tant que l'élément <gi scheme="MEI">measure</gi> est optionnel, le score
+              peut être entièrement constitué de débuts de page, chacun pointant vers une image de
+              page. Les éléments <gi scheme="MEI">div</gi> sont autorisés avant et après les
+              sections musicales pour accueillir des blocs de texte explicatif.</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="scoreDef" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.shared">
+          <desc>(définition du score) - Conteneur pour les méta-informations de score.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.scoreDef.log"/>
+            <memberOf key="att.scoreDef.vis"/>
+            <memberOf key="att.scoreDef.ges"/>
+            <memberOf key="att.scoreDef.anl"/>
+            <memberOf key="model.scoreDefLike"/>
+          </classes>
+          <content>
+            <rng:optional>
+              <rng:ref name="model.chordTableLike"/>
+            </rng:optional>
+            <rng:optional>
+              <rng:ref name="model.symbolTableLike"/>
+            </rng:optional>
+            <rng:optional>
+              <rng:ref name="model.keySigLike"/>
+            </rng:optional>
+            <rng:optional>
+              <rng:ref name="model.meterSigLike"/>
+            </rng:optional>
+            <rng:optional>
+              <rng:ref name="pgHead"/>
+            </rng:optional>
+            <rng:optional>
+              <rng:ref name="pgHead2"/>
+            </rng:optional>
+            <rng:optional>
+              <rng:ref name="pgFoot"/>
+            </rng:optional>
+            <rng:optional>
+              <rng:ref name="pgFoot2"/>
+            </rng:optional>
+            <rng:optional>
+              <rng:ref name="instrGrp"/>
+            </rng:optional>
+            <rng:choice>
+              <rng:optional>
+                <rng:ref name="model.staffGrpLike"/>
+              </rng:optional>
+            </rng:choice>
+            <rng:zeroOrMore>
+              <rng:ref name="grpSym"/>
+            </rng:zeroOrMore>
+            <rng:optional>
+              <rng:ref name="ambitus"/>
+            </rng:optional>
+          </content>
+        </elementSpec>
+        <elementSpec ident="section" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.shared">
+          <desc>Segment d'une partition musicale.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.metadataPointing"/>
+            <memberOf key="att.pointing"/>
+            <memberOf key="att.section.anl"/>
+            <memberOf key="att.section.ges"/>
+            <memberOf key="att.section.log"/>
+            <memberOf key="att.section.vis"/>
+            <memberOf key="att.targetEval"/>
+            <memberOf key="model.sectionLike"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:ref name="expansion"/>
+            </rng:zeroOrMore>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:ref name="model.annotLike"/>
+                <rng:ref name="model.appLike"/>
+                <rng:ref name="model.divLike"/>
+                <rng:ref name="model.editLike"/>
+                <rng:ref name="model.graphicPrimitiveLike"/>
+                <rng:ref name="model.milestoneLike.music"/>
+                <rng:ref name="model.relationLike"/>
+                <rng:ref name="model.sectionPart"/>
+                <rng:ref name="model.transcriptionLike"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+          <constraintSpec ident="Check_sectionexpansion" scheme="schematron">
+            <constraint>
+              <sch:rule context="mei:section[mei:expansion]">
+                <sch:assert
+                  test="descendant::mei:section|descendant::mei:ending|descendant::mei:rdg">Une
+                  section contenant un élément d'expansion doit avoir des éléments de section
+                  descendante, de fin ou rdg.</sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <remarks>
+            <p part="N">Cet élément fonctionne comme un conteneur pour les données musicales
+              réelles. Les attributs de pointage permettent de connecter cet élément à d'autres
+              entités internes ou externes, telles que des objets multimédias ou des
+              annotations.</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="staff" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.shared">
+          <desc>Un groupe de lignes horizontales équidistantes sur lesquelles les notes sont placées
+            afin de représenter la hauteur ou un élément de regroupement pour des «brins»
+            individuels de notes, de silences, etc. qui peuvent ou non être réellement rendus sur
+            les lignes de portée; c'est-à-dire des signes diastématiques et non
+            diastématiques.</desc>
+          <classes>
+            <memberOf key="att.basic"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.labelled"/>
+            <memberOf key="att.linking"/>
+            <memberOf key="att.metadataPointing"/>
+            <memberOf key="att.nInteger"/>
+            <memberOf key="att.responsibility"/>
+            <memberOf key="att.typed"/>
+            <memberOf key="att.staff.log"/>
+            <memberOf key="att.staff.vis"/>
+            <memberOf key="att.staff.ges"/>
+            <memberOf key="att.staff.anl"/>
+            <memberOf key="model.staffLike"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:ref name="model.annotLike"/>
+                <rng:ref name="model.appLike"/>
+                <rng:ref name="model.editLike"/>
+                <rng:ref name="model.graphicPrimitiveLike"/>
+                <rng:ref name="model.milestoneLike.music"/>
+                <rng:ref name="model.relationLike"/>
+                <rng:ref name="model.staffDefLike"/>
+                <rng:ref name="model.staffPart"/>
+                <rng:ref name="model.transcriptionLike"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+          <constraintSpec ident="checkStaff_n" scheme="schematron">
+            <constraint>
+              <sch:rule context="mei:staff[@n]">
+                <sch:let name="thisstaff" value="@n"/>
+                <sch:assert
+                  test="preceding::mei:staffDef[@n=$thisstaff] or preceding::mei:staff[@n=$thisstaff]/mei:staffDef or mei:staffDef"
+                  >Il doit y avoir un staffDef précédent avec une valeur correspondante de @n, une
+                  portée précédente avec une valeur @n correspondante contenant un staffDef ou un
+                  élément enfant staffDef.</sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <remarks>
+            <p part="N">L'attribut <att scheme="TEI"> def </att> peut être utilisé pour créer une
+              connexion avec un élément <gi scheme="MEI"> staffDef </gi> où des informations
+              logiques et visuelles sur le personnel sont enregistrées. Alternativement, l'attribut
+                <att scheme="TEI"> n </att> peut être utilisé comme référence à un élément <gi
+                scheme="MEI"> staffDef </gi> avec la même valeur dans son <att scheme="TEI"> n
+              </att> ou la portée peut contenir un élément staffDef qui le définit. Si ni <att
+                scheme="TEI"> def </att> ni <att scheme="TEI"> n </att> ne sont présents, alors
+              l'ordre de codage des portées est supposé correspondre à l'ordre de codage des
+              définitions de portée.</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="staffDef" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.shared">
+          <desc>(definition de la portée) – Contenant pour les meta-informations de la
+            portée.</desc>
+          <classes>
+            <memberOf key="att.basic"/>
+            <memberOf key="att.labelled"/>
+            <memberOf key="att.linking"/>
+            <memberOf key="att.metadataPointing"/>
+            <memberOf key="att.nInteger"/>
+            <memberOf key="att.responsibility"/>
+            <memberOf key="att.typed"/>
+            <memberOf key="att.staffDef.log"/>
+            <memberOf key="att.staffDef.vis"/>
+            <memberOf key="att.staffDef.ges"/>
+            <memberOf key="att.staffDef.anl"/>
+            <memberOf key="model.staffDefLike"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:ref name="model.labelLike"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:ref name="model.instrDefLike"/>
+                <rng:ref name="model.layerDefLike"/>
+                <rng:ref name="model.staffDefPart"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+            <rng:optional>
+              <rng:ref name="ambitus"/>
+            </rng:optional>
+          </content>
+          <constraintSpec ident="Check_staffDefn" scheme="schematron">
+            <constraint>
+              <sch:rule context="mei:staffDef[not(ancestor::mei:staff)]">
+                <sch:let name="thisstaff" value="@n"/>
+                <sch:assert test="@n">StaffDef doit avoir un attribut n.</sch:assert>
+                <sch:assert test="@lines or preceding::mei:staffDef[@n=$thisstaff and @lines]"> Soit
+                  @lines doit être présent, soit un staffDef précédent avec la même valeur pour @n
+                  et @lines doit exister.</sch:assert>
+                <sch:assert test="count(mei:clef) + count(mei:clefGrp) 2">Seule une clef ou ClefGrp
+                  est autorisé.</sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <constraintSpec ident="Check_ancestor_staff" scheme="schematron">
+            <constraint>
+              <sch:rule context="mei:staffDef[ancestor::mei:staff and @n]">
+                <sch:let name="thisstaff" value="@n"/>
+                <sch:assert test="ancestor::mei:staff/@n eq $thisstaff">@n doit avoir la même valeur
+                  que sa portée.</sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <constraintSpec ident="Check_ancestor_staff_lines" scheme="schematron">
+            <constraint>
+              <sch:rule context="mei:staffDef[ancestor::mei:staff and not(@n)]">
+                <sch:let name="thisstaff" value="ancestor::mei:staff/@n"/>
+                <sch:assert test="@lines or preceding::mei:staffDef[@n=$thisstaff and @lines]"> Soit
+                  @lines doit être présent, soit un staffDef précédent avec la valeur @n
+                  correspondante et @lines doit exister.</sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <constraintSpec ident="Check_clef_position_staffDef" scheme="schematron">
+            <constraint>
+              <sch:rule context="mei:staffDef[@clef.line and @lines]">
+                <sch:assert test="number(@clef.line) = number(@lines)">La position de la clé doit
+                  être inférieure ou égale au nombre de lignes sur la portée.</sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <constraintSpec ident="Check_clef_position_staffDef_nolines" scheme="schematron">
+            <constraint>
+              <sch:rule context="mei:staffDef[@clef.line and not(@lines)]">
+                <sch:let name="thisstaff" value="@n"/>
+                <sch:let name="stafflines"
+                  value="preceding::mei:staffDef[@n=$thisstaff and @lines][1]/@lines"/>
+                <sch:assert test="number(@clef.line) = number($stafflines)">La position de la clé
+                  doit être inférieure ou égale au nombre de lignes sur la portée.</sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <constraintSpec ident="Check_tab_strings_lines" scheme="schematron">
+            <constraint>
+              <sch:rule context="mei:staffDef[@tab.strings and @lines]">
+                <sch:let name="countTokens"
+                  value="count(tokenize(normalize-space(@tab.strings), '\s'))"/>
+                <sch:assert test="$countTokens = @lines">L'attribut tab.strings doit avoir le même
+                  nombre de valeurs que les lignes de portée.</sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <constraintSpec ident="Check_tab_strings_nolines" scheme="schematron">
+            <constraint>
+              <sch:rule context="mei:staffDef[@tab.strings and not(@lines)]">
+                <sch:let name="countTokens"
+                  value="count(tokenize(normalize-space(@tab.strings), '\s'))"/>
+                <sch:let name="thisstaff" value="@n"/>
+                <sch:assert
+                  test="$countTokens = preceding::mei:staffDef[@n=$thisstaff and @lines][1]/@lines"
+                  >L'attribut tab.strings doit avoir le même nombre de valeurs que les lignes de
+                  portée.</sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <constraintSpec ident="Check_lines_color" scheme="schematron">
+            <constraint>
+              <sch:pattern>
+                <sch:rule context="mei:staffDef[@lines.color and @lines]">
+                  <sch:let name="countTokens"
+                    value="count(tokenize(normalize-space(@lines.color), '\s'))"/>
+                  <sch:assert test="$countTokens = 1 or $countTokens = @lines">L'attribut
+                    lines.color doit avoir 1) une valeur unique ou 2) le même nombre de valeurs
+                    qu'il y a de lignes de portée.</sch:assert>
+                </sch:rule>
+                <sch:rule context="mei:staffDef[@lines.color and not(@lines)]">
+                  <sch:let name="countTokens"
+                    value="count(tokenize(normalize-space(@lines.color), '\s'))"/>
+                  <sch:let name="thisstaff" value="@n"/>
+                  <sch:assert
+                    test="$countTokens = 1 or $countTokens = preceding::mei:staffDef[@n=$thisstaff and @lines][1]/@lines"
+                    >L'attribut lines.color doit avoir 1) une valeur unique ou 2) le même nombre de
+                    valeurs qu'il y a de lignes de portée.</sch:assert>
+                </sch:rule>
+              </sch:pattern>
+            </constraint>
+          </constraintSpec>
+          <constraintSpec ident="Check_staff_ppq_ancestor" scheme="schematron">
+            <constraint>
+              <sch:pattern>
+                <sch:rule context="mei:staffDef[@ppq][ancestor::mei:scoreDef[@ppq]]">
+                  <sch:let name="staffPPQ" value="@ppq"/>
+                  <sch:let name="scorePPQ" value="ancestor::mei:scoreDef[@ppq][1]/@ppq"/>
+                  <sch:assert test="($scorePPQ mod $staffPPQ) = 0">La valeur de ppq doit être
+                    facteur de la valeur de ppq sur un ancêtre scoreDef.</sch:assert>
+                </sch:rule>
+              </sch:pattern>
+            </constraint>
+          </constraintSpec>
+          <constraintSpec ident="Check_staff_ppq_preceding" scheme="schematron">
+            <constraint>
+              <sch:pattern>
+                <sch:rule context="mei:staffDef[@ppq][preceding::mei:scoreDef[@ppq]]">
+                  <sch:let name="staffPPQ" value="@ppq"/>
+                  <sch:let name="scorePPQ" value="preceding::mei:scoreDef[@ppq][1]/@ppq"/>
+                  <sch:assert test="($scorePPQ mod $staffPPQ) = 0">La valeur de ppq doit être un
+                    facteur de la valeur de ppq sur un scoreDef précédent.</sch:assert>
+                </sch:rule>
+              </sch:pattern>
+            </constraint>
+          </constraintSpec>
+        </elementSpec>
+        <elementSpec ident="staffGrp" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.shared">
+          <desc>(groupe de portées) - Un groupe de portées entre parenthèses ou
+            contreventées.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.metadataPointing"/>
+            <memberOf key="att.staffGrp.log"/>
+            <memberOf key="att.staffGrp.vis"/>
+            <memberOf key="att.staffGrp.ges"/>
+            <memberOf key="att.staffGrp.anl"/>
+            <memberOf key="model.staffGrpLike"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:ref name="grpSym"/>
+            </rng:zeroOrMore>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:ref name="model.labelLike"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+            <rng:zeroOrMore>
+              <rng:ref name="model.instrDefLike"/>
+            </rng:zeroOrMore>
+            <rng:oneOrMore>
+              <rng:choice>
+                <rng:ref name="model.staffGrpLike"/>
+                <rng:ref name="model.staffDefLike"/>
+              </rng:choice>
+            </rng:oneOrMore>
+            <rng:zeroOrMore>
+              <rng:ref name="grpSym"/>
+            </rng:zeroOrMore>
+          </content>
+          <constraintSpec ident="Check_staffGrp_unique_staff_n_values" scheme="schematron">
+            <constraint>
+              <sch:rule context="mei:staffGrp">
+                <sch:let name="countstaves" value="count(descendant::mei:staffDef)"/>
+                <sch:let name="countuniqstaves"
+                  value="count(distinct-values(descendant::mei:staffDef/@n))"/>
+                <sch:assert test="$countstaves eq $countuniqstaves">Chaque élément staffDef doit
+                  être unique pour l'attribut n.</sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <remarks>
+            <p part="N">System est le nom le plus approprié pour ce concept (Read, p. 37-38). Les
+              groupes de portées entre crochets peuvent contenir d'autres groupes de portées entre
+              crochets ou contreventés ou des portées simples. Voir Read, p. 35-38, exemples p. 434,
+              438.</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="syl" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.shared">
+          <desc>(syllable) – Syllabe lyrique individuelle.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.lang"/>
+            <memberOf key="att.syl.log"/>
+            <memberOf key="att.syl.vis"/>
+            <memberOf key="att.syl.ges"/>
+            <memberOf key="att.syl.anl"/>
+            <memberOf key="model.sylLike"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:text/>
+                <rng:ref name="model.textPhraseLike.limited"/>
+                <rng:ref name="model.editLike"/>
+                <rng:ref name="model.transcriptionLike"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+          <remarks>
+            <p part="N">Ne pas confindre cet élément avec l'élément <gi scheme="MEI">syllable</gi>
+              qui est utilisé en notation neumatique.</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="tempo" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.shared">
+          <desc>Texte et symboles décrivant le tempo, l'ambiance ou le style, par exemple "allarg.",
+            "A tempo", "cantabile", "Moderato", "♩ = 60", "Moderato ♩ = 60").</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.bibl"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.lang"/>
+            <memberOf key="att.tempo.log"/>
+            <memberOf key="att.tempo.vis"/>
+            <memberOf key="att.tempo.ges"/>
+            <memberOf key="att.tempo.anl"/>
+            <memberOf key="model.controlEventLike"/>
+            <memberOf key="model.workIdent"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:text/>
+                <rng:ref name="model.textPhraseLike.limited"/>
+                <rng:ref name="model.graphicPrimitiveLike"/>
+                <rng:ref name="model.editLike"/>
+                <rng:ref name="model.transcriptionLike"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+          <constraintSpec ident="tempo_in_header_disallow_most_attrs" scheme="schematron">
+            <constraint>
+              <sch:rule context="mei:tempo[not(ancestor::mei:score or ancestor::mei:part)]">
+                <sch:assert
+                  test="not(@*[name() != 'analog' and name() != 'class' and name() != 'label' and name() != 'mm' and name() != 'mm.dots' and name() != 'translit' and name() != 'type' and name() != 'mm.unit' and name() != 'n' and name() != 'xml:base' and name() != 'xml:id' and name() != 'xml:lang'])"
+                  >Seuls les attributs analog, class, label, mm, mm.dots, mm.unit, n, translit,
+                  type, xml: base, xml: id et xml: lang sont autorisés lorsque le tempo n'est pas un
+                  descendant d'une partition ou d'une partie musicale.</sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <constraintSpec ident="tempo_start-type_attributes_required" scheme="schematron">
+            <constraint>
+              <sch:rule
+                context="mei:tempo[not(ancestor::mei:syllable) and not(ancestor::mei:work) and not(ancestor::mei:expression) and not(count(ancestor::mei:*) = 0)]">
+                <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Doit avoir
+                  l'un des attributs: startid, tstamp, tstamp.ges ou tstamp.real.</sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+        </elementSpec>
+        <elementSpec ident="title" mode="change" ns="http://www.music-encoding.org/ns/mei" module="MEI.shared">
+          <desc>Title of a bibliographic entity.</desc>
+          <classes>
+            <memberOf key="att.authorized"/>
+            <memberOf key="att.basic"/>
+            <memberOf key="att.bibl"/>
+            <memberOf key="att.classed"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.filing"/>
+            <memberOf key="att.labelled"/>
+            <memberOf key="att.lang"/>
+            <memberOf key="att.linking"/>
+            <memberOf key="att.nNumberLike"/>
+            <memberOf key="att.responsibility"/>
+            <memberOf key="model.titleLike"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:text/>
+                <rng:ref name="macro.titlePart" />
+                <rng:ref name="model.editLike" />
+                <rng:ref name="model.transcriptionLike" />
+                <rng:ref name="titlePart" />
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+          <remarks>
+            <p part="N">The
+              <att scheme="TEI">type</att>
+              attribute may be used to classify the title according to some convenient typology. Sample values include: main (main title), subordinate (subtitle, title of part), abbreviated (abbreviated form of title), alternative (alternate title by which the work is also known), translated (translated form of title), uniform (collective title), and desc (descriptive title). The
+              <att scheme="TEI">type</att>
+              attribute is provided for convenience in analysing titles and processing them according to their type; where such specialized processing is not necessary, there is no need for such analysis, and the entire title, including subtitles and any parallel titles, may be enclosed within a single
+              <gi scheme="MEI">title</gi>
+              element. Title parts may be encoded in
+              <gi scheme="MEI">titlePart</gi>
+              sub-elements. The name of the list from which a controlled value is taken may be recorded using the
+              <att scheme="TEI">auth</att>
+              attribute. The number of initial characters (such as those constituting an article or preposition) that should not be used for sorting a title or name may be indicated in the
+              <att scheme="TEI">nonfiling</att>
+              attribute.</p>
+          </remarks>
+          <remarks>
+            <p part="N">This element is modelled on an element in the Text Encoding Initiative (TEI) standard.</p>
+          </remarks>
+        </elementSpec>
+        
+        <classSpec mode="replace" ident="att.common" module="MEI.shared" type="atts">
+          <desc>Attributs communs à plusieurs elements.</desc>
+          <classes>
+            <memberOf key="att.basic"/>
+            <memberOf key="att.labelled"/>
+            <memberOf key="att.linking"/>
+            <memberOf key="att.nNumberLike"/>
+            <memberOf key="att.responsibility"/>
+            <memberOf key="att.typed"/>
+          </classes>
+        </classSpec>
+        <classSpec mode="replace" ident="att.basic" module="MEI.shared" type="atts">
+          <desc>Attributs qui forment la base de la classe att.common.</desc>
+          <classes>
+            <memberOf key="att.id"/>
+          </classes>
+          <attList org="group">
+            <attDef ident="xml:base" usage="opt">
+              <desc>Fournit une référence URI de base avec laquelle les applications peuvent
+                résoudre des références URI relatives en références URI absolues.</desc>
+              <datatype maxOccurs="1" minOccurs="1">
+                <rng:ref name="data.URI"/>
+              </datatype>
+            </attDef>
+          </attList>
+        </classSpec>
+        <classSpec mode="replace" ident="att.id" module="MEI.shared" type="atts">
+          <desc>Attributs qui identifient seulement un élément</desc>
+          <attList org="group">
+            <attDef ident="xml:id" usage="opt">
+              <desc>Régularise la dénomination d'un élément et facilite ainsi la création de liens
+                entre celui-ci et d'autres ressources. Chaque attribut id dans un document doit
+                avoir une valeur unique.</desc>
+              <datatype maxOccurs="1" minOccurs="1">
+                <rng:data type="ID"/>
+              </datatype>
+            </attDef>
+          </attList>
+        </classSpec>
+        <classSpec mode="replace" ident="att.labelled" module="MEI.shared" type="atts">
+          <attList org="group">
+            <attDef ident="label" usage="opt">
+              <desc>Capture le texte à utiliser pour générer une étiquette pour l'élément auquel il
+                est attaché, par exemple une "info-bulle" ou un texte préliminaire. Ne doit pas être
+                utilisé pour enregistrer le contenu du document.</desc>
+              <datatype maxOccurs="1" minOccurs="1">
+                <rng:data type="string"/>
+              </datatype>
+              <remarks>
+                <p part="N">L'attribut <att scheme="TEI">label</att> est utilisé pour fournir une
+                  étiquette d'affichage pour le contenu d'un élément, par exemple sous la forme
+                  d'une "info-bulle" ou comme le "nom" lorsque le contenu de l'élément est traité
+                  comme la "valeur" dans une "paire nom-valeur". Contrairement à <att scheme="TEI"
+                    >n</att> , <att scheme="TEI">label</att> peut contenir des espaces.</p>
+                <p part="N">Ne pas confondre cet attribut avec l'élément <gi scheme="MEI">label</gi>
+                  qui donne les informations sur le contenu d'un élément.</p>
+              </remarks>
+            </attDef>
+          </attList>
+        </classSpec>
+        <classSpec mode="replace" ident="att.linking" module="MEI.shared" type="atts">
+          <desc>Attributs qui spécifient des relations élément à élément.</desc>
+          <attList org="group">
+            <attDef ident="copyof" usage="opt">
+              <desc>Pointe vers un élément dont l'élément actuel est une copie.</desc>
+              <datatype maxOccurs="1" minOccurs="1">
+                <rng:ref name="data.URI"/>
+              </datatype>
+              <constraintSpec ident="When_copyof_element_empty" scheme="schematron">
+                <constraint>
+                  <sch:rule context="mei:*[@copyof]">
+                    <sch:assert
+                      test="count(child::*[not(comment() or processing-instruction())]) = 0">Un
+                      élément avec un attribut copyof ne peut avoir que des descendants de
+                      commentaire ou d'instruction de traitement.</sch:assert>
+                  </sch:rule>
+                </constraint>
+              </constraintSpec>
+              <constraintSpec ident="check_copyofTarget" scheme="schematron">
+                <constraint>
+                  <sch:rule context="@copyof">
+                    <sch:assert role="warning" test="not(normalize-space(.) eq '')">L'attribut
+                      @copyof doit avoir un contenu.</sch:assert>
+                    <sch:assert role="warning"
+                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id"
+                      >La valeur de @copyof doit correspondre à l'attribut @xml: id d'un
+                      élément.</sch:assert>
+                  </sch:rule>
+                </constraint>
+              </constraintSpec>
+            </attDef>
+            <attDef ident="corresp" usage="opt">
+              <desc>Utilisé pour pointer vers d'autres éléments qui correspondent à celui-ci de
+                manière générique.</desc>
+              <datatype maxOccurs="unbounded" minOccurs="1">
+                <rng:ref name="data.URI"/>
+              </datatype>
+              <constraintSpec ident="check_correspTarget" scheme="schematron">
+                <constraint>
+                  <sch:rule context="@corresp">
+                    <sch:assert role="warning" test="not(normalize-space(.) eq '')">L'attribut
+                      @corresp doit avoir du contenu.</sch:assert>
+                    <sch:assert role="warning"
+                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id"
+                      >Chaque valeur de @corresp doit correspondre à l'attribut @xml: id d'un
+                      élément.</sch:assert>
+                  </sch:rule>
+                </constraint>
+              </constraintSpec>
+            </attDef>
+            <attDef ident="follows" usage="opt">
+              <desc>pointe vers un ou plusieurs événements dans une collection définie par
+                l'utilisateur qui sont connus pour être des prédécesseurs de l'élément
+                actuel.</desc>
+              <datatype maxOccurs="unbounded" minOccurs="1">
+                <rng:ref name="data.URI"/>
+              </datatype>
+              <constraintSpec ident="check_followsTarget" scheme="schematron">
+                <constraint>
+                  <sch:rule context="@follows">
+                    <sch:assert role="warning" test="not(normalize-space(.) eq '')">L'attribut
+                      @follows doit avoir un contenu.</sch:assert>
+                    <sch:assert role="warning"
+                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id"
+                      >Chaque valeur de @follows doit correspondre à l'attribut @xml: id d'un
+                      élément.</sch:assert>
+                  </sch:rule>
+                </constraint>
+              </constraintSpec>
+            </attDef>
+            <attDef ident="next" usage="opt">
+              <desc>Utilisé pour pointer vers le ou les événements suivants dans une collection
+                définie par l'utilisateur.</desc>
+              <datatype maxOccurs="unbounded" minOccurs="1">
+                <rng:ref name="data.URI"/>
+              </datatype>
+              <constraintSpec ident="check_nextTarget" scheme="schematron">
+                <constraint>
+                  <sch:rule context="@next">
+                    <sch:assert role="warning" test="not(normalize-space(.) eq '')">L'attribut @next
+                      doit avoir du contenu.</sch:assert>
+                    <sch:assert role="warning"
+                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id"
+                      >Chaque valeur de @next doit correspondre à l'attribut @xml: id d'un
+                      élément.</sch:assert>
+                  </sch:rule>
+                </constraint>
+              </constraintSpec>
+            </attDef>
+            <attDef ident="precedes" usage="opt">
+              <desc>Pointe vers un ou plusieurs événements dans une collection définie par
+                l'utilisateur qui sont connus pour être les successeurs de l'élément actuel.</desc>
+              <datatype maxOccurs="unbounded" minOccurs="1">
+                <rng:ref name="data.URI"/>
+              </datatype>
+              <constraintSpec ident="check_precedesTarget" scheme="schematron">
+                <constraint>
+                  <sch:rule context="@precedes">
+                    <sch:assert role="warning" test="not(normalize-space(.) eq '')">L'attribut
+                      @precedes doit avoir un contenu.</sch:assert>
+                    <sch:assert role="warning"
+                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id"
+                      >Chaque valeur de @precedes doit correspondre à l'attribut @xml: id d'un
+                      élément.</sch:assert>
+                  </sch:rule>
+                </constraint>
+              </constraintSpec>
+            </attDef>
+            <attDef ident="prev" usage="opt">
+              <desc>Pointe vers le ou les événements précédents dans une collection définie par
+                l'utilisateur.</desc>
+              <datatype maxOccurs="unbounded" minOccurs="1">
+                <rng:ref name="data.URI"/>
+              </datatype>
+              <constraintSpec ident="check_prevTarget" scheme="schematron">
+                <constraint>
+                  <sch:rule context="@prev">
+                    <sch:assert role="warning" test="not(normalize-space(.) eq '')">L'attribut @prev
+                      doit avoir un contenu.</sch:assert>
+                    <sch:assert role="warning"
+                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id"
+                      >Chaque valeur de @prev doit correspondre à l'attribut @xml: id d'un
+                      élément.</sch:assert>
+                  </sch:rule>
+                </constraint>
+              </constraintSpec>
+            </attDef>
+            <attDef ident="sameas" usage="opt">
+              <desc>Pointe vers un élément identique à l'élément actuel mais qui n'est pas une copie
+                littérale de l'élément actuel.</desc>
+              <datatype maxOccurs="unbounded" minOccurs="1">
+                <rng:ref name="data.URI"/>
+              </datatype>
+              <constraintSpec ident="check_sameasTarget" scheme="schematron">
+                <constraint>
+                  <sch:rule context="@sameas">
+                    <sch:assert role="warning" test="not(normalize-space(.) eq '')">L'attribut
+                      @sameas doit avoir un contenu.</sch:assert>
+                    <sch:assert role="warning"
+                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id"
+                      >Chaque valeur de @sameas doit correspondre à l'attribut @xml: id d'un
+                      élément.</sch:assert>
+                  </sch:rule>
+                </constraint>
+              </constraintSpec>
+            </attDef>
+            <attDef ident="synch" usage="opt">
+              <desc>Pointe vers des éléments synchrones avec l'élément actuel.</desc>
+              <datatype maxOccurs="unbounded" minOccurs="1">
+                <rng:ref name="data.URI"/>
+              </datatype>
+              <constraintSpec ident="check_synchTarget" scheme="schematron">
+                <constraint>
+                  <sch:rule context="@synch">
+                    <sch:assert role="warning" test="not(normalize-space(.) eq '')">L'attribut
+                      @synch doit avoir un contenu.</sch:assert>
+                    <sch:assert role="warning"
+                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id"
+                      >Chaque valeur de @synch doit correspondre à l'attribut @xml: id d'un
+                      élément.</sch:assert>
+                  </sch:rule>
+                </constraint>
+              </constraintSpec>
+            </attDef>
+          </attList>
+        </classSpec>
+        <classSpec mode="replace" ident="att.nNumberLike" module="MEI.shared" type="atts">
+          <desc>Attributs utilisés pour fournir une désignation de type numérique pour un
+            élément.</desc>
+          <attList org="group">
+            <attDef ident="n" usage="opt">
+              <desc>Fournit une désignation de type numérique qui indique la position d'un élément
+                dans une séquence d'éléments similaires. Ne peut pas contenir de caractères
+                d'espacement.</desc>
+              <datatype maxOccurs="1" minOccurs="1">
+                <rng:ref name="data.WORD"/>
+              </datatype>
+            </attDef>
+          </attList>
+        </classSpec>
+        <classSpec mode="replace" ident="att.responsibility" module="MEI.shared" type="atts">
+          <desc>Attributs capturant des informations concernant la responsabilité de certains
+            aspects de la création, de la transcription, de l'édition ou du codage du texte.</desc>
+          <attList org="group">
+            <attDef ident="resp" usage="opt">
+              <desc>Indique le ou les agents responsables de certains aspects de la transcription,
+                de l'édition ou de l'encodage du texte. Sa valeur doit pointer vers un ou plusieurs
+                identifiants déclarés dans l'en-tête du document.</desc>
+              <datatype maxOccurs="unbounded" minOccurs="1">
+                <rng:ref name="data.URI"/>
+              </datatype>
+              <constraintSpec ident="check_respTarget" scheme="schematron">
+                <constraint>
+                  <sch:rule context="@resp">
+                    <sch:assert role="warning" test="not(normalize-space(.) eq '')">L'attribut @resp
+                      doit avoir du contenu.</sch:assert>
+                    <sch:assert role="warning"
+                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*[ancestor::mei:meiHead]/@xml:id"
+                      >La valeur de @resp doit correspondre à l'attribut @xml: id d'un élément dans
+                      l'en-tête de métadonnées.</sch:assert>
+                  </sch:rule>
+                </constraint>
+              </constraintSpec>
+            </attDef>
+          </attList>
+        </classSpec>
+        <classSpec mode="replace" ident="att.typed" module="MEI.shared" type="atts">
+          <desc>Attributs qui peuvent être utilisés pour classer les entités.</desc>
+          <classes>
+            <memberOf key="att.classed"/>
+          </classes>
+          <attList org="group">
+            <attDef ident="type" usage="opt">
+              <desc>Désignation qui caractérise l'élément dans un certain sens, en utilisant
+                n'importe quel schéma de classification ou typologie pratique qui utilise des
+                étiquettes à un seul label.</desc>
+              <datatype maxOccurs="unbounded" minOccurs="1">
+                <rng:data type="NMTOKEN"/>
+              </datatype>
+            </attDef>
+          </attList>
+          <remarks>
+            <p part="N">Le cas échéant, les valeurs d'une typologie établie doivent être
+              utilisées.</p>
+          </remarks>
+        </classSpec>
+        <classSpec mode="replace" ident="att.classed" module="MEI.shared" type="atts">
+          <desc>Attributs qui peuvent être utilisés pour classer des entités.</desc>
+          <attList org="group">
+            <attDef ident="class" usage="opt">
+              <desc>Contient un ou plusieurs URI qui désignent les termes de classification qui
+                s'appliquent à l'entité portant cet attribut.</desc>
+              <datatype maxOccurs="unbounded" minOccurs="1">
+                <rng:ref name="data.URI"/>
+              </datatype>
+              <constraintSpec ident="check_classURI" scheme="schematron">
+                <constraint>
+                  <sch:rule context="@class">
+                    <sch:assert
+                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:category/@xml:id or matches($i, '^([a-z]+://|\.{1,2}/)')"
+                      >La valeur de @class doit correspondre à l'attribut @xml: id d'un élément de
+                      catégorie ou être une URL externe.</sch:assert>
+                  </sch:rule>
+                </constraint>
+              </constraintSpec>
+            </attDef>
+          </attList>
+        </classSpec>
+        <classSpec mode="replace" ident="att.bibl" module="MEI.shared" type="atts">
+          <desc>Attributs bibliographiques</desc>
+          <attList org="group">
+            <attDef ident="analog" usage="opt">
+              <desc>Contient une référence à un champ ou à un élément dans un autre système de
+                codage descriptif auquel cet élément MEI est comparable.</desc>
+              <datatype maxOccurs="1" minOccurs="1">
+                <rng:data type="string"/>
+              </datatype>
+            </attDef>
+          </attList>
+          <remarks>
+            <p part="N">Mapping d'éléments d'un système à un autre via <att scheme="TEI"
+                >analogique</att> peut aider un référentiel à récolter des données sélectionnées à
+              partir du fichier MEI pour créer un enregistrement de catalogue de base. Le système de
+              codage à partir duquel les champs sont extraits doit être spécifié. Lorsque cela est
+              possible, les sous-champs ainsi que les champs doivent être spécifiés, par exemple,
+              les sous-champs dans les champs MARC.</p>
+          </remarks>
+        </classSpec>
+        <classSpec mode="replace" ident="att.lang" module="MEI.shared" type="atts">
+          <desc>Attributs de langue communs aux éléments du texte</desc>
+          <attList org="group">
+            <attDef ident="xml:lang" usage="opt">
+              <desc>Identifie la langue du contenu de l'élément. Les valeurs de cet attribut sont
+                des «balises» de langue telles que définies dans BCP 47. Toutes les balises de
+                langue qui utilisent des sous-balises à usage privé doivent être documentées dans un
+                élément de langue correspondant dans l'en-tête MEI dont l'attribut id est le même
+                que la valeur de la balise de langue.</desc>
+              <datatype maxOccurs="1" minOccurs="1">
+                <rng:data type="language"/>
+              </datatype>
+            </attDef>
+            <attDef ident="translit" usage="opt">
+              <desc>Spécifie la technique de translittération utilisée.</desc>
+              <datatype maxOccurs="1" minOccurs="1">
+                <rng:data type="NMTOKEN"/>
+              </datatype>
+              <remarks>
+                <p part="N">Il n'y a pas de liste standard de schémas de translittération.</p>
+              </remarks>
+            </attDef>
+          </attList>
+          <remarks>
+            <p part="N">BCP 47 est décrit à l'adresse <ref
+                target="https://tools.ietf.org/html/bcp47">https://tools.ietf.org/html/bcp47</ref> .
+              Le registre des sous-étiquettes IANA, à partir duquel les balises de langue BCP 47
+              sont construites, se trouve à l'adresse <ref
+                target="www.iana.org/assignments/language-subtag-registry"
+                >www.iana.org/assignments/language-subtag-registry</ref> . Un outil de localisation
+              des sous-étiquettes et de validation des balises de langue est disponible sur <ref
+                target="https://r12a.github.io/apps/subtags"
+                >https://r12a.github.io/apps/subtags</ref> .</p>
+          </remarks>
+        </classSpec>
+        <classSpec mode="replace" ident="att.tempo.log" module="MEI.shared" type="atts">
+          <desc>Attributs de domaine logique.</desc>
+          <classes>
+            <memberOf key="att.controlEvent"/>
+            <memberOf key="att.mmTempo"/>
+            <memberOf key="att.startId"/>
+          </classes>
+          <attList org="group">
+            <attDef ident="func" usage="opt">
+              <desc>Enregistre la fonction d'une indication de tempo.</desc>
+              <valList type="closed">
+                <valItem ident="continuous">
+                  <desc>Marque un changement progressif de tempo, tel que "accel". ou "rit".</desc>
+                </valItem>
+                <valItem ident="instantaneous">
+                  <desc>Représente une instruction de tempo statique, comme un terme textuel comme
+                    "Adagio", un marquage de métronome comme "♩ = 70", ou une combinaison de texte
+                    et d'indication de métronome.</desc>
+                </valItem>
+                <valItem ident="metricmod">
+                  <desc>Capture un changement de fréquence du pouls (tempo) et / ou de groupement
+                    d'impulsions (subdivision) dans une «équation» de la forme [tempo avant
+                    changement] = [tempo après changement].</desc>
+                </valItem>
+                <valItem ident="precedente">
+                  <desc>Indique un changement de fréquence d'impulsion (tempo) et / ou de groupement
+                    d'impulsions (subdivision) dans une "équation" de la forme [tempo après
+                    changement] = [tempo avant changement]. Le terme «précédent» apparaît souvent
+                    après «l'équation» pour distinguer ce type d'usage historique de la forme de
+                    modulation métrique moderne.</desc>
+                </valItem>
+              </valList>
+            </attDef>
+          </attList>
+        </classSpec> 
+        
+        <classSpec mode="replace" ident="att.mmTempo" module="MEI.shared" type="atts">
+          <desc>Attributs qui enregistrent le tempo en termes de battements par minute.</desc>
+          <attList org="group">
+            <attDef ident="mm" usage="opt">
+              <desc>Utilisé pour décrire le tempo en termes de battements (souvent le dénominateur
+                de signature du mètre) par minute, ala M.M. (Métronome de Maezel). Ne confondez pas
+                cet attribut avec midi.bpm ou midi.mspb. En MIDI, un temps est toujours défini comme
+                une noire, * pas le numérateur de la signature rythmique ou l'indication
+                métronomique *.</desc>
+              <datatype maxOccurs="1" minOccurs="1">
+                <rng:ref name="data.TEMPOVALUE"/>
+              </datatype>
+            </attDef>
+            <attDef ident="mm.unit" usage="opt">
+              <desc>Capture l'unité métronomique.</desc>
+              <datatype maxOccurs="1" minOccurs="1">
+                <rng:ref name="data.DURATION"/>
+              </datatype>
+            </attDef>
+            <attDef ident="mm.dots" usage="opt">
+              <desc>Enregistre le nombre de points d'augmentation requis par une unité de métronome
+                en pointillé.</desc>
+              <datatype maxOccurs="1" minOccurs="1">
+                <rng:ref name="data.AUGMENTDOT"/>
+              </datatype>
+            </attDef>
+          </attList>
+        </classSpec>
+        
+        <classSpec mode="replace" ident="att.placement" module="MEI.shared" type="atts">
+          <desc>Attributs capturant les informations de placement.</desc>
+          <attList org="group">
+            <attDef ident="place" usage="opt">
+              <desc>Capture le placement de l'élément par rapport à la portée à laquelle il est
+                associé.</desc>
+              <datatype maxOccurs="1" minOccurs="1">
+                <rng:ref name="data.STAFFREL"/>
+              </datatype>
+            </attDef>
+          </attList>
+        </classSpec>
+        
+        <classSpec mode="replace" ident="att.score.log" module="MEI.shared" type="atts">
+          <desc>Attributs de domaine logique.</desc>
+        </classSpec>
+        
+        <classSpec mode="replace" ident="att.sylText" module="MEI.shared" type="atts">
+          <desc>Attributs contenant les syllabes de texte chantées associées.</desc>
+          <attList org="group">
+            <attDef ident="syl" usage="opt">
+              <desc>Contient une syllabe de texte chantée associée.</desc>
+              <datatype maxOccurs="1" minOccurs="1">
+                <rng:data type="string"/>
+              </datatype>
+            </attDef>
+          </attList>
+        </classSpec>
+        <classSpec mode="replace" ident="att.staffDef.log" module="MEI.shared" type="atts">
+          <desc>Attributs domaine logique pour staffDef.</desc>
+          <classes>
+            <memberOf key="att.cleffing.log"/>
+            <memberOf key="att.duration.default"/>
+            <memberOf key="att.keySigDefault.log"/>
+            <memberOf key="att.meterSigDefault.log"/>
+            <memberOf key="att.notationType"/>
+            <memberOf key="att.octaveDefault"/>
+            <memberOf key="att.transposition"/>
+            <memberOf key="att.staffDef.log.cmn"/>
+            <memberOf key="att.staffDef.log.mensural"/>
+          </classes>
+          <attList org="group">
+            <attDef ident="lines" usage="opt">
+              <desc>Indique le nombre de lignes pour "staff".</desc>
+              <datatype maxOccurs="1" minOccurs="1">
+                <rng:data type="positiveInteger"/>
+              </datatype>
+            </attDef>
+          </attList>
+        </classSpec>
+        
+        
+        <moduleRef key="MEI.stringtab"/>
+
+        <moduleRef key="MEI.text" include="back front"/>
+        <elementSpec ident="back" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.text">
+          <desc>(arrière-plan) - Contient les annexes, publicités, index, etc. suivant le corps
+            principal d'un texte musical.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.lang"/>
+            <memberOf key="att.metadataPointing"/>
+            <memberOf key="model.backLike"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:ref name="model.divLike"/>
+                <rng:ref name="model.frontAndBackPart"/>
+                <rng:ref name="model.milestoneLike.text"/>
+                <rng:ref name="model.relationLike"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+          <remarks>
+            <p part="N">Cet élément est calqué sur des éléments des normes Text Encoding Initiative
+              (TEI) et Encoded Archival Description (EAD).</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="front" mode="change" ns="http://www.music-encoding.org/ns/mei"
+          module="MEI.text">
+          <desc>(avant-propos) - Bundles texte préliminaire trouvé avant le début du texte
+            musical.</desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="att.lang"/>
+            <memberOf key="att.metadataPointing"/>
+            <memberOf key="model.frontLike"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:ref name="model.divLike"/>
+                <rng:ref name="model.frontAndBackPart"/>
+                <rng:ref name="model.milestoneLike.text"/>
+                <rng:ref name="model.relationLike"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+          <remarks>
+            <p part="N">
+              <gi scheme="MEI">titlePage</gi> peut être utilisé pour transcrire la page de titre de
+              l'élément. D'autres structures préliminaires, telles qu'une préface, une dédicace ou
+              une table des matières, peuvent être codées sous forme de divisions textuelles;
+              c'est-à-dire comme les éléments <gi scheme="MEI">div</gi> , avec optionnellement le
+              sous-élément <gi scheme="MEI">head</gi> décrivant la nature de la division. L'élément
+                <gi scheme="MEI">pb</gi> est autorisé ici afin d'accueillir des images de page, par
+              ex. couverture, pages de garde, etc. avant et après le texte proprement dit.</p>
+          </remarks>
+          <remarks>
+            <p part="N">Cet élément est calqué sur les éléments des normes Text Encoding Initiative
+              (TEI) et Encoded Archival Description (EAD).</p>
+          </remarks>
+        </elementSpec>
+
+        <moduleRef key="MEI.usersymbols"/>
+        
+        <moduleRef key="MEI.visual"/>
+        
+
+        <!-- Include SVG -->
+        <moduleRef url="https://www.tei-c.org/release/xml/tei/custom/schema/relaxng/svg11.rng"
+          prefix="svg_">
+          <content>
+            <rng:define name="mei_model.graphicLike" combine="choice">
+              <rng:ref name="svg_svg"/>
+            </rng:define>
+          </content>
+        </moduleRef>
+
+      </schemaSpec>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mei xmlns:mei="http://www.music-encoding.org/ns/mei">
+   <music>
+      <body>
+         <mdiv>
+            <score>
+               <scoreDef>
+                  <staffGrp>
+                     <staffDef clef.shape="C"
+                               n="1"
+                               clef.line="2"
+                               lines="5"
+                               notationtype="neume"/>
+                     <staffDef clef.shape="C"
+                        n="2"
+                        clef.line="2"
+                        lines="5"
+                        notationtype="neume"/>
+                     <staffDef clef.shape="C"
+                        n="3"
+                        clef.line="2"
+                        lines="5"
+                        notationtype="neume"/>
+                     <staffDef clef.shape="C"
+                        n="4"
+                        clef.line="2"
+                        lines="5"
+                        notationtype="neume"/>
+                     <staffDef clef.shape="C"
+                        n="5"
+                        clef.line="2"
+                        lines="5"
+                        notationtype="neume"/>
+                     <staffDef clef.shape="C"
+                        n="6"
+                        clef.line="2"
+                        lines="5"
+                        notationtype="neume"/>
+                     <staffDef clef.shape="C"
+                        n="7"
+                        clef.line="2"
+                        lines="5"
+                        notationtype="neume"/>
+                  </staffGrp>
+               </scoreDef>
+               <section n="1">
+                  
+                     <staff n="1">
+                        <layer n="1">
+                           <syllable>
+                              <syl con="s" worpos="i" halign="justify">Li
+                              </syl>
+                              <neume>                                
+                                 <nc pname="f" oct="3" intm="n"/>                                                                   
+                              </neume>                           
+                           </syllable>
+                           
+                           
+                           <syllable>
+                              <syl con="s" halign="justify">granz</syl>
+                              <neume>
+                                 <nc pname="g" oct="3" intm="n"/>
+                              </neume>
+                           </syllable>
+                           <mSpace/>
+                           <syllable>
+                              <syl halign="justify">de-</syl>
+                              
+                              <neume>
+                                 <nc pname="g" oct="3" intm="n"  con="e"/>
+                                 <nc pname="a" oct="3" intm="d"  con="e"/>
+                              </neume>
+                              
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">sirs</syl>
+                              <neume>
+                                 <nc pname="g" oct="3" intm="n" />
+                                 <nc pname="f" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">et</syl>
+                              <neume>
+                                 <nc pname="g" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">la</syl>
+                              <neume>
+                                 <nc pname="a" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">dou-</syl>
+                              <neume>
+                                 <nc pname="g" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">ce</syl>
+                              <neume>
+                                 <nc pname="f" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">pen-</syl>
+                              <neume>
+                                 <nc pname="e" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">sé-</syl>
+                              <neume>
+                                 <nc pname="d" oct="3" intm="n" >
+                                    
+                                 </nc>
+                                 <nc pname="e" oct="3" intm="n" />
+                                 <nc pname="d" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">e</syl>
+                              <neume>
+                                 <nc pname="d" oct="3" intm="n" />
+                                 <nc pname="c" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                        </layer>
+                     </staff>
+                  
+               </section>
+            
+               <section n="2">
+                  
+                     <staff n="1">
+                        <layer n="1">
+                           <syllable>
+                             
+                              <syl halign="justify">que</syl>
+                              <neume>
+                                 <nc pname="c" oct="3" intm="u" />
+                              </neume>
+                              
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">j'ai</syl>
+                              <neume>
+                                 <nc pname="d" oct="3" intm="d" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">por</syl>
+                              <neume>
+                                 <nc pname="c" oct="3" intm="n" />
+                                 <nc pname="b" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">vos</syl>
+                              <neume>
+                                 <nc pname="c" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">da-</syl>
+                              <neume>
+                                 <nc pname="c" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">me</syl>
+                              <neume>
+                                 <nc pname="d" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">qui</syl>
+                              <neume>
+                                 <nc pname="e" oct="3" intm="n" />
+                                 <nc pname="f" oct="3" intm="n" />
+                                 <nc pname="g" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">va-</syl>
+                              <neume>
+                                 <nc pname="f" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">lez</syl>
+                              <neume>
+                                 <nc pname="e" oct="3" intm="u" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">tant</syl>
+                              <neume>
+                                 <nc pname="e" oct="3" intm="n" />
+                                 <nc pname="d" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                        </layer>
+                     </staff>
+                  
+               </section>
+            
+               <section n="3">
+                  
+                     <staff n="1">
+                        <layer n="1">
+                           <syllable>
+                              <syl halign="justify">dont</syl>
+                              <neume>
+                                 <nc pname="f" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">la</syl>
+                              <neume>
+                                 <nc pname="g" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">pai-</syl>
+                              <neume>
+                                 <nc pname="a" oct="3" intm="n" />
+                                 <nc pname="a" oct="3" intm="d" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">ne</syl>
+                              <neume>
+                                 <nc pname="g" oct="3" intm="n" />
+                                 <nc pname="f" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">ne</syl>
+                              <neume>
+                                 <nc pname="g" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">puet</syl>
+                              <neume>
+                                 <nc pname="a" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">es-</syl>
+                              <neume>
+                                 <nc pname="g" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">tre</syl>
+                              <neume>
+                                 <nc pname="f" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">ce-</syl>
+                              <neume>
+                                 <nc pname="e" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">lé-</syl>
+                              <neume>
+                                 <nc pname="d" oct="3" intm="n" />
+                                 <nc pname="c" oct="3" intm="n" />
+                                 <nc pname="d" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">e</syl>
+                              <neume>
+                                 <nc pname="d" oct="3" intm="n" />
+                                 <nc pname="c" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                        </layer>
+                     </staff>
+                  
+               </section>
+            
+               <section n="4">
+                  
+                     <staff n="1">
+                        <layer n="1">
+                           <syllable>
+                              <syl halign="justify">ou</syl>
+                              <neume>
+                                 <nc pname="c" oct="3" intm="n" />
+                                 <nc pname="d" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">m'a-</syl>
+                              <neume>
+                                 <nc pname="d" oct="3" intm="d" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">vez</syl>
+                              <neume>
+                                 <nc pname="c" oct="3" intm="n" />
+                                 <nc pname="b" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">mis</syl>
+                              <neume>
+                                 <nc pname="c" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">et</syl>
+                              <neume>
+                                 <nc pname="c" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">te-</syl>
+                              <neume>
+                                 <nc pname="d" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">nu</syl>
+                              <neume>
+                                 <nc pname="e" oct="3" intm="n" />
+                                 <nc pname="f" oct="3" intm="n" />
+                                 <nc pname="g" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">lon-</syl>
+                              <neume>
+                                 <nc pname="f" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">gue-</syl>
+                              <neume>
+                                 <nc pname="e" oct="3" intm="u" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl halign="justify">mant</syl>
+                              <neume>
+                                 <nc pname="e" oct="3" intm="n" />
+                                 <nc pname="d" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                        </layer>
+                     </staff>
+                  
+               </section>
+            
+               <section n="5">
+                  
+                     <staff n="1">
+                        <layer n="1">
+                           <syllable>
+                              <syl>en-</syl>
+                              <neume>
+                                 <nc pname="g" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl>cor</syl>
+                              <neume>
+                                 <nc pname="a" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl>te-</syl>
+                              <neume>
+                                 <nc pname="b" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl>nez</syl>
+                              <neume>
+                                 <nc pname="c" oct="3" intm="d" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl>mon</syl>
+                              <neume>
+                                 <nc pname="a" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl>cuer</syl>
+                              <neume>
+                                 <nc pname="g" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl>en</syl>
+                              <neume>
+                                 <nc pname="f" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl>tel</syl>
+                              <neume>
+                                 <nc pname="g" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl>tor-</syl>
+                              <neume>
+                                 <nc pname="a" oct="3" intm="u" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl>mant</syl>
+                              <neume>
+                                 <nc pname="a" oct="3" intm="n" />
+                                 <nc pname="g" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                        </layer>
+                     </staff>
+                  
+               </section>
+            
+               <section n="6">
+                  
+                     <staff n="1">
+                        <layer n="1">
+                           <syllable>
+                              <syl>dont</syl>
+                              <neume>
+                                 <nc pname="b" oct="3" intm="f" />
+                                 <nc pname="b" oct="3" intm="u" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl>ja</syl>
+                              <neume>
+                                 <nc pname="b" oct="3" intm="d" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl>nis-</syl>
+                              <neume>
+                                 <nc pname="g" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl>trai</syl>
+                              <neume>
+                                 <nc pname="a" oct="3" intm="d" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl>nul</syl>
+                              <neume>
+                                 <nc pname="f" oct="3" intm="n" />
+                                 <nc pname="e" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl>jor</syl>
+                              <neume>
+                                 <nc pname="d" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl>de</syl>
+                              <neume>
+                                 <nc pname="f" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl>mon</syl>
+                              <neume>
+                                 <nc pname="g" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl>vi-</syl>
+                              <neume>
+                                 <nc pname="a" oct="3" intm="u" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl>vant</syl>
+                              <neume>
+                                 <nc pname="a" oct="3" intm="n" />
+                                 <nc pname="g" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                        </layer>
+                     </staff>
+                  
+               </section>
+            
+               <section n="7">
+                  
+                     <staff n="1">
+                        <layer n="1">
+                           <syllable>
+                              <syl>se</syl>
+                              <neume>
+                                 <nc pname="a" oct="3" intm="u" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl>par</syl>
+                              <neume>
+                                 <nc pname="a" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl>vos</syl>
+                              <neume>
+                                 <nc pname="g" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl>non</syl>
+                              <neume>
+                                 <nc pname="a" oct="3" intm="d" />
+                                 <nc pname="a" oct="3" intm="d" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl>dou-</syl>
+                              <neume>
+                                 <nc pname="f" oct="3" intm="n" />
+                                 <nc pname="e" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl>ce</syl>
+                              <neume>
+                                 <nc pname="d" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl>dame</syl>
+                              <neume>
+                                 <nc pname="f" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl>ho-</syl>
+                              <neume>
+                                 <nc pname="g" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl>no-</syl>
+                              <neume>
+                                 <nc pname="a" oct="3" intm="n" />
+                                 <nc pname="b" oct="3" intm="n" />
+                                 <nc pname="c" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl>ré-</syl>
+                              <neume>
+                                 <nc pname="b" oct="3" intm="n" />
+                                 <nc pname="b" oct="3" intm="d" />
+                              </neume>
+                           </syllable>
+                           <syllable>
+                              <syl>e</syl>
+                              <neume>
+                                 <nc pname="a" oct="3" intm="n" />
+                                 <nc pname="g" oct="3" intm="n" />
+                              </neume>
+                           </syllable>
+                        </layer>
+                     </staff>
+                  
+               </section>
+            </score>
+         </mdiv>
+      </body>
+   </music>
+</mei>
