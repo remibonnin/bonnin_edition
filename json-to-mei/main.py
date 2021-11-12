@@ -1,7 +1,9 @@
 from json import load
 from dicttoxml import dicttoxml
 from lxml import etree
-
+from pathlib import Path
+import glob
+import os
 
 def JSON_to_MEI(json_path):
     """
@@ -61,6 +63,15 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('-s', nargs='+', help="paths to files")
     args = parser.parse_args()
+
+    Path("txt/onlyNotes").mkdir(parents=True, exist_ok=True)
+    Path("txt/both").mkdir(parents=True, exist_ok=True)
+    Path("txt/onlyOctaves").mkdir(parents=True, exist_ok=True)
+    Path("txt/intervals").mkdir(parents=True, exist_ok=True)
+    Path("txt/complexintervals").mkdir(parents=True, exist_ok=True)
+
+    for file in glob.glob("txt/*/*.txt"):
+        os.remove(file)
 
     for path in args.s:
         print(path)
