@@ -33,7 +33,7 @@
         <xsl:if test="$intervals = 'True' or $complexintervals = 'True'">
             <xsl:choose>
                 <xsl:when test="not(preceding::mei:nc)">
-                    <xsl:value-of select="0"/>
+                    <xsl:value-of select="''"/>
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:variable name="notesValues" select="'abcdefg'"/>
@@ -53,7 +53,7 @@
                                 ,
                                 '-',
                                 ''
-                                )) + 1
+                                )) 
                                 "
                             />
                             <xsl:value-of select="
@@ -69,7 +69,7 @@
                                 number(translate(@pname, $notesValues, $numericValues)),
                                 '-',
                                 ''
-                                )) + 1
+                                )) 
                                 "
                             />
                             <xsl:value-of select="$absoluteNoteInterval"/>
