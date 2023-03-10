@@ -36,7 +36,7 @@
                     <xsl:value-of select="''"/>
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:variable name="notesValues" select="'abcdefg'"/>
+                    <xsl:variable name="notesValues" select="'cdefgab'"/><!-- Octave commence sur do -->
                     <xsl:variable name="numericValues" select="'1234567'"/>
                     <xsl:if test="$complexintervals= 'True'">
                             <xsl:variable 
@@ -53,7 +53,7 @@
                                 ,
                                 '-',
                                 ''
-                                )) 
+                                )) + 1 
                                 "
                             />
                             <xsl:value-of select="
@@ -69,7 +69,7 @@
                                 number(translate(@pname, $notesValues, $numericValues)),
                                 '-',
                                 ''
-                                )) 
+                                )) + 1
                                 "
                             />
                             <xsl:value-of select="$absoluteNoteInterval"/>
