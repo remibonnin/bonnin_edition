@@ -1,0 +1,1207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<!DOCTYPE TEI SYSTEM "../dtd/abreviations.dtd">
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+<fileDesc>
+<titleStmt>
+<title>Title</title>
+</titleStmt>
+<publicationStmt>
+<p>Publication Information</p>
+</publicationStmt>
+<sourceDesc>
+<p>Information about the source</p>
+</sourceDesc>
+</fileDesc>
+</teiHeader>
+<text>
+<body>
+<div xml:id="W">
+<div type="Fouques_de_Marselle">
+    <div type="lyrical_text" xml:id="BEdT_155.21"><!-- Si tot me sui a tart apereceubutz (Folquet de Marseilla) -->
+<p>
+<pb facs="#facs_391" n="391" xml:id="img_0391" corresp="188r"/>
+<cb n="a"/>
+<lb facs="#facs_391_line_1611068505679_229" n="N001"/>a grant bonauinture · me <gap/> ger ·
+<lb facs="#facs_391_line_1611068509142_232" n="N002"/>quan me sui ꝯnaguz · des granz engĩs
+<lb facs="#facs_391_line_1611068511988_235" n="N003"/>quamors vers me faisie · toz biaus sem
+<lb facs="#facs_391_line_1611068515150_238" n="N004"/>blanz ma tenguz en faidie · maiz de li
+<lb facs="#facs_391_line_1611068518386_241" n="N005"/>est alei del mal detor · quades pramet ·
+<lb facs="#facs_391_line_1611068521083_244" n="N006"/>et gius non pagarie ·
+<lb facs="#facs_391_line_1611068524657_247" n="N007"/><hi>A</hi> bel semblant ou false amor saduis ·
+<lb facs="#facs_391_line_1611068528734_250" n="N008"/>vers li se trai fals amans · et sa cure · ꝯ
+<lb facs="#facs_391_line_1611068533658_253" n="N009"/>papillons atan folle nature · quel foc se
+<lb facs="#facs_391_line_1611068542765_256" n="N001"/><gap/>l men par ·
+<lb facs="#facs_391_line_1611068545635_259" n="N002"/><gap/>az · questar
+<lb facs="#facs_391_line_1611068548431_262" n="N003"/><gap/>age sufridor ·
+<lb facs="#facs_391_line_1611068552135_265" n="N004"/><gap/>e ·
+<lb facs="#facs_391_line_1611068554806_268" n="N005"/><gap/> retenguz · de
+<lb facs="#facs_391_line_1611068557798_271" n="N006"/><gap/>drai maiz cure ·
+<lb facs="#facs_391_line_1611068561507_274" n="N007"/><gap/>ntͤe · val miauz de
+<lb facs="#facs_391_line_1611068564660_277" n="N008"/><gap/>sui venguz · vos a
+<lb facs="#facs_391_line_1611068567792_280" n="N009"/><gap/>ꝯnoissie · si ainz vos
+<lb facs="#facs_391_line_1611068571222_283" n="N010"/><gap/> volgrie · tot altresi
+<lb facs="#facs_391_line_1611068574621_286" n="N011"/><gap/>qui dit que or fu quã
+<lb facs="#facs_391_line_1611068580034_289" n="N012"/><gap/>loinz que toz sui irascus ·
+<lb facs="#facs_391_line_1611068583811_292" n="N013"/><gap/>en chantant ma rancure · et
+<lb facs="#facs_391_line_1611068587169_295" n="N014"/><gap/>que non semble mesure  · mes
+<lb facs="#facs_391_line_1611068590423_298" n="N015"/><gap/>i ie qua son oez sui perduz · car sou
+<lb facs="#facs_391_line_1611068595845_301" n="N016"/><gap/>fraim mi vol menar vn die · ainz ma
+<lb facs="#facs_391_line_1611068599384_304" n="N017"/>fet far mon poder tota vie · et semble lou
+<lb facs="#facs_391_line_1611068602628_307" n="N018"/>cheual de grant valor · qui behorde trop
+<lb facs="#facs_391_line_1611068605318_310" n="N019"/>souent et fausnie ·
+</p>
+</div>
+     <div type="lyrical_text" xml:id="BEdT_70.41"><!-- Quant par la flor souble el vert fueill (Bernart de Ventadorn) -->
+    <p>
+        <lb facs="#facs_391_line_1611068609451_313" n="N020"/>vant par la flor soubre el
+<lb facs="#facs_391_line_1611068611772_316" n="N021"/>vert fueill · et vei lou tẽs
+<lb facs="#facs_391_line_1611068614582_319" n="N022"/>clar et seren · lou douz chans des oiselz
+<lb facs="#facs_391_line_1611068619150_322" n="N023"/>per brueill · malegre lou cor et reuen ·
+<lb facs="#facs_391_line_1611068622042_325" n="N024"/>puis cauzel chanten alor for · eu cai tan
+<lb facs="#facs_391_line_1611068625652_328" n="N025"/>de ioi en mon cor · dei ben chantar · que
+<lb facs="#facs_391_line_1611068628842_331" n="N026"/>tuit li mien iornal  sunt en amour · et
+<lb facs="#facs_391_line_1611068634738_334" n="N001"/><hi>fouq̃s de</hi>
+<lb facs="#facs_391_line_1611068636981_337" n="N002"/><hi>marselle ·</hi>
+<lb facs="#facs_391_r3l1" n="N001"/>188.
+    <pb facs="#facs_392" n="392" xml:id="img_0392"/>
+<lb facs="#facs_392_line_1611069412614_439" n="N001"/><hi>fouq̃s de</hi>
+<lb facs="#facs_392_line_1611069415191_442" n="N002"/><hi>marselle</hi>
+<lb facs="#facs_392_r1l1" n="N001"/>ne pens de<gap/>
+<lb facs="#facs_392_r1l2" n="N002"/><hi>B</hi>ien sai la<gap/>
+<lb facs="#facs_392_r1l3" n="N003"/>que non dorm<gap/>
+<lb facs="#facs_392_r1l4" n="N004"/>eu me dueill · de<gap/>
+<lb facs="#facs_392_r1l5" n="N005"/>que la ou len a fon<gap/>
+<lb facs="#facs_392_r1l6" n="N006"/>nir lou cor · per v<gap/>
+<lb facs="#facs_392_r1l7" n="N007"/>et non faz ren seu<gap/>
+<lb facs="#facs_392_r1l9" n="N008"/><hi>D</hi>osne se non veze<gap/>
+<lb facs="#facs_392_r1l10" n="N009"/>que mon cor vos ve ·
+<lb facs="#facs_392_r1l11" n="N010"/>que mi dueill · queu sa<gap/>
+<lb facs="#facs_392_r1l12" n="N011"/>me · et sel ialos vos bat d<gap/>
+<lb facs="#facs_392_r1l13" n="N012"/>non bate lou cor · sel fai au<gap/>
+<lb facs="#facs_392_r1l14" n="N013"/>tretal · ne ia avos ni gaaig<gap/>
+<lb facs="#facs_392_r1l15" n="N014"/><hi>L</hi>a ren el mont que ie miauz<gap/>
+<lb facs="#facs_392_r1l16" n="N015"/>pluz aim de cor · et de fe · aut de io<gap/>
+<lb facs="#facs_392_r1l17" n="N016"/>dis et acueill · et mon prec escoute et<gap/>
+<lb facs="#facs_392_r1l18" n="N017"/>dosna per queu chante damor · per la bou
+<lb facs="#facs_392_r1l19" n="N018"/>ce mentras el cor · dun douz baisar de douce
+<lb facs="#facs_392_r1l20" n="N019"/>amor coral · quin met en ioi · sen iet lira
+<lb facs="#facs_392_r1l22" n="N020"/>mortal ·
+<lb facs="#facs_392_r1l24" n="N021"/><hi>Q</hi>van me membre ꝯ amar sueill · la fal
+<lb facs="#facs_392_r1l26" n="N022"/>se de male merce · amon cor tal ira acuel · 
+<lb facs="#facs_392_r1l27" n="N023"/>apou de ioi non recre · quer se hom per bẽ
+<lb facs="#facs_392_r1l28" n="N024"/>amar mor · en me morrai · quer a mon cor ·
+<lb facs="#facs_392_r1l29" n="N025"/>la port amor tant fine natural · que tuit
+<lb facs="#facs_392_r1l31" n="N026"/>sunt fals vers me li pluz leal ·
+    </p>
+</div>
+ <div type="lyrical_text" xml:id="BEdT_155.22"><!-- Molt m'abelist l'amoros pensament (Folquet de Marseilla) -->
+    <p>
+        <lb facs="#facs_392_r1l36" n="N027"/>olt mabelist lamoros pensa
+<lb facs="#facs_392_r1l37" n="N028"/>ment · qui sest venuz en
+<lb facs="#facs_392_r1l42" n="N029"/>mon fin cor ausire · per que non pos nul
+<lb facs="#facs_392_r1l44" n="N030"/>astre pens aber · ne ia nus tant non mi
+<lb facs="#facs_392_r2l1" n="N001"/>q<gap/>
+<lb facs="#facs_392_r2l2" n="N002"/>leu<gap/>
+<lb facs="#facs_392_r2l3" n="N003"/>que pe<gap/> ingalment · et sil vos plaz q̃
+<lb facs="#facs_392_r2l4" n="N004"/>daltre par mi vire · ostas de vos la beltat ·
+<lb facs="#facs_392_r2l5" n="N005"/>et gent rire · et dolz parlar qui mafolist
+<lb facs="#facs_392_r2l6" n="N006"/>mon sen · pos partirai de vos mon escien ·
+    </p>
+</div>
+    <div type="lyrical_text" xml:id="BEdT_153.23"><!-- Tant mot de corteise raison (Folquet de Marseilla) -->
+    <p>
+        <lb facs="#facs_392_r2l7" n="N007"/><hi>fouq̃s de marselle ·</hi>
+<lb facs="#facs_392_r2l12" n="N008"/>an mot de corteise raison
+<lb facs="#facs_392_r2l17" n="N009"/>mos chantars que non pot
+<lb facs="#facs_392_r2l18" n="N010"/>faillir · si men degreit bens auenir · que
+<lb facs="#facs_392_r2l20" n="N011"/>mais non faz et sabescon · car lempereris<pb facs="#facs_393" n="393" xml:id="img_0393"/>
+<lb facs="#facs_393_line_1605778864698_1082" n="N001"/>189
+<lb facs="#facs_393_r2l4" n="N001"/>ma semon · et plas gien fort q<gap/>
+<lb facs="#facs_393_r2l6" n="N002"/>chis · si men sufris · car ele est cil<gap/>
+<lb facs="#facs_393_r2l9" n="N003"/>denseignement · non se chai qu<gap/>
+<lb facs="#facs_393_r2l12" n="N004"/>ment · sie mos trobas falz ni le<gap/>
+<lb facs="#facs_393_r2l15" n="N005"/>deit doublar mos engens ·
+<lb facs="#facs_393_r2l16" n="N006"/><hi>E</hi>t son parla de ma chancon · <gap/>
+<lb facs="#facs_393_r2l18" n="N007"/>qui dex deigne air · einsi les vne<gap/>
+<lb facs="#facs_393_r2l19" n="N008"/>maudir · que ia dex ne les lor pard<gap/>
+<lb facs="#facs_393_r2l20" n="N009"/>dient que veir non fon · et cele a<gap/>
+<lb facs="#facs_393_r2l21" n="N010"/>mobeis · mai relenquis · et dieu c<gap/>
+<lb facs="#facs_393_r2l22" n="N011"/>assis · mon pensament · ben muir<gap/>
+<lb facs="#facs_393_r2l23" n="N012"/>gran failliment · quant per ce que<gap/>
+<lb facs="#facs_393_r2l24" n="N013"/>nalment · per que dient que faz ne
+<lb facs="#facs_393_r2l25" n="N014"/><hi>A</hi>merai donc alarron · oil car non
+<lb facs="#facs_393_r2l26" n="N015"/>pos partir · car dedens mon cor la desir ·
+<lb facs="#facs_393_r2l27" n="N016"/>sab se ben faz vueille v non · quencor ne
+<lb facs="#facs_393_r2l28" n="N017"/>mon cor en prison · quele asi destraint et ꝯ
+<lb facs="#facs_393_r2l29" n="N018"/>quis · si que mest vis · quaie poder que mẽ
+<lb facs="#facs_393_r2l30" n="N019"/>partis · en mon viuent · per hoc sui ason cau
+<lb facs="#facs_393_r2l31" n="N020"/>siment · qumilitas et sufrir veut  la ou nõ
+<lb facs="#facs_393_line_1605778947808_1155" n="N021"/>val force ne gent ·
+<lb facs="#facs_393_r2l33" n="N022"/><hi>M</hi>ais per ice que mabandon · quere supris
+<lb facs="#facs_393_r2l34" n="N023"/>en auzir · ne mos songers non pot cubrir ·
+<lb facs="#facs_393_r2l35" n="N024"/>· que non muire aquel que saison · per ico
+<lb facs="#facs_393_r2l36" n="N025"/>faz bon al que non · quenque sa bouche de
+<lb facs="#facs_393_r2l37" n="N026"/>uis · eu en sui fis · si ꝯ sui souges et aclis ·
+<lb facs="#facs_393_r2l38" n="N027"/>de bon talent · de li amar ont pris ꝯten · mos
+<lb facs="#facs_393_r2l39" n="N028"/>fins corages et mon sen · chascun cuide a
+<lb facs="#facs_393_r2l40" n="N029"/>mar plus forment ·
+    </p>
+    </div>
+ <div type="lyrical_text" xml:id="BEdT_155.8"><!-- En chantan m'aven a membrar (Folquet de Marseilla) -->
+    <p>
+    <lb facs="#facs_393_r5l1" n="N001"/><gap/>honrar tan qual
+<lb facs="#facs_393_r5l2" n="N002"/>cor voi mi rai porrar · past merces clam quĩ
+<lb facs="#facs_393_r5l3" n="N003"/>garde del ardor · queu ai paor mol maior de
+<lb facs="#facs_393_r5l4" n="N004"/>vos que de me · et pos dosne mos cors vos ade
+<lb facs="#facs_393_r5l5" n="N005"/>risse · se maus len ven · duisies et sufrir lẽ
+<lb facs="#facs_393_r5l6" n="N006"/>ꝯuen · et per oc faz al cor cou que sab bon ·
+<lb facs="#facs_393_r5l7" n="N007"/>quel cor gardas ꝯ la vostre meson ·
+<lb facs="#facs_393_r5l8" n="N008"/><hi>E</hi>v vos am et ten tant car · quel cor mi
+<lb facs="#facs_393_r5l9" n="N009"/>fai nice samblar · quel sen esmuet lengien ·
+<lb facs="#facs_393_r5l10" n="N010"/>et la valor · si quen error · sui de vos per cor
+<lb facs="#facs_393_r5l11" n="N011"/>queu reten · et paraulent · maintes fois se
+<lb facs="#facs_393_r5l12" n="N012"/>deuen · que non sai que <hi><hi rend="strikethrough:true; fontSize:0.0; kerning:0;">deuen ·</hi></hi> luden · que
+<lb facs="#facs_393_r5l13" n="N013"/>non au ren · ni ia nus hom per ce ne ma
+<lb facs="#facs_393_r5l14" n="N014"/>cheison · si saludent · et eu mot non lor sõ ·
+<lb facs="#facs_393_r5l15" n="N015"/><hi>M</hi>out fussent dolz mi ꝯsirrier · bele dosne
+<lb facs="#facs_393_r5l16" n="N016"/>mais qua plaisir · vos vengist ia  vne foiz
+<lb facs="#facs_393_r5l17" n="N017"/>ramembrant · del mal sufrant · quauer en<pb facs="#facs_394" n="394" xml:id="img_0394"/>
+<lb facs="#facs_394_r1l1" n="N001"/>venge bens amors<gap/>
+<lb facs="#facs_394_r1l3" n="N002"/><hi>A</hi>vsi ꝯ tot lan sagence · per foille et per
+<lb facs="#facs_394_r1l4" n="N003"/>flors · val mais lou mont per amor · et el
+<lb facs="#facs_394_r1l5" n="N004"/>mont non ab vaillence ne valor · meudre dos
+<lb facs="#facs_394_r1l6" n="N005"/>ne sanz vostre maintenence · car de toz bẽs
+<lb facs="#facs_394_r1l7" n="N006"/>es et gran · et semence · et en vos es pres et
+<lb facs="#facs_394_r1l8" n="N007"/>valor et sen · et per amor es plus valor valẽ ·
+<lb facs="#facs_394_r1l9" n="N008"/><hi>T</hi>ant abes de ꝯnoissence · per que font
+<lb facs="#facs_394_r1l10" n="N009"/>seignor · iouens beltaz et amor · vos porten
+<lb facs="#facs_394_r1l11" n="N010"/>obedience · chascun ior · meudre dosne en i
+<lb facs="#facs_394_r1l12" n="N011"/>questa credence · aten a vos · et fas ma peni
+<lb facs="#facs_394_r1l13" n="N012"/>tence · que se vos plas lou mieuz enance
+<lb facs="#facs_394_r1l14" n="N013"/>mens · dun dis ioious od douz esguars plai
+<lb facs="#facs_394_line_1605780146876_1293" n="N014"/>sens ·
+<lb facs="#facs_394_r1l16" n="N015"/><hi>C</hi>vr ꝯuent et cheence · afin amador ·
+<lb facs="#facs_394_r1l17" n="N016"/>qui vol amar per doucor · que greu es qua
+<lb facs="#facs_394_r2l1" n="N001"/><gap/>ie non plor · meudre dosne
+<lb facs="#facs_394_r2l2" n="N002"/><gap/>amor venche · vostre dur cor ·
+<lb facs="#facs_394_r2l3" n="N003"/><gap/>ence · dalcuns bons fes · per q̃
+<lb facs="#facs_394_r2l4" n="N004"/><gap/>ns  · et en amor fins et ꝯmen
+<lb facs="#facs_394_r2l6" n="N005"/><gap/>ꝯdurence · pert en mar ma
+<lb facs="#facs_394_r2l7" n="N006"/><gap/>que longes noṃ cor · altresi
+<lb facs="#facs_394_r2l8" n="N007"/><gap/>lence · sa color · meudre dosne
+<lb facs="#facs_394_r2l9" n="N008"/><gap/>nence · altre beltaz deuant vo
+<lb facs="#facs_394_r2l10" n="N009"/><gap/>ala vostre qui tant es auinẽs ·
+<lb facs="#facs_394_r2l11" n="N010"/><gap/>s la lune es creissens ·
+</p>
+</div>
+</div>
+<div type="Gossiames_Faidius">
+ <div type="lyrical_text" xml:id="BEdT_262.2"><!-- L'an que li jor sunt lonc en mai (Jaufre Rudel) -->
+ <p>
+ <lb facs="#facs_394_r2l12" n="N011"/><hi><gap/>ossiames faidius</hi>
+<lb facs="#facs_394_r2l15" n="N012"/><gap/>an que li ior sunt lonc en mai ·
+<lb facs="#facs_394_r2l19" n="N013"/><gap/>mest bel dolz chanz doisel de
+<lb facs="#facs_394_r2l20" n="N014"/><gap/>ian me sui partis de lai · membre
+<lb facs="#facs_394_r2l22" n="N015"/>e amor deloig · vais de talens brũs
+<lb facs="#facs_394_r2l25" n="N016"/>et enclins · si que chanz ne flors daubespins 
+<lb facs="#facs_394_r2l29" n="N017"/>non val maiz que liuers gelaiz ·
+<lb facs="#facs_394_r2l32" n="N018"/><hi>M</hi>ol teg lou segnor per verai · per que lẽ
+<lb facs="#facs_394_r2l33" n="N019"/>dit amor de loig · et per vn ben que men
+<lb facs="#facs_394_r2l34" n="N020"/>eschai  ai deus maus · car trop sui de loig ·
+<lb facs="#facs_394_r2l35" n="N021"/>dex car fusse fains pelegrins · tan que mos
+<lb facs="#facs_394_r2l36" n="N022"/>fust et mos tapins · fust deses biauz ge re
+<lb facs="#facs_394_r2l37" n="N023"/>mirais ·
+<lb facs="#facs_394_r2l38" n="N024"/><hi>B</hi>en parra iois quant li querrai · per a
+<lb facs="#facs_394_r2l39" n="N025"/>mors del hostal deloig · et seli plais herber
+<lb facs="#facs_394_r2l40" n="N026"/>gerai · pres de li car frop sui deloig · adonc
+<lb facs="#facs_394_r2l41" n="N027"/>sera parlemens fins · quant dru lontains se
+<lb facs="#facs_394_r2l42" n="N028"/>ront veisins · en corteis iois gist gens soulais ·<pb facs="#facs_395" n="395" xml:id="img_0395"/>
+<lb facs="#facs_395_r1l1" n="N001"/><hi>I</hi>amais damors non jauzirai · se non iau
+<lb facs="#facs_395_r1l2" n="N002"/>zir damors de loig · et bien sai que grieu
+<lb facs="#facs_395_r1l3" n="N003"/>ment laurai · quar trop sunt nostres terres
+<lb facs="#facs_395_r1l4" n="N004"/>loig · dex tant ia pas et chemins · que grie
+<lb facs="#facs_395_r1l5" n="N005"/>ment en serai saisins · or seit del tot si ꝯ li
+<lb facs="#facs_395_line_1602142851777_2392" n="N006"/>plais · 
+ </p>
+ </div>
+</div>
+ <div type="home_sauvage???">
+     <div type="lyrical_text" xml:id="BEdT_461.197"><!-- Poc ve gent que l'iver s'irais (Anonyme)-->
+          <p>  
+              <hi>li sons derueᷤ del home sauuage</hi>
+<lb facs="#facs_395_r1l9" n="N007"/>oc ve gent que luier sirais ·
+<lb facs="#facs_395_r1l12" n="N008"/>et part se del tanz amoros · que
+<lb facs="#facs_395_r1l14" n="N009"/>non auges notes ni lais · des auselz per ver
+<lb facs="#facs_395_r1l18" n="N010"/>gers foilloz · per lou freit del brun tempo
+<lb facs="#facs_395_r1l20" n="N011"/>rau · non leisserai vn vers afar · et dira al
+<lb facs="#facs_395_line_1602142922974_2457" n="N012"/>ques mon talant ·
+<lb facs="#facs_395_r1l27" n="N013"/><hi>L</hi>onc desirrier et grui pantais · nai agut
+<lb facs="#facs_395_r1l28" n="N014"/>al cor cubitos · vers cele qui soaf mi trais ·
+<lb facs="#facs_395_r1l29" n="N015"/>maiz ainc vers li non fui greignos · ainz
+<lb facs="#facs_395_r1l30" n="N016"/>la portaue el cor leial · mol fui legiers aen
+<lb facs="#facs_395_r1l31" n="N017"/>ganar · mes peccas naie deus amans ·
+<lb facs="#facs_395_r1l32" n="N018"/><hi>N</hi>ogins per autre orgeuill non lais · de
+<lb facs="#facs_395_line_1612965485477_1139" n="N019"/>et
+<lb facs="#facs_395_r1l33" n="N020"/>samor dont tant sui corcous · ꝯneis ben ꝯ
+<lb facs="#facs_395_r1l34" n="N021"/>ben mi pais · et sui galias aestrous · las re
+<lb facs="#facs_395_r1l35" n="N022"/>masus sui del chabau · quant per autre
+<lb facs="#facs_395_r1l36" n="N023"/>non vol poignar · per me · ni per mon dru
+<lb facs="#facs_395_line_1602143009987_2489" n="N024"/>ghemant ·
+<lb facs="#facs_395_r1l38" n="N025"/><hi>T</hi>ot mes chauat car agran fais · me
+<lb facs="#facs_395_r1l39" n="N026"/>tieg dosne quan pens de vos · et quant
+<lb facs="#facs_395_r1l40" n="N027"/>noi parlar mes esglais · et ia ior non serai
+<lb facs="#facs_395_r1l41" n="N028"/>iauzos · queu sui irais de vostre lau · et ab
+<lb facs="#facs_395_r1l42" n="N029"/>ioi de vostre blasmar · et plaisen me tuit
+<lb facs="#facs_395_r1l43" n="N030"/>vostre dan ·
+<lb facs="#facs_395_r3l1" n="N001"/><hi>N</hi>on pos mudar que non bias · vers a
+<lb facs="#facs_395_r3l2" n="N002"/>queu ioi tant orgueilloz · quainc non vi or
+<lb facs="#facs_395_r3l3" n="N003"/>gueill non abais · quan pluz en poie meuz
+<lb facs="#facs_395_r3l4" n="N004"/>caous · et est folz qui ve et qui au · et si
+<lb facs="#facs_395_r3l5" n="N005"/>non sab son meuz triar · et na el siegle da
+<lb facs="#facs_395_r3l6" n="N006"/>ques tans ·
+<lb facs="#facs_395_r3l7" n="N007"/><hi>H</hi>vi mais sen faignent drue et lais · cel qͥ
+<lb facs="#facs_395_r3l8" n="N008"/>non estat enuios · qua toz les fenis et le lais ·
+<lb facs="#facs_395_r3l9" n="N009"/>per oc que non si poderos · pos oder ni sab
+<lb facs="#facs_395_r3l10" n="N010"/>ben ni man · ben es dreis ꝯ la des ampar · et
+<lb facs="#facs_395_line_1602143069802_2515" n="N011"/>ai me perdu mon enfans ·
+          </p>
+     </div>
+ </div>
+<div type="Pieres_Vidaus">
+ <div type="lyrical_text" xml:id="BEdT_70.7"><!-- Ere non ve luisir soleill (Bernart de Ventadorn) -->
+      <p> 
+      <lb facs="#facs_395_line_1602768368158_2078" n="N012"/><hi>pieres vidaus ·</hi>
+<lb facs="#facs_395_r3l15" n="N013"/>re non ve luisir soleill · tãt
+<lb facs="#facs_395_r3l18" n="N014"/>mi sunt oscurei lou rai · et
+<lb facs="#facs_395_r3l22" n="N015"/>gius per aico non mesmai · cune clartas
+<lb facs="#facs_395_r3l25" n="N016"/>mi soleille · damor qui al cor mi raie · et
+<lb facs="#facs_395_r3l27" n="N017"/>quan laltre gens sesmaie · et meillor ab
+<lb facs="#facs_395_r3l30" n="N018"/>aus que sordei · que mon chant non
+<lb facs="#facs_395_line_1602143137203_2595" n="N019"/>sordee ·
+<lb facs="#facs_395_r3l35" n="N020"/><hi>P</hi>rat mi semblent blanc et vermeill ·
+<lb facs="#facs_395_r3l36" n="N021"/>ensement ꝯ el tans de mai · mi ten fine a
+<lb facs="#facs_395_r3l37" n="N022"/>mor ꝯinte et gai · meu mest flors blan
+<lb facs="#facs_395_r3l38" n="N023"/>che et vermeille · <hi><hi rend="strikethrough:true; fontSize:0.0; kerning:0;">quel</hi></hi> et yuers kalende
+<lb facs="#facs_395_r3l39" n="N024"/>maie · quel gencors et la plus gaie · ma pra
+<lb facs="#facs_395_r3l40" n="N025"/>mes que samor mautrei · sencor ne sen des
+<lb facs="#facs_395_line_1602143173598_2610" n="N026"/>autree ·
+<lb facs="#facs_395_r3l42" n="N027"/><hi>P</hi>aor me font malues ꝯseill · per quel
+<lb facs="#facs_395_r3l43" n="N028"/>segle · et amor decai · querre sa ioste en lieu
+<lb facs="#facs_395_r4l1" n="N001"/>190<note facs="#facs_395_region_1602142793347_2361" place="[direction]">
+<lb facs="#facs_395_line_1602143214261_2636" n="N001"/>30</note><note facs="#facs_395_region_1602142796946_2364" place="[direction]">
+<lb facs="#facs_395_line_1602143208139_2630" n="N001"/>22503
+<lb facs="#facs_395_line_1602143211237_2633" n="N002"/>972</note><pb facs="#facs_396" n="396" xml:id="img_0396"/>
+<lb facs="#facs_396_r2l2" n="N001"/>saluai · et luns al autre ꝯseille · ꝯ si fine a
+<lb facs="#facs_396_r2l4" n="N002"/>mor decai · ha  maluaise gens saluaige · qͥ
+<lb facs="#facs_396_r2l6" n="N003"/>uos nel vostre ꝯseill crei  damedeu perde et
+<lb facs="#facs_396_r2l8" n="N004"/>mescreie ·
+<lb facs="#facs_396_r2l9" n="N005"/><hi>D</hi>alques mi reuen en coreil · quite me fẽ
+<lb facs="#facs_396_r2l10" n="N006"/>dol es esglai · et peise mei del ioi queu nai ·
+<lb facs="#facs_396_r2l11" n="N007"/>et pos chascuns sen coreille · del altrui ioi
+<lb facs="#facs_396_r2l12" n="N008"/>et sesglaie · la ie meillor dreit non aie · qͦ
+<lb facs="#facs_396_r2l13" n="N009"/>plen deport non esguei · celi qin pluz mi
+<lb facs="#facs_396_line_1603793983036_1095" n="N010"/>guerree ·
+<lb facs="#facs_396_r2l15" n="N011"/><hi>N</hi>vit et ior ꝯsir et vueil · plaig et souspir ·
+<lb facs="#facs_396_r2l19" n="N012"/>maiz puis mapai · quan mieuz miraiz et
+<lb facs="#facs_396_r2l20" n="N013"/>ie pis trai · maiz vns bons respis mesueille ·
+<lb facs="#facs_396_r2l21" n="N014"/>donc mon ꝯsirrer sapaie · fol sui quan die
+<lb facs="#facs_396_r2l23" n="N015"/>que mal traie · et pos ai tant riche amor 
+<lb facs="#facs_396_r2l24" n="N016"/>en uol ben ia vn sol ioi naie ·
+<lb facs="#facs_396_r2l25" n="N017"/><hi>F</hi>ine amor a vos mapareill · per ou nõ
+<lb facs="#facs_396_r2l28" n="N018"/>ꝯuen ni sachai · maiz per vostre merce vos
+<lb facs="#facs_396_r2l30" n="N019"/>plaie · dex que men appareille · car se fine
+<lb facs="#facs_396_r2l31" n="N020"/>amor mi caie · ha  dosna per merce vos plai
+<lb facs="#facs_396_r2l33" n="N021"/>e · quaias de vostre ami marce · pos ai tant
+<lb facs="#facs_396_r2l36" n="N022"/>iant si marcee ·
+      </p>
+ </div>
+    <div type="lyrical_text" xml:id="BEdT_323.4"><!-- Amis Bernart de Ventador (Peire d'Alvergne) -->
+        <p>
+            <lb facs="#facs_396_r1l1" n="N001"/><hi>Pieres</hi>
+    <lb facs="#facs_396_r1l2" n="N002"/><hi>vidaus</hi>  
+<lb facs="#facs_396_r2l42" n="N023"/>mis bernart de ventador · ꝯ
+<lb facs="#facs_396_r2l48" n="N024"/>vos poias de chant sufrir ·
+<lb facs="#facs_396_r2l54" n="N025"/>quant ensi oias resbaudir · le louseignol et
+<lb facs="#facs_396_r2l58" n="N026"/>nuit et ior · auiaz lou ioi que demene ·
+<lb facs="#facs_396_r2l61" n="N027"/>tote nuit chante sur la flor · maiz senten
+<lb facs="#facs_396_r2l65" n="N028"/>de vos en amor ·
+<lb facs="#facs_396_line_1603794189979_1234" n="N029"/><hi>P</hi>errot lou dormir a seior · aun miauz
+<lb facs="#facs_396_line_1605003880535_561" n="N001"/>quel louseignol auzir · ne iamaiz tant
+<lb facs="#facs_396_line_1605003884461_564" n="N002"/>sauriez dir · que maiz ala folie tor · lo
+<lb facs="#facs_396_line_1605003889033_567" n="N003"/>dieu for sui de chadene · et vos et li altre
+<lb facs="#facs_396_line_1605003892746_570" n="N004"/>amador  sunt remasu en la folor ·
+        </p>
+    </div>
+ <div type="lyrical_text" xml:id="BEdT_70.43"><!-- Quan vei l'aloete moder (Bernart de Ventadorn) -->
+    <p>
+    <lb facs="#facs_396_line_1605003904240_573" n="N005"/><hi>pieres vidaus ·</hi>
+<lb facs="#facs_396_line_1605003907835_576" n="N006"/>van vei laloete moder · de
+<lb facs="#facs_396_line_1605003911013_579" n="N007"/>io ses ales ꝯtre al rai · que
+<lb facs="#facs_396_line_1605003914910_582" n="N008"/>soublide et laisse cader · per la doucor quel
+<lb facs="#facs_396_line_1605003919148_585" n="N009"/>cor li vai · he  tan granz enuide men prẽ ·
+<lb facs="#facs_396_line_1605003923403_588" n="N010"/>de co quest si en jausion · mirauill me q̃u
+<lb facs="#facs_396_line_1605003927224_591" n="N011"/>nies del sen · et cor de desirrier non son ·
+<lb facs="#facs_396_line_1605003932006_594" n="N012"/><hi>H</hi>e  las tan solie saber · damor et ꝯ pe
+<lb facs="#facs_396_line_1605003936532_597" n="N013"/>tit en sai · name damar non me po tener ·
+<lb facs="#facs_396_line_1605003940956_600" n="N014"/>cele dont ia ioi non aurai · tol me lou cor ·
+<lb facs="#facs_396_line_1605003944797_603" n="N015"/>et tol lou sen · et sei meeme et tot lou
+    </p>
+</div>
+</div>
+<div type="Anonyme"> 
+    <div type="lyrical_text" xml:id="BEdT_70.45"> <!-- Tuit cil que.m pregon qu'eu chant (Bernart de Ventadorn) -->
+         <p>
+         <pb facs="#facs_397" n="397" xml:id="img_0397"/>
+<lb facs="#facs_397_line_1613043051560_3627" n="N001"/>
+<lb facs="#facs_397_r1l1" n="N002"/>tutae
+<lb facs="#facs_397_r1l2" n="N003"/>Daxids:
+<lb facs="#facs_397_r2l1" n="N001"/>sab ni champ ni oie.pos pa
+<lb facs="#facs_397_r2l4" n="N002"/>enance.per ma male destia
+<lb facs="#facs_397_r2l5" n="N003"/>Namor ros diperement.i
+<lb facs="#facs_397_r2l6" n="N004"/>tener.mais en deurie paler.
+<lb facs="#facs_397_r2l7" n="N005"/>fol amie.mais non dure que s
+<lb facs="#facs_397_r2l8" n="N006"/>es fol qui sans fermance.mēt
+<lb facs="#facs_397_r2l9" n="N007"/>sesperance:
+<lb facs="#facs_397_r2l10" n="N008"/>De:las ꝯmiur de talen.queu
+<lb facs="#facs_397_r2l11" n="N009"/>matin non seir.Et la nuit quar
+<lb facs="#facs_397_r2l12" n="N010"/>lou lonseignol chante et crie.mai
+<lb facs="#facs_397_r2l13" n="N011"/>chantar solie.muir de dol et de pl
+<lb facs="#facs_397_r2l14" n="N012"/>queu nai ioi ne alegrance.E
+<lb facs="#facs_397_r2l15" n="N013"/>N mors ma mis al neent.Et torr
+<lb facs="#facs_397_r2l16" n="N014"/>non chaler.mais seula poges tener
+<lb facs="#facs_397_r2l17" n="N015"/>fere oilenie.marz dexz non ool qiiamor sie
+<lb facs="#facs_397_r2l18" n="N016"/>ren donc len prende penance.ob espade
+<lb facs="#facs_397_line_1613042853158_3471" n="N017"/>
+<lb facs="#facs_397_r2l21" n="N018"/>mor prei ros de mon dan.qual qule prou
+<lb facs="#facs_397_r2l22" n="N019"/>non pos peder.iames blandir ne temer.n
+<lb facs="#facs_397_r2l23" n="N020"/>quier.car tot en perdie.ben es fol quen pos
+<lb facs="#facs_397_r2l24" n="N021"/>se fie.par rostre false semblance.siutrahiz
+         </p>
+    </div>
+    <div type="lyrical_text" xml:id="BEdT_70.31"><!-- Non es meraville s'eu chant (Bernart de Ventadorn) -->
+    <p>
+    <lb facs="#facs_397_line_1613042867207_3482" n="N022"/>
+    <lb facs="#facs_397_r2l27" n="N023"/>on es merauille seu chant.
+<lb facs="#facs_397_r2l31" n="N024"/>mais de nul altre chantador.
+<lb facs="#facs_397_r2l35" n="N025"/>quan plus trai lou cor rers
+<lb facs="#facs_397_r2l40" n="N026"/>sui fais ason ꝯmant.cor et cors sabei
+<lb facs="#facs_397_r2l45" n="N027"/>et sen.et force et poder iai mes.sen ti
+<lb facs="#facs_397_r4l3" n="N001"/>e bers amor lon fren.qua nle altre
+<lb facs="#facs_397_line_1613042929813_3557" n="N002"/>
+<lb facs="#facs_397_r4l6" n="N003"/>Uen es mors qui damors non sen.al cor
+<lb facs="#facs_397_r4l7" n="N004"/>niil que don de sabor.et que omme sanz do
+<lb facs="#facs_397_r4l8" n="N005"/>or.tors per auuni far ala gen.ia dame dgee
+<lb facs="#facs_397_r4l9" n="N006"/>ion mauit tant.qne ie ia wiue ior ne
+<lb facs="#facs_397_r4l10" n="N007"/>ies.pos que damor serai repres.que da
+<lb facs="#facs_397_r4l11" n="N008"/>lt non aurai talen." "E
+<lb facs="#facs_397_r4l12" n="N009"/>e:dex car se fussen trian.dentre fals
+<lb facs="#facs_397_r4l13" n="N010"/>fin amador.que losengier.Et tricador.
+<lb facs="#facs_397_r4l14" n="N011"/>taissen corne el front deuant.tot laut
+<lb facs="#facs_397_r4l15" n="N012"/>Lmont et tot largant. rolgre aber dat
+<lb facs="#facs_397_r4l16" n="N013"/>lauges.per oc mi dostie ꝯnosghes.ansi
+<lb facs="#facs_397_r4l17" n="N014"/>eulamfinament.
+<lb facs="#facs_397_r4l19" n="N015"/>Uant eu la re mos bens peruent.ases
+<lb facs="#facs_397_r4l20" n="N016"/>al ois ala color.ualtresi tramble de paor.
+<lb facs="#facs_397_r4l21" n="N017"/>s fait la foille ꝯtraluent.non ab desens.
+<lb facs="#facs_397_r4l22" n="N018"/>tre on enfant.alsi ma amors soubrepres
+<lb facs="#facs_397_r4l23" n="N019"/>et dome qui si es ꝯcues.pot len auer al
+<lb facs="#facs_397_line_1613042970700_3587" n="N020"/>
+<lb facs="#facs_397_r4l26" n="N021"/>Der bona fel et sanz engant.am la ple
+<lb facs="#facs_397_r4l27" n="N022"/>bele.et la meillor.del cor sonfpit et des
+<lb facs="#facs_397_r4l28" n="N023"/>or plor.tan lamade que faz mon dant.no
+<lb facs="#facs_397_r4l29" n="N024"/>pos mes.que samor ma pres.et en la char
+<lb facs="#facs_397_r4l30" n="N025"/>tre ou el ma mes.non pot clas oubrir fors
+<lb facs="#facs_397_r4l31" n="N026"/>merces:et de merce non trop niant.Or.
+<lb facs="#facs_397_r4l32" n="N027"/>ẏona dosna plus non demant.mais qm
+<lb facs="#facs_397_r4l33" n="N028"/>prendas aseruidor.seriurai ros sbon seig
+<lb facs="#facs_397_r4l34" n="N029"/>nor.qual qui sia guerredonant.tot al ro
+<lb facs="#facs_397_r4l35" n="N030"/>stre ꝯmandemant.bel cors ientre frans et
+<lb facs="#facs_397_r4l36" n="N031"/>corteis.ors ne hoons nestes ros ges:que mau
+<lb facs="#facs_397_r4l37" n="N032"/>cias sa ros me rant:E
+    </p>
+    </div>
+  <div type="lyrical_text" xml:id="BEdT_461.13"><!-- A l'entrada del tans florit (Anonyme) -->
+    <p>
+    <lb facs="#facs_397_r4l41" n="N033"/>lentrada del tans florit.q'
+<lb facs="#facs_397_r4l43" n="N034"/>nos sons del puer partit.
+<lb facs="#facs_397_r5l1" n="N001"/>Nei.<pb facs="#facs_398" n="398" xml:id="img_0398"/>
+<lb facs="#facs_398_r1l2" n="N001"/>me sunt bel chant et lai crit.que font
+<lb facs="#facs_398_r1l5" n="N002"/>auseillon petit.adont mi membre dune a'
+<lb facs="#facs_398_r1l9" n="N003"/>qui ma tornat en lonc oublit.sencor afma J
+<lb facs="#facs_398_r1l12" n="N004"/>non secor.
+<lb facs="#facs_398_r1l13" n="N005"/>Pos entre lou ointe et morir.estau
+<lb facs="#facs_398_r1l14" n="N006"/>non mi pos partit.assas mi degre dete
+<lb facs="#facs_398_r1l15" n="N007"/>pos en altre non ab ꝯsir.Et sen faisie t
+<lb facs="#facs_398_r1l16" n="N008"/>danor.que mi laissat ses mans denit
+<lb facs="#facs_398_r1l17" n="N009"/>dont autai ioi et baudor.Ennz
+<lb facs="#facs_398_r1l18" n="N010"/>Per oc sai dit gran hardiment.queu
+<lb facs="#facs_398_r1l19" n="N011"/>esguat nul failliment.Et pos far me s
+<lb facs="#facs_398_r1l20" n="N012"/>de neent.prei li quen aie causiment.Ens
+<lb facs="#facs_398_r1l21" n="N013"/>sinc garrai dema dolor.qui ma tengut on
+<lb facs="#facs_398_r1l22" n="N014"/>an pertent.que neguns hom non ab pre
+<lb facs="#facs_398_line_1613043580902_3733" n="N015"/>
+<lb facs="#facs_398_r1l24" n="N016"/>Nosne de ros me blasm.et lau.et guer
+<lb facs="#facs_398_r1l25" n="N017"/>pirai siecle charnau.et pos lou ben mi torn
+<lb facs="#facs_398_r1l26" n="N018"/>il mau.tan me metrai per postre esclau.
+<lb facs="#facs_398_r1l27" n="N019"/>per oc si prei al credator.qiun lais remirār
+<lb facs="#facs_398_r1l28" n="N020"/>uostre ostau.mais men preis dun empera
+<lb facs="#facs_398_line_1613043596474_3747" n="N021"/>
+<lb facs="#facs_398_r1l30" n="N022"/>Per ceste amor ferai orgueill.et totes
+<lb facs="#facs_398_r1l31" n="N023"/>altres non acueill.assas men preis mais q
+<lb facs="#facs_398_r1l32" n="N024"/>non suesil.queu crei quc la berront mi
+<lb facs="#facs_398_r1l33" n="N025"/>oeill.ia dex non des pluz de richor.maiz
+<lb facs="#facs_398_r1l34" n="N026"/>qua li frisse dis Un beueisl.que lauzel chan
+<lb facs="#facs_398_line_1613043610267_3758" n="N027"/>
+<lb facs="#facs_398_r1l36" n="N028"/>Ab on petit damar non lais.que rienz
+<lb facs="#facs_398_r1l37" n="N029"/>non ai al que lou fais.sin torne mos iois en
+<lb facs="#facs_398_r1l38" n="N030"/>biais.delamor quaten en pantais.se nō
+<lb facs="#facs_398_r1l39" n="N031"/>rent abreu ma balor.Lassar mi cuit del
+<lb facs="#facs_398_r1l40" n="N032"/>tot eschais.et far moines en refretoz.
+    </p>
+  </div>
+ <div type="lyrical_text" xml:id="BEdT_167.22"><!-- Fort chose avias et tot lor maor dan (Gaucelm Faidit) -->
+    <p><lb facs="#facs_398_r3l2" n="N001"/>chose auias et tot lor ma
+<lb facs="#facs_398_r3l5" n="N002"/>dan.et greignor dol que
+<lb facs="#facs_398_r3l9" n="N003"/>Noges.que ce sdeit itoz ior
+<lb facs="#facs_398_r3l10" n="N004"/>ploran.mest bel adir en chan
+<lb facs="#facs_398_r3l13" n="N005"/>traite.que cil qui es des palens
+<lb facs="#facs_398_r3l15" n="N006"/>paur.lou reis ualens.richars reis
+<lb facs="#facs_398_r3l19" n="N007"/>des engles.es mors.Hhe:las.qual dol et
+<lb facs="#facs_398_r3l24" n="N008"/>ꝯperdens.ꝯ estraig mot et saluage aau
+<lb facs="#facs_398_r3l27" n="N009"/>it.qadut cor tals hom qui pot sufrit
+<lb facs="#facs_398_r3l28" n="N010"/>Mors es lou reis.Et siit passat mil an.
+<lb facs="#facs_398_r3l29" n="N011"/>que tals preudom non fu ne non ier mes.
+<lb facs="#facs_398_r3l30" n="N012"/>iamaiz nus hom noner de son semblan.
+<lb facs="#facs_398_r3l31" n="N013"/>tan lars tan prous tanhardis taus donai
+<lb facs="#facs_398_r3l32" n="N014"/>re.algxandres lou teis qui rencui daie.
+<lb facs="#facs_398_r3l33" n="N015"/>non crei que tan donas ni tan meses.non
+<lb facs="#facs_398_r3l34" n="N016"/>fist charlousni artus tan non mes.qua
+<lb facs="#facs_398_r3l35" n="N017"/>tot lou mont afet qui wiaut deir dir:
+<lb facs="#facs_398_r3l36" n="N018"/>as Uns doutar.et as autres grazir. te
+<lb facs="#facs_398_r3l37" n="N019"/>Ma:seigner reis ralens et que ferem.
+<lb facs="#facs_398_r3l38" n="N020"/>ni as armes.nas granz torneis espes.ne
+<lb facs="#facs_398_r3l39" n="N021"/>qui porra lous bens rendre iamaiz.non
+<lb facs="#facs_398_r3l40" n="N022"/>crei qualtres getsor pas ni graaire.deso
+<lb facs="#facs_398_r3l41" n="N023"/>temaiz moustra dex que pot faire.qua
+<lb facs="#facs_398_line_1613043631084_3771" n="N001"/><pb facs="#facs_399" n="399" xml:id="img_0399"/>
+<lb facs="#facs_399_r3l3" n="N001"/>vn coup a tot le mieuz del mon preis · tote
+<lb facs="#facs_399_r3l5" n="N002"/>lonor · tot lou ben tot lou mes · et quan
+<lb facs="#facs_399_r3l6" n="N003"/>en vei ꝯ non li pot guenchir  maiz ende
+<lb facs="#facs_399_r3l7" n="N004"/>utren redoutar a morir ·
+    </p>
+</div>
+  <div type="lyrical_text" xml:id="BEdT_16.9"><!-- Destregz d'amor veing denan vos (Albertet) -->
+    <p>
+        <lb facs="#facs_399_r3l8" n="N005"/>ncor abes mains de valor de
+<lb facs="#facs_399_r3l9" n="N006"/>nule altra dosne · cainc fons
+<lb facs="#facs_399_r3l10" n="N007"/>non nusies de beau respons · se tot vos di
+<lb facs="#facs_399_r3l11" n="N008"/>lou talent el desire · que done amors qui
+<lb facs="#facs_399_r3l12" n="N009"/>me fait pis daucire · et sen desrain mi lais
+<lb facs="#facs_399_r3l13" n="N010"/>amar lon lou fraim · per merces prei que
+<lb facs="#facs_399_r3l14" n="N011"/>non sies saluage · mais escoutas ne ia non
+<lb facs="#facs_399_line_1613043871116_3961" n="N012"/>facies ren ·
+    </p>
+</div>
+    <div type="lyrical_text" xml:id="BEdT_223.3"><!-- Eu ensi preig com fai al pescador (Guillem Magret) -->
+    <p>
+    <note facs="#facs_399_region_1613053286465_4271" place="[direction]">
+    <lb facs="#facs_399_line_1613053290546_4274" n="N001"/>viii</note>
+<lb facs="#facs_399_r5l2" n="N001"/>v ensi preig ꝯ fai al pesca
+<lb facs="#facs_399_r5l4" n="N002"/>dor · qui non ause son peis
+<lb facs="#facs_399_r5l6" n="N003"/>meniar ni vendre · tros que il lait moustrat
+<lb facs="#facs_399_r5l10" n="N004"/>ason seignor · ital dosta mi fai amor entendre ·
+<lb facs="#facs_399_r5l12" n="N005"/>que quant ai fait seruenteis ma chancon ·
+<lb facs="#facs_399_r5l16" n="N006"/>ne nule ren queu pens qui sie bon · eu li
+<lb facs="#facs_399_r5l18" n="N007"/>tramet per oc quel en retaigne · ce que plai
+<lb facs="#facs_399_r5l20" n="N008"/>ra · et que de me suuaigne · et pbs blous
+<lb facs="#facs_399_r5l22" n="N009"/>de son remanent · deport me od la corteise
+<lb facs="#facs_399_line_1613043914361_4017" n="N001"/>192<note facs="#facs_399_region_1613043813866_3920" place="[direction]">
+<lb facs="#facs_399_line_1613043918716_4020" n="N001"/>VIII
+<lb facs="#facs_399_line_1613043920304_4023" n="N002"/>Bernars de
+<lb facs="#facs_399_line_1613043922155_4026" n="N003"/>Ventadour</note><pb facs="#facs_400" n="400" xml:id="img_0400"/><note facs="#facs_400_region_1613053647458_4325" place="[direction]">
+<lb facs="#facs_400_line_1613053650168_4328" n="N001"/>IX</note>
+<lb facs="#facs_400_r1l1" n="N001"/>gent ·
+<lb facs="#facs_400_r1l2" n="N002"/><hi>A</hi>ltresi fait gorpill en chacador · qui cha
+<lb facs="#facs_400_r1l3" n="N003"/>ce ades ce que non ause prendre · atendre ·
+<lb facs="#facs_400_r1l4" n="N004"/>ensi vueill prendre ala perdriz lostor · et ꝯ
+<lb facs="#facs_400_r1l5" n="N005"/>bat la ou non mi pos desfendre · ꝯ bateil
+<lb facs="#facs_400_r1l6" n="N006"/>liers quab perdut son baston · et ies na
+<lb facs="#facs_400_r1l7" n="N007"/>uraz sous laltre champion · et lou mal
+<lb facs="#facs_400_r1l8" n="N008"/>mot encor dire non deigne.car par son
+<lb facs="#facs_400_r1l9" n="N009"/>dreit aespeir quil reueigne · ensi ful espro
+<lb facs="#facs_400_r1l10" n="N010"/>bas per cent · per oc nait maior hardim̃t ·
+    </p>
+    </div>
+ <div type="lyrical_text" xml:id="BEdT_404.4"><!-- Lou clar tans vei brunasir (Raimon Jordan) -->
+    <p>
+        <lb facs="#facs_400_r1l12" n="N011"/>ou clar tans vei brunasir ·
+<lb facs="#facs_400_r3l3" n="N001"/>les auzeillons esperduz · per freit quis
+<lb facs="#facs_400_r3l8" n="N002"/>destraig sunt mus · et sanz ꝯnort des
+<lb facs="#facs_400_r3l12" n="N003"/>iauzir · maiz en qui en ioi ꝯsir · per la
+<lb facs="#facs_400_r3l15" n="N004"/>gensor ren cainc fous · tan ioious · sui
+<lb facs="#facs_400_r3l20" n="N005"/>quades mest vis · que foille et flor resplẽ
+<lb facs="#facs_400_line_1613044151860_4193" n="N006"/>dis ·
+    </p>
+</div>
+    <div type="lyrical_text" xml:id="BEdT_461.100"><!-- D'un deduit qui me fuit (Anonyme) -->
+        <p>
+                <pb facs="#facs_401" n="401" xml:id="img_0401"/>
+                <lb facs="#facs_401_line_1607856590244_126" n="N001"/>193<pb facs="#facs_402" n="402" xml:id="img_0402"/><note facs="#facs_402_r1" place="[direction]">
+                    <lb facs="#facs_402_line_1607856684316_146" n="N001"/>XIII
+                    <lb facs="#facs_402_r1l1" n="N002"/>Bernars de
+                    <lb facs="#facs_402_r1l2" n="N003"/>Ventadour</note>
+                <lb facs="#facs_402_r2l1" n="N001"/>vn deduit qui me fuit ·
+                <lb facs="#facs_402_r3l3" n="N001"/><gap/>treicar · desoubre lou
+                <lb facs="#facs_402_r3l6" n="N002"/>glai · ne cointement remirar · ensi ꝯ solia
+                <lb facs="#facs_402_r3l7" n="N003"/>far ·
+            </p>
+        </div> 
+    <div type="lyrical_text" xml:id="BEdT_404.11"><!-- Vers vos souple, dosne, premierement  (Raimon Jordan)-->
+        <p><pb facs="#facs_403" n="403" xml:id="img_0403"/>
+            <lb facs="#facs_403_r2l3" n="N001"/>ers vos souple dosne pre
+            <lb facs="#facs_403_r2l7" n="N002"/>mierement · per que eu
+            <lb facs="#facs_403_r4l3" n="N001"/>fas et ꝯmens ma chancon · et sil vos 
+            <lb facs="#facs_403_r4l5" n="N002"/>plas entendez ma raison · caltre non aus
+            <lb facs="#facs_403_r4l9" n="N003"/>descourir mon talent · quensinc mauẽ
+            <lb facs="#facs_403_r4l12" n="N004"/>quan vei vostre facon · la langue fal · lou
+            <lb facs="#facs_403_r4l14" n="N005"/>cor ai temerouz · quer qui non tem nõ
+            <lb facs="#facs_403_r4l17" n="N006"/>ame coralment · per oc ten car lou vostre
+            <lb facs="#facs_403_r4l19" n="N007"/>seignorage ·
+            <lb facs="#facs_403_r4l21" n="N008"/><hi>E</hi>v vos donai per fei et lealment · mon
+            <lb facs="#facs_403_r4l22" n="N009"/>cors el cor dont faites teneison · et ai grãt
+            <lb facs="#facs_403_r4l23" n="N010"/>ioi que sab que sui vostre hom · cuns bons
+            <lb facs="#facs_403_r4l24" n="N011"/>espeirs de vos mi ten jauzent · quen bon
+            <lb facs="#facs_403_r4l25" n="N012"/>seignor non pert nus guerredon · cui bẽ
+            <lb facs="#facs_403_r4l26" n="N013"/>la sert · eu vei mainte saison · poure enri
+            <lb facs="#facs_403_r4l27" n="N014"/>chir · per bon atendiment · per oc esfors
+            <lb facs="#facs_403_r4l28" n="N015"/>enuers vos mon corage ·
+            <lb facs="#facs_403_r4l30" n="N016"/><hi>T</hi>ant ai assis mon desir finament · en
+            <lb facs="#facs_403_r4l31" n="N017"/>vos dosna se dex iauzir men dons · que
+            <lb facs="#facs_403_r4l32" n="N018"/>mieuz vos am seruir tot en pardons · q̃
+            <lb facs="#facs_403_r4l33" n="N019"/>de nule altra afar mon mandiment · car
+            <lb facs="#facs_403_r4l34" n="N020"/>si granz iois ratrait mon cor vers vos ·
+            <lb facs="#facs_403_r4l35" n="N021"/>pos que vos di non fui ainc poderos · si
+            <lb facs="#facs_403_r4l36" n="N022"/>desirrous sui de vostre cors gent · ꝯquis
+            <lb facs="#facs_403_r4l37" n="N023"/>mauez remaig en vostre ostage ·
+            <lb facs="#facs_403_r4l38" n="N024"/><hi>E</hi>t sab trop ben queu faz fol ardimen ·
+            <lb facs="#facs_403_r4l39" n="N025"/>quan eu la prei damors ni mot en son ·
+            <lb facs="#facs_403_r4l40" n="N026"/>mais ainc non pos tornar ma sonspecõ ·
+            <lb facs="#facs_403_r4l41" n="N027"/>et sab trop ben que trauaill per neent ·
+            <lb facs="#facs_403_r5l1" n="N001"/>194.<pb facs="#facs_404" n="404" xml:id="img_0404"/>
+            <lb facs="#facs_404_r1l1" n="N001"/>tant abeltas son gent cors orgueillouz 
+            <lb facs="#facs_404_r1l2" n="N002"/>que son reu pres fait puiar soubre toz ·
+            <lb facs="#facs_404_r1l3" n="N003"/>quen desirrans souspir en esperuens · et te
+            <lb facs="#facs_404_r1l4" n="N004"/>meros que non tegne afolage ·
+            <lb facs="#facs_404_r1l5" n="N005"/><hi>E</hi>t seu folei eu faz a escient · sabes per
+            <lb facs="#facs_404_r1l6" n="N006"/>quei el mest bel si mest bon · et dirai vos
+            <lb facs="#facs_404_r1l7" n="N007"/><hi rend="strikethrough:true; fontSize:0.0; kerning:0;">q</hi> per quale entention · bons esperars tiẽt
+            <lb facs="#facs_404_r1l8" n="N008"/>lome asaluiment · et seu faz ben mout
+            <lb facs="#facs_404_r1l9" n="N009"/>en serai iauzouz · et sen fai mal sufrirai
+            <lb facs="#facs_404_r1l10" n="N010"/>pesancouz · et jausirai ben et mal ensim̃t ·
+            <lb facs="#facs_404_r1l11" n="N011"/>ensi ferai le ꝯnort al saluage ·
+            <lb facs="#facs_404_r1l12" n="N012"/><hi>B</hi>ona dosna merces clam per garent ·
+            <lb facs="#facs_404_r1l13" n="N013"/>car sens merces non aten guerredon · aĩz
+            <lb facs="#facs_404_r1l14" n="N014"/>cri merces ou merces venghe ou non · et
+            <lb facs="#facs_404_r1l15" n="N015"/>ia de ce non verrois recredent · ainz pree
+            <lb facs="#facs_404_r1l16" n="N016"/>rei merces tant angoissoz · que per mer
+            <lb facs="#facs_404_r1l17" n="N017"/>ces tendrai mes mains ansdous · entre
+            <lb facs="#facs_404_r1l18" n="N018"/>vostres · et ferai causiment · quel mont
+            <lb facs="#facs_404_r1l19" n="N019"/>non sab tan certan hominage ·
+        </p>
+    </div> 
+<div type="lyrical_text" xml:id="BEdT_293.35"><!-- Pax in nomine Domini (Marcabru) -->
+    <p>
+        <lb facs="#facs_404_r1l22" n="N020"/>ax in nomine domini · dist
+<lb facs="#facs_404_r1l26" n="N021"/>macabruns lou vers del sõ
+<lb facs="#facs_404_r1l28" n="N022"/>oias queu dis · que nos afait per sa doucor 
+<lb facs="#facs_404_r1l30" n="N023"/>lou seignoris celestiaus · quil post per nos
+<lb facs="#facs_404_r1l33" n="N024"/>vn lauador · que for doutremar non fu
+<lb facs="#facs_404_r1l36" n="N025"/>taus · et lai deuers val iosaphat · et daikel
+<lb facs="#facs_404_r1l39" n="N026"/>de cai nos ꝯnort ·
+<lb facs="#facs_404_r1l40" n="N027"/><hi>L</hi>auar al seir et al matin · nos deuriõ
+<lb facs="#facs_404_r2l1" n="N001"/>segont raison · eu vos afic · cel qui de la
+<lb facs="#facs_404_r2l2" n="N002"/>uar ont laissor · de me tenez quil sunt sã
+<lb facs="#facs_404_r2l3" n="N003"/>et sau · deuren annar al lauador · quer il
+<lb facs="#facs_404_r2l4" n="N004"/>nos ert vrais mecinaus · et sabens ioignõs
+<lb facs="#facs_404_r2l5" n="N005"/>ala mort · dont encrei quaurem larberc
+<lb facs="#facs_404_line_1611124078805_318" n="N006"/>bas ·
+    </p>
+</div>
+    <div type="lyrical_text" xml:id="BEdT_421.5"><!-- Be volria saber d'amor (Richart de Berbezill) -->
+    <p>
+    <lb facs="#facs_404_line_1612979134663_1306" n="N007"/>XVI
+<lb facs="#facs_404_r2l9" n="N008"/>i ꝯ la tygre al mirador · qui
+<lb facs="#facs_404_r2l10" n="N009"/>per remirar son cor gent ·
+<lb facs="#facs_404_r2l13" n="N010"/>oblide sire et son torment · ausi <hi rend="strikethrough:true; fontSize:0.0; kerning:0;">ꝯ v</hi>
+<lb facs="#facs_404_r2l15" n="N011"/>quan vei le qui iaor · vblide mire · et ma
+<lb facs="#facs_404_r2l16" n="N012"/>dolor  est mandre · ne ia neguns ne sẽ<note facs="#facs_404_region_1611124699270_368" place="[direction]">
+<lb facs="#facs_404_line_1611124723213_377" n="N001"/>XV</note><note facs="#facs_404_region_1611124701498_371" place="[direction]"/><pb facs="#facs_405" n="405" xml:id="img_0405"/><note facs="#facs_405_r1" place="[direction]">
+<lb facs="#facs_405_r2l1" n="N001"/>face deuins · queu vos dirai qui ma od
+<lb facs="#facs_405_r2l2" n="N002"/>foi conquis · se vos sauez ꝯnssar et enten
+<lb facs="#facs_405_r2l3" n="N003"/>dre ·
+<lb facs="#facs_405_r2l5" n="N004"/><hi>B</hi>ien voudrie saber damor · sele vei ne
+<lb facs="#facs_405_r2l6" n="N005"/>au ne enten · quar tot ai requis franca
+<lb facs="#facs_405_r2l7" n="N006"/>men · merces ni de ren non secor · ni eu
+<lb facs="#facs_405_r2l8" n="N007"/>non pos vers ses armes desfendre · fors per
+<lb facs="#facs_405_r2l9" n="N008"/>merces acui en sui aclins · quil non es
+<lb facs="#facs_405_r2l10" n="N009"/>iois ni altres paradis · per queu changaisse
+<lb facs="#facs_405_line_1611125127584_498" n="N010"/>esperance et atendre ·
+</note>
+</p>
+</div>
+    <div type="lyrical_text" xml:id="BEdT_70.19"><!-- Estat ai com hom esperdutz (Bernart de Ventadorn) -->
+        <p>
+            <lb facs="#facs_405_r1l1" n="N001"/>XVII
+            <lb facs="#facs_405_r1l2" n="N002"/>Bernars de
+            <lb facs="#facs_405_r1l3" n="N003"/><gap/>entadour
+            <lb facs="#facs_405_r2l13" n="N011"/>a dosne fu al ꝯmencar · frã
+            <lb facs="#facs_405_r3l3" n="N001"/>che et de bone ꝯpaignie · per quei eu mẽ
+            <lb facs="#facs_405_r3l8" n="N002"/>dei mais lauar  que sel fust fel ne estraig
+            <lb facs="#facs_405_r3l12" n="N003"/>ne · ben es dreis que dosna fraigne · vers ce
+            <lb facs="#facs_405_r3l15" n="N004"/>lui qui la cor damar · que sel fait son ami
+            <lb facs="#facs_405_r3l19" n="N005"/>pregar · dreis es <hi rend="strikethrough:true; fontSize:0.0; kerning:0;">sa</hi> quantus li soufraigne ·
+            <lb facs="#facs_405_r3l20" n="N006"/><hi>D</hi>osne pensans mal enganar · losengier
+            <lb facs="#facs_405_r3l21" n="N007"/>qui dex ꝯtraigne · car tan ꝯ on en pot em
+            <lb facs="#facs_405_r3l22" n="N008"/>blar · damar · itant en gadaigne · auan
+            <lb facs="#facs_405_r3l23" n="N009"/>que neguns sen plaigne · pot lamor lon
+            <lb facs="#facs_405_r3l24" n="N010"/>guement durar · car quan leus est deit
+            <lb facs="#facs_405_r3l25" n="N011"/>on parlar · et quant lieus non est remaig
+            <lb facs="#facs_405_r3l26" n="N012"/>ne ·
+            <lb facs="#facs_405_r3l28" n="N013"/><hi>M</hi>a dosne me fait grant anor · quan li
+            <lb facs="#facs_405_r3l29" n="N014"/>plas qua li ꝯtaigne · et prei li de son amador ·
+            <lb facs="#facs_405_r3l30" n="N015"/>quel ben quele fara non venge · non leis
+            <lb facs="#facs_405_r3l31" n="N016"/>se far longe atente · car lons termes mi
+            <lb facs="#facs_405_r3l32" n="N017"/>fait paor · cainc non vi maluaiz donador · q̃
+            <lb facs="#facs_405_r3l33" n="N018"/>lons respis non desfende ·
+        </p>
+    </div>
+  <div type="lyrical_text" xml:id="BEdT_421.1"><!-- Ausement com li lyons (Richart de Berbezill) -->
+    <p>
+        <lb facs="#facs_405_r4l2" n="N001"/>195<pb facs="#facs_406" n="406" xml:id="img_0406"/>
+<lb facs="#facs_406_r2l3" n="N001"/>vsement ꝯli lyons qui tant es
+<lb facs="#facs_406_r2l6" n="N002"/>fers et tan gais · que sous leo
+<lb facs="#facs_406_r2l8" n="N003"/>niaus quan nais · mors sans alane et sans
+<lb facs="#facs_406_r2l11" n="N004"/>vide · maiz od sa veis quant lou cride · les
+<lb facs="#facs_406_r2l14" n="N005"/>fait reuiure <hi rend="strikethrough:true; fontSize:0.0; kerning:0;">et morir</hi> · et annar · ensimẽt
+<lb facs="#facs_406_r2l17" n="N006"/>pot de me far · ma douce dosne et amor ·
+<lb facs="#facs_406_r2l19" n="N007"/>et guerir ma gran dolor ·
+    </p>
+</div>
+    <div type="lyrical_text" xml:id="BEdT_421.2"><!-- Ausement com l'olifans (Richart de Berbezill) -->
+    <p>
+        <lb facs="#facs_406_r4l5" n="N001"/>vsement ꝯlolifans · qui
+<lb facs="#facs_406_r4l9" n="N002"/>chat et non pot leuar · mes
+<lb facs="#facs_406_r4l14" n="N003"/>li altre od lor cridar · delor veis lou leuen
+<lb facs="#facs_406_r4l18" n="N004"/>sus · et eu vol sigre itel vs · car mos mes
+<lb facs="#facs_406_r4l21" n="N005"/>fais mes tan grieus et pesans · que se la
+<lb facs="#facs_406_r4l26" n="N006"/>cors del pui et lou beubans · et lou dreis
+<lb facs="#facs_406_r4l29" n="N007"/>preis deleaus amadors · non me leuent ia
+<lb facs="#facs_406_r4l32" n="N008"/>maiz non serai sors · el deignaissen per me
+<lb facs="#facs_406_r4l35" n="N009"/>clamar mercez  la ou jogar ni raison non
+<lb facs="#facs_406_line_1611125851681_827" n="N010"/><hi rend="strikethrough:true; fontSize:0.0; kerning:0;">que</hi> val ren ·
+<lb facs="#facs_406_r4l38" n="N011"/><hi>E</hi>t se per lou fins amans non pos de ioie
+<lb facs="#facs_406_r4l39" n="N012"/>coubrar · per toz iors mais lai mon chantar ·
+<lb facs="#facs_406_r4l40" n="N013"/>ne de mei non er ren pluz · ainz viurai ꝯ
+<lb facs="#facs_406_r4l41" n="N014"/>me ranclus · sous sainz soulaz · car ma vi
+<lb facs="#facs_406_r4l42" n="N015"/>de mes enuide et pesanz · ioi est mes doelz
+<lb facs="#facs_406_r4l43" n="N016"/>et plaisens ma dolors · dont sui ie mieuz
+<lb facs="#facs_406_r4l44" n="N017"/>de la manere al ors · car qui lou bat et<note facs="#facs_406_r1" place="[direction]">
+<lb facs="#facs_406_r1l1" n="N001"/>XVIII</note><note facs="#facs_406_region_1611125761124_663" place="[direction]">
+<lb facs="#facs_406_line_1611125764983_666" n="N001"/>XIX</note><pb facs="#facs_407" n="407" xml:id="img_0407"/>
+<lb facs="#facs_407_r2l3" n="N001"/>ten vill sanz merces · al douz degraz · et
+<lb facs="#facs_407_r2l7" n="N002"/>meilleir en valghes ·
+    </p>
+    </div>
+    <div type="lyrical_text" xml:id="BEdT_124.5"><!-- Bele mes la veis altana (Daude de Pradas) -->
+    <p>
+        <lb facs="#facs_407_r2l12" n="N003"/>ele mes la veis altana des
+<lb facs="#facs_407_r2l14" n="N004"/>louseignol en pascor · que
+<lb facs="#facs_407_r2l16" n="N005"/>foille es vers et blanche flor · et lerbe nais
+<lb facs="#facs_407_r2l19" n="N006"/>en larfane · adonc tentissent li vergier · et
+<lb facs="#facs_407_r3l4" n="N001"/>iois maurie tal mestier · quel cor mi rauif
+<lb facs="#facs_407_r3l7" n="N002"/>et sane ·
+<lb facs="#facs_407_r3l8" n="N003"/><hi>E</hi>sbaiz ꝯ caus arana · vanis et plans de
+<lb facs="#facs_407_r3l9" n="N004"/>duisor · atai campes asa valor · sen sui de
+<lb facs="#facs_407_r3l10" n="N005"/>plusor ꝯpane · que tuit soulaz mi sunt ger
+<lb facs="#facs_407_r3l11" n="N006"/>rier · auiaz que lon faz destorber · tal cortei
+<lb facs="#facs_407_r3l13" n="N007"/>sie es vilane ·
+    </p>
+</div>
+    <div type="lyrical_text" xml:id="BEdT_461.9"><!-- Ensi com eu sab triar (Anonyme) -->
+    <p>
+        <lb facs="#facs_407_r3l17" n="N008"/>nsi ꝯ eu sab mar · lou melz
+<lb facs="#facs_407_r3l21" n="N009"/>del mon et causir · me don
+<lb facs="#facs_407_r3l25" n="N010"/>dex de me iausir · et de la bele nonpar · ou iois
+<lb facs="#facs_407_r3l28" n="N011"/>apris son estage · quere chacaz et guerpiz · et
+<lb facs="#facs_407_r3l31" n="N012"/>de tot lou mon faidis ·mais en son franc seig<note facs="#facs_407_r1" place="[direction]">
+<lb facs="#facs_407_r1l1" n="N001"/>XX</note>
+<lb facs="#facs_407_r5l1" n="N001"/>196.<pb facs="#facs_408" n="408" xml:id="img_0408"/><note facs="#facs_408_region_1611128030170_184" place="[direction]">
+<lb facs="#facs_408_line_1611128034198_187" n="N001"/>XXII</note>
+<lb facs="#facs_408_r1l3" n="N001"/>norage · sest arrestas et aers · ou ert honras
+<lb facs="#facs_408_line_1611128057183_209" n="N002"/>et aders ·
+    </p>
+</div>
+    <div type="lyrical_text" xml:id="BEdT_194.8"><!-- Tens de chantar non dal cor ni raison (Gui d'Uisel) -->
+    <p>
+        <lb facs="#facs_408_r1l10" n="N003"/>ens de chantar non fal cor ni
+<lb facs="#facs_408_r1l13" n="N004"/>raison · non fas saber se chans
+<lb facs="#facs_408_r1l15" n="N005"/>mere grassis · mais ere mes cant vers a
+<lb facs="#facs_408_r1l17" n="N006"/>mors failliz · per quei eu mestau maris · et
+<lb facs="#facs_408_r2l5" n="N001"/>ꝯsirous · et post fai me defaillir mous par
+<lb facs="#facs_408_r2l8" n="N002"/>dons · deserenans deit chascur ior chantar ·
+<lb facs="#facs_408_r2l9" n="N003"/>post ca <hi rend="strikethrough:true; fontSize:0.0; kerning:0;">mo</hi> mi dosn dei chascun ioi troubar ·
+<lb facs="#facs_408_r2l13" n="N004"/>nouel sens · nouele valor · et beltaz pluz fine
+<lb facs="#facs_408_r2l14" n="N005"/>et meillor ·<pb facs="#facs_409" n="409" xml:id="img_0409"/>
+    </p>
+</div>
+<div type="lyrical_text" xml:id="BEdT_364.49"><!-- Tart mi vendront mi ami tholousan (Peire Vidal) -->
+    <p>
+    <lb facs="#facs_409_r2l2" n="N001"/>art mi vendront mi ami tho
+<lb facs="#facs_409_r2l5" n="N002"/>lousan · et tart verrai fau
+<lb facs="#facs_409_r2l9" n="N003"/>giaus et mout real · quier remasus es del tot
+<lb facs="#facs_409_r2l12" n="N004"/>en baras · mos bels regnes · qui es dolz et cer
+<lb facs="#facs_409_r2l14" n="N005"/>tans · he  bela dosna queu am et desir · des
+<lb facs="#facs_409_r2l18" n="N006"/>ex vos plor · et del cor vos souspir · quan mi
+<lb facs="#facs_409_r2l21" n="N007"/>membre vostre cors auinenz · el dolz regars ·
+<lb facs="#facs_409_r2l24" n="N008"/>et la bouche riens ·
+<lb facs="#facs_409_r2l25" n="N009"/><hi>D</hi>osna ben oi larberc sant julian · quan p̃
+<lb facs="#facs_409_r2l26" n="N010"/>miers · veng en vostre ric hostal · cainc dex ñ
+<lb facs="#facs_409_r2l27" n="N011"/>feis tant auinent iornal · ꝯ ikel ior quil
+<lb facs="#facs_409_r2l28" n="N012"/>forma de sa man · mirauill mei quan sot si
+<lb facs="#facs_409_r2l29" n="N013"/>gent bastir · et vn tal glaue afait per me
+<lb facs="#facs_409_r2l30" n="N014"/>aucir · et vn ꝯnort quist tant dolz et tan
+<lb facs="#facs_409_r2l31" n="N015"/>gens · se mocias liez ensin et jauzens ·
+    </p>
+</div>
+    <div type="lyrical_text" xml:id="BEdT_421.3"><!-- Altresi com Percevaus (Richart de Berbezill) -->
+    <p>
+        <lb facs="#facs_409_r4l3" n="N001"/>ltresi perceuaus · al tans q̃
+<lb facs="#facs_409_r4l5" n="N002"/>viuie · qui sesbahi desgardar ·
+<lb facs="#facs_409_r4l7" n="N003"/>et si non sab demandar · de coi seruie la lãnce
+<lb facs="#facs_409_r4l9" n="N004"/>et lon graaus · et eu sui altretaus · bona dos
+<lb facs="#facs_409_r4l11" n="N005"/>na quan vei rostre cors gent · ensiment mu
+<lb facs="#facs_409_r4l13" n="N006"/>bli quan vos remir · non aus pregar · ne ñ
+<lb facs="#facs_409_line_1611128695604_495" n="N007"/>sab ꝯsir ·
+<lb facs="#facs_409_r4l15" n="N008"/><hi>A</hi>ielle de sens et delaus · juene ou jois sa
+<lb facs="#facs_409_r4l16" n="N009"/>lie · vieille de preis et donrar · juene de bel
+<lb facs="#facs_409_r4l17" n="N010"/>dosnear  loing de folie · vielle destre leaus ·<note facs="#facs_409_r1" place="[direction]">
+<lb facs="#facs_409_r1l1" n="N001"/>XXIII</note><note facs="#facs_409_region_1611128534313_350" place="[direction]">
+<lb facs="#facs_409_line_1611128550660_360" n="N001"/>XXIV</note>
+<lb facs="#facs_409_line_1611128554562_363" n="N001"/>197.<pb facs="#facs_410" n="410" xml:id="img_0410"/>
+<lb facs="#facs_410_r2l2" n="N001"/>juene ou iouens est saus · vielle en toz biaus
+<lb facs="#facs_410_r2l4" n="N002"/>iouens auinens · vielle sanz viellazir · et jue
+<lb facs="#facs_410_r2l6" n="N003"/>ne dans et de gent acueillir ·
+    </p>
+</div>
+    <div type="lyrical_text" xml:id="BEdT_366.2"><!-- Altresi com cisnes fait quan deit morir chant (Peirol) -->
+      <p>
+          <lb facs="#facs_410_r2l8" n="N004"/>ltresi ꝯques fai quan deit
+<lb facs="#facs_410_r2l9" n="N005"/>morir chant · et se viaus gẽ
+<lb facs="#facs_410_r2l11" n="N006"/>sor morrai et amais de san · mol ma tengut
+<lb facs="#facs_410_r2l14" n="N007"/>amors al laz · et maint trauau suefert tas ne
+<lb facs="#facs_410_r2l18" n="N008"/>perdan que cere me teng · ꝯnois cainc mais
+<lb facs="#facs_410_r2l19" n="N009"/>non forfis ren ·
+      </p>
+  </div>
+<div><!-- Quant hom onratz torna en gran paubreira (Peire Vidal)  -->
+    <p><lb facs="#facs_410_r4l8" n="N001"/> i ꝯlenclaus qui a de mort dou
+<lb facs="#facs_410_r4l9" n="N002"/> tance · bastist dedenz · et trenche
+<lb facs="#facs_410_r4l10" n="N003"/>et fait archiere · enꝯtre lost et prent de nui
+<lb facs="#facs_410_r4l11" n="N004"/>re esmance · larcher defors · et es pluz engeis
+<lb facs="#facs_410_r4l12" n="N005"/>nos · et fiert deuant per oc quil seit rescous ·
+<lb facs="#facs_410_r4l13" n="N006"/>et mi dosne mi ten en tal balance ·<note facs="#facs_410_r1" place="[direction]">
+<lb facs="#facs_410_r1l1" n="N001"/>XXV</note><note facs="#facs_410_region_1611129506057_590" place="[direction]">
+    <lb facs="#facs_410_line_1611129511362_593" n="N001"/>XXVI</note>
+</p>
+</div>
+    <div type="lyrical_text" xml:id="BEdT_194.7"><!-- Estat aurai de chantar (Gui d'Uisel) -->
+    <p>
+        <pb facs="#facs_411" n="411" xml:id="img_0411"/>
+<lb facs="#facs_411_line_1611130155069_807" n="N001"/>vs dosne ab vn dolz regart que
+<lb facs="#facs_411_r1l2" n="N002"/>firent vostre oeill larron · qui
+<lb facs="#facs_411_r1l3" n="N003"/>vindrent mon cor emblar · mais non firẽt
+<lb facs="#facs_411_r1l5" n="N004"/>mesproison · et post que mon cor auez lai ·
+<lb facs="#facs_411_r1l8" n="N005"/>non crei que vos morir mi lai · per oc ben sai
+<lb facs="#facs_411_r1l10" n="N006"/>que sen volez aucirre · non pos morir atant
+<lb facs="#facs_411_r1l12" n="N007"/>honrat martyre ·
+    </p>
+</div>
+    <div type="lyrical_text" xml:id="BEdT_461.41"><!-- Biau m'est que je chant (Anonyme) -->
+    <p>
+        <lb facs="#facs_411_r2l2" n="N001"/>iau mest que chant quan
+<lb facs="#facs_411_r2l3" n="N002"/>vei del fau cader la foille ꝯ
+<lb facs="#facs_411_r2l4" n="N003"/>tre vau · que li ausel restent lor veis · per
+<lb facs="#facs_411_r2l5" n="N004"/>lou tens qui ses brunasis · en qui per ioi
+<lb facs="#facs_411_r2l6" n="N005"/>damor mesjau  dirai ꝯ sui damar iausis ·<note facs="#facs_411_region_1611130046564_754" place="[direction]">
+<lb facs="#facs_411_line_1611130095016_781" n="N001"/>XVII</note><note facs="#facs_411_region_1611130043103_751" place="[direction]">
+<lb facs="#facs_411_line_1611130097576_784" n="N001"/>XVIII</note>
+<lb facs="#facs_411_r3l1" n="N001"/>198.<pb facs="#facs_412" n="412" xml:id="img_0412"/><note facs="#facs_412_region_1611130543718_1016" place="[direction]">
+<lb facs="#facs_412_line_1611130546733_1019" n="N001"/>XXIX</note><note facs="#facs_412_r1" place="[direction]">
+<lb facs="#facs_412_r1l1" n="N001"/>XXX·</note>
+    </p>
+</div>
+    <div type="lyrical_text" xml:id="BEdT_461.206"><!-- Quan vei les praz verdesir (Anonyme) -->
+    <p>
+        <lb facs="#facs_412_r3l2" n="N001"/>van vei les praz verdesir · et
+<lb facs="#facs_412_r3l3" n="N002"/>parens la flor granea · adonq̃s
+<lb facs="#facs_412_r3l4" n="N003"/>pens et ꝯsir · damors quainsi malegrea · per
+<lb facs="#facs_412_r3l6" n="N004"/>vn pou non ma tuea · tan soen souspir · caĩc
+<lb facs="#facs_412_r3l7" n="N005"/>non vi tan for colea senes colp ferir · aei ·
+<lb facs="#facs_412_r3l8" n="N006"/><hi>T</hi>ota nuit souspir et veill · et tressal tote
+<lb facs="#facs_412_r3l9" n="N007"/>endormia · per oc car ueraire mes quel meus
+<lb facs="#facs_412_r3l10" n="N008"/>amis se resia · a  dex ꝯseri garia · sensi deuẽ
+<lb facs="#facs_412_r3l11" n="N009"/>gues · vna nuit par escaria qua me sen vẽ
+<lb facs="#facs_412_r3l12" n="N010"/>gues · aei ·
+<lb facs="#facs_412_r3l13" n="N011"/><hi>D</hi>onna qui amor saten ben de auer fin co
+<lb facs="#facs_412_r3l14" n="N012"/>raie · tal ni a quades la pren puis la laissa
+<lb facs="#facs_412_r3l15" n="N013"/>per folaie · maiz eu len ten fin corage · ensi
+<lb facs="#facs_412_r3l16" n="N014"/>lealment · cainc dosna del mieu parage · nõ
+<lb facs="#facs_412_line_1611130972233_1160" n="N015"/>ou fiz tant gent · aei ·
+<lb facs="#facs_412_r3l18" n="N016"/><hi>D</hi>osna qui amie non a · ben si gart que
+<lb facs="#facs_412_r3l19" n="N017"/>mais non aia · quamors pou vie demag · ni
+<lb facs="#facs_412_r3l20" n="N018"/>tan ni quan non sapia · senes colp fai mort
+<lb facs="#facs_412_r3l21" n="N019"/>et plaia · tal ia non garria · per nul mege
+<lb facs="#facs_412_r3l22" n="N020"/>que ie naia · se mors non loida · aei ·
+<lb facs="#facs_412_r3l23" n="N021"/><hi>M</hi>essagier leuaz matin et vaimen la
+<lb facs="#facs_412_r3l24" n="N022"/>gran iorna a · la chancon amon amic · li por
+<lb facs="#facs_412_r3l25" n="N023"/>taz en sa ꝯtraa · digas li que mol magraa ·
+<lb facs="#facs_412_r3l26" n="N024"/>quan membres del song · quel mi dist
+<lb facs="#facs_412_r3l27" n="N025"/>quan mot baisaa · soz mon paueillon · aei ·
+<lb facs="#facs_412_r3l28" n="N026"/><hi>D</hi>ins ma chambre encortinaa · fu il alar
+<lb facs="#facs_412_r3l29" n="N027"/>ton · dins ma chambre bendoraa · fu il en
+<lb facs="#facs_412_r3l31" n="N028"/>prison ·
+    </p>
+</div>
+    <div type="lyrical_text" xml:id="BEdT_134.1"><!-- De bon loc moven mes chansons (Elias Fonsalada) -->
+    <p>
+        <lb facs="#facs_412_r3l32" n="N029"/>e bon loc mouen mes chancõs
+<lb facs="#facs_412_line_1611130653118_1127" n="N001"/>per queu me dei trair aenant · de ben a
+<lb facs="#facs_412_r4l2" n="N002"/>mar totes saisons · quamors men uensarci
+<lb facs="#facs_412_r4l3" n="N003"/>lou dan · queu nai sufert et sufrirai · trus
+<lb facs="#facs_412_r4l6" n="N004"/>que la sap qual mal quen trai · simpan
+<lb facs="#facs_412_r4l8" n="N005"/>tais al cor en balans · que ben pot venser
+<lb facs="#facs_412_r4l9" n="N006"/>vns enfans ·
+<lb facs="#facs_412_r4l10" n="N007"/><hi>P</hi>er dieu donna car mi euos uan celes qͥ
+<lb facs="#facs_412_r4l11" n="N008"/>an druz gaban · et disons que trop en perdõs
+<lb facs="#facs_412_r4l12" n="N009"/>nai chantat nen irai chantan · lou cor non
+<lb facs="#facs_412_line_1612981177624_1616" n="N010"/>l
+<lb facs="#facs_412_r4l13" n="N011"/>pot dit co quil prai · la bouche non pausa peis
+<lb facs="#facs_412_r4l14" n="N012"/>trai · maiz vol murir per vos amans · que des
+<lb facs="#facs_412_line_1611130661791_1131" n="N013"/>amans viure dous tanz ·
+<lb facs="#facs_412_r4l16" n="N014"/><hi>I</hi>a nou gabare lous bretons qualtresi vau
+<lb facs="#facs_412_r4l17" n="N015"/>ꝯ il musan · et vei quades faz dun dan douz ·
+<lb facs="#facs_412_r4l18" n="N016"/>car li soi tan fings sos enians · sin parc de lei
+<lb facs="#facs_412_r4l19" n="N017"/>deus que farai · sui roman arta poc osai · be
+<lb facs="#facs_412_r4l20" n="N018"/>lamei er uilan dostanz · quaissi vais doublan
+<lb facs="#facs_412_r4l21" n="N019"/>mos talanz ·
+<lb facs="#facs_412_r4l22" n="N020"/><hi>P</hi>os fait mauez fait mi joious · per chausi
+<lb facs="#facs_412_r4l23" n="N021"/>men vos odeman · et traiez mes ielz ambes
+<lb facs="#facs_412_r4l24" n="N022"/>dos · sanc posui usanei camnam · quen nobs
+<lb facs="#facs_412_r4l25" n="N023"/>ames et mielz et maiz · queu non dic ni
+<lb facs="#facs_412_r4l26" n="N024"/>no os odiri · ben sai de ver or moi lenians · sius
+<lb facs="#facs_412_line_1611130667250_1134" n="N025"/>auses diri mos talans ·
+<lb facs="#facs_412_r4l28" n="N026"/><hi>A</hi>nc non raisonai denan vos · anc tan non
+<lb facs="#facs_412_r4l29" n="N027"/>vos estui denan · quar anc sens vos sei enoios ·
+<lb facs="#facs_412_r4l30" n="N028"/>quadas die merces et clam · queu non lai tͦp
+<lb facs="#facs_412_r4l31" n="N029"/>ni sai nilai · merses car ami dosn non plai · sap
+<lb facs="#facs_412_r4l32" n="N030"/>chaz quan vei vostre semblanz · pluz soi mus<pb facs="#facs_413" n="413" xml:id="img_0413"/>
+<lb facs="#facs_413_r1l1" n="N001"/>que non soi parlanz ·
+<lb facs="#facs_413_r1l2" n="N002"/><hi>B</hi>eus ioens nobs esṭ nuns enans · quar
+<lb facs="#facs_413_r1l3" n="N003"/>vau toz iors de vos clamans ·
+<lb facs="#facs_413_r1l4" n="N004"/><hi>D</hi>el rei daragon pren talanz · veiaque soz
+<lb facs="#facs_413_r1l5" n="N005"/>preis es granz ·
+    </p>
+    </div>
+    <div type="lyrical_text" xml:id="BEdT_461.17"><!-- Amors, dousors, mi assaja (Anonyme) -->
+    <p>
+        <lb facs="#facs_413_r1l6" n="N006"/>mors dousors mi assaia ·
+<lb facs="#facs_413_r1l7" n="N007"/>valors richors mi menaia ·
+<lb facs="#facs_413_r1l9" n="N008"/>gensors que flors es pluz gaia · esel quaissi
+<lb facs="#facs_413_r1l10" n="N009"/>mauci em plaia · per que non vol quautra
+<lb facs="#facs_413_r1l11" n="N010"/>meschaia · mais il me tormenta et mesglaia ·
+<lb facs="#facs_413_r1l12" n="N011"/>don soument sent · martire ꝯsire · car dire ñ
+<lb facs="#facs_413_r1l14" n="N012"/>aus mas quil maia · cors ꝯumens iens · traire
+<lb facs="#facs_413_r1l16" n="N013"/>delire quabrire · quen fai mi menaia · et mi
+<lb facs="#facs_413_r1l18" n="N014"/>te en tal iustenca · que dal non ai souinenca ·
+<lb facs="#facs_413_r1l22" n="N015"/>mais de leis qui toz iors ienca · et pois sun fai
+<lb facs="#facs_413_r1l26" n="N016"/>aperuenca · qua ia de samor tenenca · per q̃u
+<lb facs="#facs_413_r1l27" n="N017"/>momet afustenca · car ondranca · e pesanca
+<lb facs="#facs_413_line_1605790842020_109" n="N001"/>lenlanca sel doptanca · quab semlanca · quen
+<lb facs="#facs_413_r2l3" n="N002"/>fai mi retrai · que iamai non don desesperã
+<lb facs="#facs_413_r2l7" n="N003"/>ca · per quatendrai e uerrai si iamai troua
+<lb facs="#facs_413_r2l10" n="N004"/>rai ablei nulla ạcordanca · si que lesmai
+<lb facs="#facs_413_r2l11" n="N005"/>que ieu nai torn en iai dun murrai si non
+<lb facs="#facs_413_r2l12" n="N006"/>len pren pizanca ·
+    </p>
+</div>
+    <div type="lyrical_text" xml:id="BEdT_461.46"><!-- L'altrier cuidai aber druda (Anonyme) -->
+    <p>
+        <lb facs="#facs_413_r2l16" n="N007"/>altrier cuidai aber druda to
+<lb facs="#facs_413_r2l20" n="N008"/>ta la meillor · ꝯques egusse ue
+<lb facs="#facs_413_r2l23" n="N009"/>guda et la belisor · velle antine paupre et nu
+<lb facs="#facs_413_r2l28" n="N010"/>da ben parlant damor · trames per oc quel
+<lb facs="#facs_413_r2l33" n="N011"/>saluda et fac plaz gensor · mais la trace ma
+<lb facs="#facs_413_r2l36" n="N012"/>lastruda queu per liei oi dat · veis vin e tro
+<lb facs="#facs_413_r2l39" n="N013"/>blat · peis et por salat · e loi calcada et vestuda
+<lb facs="#facs_413_r3l1" n="N001"/>199.<pb facs="#facs_414" n="414" xml:id="img_0414"/>
+<lb facs="#facs_414_r1l3" n="N001"/>si men ab boisat · quen loc damige es ven
+<lb facs="#facs_414_r1l7" n="N002"/>guda · en tens tenebror · tint son pan en sor ·
+<lb facs="#facs_414_r1l11" n="N003"/>et eu sus li cor · et trobai la piau caluda · cor
+<lb facs="#facs_414_r1l14" n="N004"/>de el col · espaulle aguda · memella pendant et
+<lb facs="#facs_414_r1l19" n="N005"/>viuda · ꝯ borsa pastor · pis ossut et plat · el vẽ
+<lb facs="#facs_414_r1l22" n="N006"/>tre ridat · maigre rains · et cuisse ruda · dur
+<lb facs="#facs_414_r1l25" n="N007"/>genoill et flat · et quant lai apercude ·es
+<lb facs="#facs_414_r1l29" n="N008"/>me vos irat · ab itant vit ala fuda · non sui
+<lb facs="#facs_414_r1l31" n="N009"/>arrestat ·
+<lb facs="#facs_414_r1l32" n="N010"/><hi>T</hi>an menes el cor creguda · rancune et gra
+<lb facs="#facs_414_r1l33" n="N011"/>mor · que ꝯtinence ai perduda damar per amor ·
+<lb facs="#facs_414_r1l34" n="N012"/>q̃ pensaua la canuda · que non ab calor · et vo
+<lb facs="#facs_414_line_1613027248895_175" n="N013"/>t
+<lb facs="#facs_414_r1l35" n="N014"/>lie esre batuda subra son tabor · non ab tan lã
+<lb facs="#facs_414_r1l36" n="N015"/>gue esmoluda · quegusse aꝯtat · demei la me
+<lb facs="#facs_414_r1l37" n="N016"/>tat · del mal quab pensat · dont deurie essre
+<lb facs="#facs_414_line_1613027300174_183" n="N017"/>et
+<lb facs="#facs_414_r1l38" n="N018"/>teguda per son lait <hi><hi rend="strikethrough:true; fontSize:0.0; kerning:0;">peccuda ·</hi></hi> peceat · tos agut
+<lb facs="#facs_414_r1l39" n="N019"/><hi rend="strikethrough:true; fontSize:0.0; kerning:0;"><hi>da</hi> e</hi> ta et mal qui suda · sanz aber retor ·
+<lb facs="#facs_414_r1l40" n="N020"/>freit et seif et plor · od fresche dolor · ni ial
+<lb facs="#facs_414_r1l41" n="N021"/>tendre ni paruda · que non sie amort feruda ·
+<lb facs="#facs_414_r1l42" n="N022"/>de tal mal qui non la duda · ainz la teigne
+<lb facs="#facs_414_r1l43" n="N023"/>en langor · nel non ait denfat for pani mesalat ·
+<lb facs="#facs_414_r1l44" n="N024"/>et carne de vella truda · ou de porc sorsemat ·
+<lb facs="#facs_414_r1l45" n="N025"/>pis de mar qui deloig puda  vin cras et boutat ·
+<lb facs="#facs_414_r1l46" n="N026"/>ian ñ es tant irascuda quẽ quidai essre vẽgat ·
+</p>
+    </div>
+    <div type="lyrical_text" xml:id="BEdT_461.102"><!-- Ensement com la panthere (Anonyme) -->
+    <p>
+        <lb facs="#facs_414_r2l1" n="N001"/>nsement ꝯ la panthere qui
+<lb facs="#facs_414_r2l5" n="N002"/>porte tan bone odor · et asi
+<lb facs="#facs_414_r2l11" n="N003"/>bele color · que non es beste saluage · qui par
+<lb facs="#facs_414_r2l16" n="N004"/>force et par outrage · sie tan male ni fere ·
+<lb facs="#facs_414_r2l18" n="N005"/>que si loig ꝯ puet choisir · non auges pres
+<lb facs="#facs_414_r2l22" n="N006"/>lou muir · et en altretal semblance · mi ten
+<lb facs="#facs_414_r2l26" n="N007"/>amor en balance · Q̃ fas segre che q̃nͣ
+<lb facs="#facs_414_r2l31" n="N008"/>pos aber · ꝙ sec mõ dãp ꝑfar lousen plaser ·
+<lb facs="#facs_414_r2l32" n="N009"/><hi>N</hi>e ia por ce non plantere · negun tor da
+<lb facs="#facs_414_r2l33" n="N010"/>mor · ainz prendrai en ioi dolor · son gentill
+<lb facs="#facs_414_r2l34" n="N011"/>cor del parage · mes sel abes encorage · merces
+<lb facs="#facs_414_r2l35" n="N012"/>que non es encore · ensinc non pogres garir ·
+<lb facs="#facs_414_r2l36" n="N013"/>de mon mal trait et merir · asa simple sem
+<lb facs="#facs_414_r2l37" n="N014"/>blance · et asa douce acointance · ou atan
+<lb facs="#facs_414_r2l38" n="N015"/>gran beltat en son poder · per que non pos
+<lb facs="#facs_414_r2l39" n="N016"/>laissat del veder ·
+    </p>
+</div>
+    <div type="lyrical_text" xml:id="BEdT_163.3"><!-- Jamais rien tan n'en porroit far amor (Gaucelm Faidit) -->
+        <p>
+            <pb facs="#facs_415" n="415" xml:id="img_0415"/>
+<lb facs="#facs_415_r1l5" n="N001"/>amais rĩn tan ñ porroit far amor kiu
+<lb facs="#facs_415_r1l7" n="N002"/>sie ennui ne mal trais ne afans · car el
+<lb facs="#facs_415_r1l9" n="N003"/>ma fait tant auinent soucors · que re
+<lb facs="#facs_415_r1l12" n="N004"/>stauraz males pertes el dans · quaiue fes
+<lb facs="#facs_415_r1l15" n="N005"/>a dreit per mon folage · et si ainc ior de
+<lb facs="#facs_415_r1l19" n="N006"/>· ren ma fet mari · eu lou pardon lou de
+<lb facs="#facs_415_r1l21" n="N007"/>trie el damage · car tal dosna fai mon
+<lb facs="#facs_415_r1l22" n="N008"/>preis acueillir · qui mamende tuit que
+<lb facs="#facs_415_line_1602143400869_2720" n="N009"/>ma fait sufrir ·
+<lb facs="#facs_415_r2l1" n="N001"/><hi>M</hi>ol mi sab gent lou cor daltres partir · et
+<lb facs="#facs_415_r2l2" n="N002"/>aiostar en li toz mes talanz  amors lou ior q̃l
+<lb facs="#facs_415_r2l3" n="N003"/>fist del tans venir · ala bele ·don vn corteis sem
+<lb facs="#facs_415_r2l4" n="N004"/>blanz  de ses biaus exendredist mon corage ·
+<lb facs="#facs_415_r2l5" n="N005"/>si que ainc puis nou pos virar aillors · adonc
+<lb facs="#facs_415_r2l6" n="N006"/>sab eu que lueill meront message  damors ·
+<lb facs="#facs_415_r2l7" n="N007"/>qual cor me ven freis et calors · iois et ꝯsirs 
+<lb facs="#facs_415_line_1602143470349_2778" n="N008"/>ardimens et paors ·
+        </p>
+    </div>
+    <div type="lyrical_text" xml:id="BEdT_421.10"><!-- Tuit demandent qu'est devengude amors  (Richart de Berbezill) -->
+    <p>
+        <lb facs="#facs_415_r2l11" n="N009"/>vit demandent quest deuen
+<lb facs="#facs_415_r2l14" n="N010"/>gude amors · mais oiant toz
+<lb facs="#facs_415_r2l18" n="N011"/>en dirai la vertaz · tout autresi ꝯ del soleill
+<lb facs="#facs_415_r3l1" n="N001"/>200<pb facs="#facs_416" n="416" xml:id="img_0416"/>
+<lb facs="#facs_416_r1l2" n="N001"/>estaz · qui per mant leu iete sa resplendor ·
+<lb facs="#facs_416_r1l5" n="N002"/>e al seir vait colcar tout ensament · sinc
+<lb facs="#facs_416_r1l10" n="N003"/>fai amor quan a per tot cercat · et quan
+<lb facs="#facs_416_r1l14" n="N004"/>non pot vengher ason agrap · torne sen lai
+<lb facs="#facs_416_r1l17" n="N005"/>donc ven premerament ·
+    </p>
+</div>
+    <div type="lyrical_text" xml:id="BEdT_155.1"><!-- Greu feira nuls hom faillensa (Folquet de Marseilla) -->
+    <p>
+        <lb facs="#facs_416_r3l2" n="N001"/>nla vostre maintenence · mai
+<lb facs="#facs_416_r3l7" n="N002"/>mis amors franchement ·
+<lb facs="#facs_416_r3l10" n="N003"/>queu fusse mors verament · se non fust ma
+<lb facs="#facs_416_line_1613027689136_259" n="N004"/>e
+<lb facs="#facs_416_r3l14" n="N005"/>ꝯnoissence · dont non eu en me peruence ·
+<lb facs="#facs_416_r3l16" n="N006"/>don muir quan pluz sui plaignens · dont
+<lb facs="#facs_416_r3l19" n="N007"/>mire me tan suuent · que ma cancon en
+<lb facs="#facs_416_r3l24" n="N008"/>peruence · naurie maiz de valence ·<pb facs="#facs_417" n="417" xml:id="img_0417"/>
+    </p>
+</div>
+    <div type="lyrical_text" xml:id="BEdT_461.152"><!-- Lou premer jor que vi (Anonyme) -->
+    <p>
+    <lb facs="#facs_417_r1l3" n="N001"/>eu premer ior que vi mabeli
+<lb facs="#facs_417_r1l7" n="N002"/>li vostres biaus cors gens ·
+<lb facs="#facs_417_r1l10" n="N003"/>douz et plaisens corteis et debonaire · et
+<lb facs="#facs_417_r1l13" n="N004"/>seu sap dir ni faire · nule ren · que vos ten
+<lb facs="#facs_417_r1l16" n="N005"/>gues aben · ma douce chere amige al cors
+<lb facs="#facs_417_r1l18" n="N006"/>plaisen et gai · sachaz que mol mi plai ·
+<lb facs="#facs_417_r1l21" n="N007"/>seu fai ren qui vos sie ·
+    </p>
+</div>
+    <div type="lyrical_text" xml:id="BEdT_273.1"><!-- S'ira d'amor tengues amic jauzen (Jordan Bonel de Cofolen) -->
+    <p>
+        <lb facs="#facs_417_r2l2" n="N001"/>J con laigue suffre lanaf courẽt
+<lb facs="#facs_417_r2l5" n="N002"/>po ben tan gran ke nul hou
+<lb facs="#facs_417_r2l9" n="N003"/>mes susten · ꝑ ·i· clabel pert sõ efforcalm̃t · pot ñ
+<lb facs="#facs_417_r2l14" n="N004"/>suffrar mãis q̃ nule autͤ ren · si ua dele qͥ defail
+<lb facs="#facs_417_r2l21" n="N005"/>a merces · et molt mi plas que daltre part
+<lb facs="#facs_417_r2l24" n="N006"/>mi vite · et sab per ver que non aus ren
+<lb facs="#facs_417_r2l27" n="N007"/>desdire · el vol mon dan  · et eu li vol amor  · 
+<lb facs="#facs_417_r2l29" n="N008"/>quer assas sui defaillens amador ·
+<lb facs="#facs_417_r3l1" n="N001"/>201.<pb facs="#facs_418" n="418" xml:id="img_0418"/>
+    </p>
+</div>
+    <div type="lyrical_text" xml:id="BEdT_223.1"><!-- L'aigue puge contre mont (Guillem Magret) -->
+    <p>
+        <lb facs="#facs_418_r1l4" n="N001"/>aigue puge ꝯtre mont
+<lb facs="#facs_418_r1l9" n="N002"/>al fum et al niule et al
+<lb facs="#facs_418_r1l12" n="N003"/>vent · et quant est aut et descent · et sa
+<lb facs="#facs_418_r1l16" n="N004"/>chent tuit cil del mont · quensement
+<lb facs="#facs_418_r3l6" n="N001"/>puge valors · abenfas et ab ennor · et
+<lb facs="#facs_418_r3l11" n="N002"/>quant est aut descendrie · son ben non
+<lb facs="#facs_418_r3l15" n="N003"/>la soustenie · et degrem esser enuious 
+<lb facs="#facs_418_r3l18" n="N004"/>del markeis et des altres prous · et des
+<lb facs="#facs_418_r3l22" n="N005"/>onras rie fas kui fen · 
+    </p>
+</div>
+    <div type="lyrical_text" xml:id="BEdT_70.1"><!-- En joi mof lou vers et commens (Bernart de Ventadorn) -->
+      <p> 
+          <pb facs="#facs_419" n="419" xml:id="img_0419"/>
+<lb facs="#facs_419_r1l1" n="N001"/>n ioi mof lou vers et ꝯmẽs
+<lb facs="#facs_419_r1l5" n="N002"/>et en ioi reman et fenis · &amp;
+<lb facs="#facs_419_r1l8" n="N003"/>sab q̃ bone en ÷ la fins carbõs ÷
+<lb facs="#facs_419_r1l12" n="N004"/>li ꝯmencemens · per la bone ꝯmencance 
+<lb facs="#facs_419_r1l17" n="N005"/>mi ven iois et alegrance · et per oc dei la
+<lb facs="#facs_419_r1l18" n="N006"/>bone fin grasir  que toz bens faz vei lau
+<lb facs="#facs_419_line_1606149999987_53" n="N007"/>sar al fenir ·
+      </p>
+  </div>
+    <div type="lyrical_text" xml:id="BEdT_167.43"><!-- Non m'alegre chans ni cris (Gaucelm Faidit) -->
+    <p>
+        <lb facs="#facs_419_r2l3" n="N001"/>on malegre chans ni cris 
+<lb facs="#facs_419_r2l6" n="N002"/>dauzel · non fai cors en greiz ·
+<lb facs="#facs_419_r2l8" n="N003"/>ni non sap ꝑ q̃ tenghez ni per
+<lb facs="#facs_419_r2l14" n="N004"/>des mous dis · car ben lous perdrie · sen cui
+<lb facs="#facs_419_r2l17" n="N005"/>die que volghes  ami dosn pres ni mer
+<lb facs="#facs_419_r2l20" n="N006"/>ces · car non tengues que per me si chausis ·
+<lb facs="#facs_419_r2l24" n="N007"/>perdons tal mi sui faillis ·
+<lb facs="#facs_419_r3l1" n="N001"/>202.
+    </p>
+</div>
+    <div type="lyrical_text" xml:id="BEdT_70.24"><!-- L'an que fueille et bosc jaurrist (Bernart de Ventadorn) -->
+        <p>
+            <pb facs="#facs_420" n="420" xml:id="img_0420"/>
+<lb facs="#facs_420_r1l2" n="N001"/>an que fueille et bosc jaur
+<lb facs="#facs_420_r1l4" n="N002"/>rist · que flor sespan et ver
+<lb facs="#facs_420_r1l7" n="N003"/>dure · per vergiers et per praz · et lauzel
+<lb facs="#facs_420_r1l10" n="N004"/>qui sestai teuic <hi rend="strikethrough:true; fontSize:0.0; kerning:0;">et</hi> sunt gai · per me lou
+<lb facs="#facs_420_r1l13" n="N005"/>fueillas · altresi chant et mesbaude · et
+<lb facs="#facs_420_r1l18" n="N006"/>vif de ioi et rauerde · et fueill segont
+<lb facs="#facs_420_line_1606223774121_56" n="N007"/>ma nature ·
+        </p>
+    </div>
+    <div type="lyrical_text" xml:id="BEdT_375.14"><!-- Loiaus amis cui amors tient (Pons de Capdoill) -->
+    <p>
+        <lb facs="#facs_420_r2l5" n="N001"/>oiaus amis cui amors tiẽt
+<lb facs="#facs_420_r2l9" n="N002"/>ioious · deit ben essre alegres
+<lb facs="#facs_420_r2l12" n="N003"/>et jauzens · lars et ardis adreis et amoros · 
+<lb facs="#facs_420_r2l15" n="N004"/>ere quan veit lou gais termines gent · q̃
+<lb facs="#facs_420_r2l18" n="N005"/>foille et flors sespandis per la plaigne · el
+<lb facs="#facs_420_r2l20" n="N006"/>rouseignol chante iouste el vert fueill · mais
+<lb facs="#facs_420_r2l22" n="N007"/>eu non am lor dous chans tant ꝯsueill · 
+<lb facs="#facs_420_r2l25" n="N008"/>pos mi dosn plaz que toz iors mi suffragne · 
+    </p>
+</div>
+    <div type="lyrical_text" xml:id="BEdT_16.14"><!-- Tal amor ai en mon cor encubide (Albertet) -->
+       <p>
+           <pb facs="#facs_421" n="421" xml:id="img_0421"/>
+<lb facs="#facs_421_r2l3" n="N001"/>al amor ai en mon cor encubi
+<lb facs="#facs_421_r2l4" n="N002"/>de · per que mi ten per ric et
+<lb facs="#facs_421_r2l6" n="N003"/>per honras · et plaz me mout que sie en
+<lb facs="#facs_421_r5l2" n="N001"/>amoraz · et en am n<gap/>
+<lb facs="#facs_421_r5l3" n="N002"/>causide · et pos amor me<gap/>
+<lb facs="#facs_421_r5l7" n="N003"/>me pot tot lou tort amendar · que magra
+<lb facs="#facs_421_r5l10" n="N004"/>se dital mi destregne  et seu fai ben bone a
+<lb facs="#facs_421_line_1606324501520_89" n="N005"/>uenture auegne ·
+<lb facs="#facs_421_r6l1" n="N001"/>203<pb facs="#facs_422" n="422" xml:id="img_0422"/>
+       </p>
+   </div>
+    <div type="lyrical_text" xml:id="BEdT_461.150"><!-- Lo dous chans que l'auzel cride (Anonyme) -->
+    <p>
+        <lb facs="#facs_422_r1l2" n="N001"/><gap/>que lauzel cride ·
+<lb facs="#facs_422_r1l7" n="N002"/><gap/> esbaudit mon corage · ha 
+<lb facs="#facs_422_r1l10" n="N003"/><gap/>en per boschage · la veis ques de le par
+<lb facs="#facs_422_r1l15" n="N004"/>tide · ere mes venguz de nouel lou talens ·
+<lb facs="#facs_422_r1l21" n="N005"/>noton et ridel · et amerai ꝯme pastor 
+<lb facs="#facs_422_line_1606660724595_87" n="N006"/>aurill et mai et tans pascor · 
+    </p>
+</div>
+    <div type="lyrical_text" xml:id="BEdT_293.13"><!-- Bel m'es quan sunt li fruit madur (Marcabru) -->
+    <p>
+        <lb facs="#facs_422_r2l1" n="N001"/>el mes quan sunt li fruit
+<lb facs="#facs_422_r2l3" n="N002"/>madur · que rauerdissent
+<lb facs="#facs_422_r2l7" n="N003"/>li gaim · et lauzel per lou tens obscur 
+<lb facs="#facs_422_r2l11" n="N004"/>baissent delor veis lou refren · tan redou
+<lb facs="#facs_422_r2l14" n="N005"/>ten la tenebror · et mous corages senan
+<lb facs="#facs_422_r2l17" n="N006"/>ce · et chant per ioi de fine amor · ou nais
+<lb facs="#facs_422_line_1606660860512_134" n="N007"/>ma bone esperance · <pb facs="#facs_423" n="423" xml:id="img_0423"/>
+    </p>
+</div>
+    <div type="lyrical_text" xml:id="BEdT_16.5"><!-- Ha ! Me non fai chantar foille ne flor (Albertet) -->
+    <p>
+        <lb facs="#facs_423_r1l1" n="N001"/>a  me non fai chantar foil
+<lb facs="#facs_423_r1l5" n="N002"/>le ni flor · ni chanz dau
+<lb facs="#facs_423_r1l8" n="N003"/>zel · ni louseignol en mai  · mais la meil
+<lb facs="#facs_423_r1l10" n="N004"/>leur de toutes les meillors · et la gensors de
+<lb facs="#facs_423_r1l12" n="N005"/>la gensor queu sai · mi fai chantar lou
+<lb facs="#facs_423_r1l15" n="N006"/>preis que de li nai · car per son preis dei
+<lb facs="#facs_423_r1l19" n="N007"/>ie ben chancon faire · si ferai eu pos li vẽ
+<lb facs="#facs_423_r1l21" n="N008"/>aplaiser · car ren non fai fors que lou
+<lb facs="#facs_423_r1l25" n="N009"/>son voler · tant es vaillanz et sage et
+<lb facs="#facs_423_r1l28" n="N010"/>debonaire ·
+    </p>
+</div>
+    <div type="lyrical_text" xml:id="BEdT_46.2"><!-- A chantar mes al cor que non devrie (Beatriz de Dia) -->
+    <p>
+        <lb facs="#facs_423_r2l3" n="N001"/>chantar mes al cor que ñ
+<lb facs="#facs_423_r2l5" n="N002"/>deurie · tant mi rancun ce
+<lb facs="#facs_423_r2l7" n="N003"/>le a qui sui amigs · et si lam mais que
+<lb facs="#facs_423_r2l10" n="N004"/>nule ren qui sie · non mi val ren beltat
+<lb facs="#facs_423_r3l1" n="N001"/>204<pb facs="#facs_424" n="424" xml:id="img_0424"/>
+<lb facs="#facs_424_line_1606735785205_46" n="N001"/>ni curtesie · ne ma bontaz ne mon pres ne
+<lb facs="#facs_424_line_1606735799439_50" n="N002"/>mon sen · altresi sui enganade et tragide ·
+<lb facs="#facs_424_line_1606735804048_53" n="N003"/>quesse fait vers lui desauinence ·
+    </p>
+</div>
+    <div type="lyrical_text" xml:id="BEdT_364.39"><!-- Quant hom est en altrui poder (Peire Vidal) -->
+    <p><lb facs="#facs_424_line_1606735818329_61" n="N001"/>vant hom est en altrui po
+<lb facs="#facs_424_r2l4" n="N001"/>der · non pos toz sous talanz ꝯplir · ainz
+<lb facs="#facs_424_r2l8" n="N002"/>aueir · souent aguerpir · per altre graz 
+<lb facs="#facs_424_r2l12" n="N003"/>lou sou voler · et pos en poder me sui mes 
+<lb facs="#facs_424_r2l17" n="N004"/>damors sigrai et maus et bens · et tors et
+<lb facs="#facs_424_r2l20" n="N005"/>dreis et dans et prous  quensi lou ꝯman
+<lb facs="#facs_424_line_1606735887718_134" n="N006"/>de raisons ·<note facs="#facs_424_region_1606736286544_176" place="[direction]">
+<lb facs="#facs_424_line_1606736320091_181" n="N001"/>Peire Vidal</note>
+    </p>
+</div>
+</div>
+</div>
+</body>
+</text>
+</TEI>
