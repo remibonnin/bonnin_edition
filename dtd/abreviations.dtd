@@ -106,7 +106,7 @@ le caractère Unicode U+FB00 LATIN SMALL LIGATURE FF
 <!ENTITY tilde1-nasale-m "<choice><expan><ex>m</ex></expan><abbr>&#x0303;</abbr></choice>">
 <!ENTITY tilde1-nasale-n "<choice><expan><ex>n</ex></expan><abbr>&#x0303;</abbr></choice>">
 <!ENTITY tilde1-nasale-en "<choice><expan><ex>en</ex></expan><abbr>&#x0303;</abbr></choice>">
-<!ENTITY tilde1-nasale-an "<choice><expan><ex>an</ex><abbr>&#x303;</abbr></choice>">
+<!ENTITY tilde1-nasale-an "<choice><expan><ex>an</ex></expan><abbr>&#x303;</abbr></choice>">
 <!ENTITY tilde4-us "<choice><expan><ex>us</ex></expan><abbr>⁹</abbr></choice>">
 <!ENTITY et-tironien-non-barré "<choice><expan>et</expan><abbr><am>&#x204A;</am></abbr></choice>">
 
