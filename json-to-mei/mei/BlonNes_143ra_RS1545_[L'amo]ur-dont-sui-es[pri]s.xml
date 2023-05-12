@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mei xmlns="http://www.music-encoding.org/ns/mei">
+  <meiHead>
+    <fileDesc>
+      <titleStmt>
+        <title/>
+        <respStmt>
+          <resp/>
+          <persName/>
+        </respStmt>
+      </titleStmt>
+      <pubStmt/>
+      <seriesStmt>
+        <title/>
+        <editor/>
+      </seriesStmt>
+      <sourceDesc/>
+    </fileDesc>
+    <encodingDesc/>
+    <workList>
+      <work>
+        <title/>
+        <composer/>
+        <contents>
+          <contentItem/>
+        </contents>
+      </work>
+    </workList>
+  </meiHead>
+  <music>
+    <body>
+      <mdiv>
+        <score>
+          <scoreDef>
+            <staffGrp>
+              <staffDef n="1" lines="5" notationtype="neume" clef.shape="G" clef.line="2"/>
+            </staffGrp>
+          </scoreDef>
+          <section n="1">
+            <measure>
+              <staff n="1">
+                <layer n="1">
+                  <syllable>
+                    <syl>[L’am-</syl>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl>o]ur</syl>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl>dont</syl>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl>sui</syl>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl>es[...]s·</syl>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl/>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl/>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl>me</syl>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl>se-</syl>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl>mont</syl>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl>de</syl>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl>[...]ant</syl>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl>com</syl>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl>hom</syl>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl>sou-</syl>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl>pris</syl>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl>[...]puet</syl>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl>a-</syl>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl>men-</syl>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl>der·</syl>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl/>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl>pe-</syl>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl>tit</syl>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl>i</syl>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl>[...]cou-</syl>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl>quis·</syl>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl>mais</syl>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl>bien</syl>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl>me</syl>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl>puis</syl>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl>van-</syl>
+                    <neume>
+                      <nc pname="b" oct="4" intm="n" tilt="se"/>
+                      <nc pname="a" oct="4" intm="n" tilt="se"/>
+                      <nc pname="g" oct="4" intm="n" tilt="se"/>
+                    </neume>
+                  </syllable>
+                  <syllable>
+                    <syl>ter</syl>
+                    <neume>
+                      <nc pname="f" oct="4" intm="n" tilt="se"/>
+                    </neume>
+                  </syllable>
+                  <syllable>
+                    <syl/>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl>se</syl>
+                    <neume>
+                      <nc pname="g" oct="4" intm="n" tilt="se"/>
+                    </neume>
+                  </syllable>
+                  <syllable>
+                    <syl>li</syl>
+                    <neume>
+                      <nc pname="a" oct="4" intm="n" tilt="se"/>
+                      <nc pname="b" oct="4" intm="n" tilt="se"/>
+                    </neume>
+                  </syllable>
+                  <syllable>
+                    <syl>plaist</syl>
+                    <neume>
+                      <nc pname="a" oct="4" intm="n" tilt="se"/>
+                    </neume>
+                  </syllable>
+                  <syllable>
+                    <syl>i’ai</syl>
+                    <neume>
+                      <nc pname="g" oct="4" intm="n" tilt="se"/>
+                    </neume>
+                  </syllable>
+                  <syllable>
+                    <syl>a-</syl>
+                    <neume>
+                      <nc pname="a" oct="4" intm="n" tilt="se"/>
+                      <nc pname="g" oct="4" intm="n" tilt="se"/>
+                    </neume>
+                  </syllable>
+                  <syllable>
+                    <syl>pris</syl>
+                    <neume>
+                      <nc pname="f" oct="4" intm="n" tilt="se"/>
+                    </neume>
+                  </syllable>
+                  <syllable>
+                    <syl>a</syl>
+                    <neume>
+                      <nc pname="g" oct="4" intm="n" tilt="se"/>
+                    </neume>
+                  </syllable>
+                  <syllable>
+                    <syl>loi-</syl>
+                    <neume>
+                      <nc pname="a" oct="4" intm="n" tilt="se"/>
+                      <nc pname="b" oct="4" intm="n" tilt="se"/>
+                    </neume>
+                  </syllable>
+                  <syllable>
+                    <syl>au-</syl>
+                    <neume>
+                      <nc pname="a" oct="4" intm="n" tilt="se"/>
+                      <nc pname="a" oct="4" intm="n" tilt="se"/>
+                      <nc pname="g" oct="4" intm="n" tilt="se"/>
+                    </neume>
+                  </syllable>
+                  <syllable>
+                    <syl>ment</syl>
+                    <neume>
+                      <nc pname="f" oct="4" intm="n" tilt="se"/>
+                      <nc pname="e" oct="4" intm="n" tilt="se"/>
+                      <nc pname="d" oct="4" intm="n" tilt="se"/>
+                    </neume>
+                  </syllable>
+                  <syllable>
+                    <syl>a-</syl>
+                    <neume>
+                      <nc pname="d" oct="4" intm="n" tilt="se"/>
+                      <nc pname="c" oct="4" intm="n" tilt="se"/>
+                    </neume>
+                  </syllable>
+                  <syllable>
+                    <syl>mer·</syl>
+                    <neume>
+                      <nc pname="c" oct="4" intm="n" tilt="se"/>
+                    </neume>
+                  </syllable>
+                  <syllable>
+                    <syl/>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl>a</syl>
+                    <neume>
+                      <nc pname="c" oct="4" intm="n" tilt="se"/>
+                    </neume>
+                  </syllable>
+                  <syllable>
+                    <syl>ce</syl>
+                    <neume>
+                      <nc pname="c" oct="4" intm="n" tilt="se"/>
+                      <nc pname="d" oct="4" intm="n" tilt="se"/>
+                    </neume>
+                  </syllable>
+                  <syllable>
+                    <syl>sunt</syl>
+                    <neume>
+                      <nc pname="f" oct="4" intm="n" tilt="se"/>
+                    </neume>
+                  </syllable>
+                  <syllable>
+                    <syl>mi</syl>
+                    <neume>
+                      <nc pname="g" oct="4" intm="n" tilt="se"/>
+                    </neume>
+                  </syllable>
+                  <syllable>
+                    <syl>pen-</syl>
+                    <neume>
+                      <nc pname="g" oct="4" intm="n" tilt="se"/>
+                      <nc pname="a" oct="4" intm="n" tilt="se"/>
+                      <nc pname="g" oct="4" intm="n" tilt="se"/>
+                    </neume>
+                  </syllable>
+                  <syllable>
+                    <syl>ser·</syl>
+                    <neume>
+                      <nc pname="f" oct="4" intm="n" tilt="se"/>
+                    </neume>
+                  </syllable>
+                  <syllable>
+                    <syl/>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl>et</syl>
+                    <neume>
+                      <nc pname="f" oct="4" intm="n" tilt="se"/>
+                    </neume>
+                  </syllable>
+                  <syllable>
+                    <syl>se-</syl>
+                    <neume>
+                      <nc pname="a" oct="4" intm="n" tilt="se"/>
+                    </neume>
+                  </syllable>
+                  <syllable>
+                    <syl>ront</syl>
+                    <neume>
+                      <nc pname="c" oct="5" intm="n" tilt="se"/>
+                      <nc pname="d" oct="5" intm="n" tilt="se"/>
+                    </neume>
+                  </syllable>
+                  <syllable>
+                    <syl>a</syl>
+                    <neume>
+                      <nc pname="c" oct="5" intm="n" tilt="se"/>
+                    </neume>
+                  </syllable>
+                  <syllable>
+                    <syl>touz</syl>
+                    <neume>
+                      <nc pname="b" oct="4" intm="n" tilt="se"/>
+                      <nc pname="a" oct="4" intm="n" tilt="se"/>
+                      <nc pname="g" oct="4" intm="n" tilt="se"/>
+                    </neume>
+                  </syllable>
+                  <syllable>
+                    <syl>dis</syl>
+                    <neume>
+                      <nc pname="f" oct="4" intm="n" tilt="se"/>
+                    </neume>
+                  </syllable>
+                  <syllable>
+                    <syl/>
+                    <neume/>
+                  </syllable>
+                  <syllable>
+                    <syl>ia</syl>
+                    <neume>
+                      <nc pname="g" oct="4" intm="n" tilt="se"/>
+                    </neume>
+                  </syllable>
+                  <syllable>
+                    <syl>n’es</syl>
+                    <neume>
+                      <nc pname="a" oct="4" intm="n" tilt="se"/>
+                      <nc pname="b" oct="4" intm="n" tilt="se"/>
+                    </neume>
+                  </syllable>
+                  <syllable>
+                    <syl>en</syl>
+                    <neume>
+                      <nc pname="a" oct="4" intm="n" tilt="se"/>
+                      <nc pname="a" oct="4" intm="n" tilt="se"/>
+                      <nc pname="g" oct="4" intm="n" tilt="se"/>
+                    </neume>
+                  </syllable>
+                  <syllable>
+                    <syl>quier</syl>
+                    <neume>
+                      <nc pname="f" oct="4" intm="n" tilt="se"/>
+                      <nc pname="e" oct="4" intm="n" tilt="se"/>
+                      <nc pname="d" oct="4" intm="n" tilt="se"/>
+                      <nc pname="e" oct="4" intm="n" tilt="se"/>
+                    </neume>
+                  </syllable>
+                  <syllable>
+                    <syl>os-</syl>
+                    <neume>
+                      <nc pname="e" oct="4" intm="n" tilt="se"/>
+                      <nc pname="d" oct="4" intm="n" tilt="se"/>
+                      <nc pname="c" oct="4" intm="n" tilt="se"/>
+                    </neume>
+                  </syllable>
+                  <syllable>
+                    <syl>ter·</syl>
+                    <neume>
+                      <nc pname="d" oct="4" intm="n" tilt="se"/>
+                    </neume>
+                  </syllable>
+                </layer>
+              </staff>
+            </measure>
+          </section>
+        </score>
+      </mdiv>
+    </body>
+  </music>
+</mei>

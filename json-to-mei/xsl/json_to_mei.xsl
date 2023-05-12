@@ -54,8 +54,8 @@
         
         <scoreDef>
             <staffGrp>
-                
-                <xsl:apply-templates select="descendant::item[kind = 'Clef']"/>
+                <staffDef n="1" lines="5" notationtype="neume" clef.shape="G" clef.line="2"/>
+                <!--<xsl:apply-templates select="descendant::item[kind = 'Clef']"/>--><!-- Missing in the source, need to update-->
             </staffGrp>
         </scoreDef>
         
@@ -64,6 +64,7 @@
         
     </xsl:template>
     
+    <!--
     <xsl:template match="item[kind = 'Clef']">
         <staffDef>
             
@@ -92,6 +93,7 @@
             
         </staffDef>
     </xsl:template>
+    -->
     
     <xsl:template match="item[kind = 'ZeileContainer']">
         <section>

@@ -32,7 +32,9 @@
       <mdiv>
         <score>
           <scoreDef>
-            <staffGrp/>
+            <staffGrp>
+              <staffDef n="1" lines="5" notationtype="neume" clef.shape="G" clef.line="2"/>
+            </staffGrp>
           </scoreDef>
           <section n="1">
             <measure>
