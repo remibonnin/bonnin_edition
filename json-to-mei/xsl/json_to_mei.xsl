@@ -65,34 +65,34 @@
     </xsl:template>
     
     <!--
-    <xsl:template match="item[kind = 'Clef']">
+        <xsl:template match="item[kind = 'Clef']">
         <staffDef>
-            
-            <xsl:attribute name="clef.shape">
-                <xsl:apply-templates select="shape"/>
-                
-            </xsl:attribute>
-            
-            <xsl:attribute name="n">
-                
-                <xsl:number level="single"/>
-            </xsl:attribute>
-            
-            <xsl:attribute name="clef.line">
-                <xsl:number value="'4'"/>
-            </xsl:attribute>
-            
-            <xsl:attribute name="lines">
-                <xsl:number value="'5'"/>
-            </xsl:attribute>
-            
-            
-            <xsl:attribute name="notationtype">
-                <xsl:apply-templates select="'neume'"/>
-            </xsl:attribute>
-            
+        
+        <xsl:attribute name="clef.shape">
+        <xsl:apply-templates select="shape"/>
+        
+        </xsl:attribute>
+        
+        <xsl:attribute name="n">
+        
+        <xsl:number level="single"/>
+        </xsl:attribute>
+        
+        <xsl:attribute name="clef.line">
+        <xsl:number value="'4'"/>
+        </xsl:attribute>
+        
+        <xsl:attribute name="lines">
+        <xsl:number value="'5'"/>
+        </xsl:attribute>
+        
+        
+        <xsl:attribute name="notationtype">
+        <xsl:apply-templates select="'neume'"/>
+        </xsl:attribute>
+        
         </staffDef>
-    </xsl:template>
+        </xsl:template>
     -->
     
     <xsl:template match="item[kind = 'ZeileContainer']">
@@ -130,35 +130,73 @@
             <xsl:element name="syl">
                 <xsl:apply-templates select="text"/>
             </xsl:element>
-            <neume>
-                <xsl:for-each select="descendant::grouped/item">
-                    <xsl:element name="nc">
-                        <xsl:attribute name="pname">
-                            <xsl:value-of select="translate(base/text(), 'ABCDEFG', 'abcdefg')"/>
-                        </xsl:attribute>
-                        <xsl:attribute name="oct">
-                            <xsl:value-of select="octave"/>
-                        </xsl:attribute>
-                        <xsl:attribute name="intm">
-                            <xsl:choose>
+            
+            <xsl:for-each select="descendant::grouped">
+                <xsl:element name="neume">
+                    <xsl:for-each select="item">
+                        <xsl:element name="nc">
+                            <xsl:attribute name="pname">
+                                <xsl:value-of select="translate(base/text(), 'ABCDEFG', 'abcdefg')"/>
+                            </xsl:attribute>
+                            <xsl:attribute name="oct">
+                                <xsl:value-of select="octave"/>
+                            </xsl:attribute>
+                            <xsl:apply-templates select="noteType"/>
+                            <!-- "focus" ne nous intéresse pas a priori. Mais de quoi s'agit-il? -->
+                            <xsl:apply-templates select="liquescent"/>
+                            
+                            
+                            
+                            <!-- Attributs non nécessaires, cf. mail LP -->
+                            <!--<xsl:attribute name="intm">
+                                <xsl:choose>
                                 <xsl:when test="noteType = 'Descending'">
-                                    <xsl:text>d</xsl:text>
+                                <xsl:text>d</xsl:text>
                                 </xsl:when>
                                 <xsl:when test="noteType = 'Ascending'">
-                                    <xsl:text>u</xsl:text>
+                                <xsl:text>u</xsl:text>
                                 </xsl:when>
                                 <xsl:when test="noteType = 'Normal'">
-                                    <xsl:text>n</xsl:text>
+                                <xsl:text>n</xsl:text>
                                 </xsl:when>
-                            </xsl:choose>
-                        </xsl:attribute>
-                        
-                        <xsl:attribute name="tilt">
-                            <xsl:text>se</xsl:text>
-                        </xsl:attribute>
-                    </xsl:element>
-                </xsl:for-each>
-            </neume>
+                                </xsl:choose>
+                                </xsl:attribute>
+                                
+                                <xsl:attribute name="tilt">
+                                <xsl:text>se</xsl:text>
+                                </xsl:attribute>-->
+                        </xsl:element>
+                    </xsl:for-each>
+                </xsl:element>
+            </xsl:for-each>
+            
         </syllable>
     </xsl:template>
+    
+    
+    <xsl:template match="noteType">
+        <xsl:if test=". != 'Normal'">
+            <xsl:attribute name="accid.ges">
+                <xsl:choose>
+                    <xsl:when test="contains(., 'lat')"><!-- Flat/flat -->
+                        <xsl:text>f</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="contains(., 'harp')"><!-- Sharp/sharp -->
+                        <xsl:text>s</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="contains(., 'atural')"><!-- Natural/natural -->
+                        <xsl:text>n</xsl:text>
+                    </xsl:when>
+                </xsl:choose>
+            </xsl:attribute>
+            
+        </xsl:if>
+    </xsl:template>
+    
+    <xsl:template match="liquescent">
+        <xsl:if test="contains(., 'rue')"><!-- Hack for case of True/true -->
+            <xsl:element name="liquescent"/>
+        </xsl:if>
+    </xsl:template>
+    
 </xsl:stylesheet>
